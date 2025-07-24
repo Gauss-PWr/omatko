@@ -1,0 +1,24 @@
+baseURL = 'https://omatko.pwr.edu.pl' 
+languageCode = 'pl-PL'
+title = 'OMatKo!!!' 
+
+[menus]
+  [[menus.main]]
+    name = 'O konferencji'
+    pageRef = '/'
+    weight = 10
+
+  [[menus.main]]
+    name = 'Aktualności'
+    pageRef = '/aktualnosci'
+    weight = 20
+
+  [[menus.main]]
+    name = 'Organizatorzy'
+    pageRef = '/organizatorzy'
+    weight = 30
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = '0.146.0'
