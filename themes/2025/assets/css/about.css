@@ -1,0 +1,42 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.about-text {
+  margin: 0;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.about-socials {
+  padding: 0px 15px;
+  display: flex;
+  background-color: var(--o-gray);
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-socials-icons {
+  font-size: 2rem;
+}
+
+.about-socials-icons a {
+  color: black;
+  margin: 1px 5px;
+  padding: 0 auto;
+}
