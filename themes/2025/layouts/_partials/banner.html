@@ -6,7 +6,24 @@
   </div>
   <div class="banner-timer">
     <p>Pozostało:</p>
-    <div id="timer"></div>
+    <div id="timer">
+      <div class="countdown-item">
+        <span class="countdown-number" style="color: var(--o-green)">00</span>
+        <span class="countdown-label">Dni</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-number" style="color: var(--o-blue)">00</span>
+        <span class="countdown-label">Godzin</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-number" style="color: var(--o-orange)">00</span>
+        <span class="countdown-label">Minut</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-number" style="color: var(--o-gray)">00</span>
+        <span class="countdown-label">Sekund</span>
+      </div>
+    </div>
     <script>
       function countdownToDate(targetDate, elementId) {
         const timer = document.getElementById(elementId);
@@ -23,7 +40,7 @@
           if (distance < 0) {
             clearInterval(interval);
             timer.innerHTML =
-              "<div class='banner-event-start'>Konferencja rozpoczęta!</div>";
+              "<div class='countdown-end'>Konferencja rozpoczęta!</div>";
             return;
           }
 
@@ -41,31 +58,22 @@
           const formattedMinutes = minutes.toString().padStart(2, "0");
           const formattedSeconds = seconds.toString().padStart(2, "0");
 
-          timer.innerHTML = `
-                  <div class="countdown-item">
-                      <span class="countdown-number" style="color: var(--o-green);">${formattedDays}</span>
-                      <span class="countdown-label">Dni</span>
-                  </div>
-                  <div class="countdown-item">
-                      <span class="countdown-number" style="color: var(--o-blue);">${formattedHours}</span>
-                      <span class="countdown-label">Godzin</span>
-                  </div>
-                  <div class="countdown-item">
-                      <span class="countdown-number" style="color: var(--o-orange);">${formattedMinutes}</span>
-                      <span class="countdown-label">Minut</span>
-                  </div>
-                  <div class="countdown-item">
-                      <span class="countdown-number" style="color: var(--o-gray);">${formattedSeconds}</span>
-                      <span class="countdown-label">Sekund</span>
-                  </div>
-              `;
+          const formattedValues = [
+            formattedDays,
+            formattedHours,
+            formattedMinutes,
+            formattedSeconds,
+          ];
+
+          timer.querySelectorAll(".countdown-number").forEach((ele, i) => {
+            ele.textContent = formattedValues[i];
+          });
         }, 1000);
       }
 
       // Usage
       document.addEventListener("DOMContentLoaded", function () {
-        // Set target date (New Year 2026)
-        const targetDate = new Date("2026-01-01 00:00:00").getTime();
+        const targetDate = new Date(2025, 12, 7, 10, 0, 0).getTime();
         countdownToDate(targetDate, "timer");
       });
     </script>

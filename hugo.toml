@@ -1,4 +1,11 @@
-baseURL = 'https://example.org/'
+baseURL = 'omatko.im.pwr.edu.pl'
 languageCode = 'en-us'
 title = 'OMatKo!!!'
 theme = '2025'
+
+[params]
+show_register_section = false
+show_schedule_section = false
+show_sponsors_section = false
+show_patrons_section = false
+enable_background_animations = false

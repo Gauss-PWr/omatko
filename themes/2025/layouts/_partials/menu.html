@@ -12,9 +12,7 @@ Renders a menu for the given menu ID.
 
 {{- with index site.Menus $menuID }}
   <nav class="main-nav">
-    <div class="nav-logo">
-      <img src="logo.webp" alt="Logo OMatKo">
-    </div>
+      <a class="nav-logo" href=""><img src="logo.webp" alt="Logo OMatKo"></a>
     <ul class="nav-list">
       {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
     </ul>

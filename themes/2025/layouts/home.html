@@ -1,2 +1,4 @@
-{{ define "main" }} {{ partial "banner.html"}} {{ partial "about.html"}} {{
-partial "registration.html"}} {{ end }}
+{{ define "main" }} {{if .Site.Params.enable_background_animations}} {{partial
+"background.html"}} {{ end }} {{ partial "banner.html"}} {{ partial
+"about.html"}} {{ if .Site.Params.show_registration_section }} {{ partial
+"registration.html"}} {{ end }} {{ end}}

@@ -30,6 +30,7 @@ body {
   margin: 0;
   padding: 0;
   background: url("/bg.webp");
+  background-size: cover;
 }
 
 h1 {
@@ -41,6 +42,10 @@ h1 {
   font-weight: 500;
 }
 
+p {
+  font-size: 1.5rem;
+}
+
 section {
   padding: 30px;
 }
@@ -49,4 +54,25 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+/* Extra Large Devices (Large Desktops) */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+  }
+
+  section {
+    padding: 40px;
+  }
 }
