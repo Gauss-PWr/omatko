@@ -1,4 +1,4 @@
-baseURL = 'omatko.im.pwr.edu.pl'
+baseURL = '/'
 languageCode = 'en-us'
 title = 'OMatKo!!!'
 theme = '2025'

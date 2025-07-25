@@ -2,12 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>omatko.im.pwr.edu.pl/aktualnosci/</loc>
+    <loc>//localhost:1313/aktualnosci/</loc>
   </url><url>
-    <loc>omatko.im.pwr.edu.pl/categories/</loc>
+    <loc>//localhost:1313/categories/</loc>
   </url><url>
-    <loc>omatko.im.pwr.edu.pl/</loc>
+    <loc>//localhost:1313/</loc>
   </url><url>
-    <loc>omatko.im.pwr.edu.pl/tags/</loc>
+    <loc>//localhost:1313/tags/</loc>
   </url>
 </urlset>
