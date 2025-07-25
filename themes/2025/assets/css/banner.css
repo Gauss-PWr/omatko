@@ -1,0 +1,36 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner-logo {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--o-blue);
+  margin-bottom: 50px;
+}
+
+.banner-logo img {
+  width: 100%;
+}
+
+.banner-timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#timer {
+  display: flex;
+}
+
+.countdown-number {
+  font-size: 4rem;
+}
+
+.countdown-item {
+  padding: 10px;
+}

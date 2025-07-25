@@ -4,6 +4,7 @@
   flex-direction: row;
   justify-content: space-around;
   height: 50px;
+  padding: 2px 30px;
   color: var(--o-blue);
 }
 
@@ -11,7 +12,7 @@
   padding: 12px;
   display: flex;
   flex: 1 2 auto;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -40,6 +41,7 @@ nav .nav-list {
 .nav-link {
   display: block;
   padding: 20px 24px;
+  cursor: pointer;
   text-decoration: none;
   font-weight: 500;
   font-size: 16px;

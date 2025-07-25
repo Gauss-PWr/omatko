@@ -5,6 +5,26 @@
   --o-gray: #babab9ef;
 }
 
+* {
+  font-family: "Quicksand";
+}
+
+.green {
+  background-color: var(--o-green);
+}
+
+.blue {
+  background-color: var(--o-blue);
+}
+
+.orange {
+  background-color: var(--o-orange);
+}
+
+.gray {
+  background-color: var(--o-gray);
+}
+
 body {
   font-family: "Quicksand", sans-serif;
   margin: 0;

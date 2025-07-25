@@ -1,0 +1,73 @@
+<section class="banner">
+  <div class="banner-logo">
+    <img src="logo.webp" alt="Logo OMatKo" />
+    <p>XII Edycja Ogólnopolskiej Matematycznej Konferencji Studentów</p>
+    <p>5-7 grudnia 2025</p>
+  </div>
+  <div class="banner-timer">
+    <p>Pozostało:</p>
+    <div id="timer"></div>
+    <script>
+      function countdownToDate(targetDate, elementId) {
+        const timer = document.getElementById(elementId);
+
+        if (!timer) {
+          console.error("Timer element not found");
+          return;
+        }
+
+        const interval = setInterval(function () {
+          const now = new Date().getTime();
+          const distance = targetDate - now;
+
+          if (distance < 0) {
+            clearInterval(interval);
+            timer.innerHTML =
+              "<div class='banner-event-start'>Konferencja rozpoczęta!</div>";
+            return;
+          }
+
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          const minutes = Math.floor(
+            (distance % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          const formattedDays = days.toString().padStart(2, "0");
+          const formattedHours = hours.toString().padStart(2, "0");
+          const formattedMinutes = minutes.toString().padStart(2, "0");
+          const formattedSeconds = seconds.toString().padStart(2, "0");
+
+          timer.innerHTML = `
+                  <div class="countdown-item">
+                      <span class="countdown-number" style="color: var(--o-green);">${formattedDays}</span>
+                      <span class="countdown-label">Dni</span>
+                  </div>
+                  <div class="countdown-item">
+                      <span class="countdown-number" style="color: var(--o-blue);">${formattedHours}</span>
+                      <span class="countdown-label">Godzin</span>
+                  </div>
+                  <div class="countdown-item">
+                      <span class="countdown-number" style="color: var(--o-orange);">${formattedMinutes}</span>
+                      <span class="countdown-label">Minut</span>
+                  </div>
+                  <div class="countdown-item">
+                      <span class="countdown-number" style="color: var(--o-gray);">${formattedSeconds}</span>
+                      <span class="countdown-label">Sekund</span>
+                  </div>
+              `;
+        }, 1000);
+      }
+
+      // Usage
+      document.addEventListener("DOMContentLoaded", function () {
+        // Set target date (New Year 2026)
+        const targetDate = new Date("2026-01-01 00:00:00").getTime();
+        countdownToDate(targetDate, "timer");
+      });
+    </script>
+  </div>
+</section>
