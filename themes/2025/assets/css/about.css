@@ -40,3 +40,16 @@
   margin: 1px 5px;
   padding: 0 auto;
 }
+
+@media screen and (max-width: 768px) {
+  .about-content {
+    grid-template-rows: 1fr fr;
+    grid-template-columns: none;
+  }
+
+  .about-socials-icons {
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+  }
+}

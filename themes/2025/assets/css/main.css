@@ -51,28 +51,15 @@ section {
 }
 
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
-/* ===== MEDIA QUERIES ===== */
-
-/* Extra Large Devices (Large Desktops) */
-@media (min-width: 1400px) {
-  .container {
-    max-width: 1320px;
-  }
-
-  h1 {
-    font-size: 3rem;
+@media screen and (max-width: 768px) {
+  section {
+    padding: 30px 10px;
   }
 
   p {
-    font-size: 1.6rem;
-  }
-
-  section {
-    padding: 40px;
+    font-size: 1rem;
   }
 }

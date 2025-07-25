@@ -12,10 +12,27 @@ Renders a menu for the given menu ID.
 
 {{- with index site.Menus $menuID }}
   <nav class="main-nav">
-      <a class="nav-logo" href=""><img src="logo.webp" alt="Logo OMatKo"></a>
+    <div class="nav-logo">
+      <a href=""><img src="/logo.webp" alt="Logo OMatKo"></a>
+    </div>
+    <button id="menu-button"><i class="fa-solid fa-bars"></i></button>
+
     <ul class="nav-list">
       {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
     </ul>
+
+    <script>
+      const button = document.getElementById('menu-button')
+      const navList = document.querySelector('.nav-list')
+      const buttonIcon = document.querySelector('.fa-solid')
+
+      button.addEventListener('click', () => {
+        navList.classList.toggle('active-menu')
+        buttonIcon.classList.toggle('fa-bars')
+        buttonIcon.classList.toggle('fa-xmark')
+      })
+
+    </script>
   </nav>
 {{- end }}
 

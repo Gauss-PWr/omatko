@@ -25,6 +25,10 @@
   align-items: center;
 }
 
+.banner-logo p:nth-child(3) {
+  font-weight: 600;
+}
+
 #timer {
   display: flex;
 }
@@ -41,4 +45,32 @@
   text-transform: uppercase;
   font-size: 4rem;
   font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+  .banner-logo {
+    width: 90%;
+  }
+
+  .banner-logo p {
+    text-align: center;
+  }
+
+  .countdown-number {
+    font-size: 1.5rem;
+    margin-right: 2px;
+  }
+
+  .countdown-label {
+    font-size: 0.7rem;
+  }
+
+  .countdown-item {
+    width: 75px;
+    padding: 2px;
+  }
+
+  #timer {
+    justify-content: space-evenly;
+  }
 }

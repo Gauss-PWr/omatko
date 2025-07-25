@@ -6,7 +6,15 @@ title = 'OMatKo!!!'
   [[menus.main]]
     name = 'O konferencji'
     pageRef = '/'
-    weight = 10
+    url = '/'
+    weight = 1
+
+  [[menus.main]]
+    name = 'Aktualności'
+    pageRef = 'aktualnosci'
+    url = '/aktualnosci'
+    weight = 2
+
 
 [module]
   [module.hugoVersion]
