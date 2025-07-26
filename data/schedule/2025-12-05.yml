@@ -7,7 +7,7 @@
     - name: "Workshop A"
       author: "Jan kowalski"
       location: "Room 101"
-      type: "teorytyczna"
+      type: "teoretyczna" 
 - time: "10:00"
   events:
     - name: "Wykład"
