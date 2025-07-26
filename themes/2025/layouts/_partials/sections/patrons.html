@@ -1,0 +1,15 @@
+<section class="patrons" id="patrons">
+  <h1>patroni honorowi</h1>
+  <div class="patrons-container">
+    {{ $images := readDir "static/patrons" }}
+    {{ range $images }}
+      {{ if not .IsDir }}
+        <img
+          class="patron-img"
+          src="{{ (printf "patrons/%s" .Name) | relURL }}"
+          alt="{{ .Name }}"
+        />
+      {{ end }}
+    {{ end }}
+  </div>
+</section>

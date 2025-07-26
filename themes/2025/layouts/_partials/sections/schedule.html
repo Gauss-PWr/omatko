@@ -1,4 +1,4 @@
-<section class="schedule">
+<section class="schedule" id="schedule">
   <h1>Harmonogram</h1>
   <div class="day-selector">
     {{ range $filename, $data := site.Data.schedule }}
@@ -17,6 +17,7 @@
       {{ partial "sections/schedule-day.html" $key }}
     {{ end }}
     <div class="schedule-legend">
+      <a href="">zagłosuj!</a>
       <span class="legend-element"
         ><span style="color: var(--o-orange);">█</span> - Blok stosowany</span
       >
@@ -51,6 +52,8 @@
         if (new Date(button.dataset.day).getTime() >= new Date().getTime()) {
           button.click();
           break;
+        } else {
+          buttons[2].click();
         }
       }
     });

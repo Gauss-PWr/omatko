@@ -23,10 +23,10 @@ poster_url = ''
 
 
 # Sponsorzy
-show_sponsors_section = true
+show_sponsors_section = false
 
 # Patroni medialni
-show_patrons_section = true
+show_patrons_section = false
 
 # Animacja w tle
 enable_background_animations = true

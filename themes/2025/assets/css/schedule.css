@@ -44,6 +44,25 @@
   gap: 30px;
 }
 
+.schedule-legend a {
+  background-color: var(--o-gray);
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  padding: 5px;
+  border-radius: 5px;
+  transition: 0.5s ease;
+  text-align: center;
+}
+
+.schedule-legend a:hover {
+  background-color: var(--o-green);
+}
+
+.legend-element {
+  text-wrap: nowrap;
+}
+
 .event {
   background-color: var(--o-gray);
   border-radius: 5px;
@@ -71,6 +90,7 @@
   font-size: small;
   display: flex;
   justify-content: right;
+  align-items: center;
   gap: 10px;
 }
 
@@ -89,5 +109,9 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+  }
+
+  .schedule-legend a {
+    width: 100%;
   }
 }

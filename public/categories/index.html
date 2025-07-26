@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl" dir="ltr">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width" />
 <title>
@@ -9,7 +9,7 @@
  
 <link rel="stylesheet" href="/css/combined.min.css" />
  
-        <script src="/js/main.f2979a93a325fecf9605263bd141398a311c8e23388ed7dcff74f92f7e632866.js" integrity="sha256-8peak6Ml/s&#43;WBSY70UE5ijEcjiM4jtfc/3T5L35jKGY=" crossorigin="anonymous"></script>
+      <script src="/js/main.js"></script>
 
 
 <link
@@ -47,32 +47,37 @@
     
   <nav class="main-nav">
     <div class="nav-logo">
-      <a href=""><img src="/logo.webp" alt="Logo OMatKo"></a>
+      <a href=""><img src="/logo.webp" alt="Logo OMatKo" /></a>
     </div>
     <button id="menu-button"><i class="fa-solid fa-bars"></i></button>
 
     <ul class="nav-list">
+      
+      
+      
     <li class="nav-item">
-      <a class="nav-link" href="/">O konferencji</a>
+      <a class="nav-link" href="/#about">O konferencji</a
+      >
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="/aktualnosci/">Aktualności</a>
+      <a class="nav-link" href="/aktualnosci/">Aktualności</a
+      >
     </li>
     </ul>
 
     <script>
-      const button = document.getElementById('menu-button')
-      const navList = document.querySelector('.nav-list')
-      const buttonIcon = document.querySelector('.fa-solid')
+      const button = document.getElementById("menu-button");
+      const navList = document.querySelector(".nav-list");
+      const buttonIcon = document.querySelector(".fa-solid");
 
-      button.addEventListener('click', () => {
-        navList.classList.toggle('active-menu')
-        buttonIcon.classList.toggle('fa-bars')
-        buttonIcon.classList.toggle('fa-xmark')
-      })
-
+      button.addEventListener("click", () => {
+        navList.classList.toggle("active-menu");
+        buttonIcon.classList.toggle("fa-bars");
+        buttonIcon.classList.toggle("fa-xmark");
+      });
     </script>
   </nav>
+
 
   </header>
   <main>

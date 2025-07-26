@@ -1,0 +1,14 @@
+.sponsors {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.normal-sponsors-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 150px;
+}
+
+.sponsor-img {
+  max-width: 100%;
+}

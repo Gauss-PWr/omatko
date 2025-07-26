@@ -11,7 +11,7 @@
 }
 
 .floating-image {
-  position: absolute;
+  position: fixed;
   animation: floatImage infinite linear;
   animation-duration: 120s !important;
   opacity: 0;

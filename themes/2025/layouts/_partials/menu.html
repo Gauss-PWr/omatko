@@ -1,37 +1,45 @@
 {{- /*
-Renders a menu for the given menu ID.
+  Renders a menu for the given menu ID.
 
-@context {page} page The current page.
-@context {string} menuID The menu ID.
+  @context {page} page The current page.
+  @context {string} menuID The menu ID.
 
-@example: {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+  @example: {{ partial "menu.html" (dict "menuID" "main" "page" .)
+}}
 */}}
-
 {{- $page := .page }}
 {{- $menuID := .menuID }}
 
 {{- with index site.Menus $menuID }}
   <nav class="main-nav">
     <div class="nav-logo">
-      <a href=""><img src="/logo.webp" alt="Logo OMatKo"></a>
+      <a href=""><img src="/logo.webp" alt="Logo OMatKo" /></a>
     </div>
     <button id="menu-button"><i class="fa-solid fa-bars"></i></button>
 
     <ul class="nav-list">
+      {{ if site.Params.show_schedule_section }}
+        <li><a class="nav-link" href="/#schedule">Harmonogram</a></li>
+      {{ end }}
+      {{ if site.Params.show_registration_section }}
+        <li><a class="nav-link" href="/#registration">Zapisy</a></li>
+      {{ end }}
+      {{ if site.Params.show_patrons_section }}
+        <li><a class="nav-link" href="/#patrons">Sponsorzy</a></li>
+      {{ end }}
       {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
     </ul>
 
     <script>
-      const button = document.getElementById('menu-button')
-      const navList = document.querySelector('.nav-list')
-      const buttonIcon = document.querySelector('.fa-solid')
+      const button = document.getElementById("menu-button");
+      const navList = document.querySelector(".nav-list");
+      const buttonIcon = document.querySelector(".fa-solid");
 
-      button.addEventListener('click', () => {
-        navList.classList.toggle('active-menu')
-        buttonIcon.classList.toggle('fa-bars')
-        buttonIcon.classList.toggle('fa-xmark')
-      })
-
+      button.addEventListener("click", () => {
+        navList.classList.toggle("active-menu");
+        buttonIcon.classList.toggle("fa-bars");
+        buttonIcon.classList.toggle("fa-xmark");
+      });
     </script>
   </nav>
 {{- end }}
@@ -42,7 +50,7 @@ Renders a menu for the given menu ID.
     {{- $attrs := dict "href" .URL }}
     {{- if $page.IsMenuCurrent .Menu . }}
       {{- $attrs = merge $attrs (dict "class" "nav-link active" "aria-current" "page") }}
-    {{- else if $page.HasMenuCurrent .Menu .}}
+    {{- else if $page.HasMenuCurrent .Menu . }}
       {{- $attrs = merge $attrs (dict "class" "nav-link ancestor" "aria-current" "true") }}
     {{- else }}
       {{- $attrs = merge $attrs (dict "class" "nav-link") }}
@@ -60,7 +68,8 @@ Renders a menu for the given menu ID.
             {{- printf " %s=%q" $k $v | safeHTMLAttr }}
           {{- end }}
         {{- end -}}
-      >{{ $name }}</a>
+        >{{ $name }}</a
+      >
       {{- with .Children }}
         <ul class="nav-submenu">
           {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
