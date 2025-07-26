@@ -1,0 +1,20 @@
+{{- $day := . -}}
+{{- $schedule := index site.Data.schedule $day -}}
+
+
+<div id="schedule-{{ $day }}" class="schedule-day hidden">
+  {{- range $slot := $schedule }}
+    <div class="time-slot">
+      <div class="time">{{ $slot.time }}</div>
+      <div class="events">
+        {{- range $event := $slot.events }}
+          <div class="event {{ $event.type }}">
+            <strong>{{ $event.name }}</strong> {{ if $event.author }}-{{ end }}
+            {{ $event.author }}
+            {{/* ({{ $event.location }}) */}}
+          </div>
+        {{- end }}
+      </div>
+    </div>
+  {{- end }}
+</div>

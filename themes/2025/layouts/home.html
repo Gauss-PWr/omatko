@@ -1,4 +1,17 @@
-{{ define "main" }} {{if .Site.Params.enable_background_animations}} {{partial
-"background.html"}} {{ end }} {{ partial "banner.html"}} {{ partial
-"about.html"}} {{ if .Site.Params.show_registration_section }} {{ partial
-"registration.html"}} {{ end }} {{ end}}
+{{ define "main" }}
+  {{ if .Site.Params.enable_background_animations }}
+    {{ partial
+      "sections/background.html" .
+    }}
+  {{ end }}
+  {{ partial "sections/banner.html" . }}
+  {{ if .Site.Params.show_schedule_section }}
+    {{ partial "sections/schedule.html" . }}
+  {{ end }}
+  {{ partial "sections/about.html" }}
+  {{ if .Site.Params.show_registration_section }}
+    {{ partial
+      "sections/registration.html" .
+    }}
+  {{ end }}
+{{ end }}

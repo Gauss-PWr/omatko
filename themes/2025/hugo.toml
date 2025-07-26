@@ -1,6 +1,3 @@
-baseURL = 'https://omatko.pwr.edu.pl' 
-languageCode = 'pl-PL'
-title = 'OMatKo!!!' 
 
 [menus]
   [[menus.main]]

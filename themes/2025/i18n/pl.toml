@@ -1,0 +1,14 @@
+[monday]
+other = "Poniedziałek"
+[tuesday]
+other = "Wtorek"
+[wednesday]
+other = "Środa"
+[thursday]
+other = "Czwartek"
+[friday]
+other = "Piątek"
+[saturday]
+other = "Sobota"
+[sunday]
+other = "Niedziela"

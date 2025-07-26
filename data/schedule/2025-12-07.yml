@@ -1,0 +1,11 @@
+- time: "09:00"
+  events:
+    - name: "Keynote"
+      location: "Main Hall"
+    - name: "Workshop A"
+      location: "Room 101"
+
+- time: "11:00"
+  events:
+    - name: "Talk 1"
+      location: "Room 201"

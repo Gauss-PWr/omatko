@@ -12,53 +12,68 @@
 
 .floating-image {
   position: absolute;
-  animation: floatImage 25s infinite linear;
-  opacity: 1;
+  animation: floatImage infinite linear;
+  animation-duration: 120s !important;
+  opacity: 0;
 }
 
 .floating-image:nth-child(1) {
-  top: 10%;
-  left: -200px;
-  width: 520px;
-  animation-delay: 0s;
-  animation-duration: 30s;
+  top: 5%;
+  left: -15%;
+  width: 30%;
+  animation-duration: 100s !important;
 }
 
 .floating-image:nth-child(2) {
-  top: 30%;
-  left: -150px;
-  width: 280px;
+  top: 50%;
+  right: -10%;
+  width: 50%;
+  animation: floatImageReverse infinite linear;
   animation-delay: 5s;
-  animation-duration: 25s;
 }
 
 .floating-image:nth-child(3) {
-  top: 50%;
-  left: -180px;
-  width: 300px;
+  bottom: 5%;
+  left: -25%;
+  width: 30%;
   animation-delay: 10s;
-  animation-duration: 35s;
 }
 
 @keyframes floatImage {
   0% {
     transform: translateX(0) translateY(0) rotate(0deg) scale(0.8);
-    opacity: 0;
+  }
+  5% {
+    opacity: 1;
   }
   10% {
-    transform: scale(1);
+    transform: translateX(20vw) scale(1) rotate(32deg);
     opacity: 1;
   }
   50% {
     transform: translateX(100vw) translateY(-100px) rotate(180deg) scale(1.1);
     opacity: 1;
   }
-  90% {
+  100% {
     transform: scale(0.9);
+    opacity: 0;
+  }
+}
+
+@keyframes floatImageReverse {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg) scale(0.8);
+  }
+  10% {
+    transform: translateX(-20vm) scale(1) rotate(32deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-100vw) translateY(-100px) rotate(180deg) scale(1.1);
     opacity: 1;
   }
   100% {
-    transform: translateX(100vw) translateY(50px) rotate(360deg) scale(0.8);
+    transform: scale(0.9);
     opacity: 0;
   }
 }

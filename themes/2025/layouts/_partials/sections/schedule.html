@@ -1,0 +1,58 @@
+<section class="schedule">
+  <h1>Harmonogram</h1>
+  <div class="day-selector">
+    {{ range $filename, $data := site.Data.schedule }}
+      {{ $weekday := time.Format "Monday" $filename }}
+      <button
+        onclick="showSchedule('{{ $filename }}')"
+        data-day="{{ $filename }}"
+      >
+        {{ $weekday }}
+      </button>
+    {{ end }}
+  </div>
+
+  <div class="day-container">
+    {{ range $key, $val := site.Data.schedule }}
+      {{ partial "sections/schedule-day.html" $key }}
+    {{ end }}
+    <div class="schedule-legend">
+      <span class="legend-element"
+        ><span style="color: var(--o-orange);">█</span> - Blok stosowany</span
+      >
+      <span class="legend-element"
+        ><span style="color: var(--o-blue);">█</span> - Blok teorytyczny</span
+      >
+    </div>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll(".day-selector button");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", (event) => {
+        buttons.forEach((button) => button.classList.remove("active-button"));
+        event.target.classList.add("active-button");
+        console.log(button);
+      });
+    });
+
+    function showSchedule(day) {
+      document.querySelectorAll(".schedule-day").forEach((el) => {
+        el.classList.add("hidden");
+        el.classList.remove("active");
+      });
+      const current = document.getElementById("schedule-" + day);
+      current.classList.remove("hidden");
+    }
+    document.addEventListener("DOMContentLoaded", () => {
+      const buttons = document.querySelectorAll(".day-selector button");
+      for (const button of buttons) {
+        if (new Date(button.dataset.day).getTime() >= new Date().getTime()) {
+          button.click();
+          break;
+        }
+      }
+    });
+  </script>
+</section>

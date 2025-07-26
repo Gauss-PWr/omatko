@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl" dir="ltr">
 <head>
-	<meta name="generator" content="Hugo 0.148.1">
+	<meta name="generator" content="Hugo 0.148.1"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width" />
 <title>
@@ -10,7 +10,7 @@
  
 <link rel="stylesheet" href="/css/combined.min.css" />
  
-        <script src="/js/main.f2979a93a325fecf9605263bd141398a311c8e23388ed7dcff74f92f7e632866.js" integrity="sha256-8peak6Ml/s&#43;WBSY70UE5ijEcjiM4jtfc/3T5L35jKGY=" crossorigin="anonymous"></script>
+      <script src="/js/main.js"></script>
 
 
 <link
@@ -54,7 +54,7 @@
 
     <ul class="nav-list">
     <li class="nav-item">
-      <a aria-current="page" class="nav-link active" href="/">O konferencji</a>
+      <a class="nav-link" href="/">O konferencji</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="/aktualnosci/">Aktualności</a>
@@ -78,13 +78,6 @@
   </header>
   <main>
     
-  
-    <div class="floating-bg">
-  <img class="floating-image" src="green.webp" alt="" loading="lazy" />
-  <img class="floating-image" src="blue.webp" alt="" loading="lazy" />
-  <img class="floating-image" src="orange.webp" alt="" loading="lazy" />
-</div>
-
   
   <section class="banner">
   <div class="banner-logo">
@@ -168,7 +161,6 @@
   </div>
 </section>
 
-  
   <section class="about" id="about">
   <h1>O konferencji</h1>
   <div class="about-content">
@@ -213,6 +205,33 @@
   </div>
 </section>
 
+  
+    <section class="schedule">
+  <div class="day-selector"><button onclick="showSchedule('2025-12-05')">
+        piątek
+      </button><button onclick="showSchedule('2025-12-06')">
+        sobota
+      </button><button onclick="showSchedule('2025-12-07')">
+        niedziela
+      </button>
+
+  </div>
+  <script>
+    function showSchedule(day) {
+      document
+        .querySelectorAll(".schedule-day")
+        .forEach((el) => el.classList.add("hidden"));
+      document.getElementById("schedule-" + day).classList.remove("hidden");
+    }
+    document.addEventListener("DOMContentLoaded", () => {
+      const today = new Date().toISOString().split("T")[0];
+      const el = document.getElementById("schedule-" + today);
+      if (el) showSchedule(today);
+    });
+  </script>
+</section>
+
+  
   
 
   </main>

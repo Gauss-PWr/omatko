@@ -1,11 +1,32 @@
 baseURL = '/'
-languageCode = 'en-us'
+languageCode = 'pl-PL'
 title = 'OMatKo!!!'
 theme = '2025'
 
+defaultContentLanguage = "pl"
+[languages]
+[languages.pl]
+languageName = "Polski"
+
+
 [params]
-show_register_section = false
+# Harmonogram
 show_schedule_section = false
-show_sponsors_section = false
-show_patrons_section = false
-enable_background_animations = false
+
+# Rejestracja 
+show_registration_section = false
+
+# Linki do formularzy
+participant_url = ''
+speaker_url = ''
+poster_url = ''
+
+
+# Sponsorzy
+show_sponsors_section = true
+
+# Patroni medialni
+show_patrons_section = true
+
+# Animacja w tle
+enable_background_animations = true
