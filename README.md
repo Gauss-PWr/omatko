@@ -28,6 +28,10 @@ Komenda `hugo server --buildDrafts --noHTTPCache` uruchamia serwer http.
 
 Podgląd strony na żywo będzie dostępny na [localhost:1313](http://localhost:1313).
 
+Hugo używa motywów do tworzenia stron.
+Dla jednej edycji konferencji powinien istnieć jeden motyw.
+Aby zmienić motyw ustaw parametr `theme='rok-edycji'`.
+
 ## Zarządzanie stroną
 
 W pliku _hugo.toml_ znajduje się konfiguracja strony.
@@ -96,4 +100,10 @@ poster_url = 'kolejny link'
 Aby zakutalizować stronę po dokonaniu zmian, otaguj commit z nową wersją strony.
 Po otagowaniu, wejdź na serwer wydziału przy użyciu studenckiego vpn'a i odpal skrypt _pull.sh_, który pobierze najnowszą otagowaną wersje strony.
 
-**Nigdy nie używaj** git _push --force_
+## Tagowanie
+
+Konwencja jest następująca:
+
+v13.1.3 - _edycja omatko_ | _wersja strony_ | _wersja poprawki_
+
+**Nigdy nie używaj** _git push --force_
