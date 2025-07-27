@@ -7,5 +7,12 @@
     <generator>Hugo</generator>
     <language>pl</language>
     <atom:link href="//localhost:1313/aktualnosci/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>//localhost:1313/aktualnosci/zapisy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/aktualnosci/zapisy/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

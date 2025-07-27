@@ -2,12 +2,12 @@
   <section class="organizers">
     <h1>sztab</h1>
     <div class="organizers-container">
-      <div class="coordinators">
+      <div class="team">
         {{ range $_, $coordinator_data := .Site.Data.organizers.coordinators }}
           <div class="organizer">
             <h2>{{ $coordinator_data.title }}</h2>
             <img
-              src="organizers/coordinators/{{ $coordinator_data.img_name }}"
+              src="photos/{{ $coordinator_data.img_name }}"
               alt="{{ $coordinator_data.name }}"
             />
             <h3>{{ $coordinator_data.name }}</h3>
@@ -21,7 +21,7 @@
           <div class="organizer">
             <h4>{{ $section_head_data.section }}</h4>
             <img
-              src="organizers/section-head/{{ $section_head_data.img_name }}"
+              src="photos/{{ $section_head_data.img_name }}"
               alt="{{ $section_head_data.name }}"
             />
             <h3>{{ $section_head_data.name }}</h3>
@@ -34,7 +34,7 @@
         {{ range $_, $team_data := .Site.Data.organizers.team }}
           <div class="organizer">
             <img
-              src="organizers/{{ $team_data.img_name }}"
+              src="photos/{{ $team_data.img_name }}"
               alt="{{ $team_data.name }}"
             />
             <h3>{{ $team_data.name }}</h3>

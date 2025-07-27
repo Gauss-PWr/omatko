@@ -3,7 +3,7 @@
 ## TODO
 
 - [ ] Import aktualności ze starej strony (?)
-- [ ] Podstrona ze sztabem
+- [x] Podstrona ze sztabem
 - [ ] Poprzednie edycje (?)
 - [ ] Dokumentacja
 - [ ] Github Actions
@@ -93,6 +93,20 @@ Linki do zapisów wstaw do parametrów:
 participant_url = 'link'
 speaker_url = 'inny link'
 poster_url = 'kolejny link'
+```
+
+### Sztab
+
+W folderze _data/organizers_ znajdują się pliki _.yml_ z danymi sztabu.
+Wystarczy je wypełnić i wstawić zdjęcia do folderu _content/organizatorzy/photos_.
+Żeby aktywować podstronę odkomentuj:
+
+```toml
+[[menus.main]]
+ name = 'Organizatorzy'
+ pageRef = 'organizatorzy'
+ url = '/organizatorzy'
+ weight = 3
 ```
 
 ## Aktualizacja strony

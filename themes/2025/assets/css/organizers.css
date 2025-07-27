@@ -24,12 +24,6 @@
   text-align: center;
 }
 
-.coordinators {
-  display: flex;
-  gap: 50px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
 .quote {
   display: flex;
   padding-left: 100px;

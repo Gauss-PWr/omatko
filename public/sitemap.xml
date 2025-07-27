@@ -4,6 +4,8 @@
   <url>
     <loc>//localhost:1313/aktualnosci/</loc>
   </url><url>
+    <loc>//localhost:1313/aktualnosci/zapisy/</loc>
+  </url><url>
     <loc>//localhost:1313/organizatorzy/</loc>
   </url><url>
     <loc>//localhost:1313/categories/</loc>
