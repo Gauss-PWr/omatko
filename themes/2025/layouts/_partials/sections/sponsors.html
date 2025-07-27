@@ -3,7 +3,7 @@
   <div class="main-sponsors">
     <h2>sponsor główny</h2>
     <div class="main-sponsors-container">
-      {{ $images := readDir "static/sponsors/main" }}
+      {{ $images := readDir "public/sponsors/main" }}
       {{ range $images }}
         {{ if not .IsDir }}
           <img
@@ -17,7 +17,7 @@
     <div class="normal-sponsors">
       <h2>sponsorzy i partnerzy</h2>
       <div class="normal-sponsors-container">
-        {{ $images := readDir "static/sponsors" }}
+        {{ $images := readDir "public/sponsors" }}
         {{ range $images }}
           {{ if not .IsDir }}
             <img

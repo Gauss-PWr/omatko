@@ -54,7 +54,13 @@
 
     <ul class="nav-list">
       
+        <li><a class="nav-link" href="/#schedule">Harmonogram</a></li>
       
+      
+        <li><a class="nav-link" href="/#registration">Zapisy</a></li>
+      
+      
+        <li><a class="nav-link" href="/#patrons">Sponsorzy</a></li>
       
     <li class="nav-item">
       <a class="nav-link" href="/#about">O konferencji</a
@@ -62,6 +68,10 @@
     </li>
     <li class="nav-item">
       <a class="nav-link" href="/aktualnosci/">Aktualności</a
+      >
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/organizatorzy/">Organizatorzy</a
       >
     </li>
 
@@ -218,9 +228,261 @@
 </section>
 
   
+    <section class="schedule" id="schedule">
+  <h1>Harmonogram</h1>
+  <div class="day-selector">
+    
+      
+      <button
+        onclick="showSchedule('2025-12-05')"
+        data-day="2025-12-05"
+      >
+        piątek
+      </button>
+    
+      
+      <button
+        onclick="showSchedule('2025-12-06')"
+        data-day="2025-12-06"
+      >
+        sobota
+      </button>
+    
+      
+      <button
+        onclick="showSchedule('2025-12-07')"
+        data-day="2025-12-07"
+      >
+        niedziela
+      </button>
+    
+  </div>
+
+  <div class="day-container">
+    
+      <div id="schedule-2025-12-05" class="schedule-day hidden">
+    <div class="time-slot">
+      <div class="time">09:00</div>
+      <div class="events">
+          <div class="event stosowana">
+            <strong>Bardzo bardzo bardzo bardzo bardzo długa nazwa wykładu</strong> -
+            Jan kowalski
+            
+          </div>
+          <div class="event teoretyczna">
+            <strong>Workshop A</strong> -
+            Jan kowalski
+            
+          </div>
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time">10:00</div>
+      <div class="events">
+          <div class="event s">
+            <strong>Wykład</strong> 
+            
+            
+          </div>
+          <div class="event t">
+            <strong>Wykład inny</strong> 
+            
+            
+          </div>
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time">11:00</div>
+      <div class="events">
+          <div class="event ">
+            <strong>Talk 1</strong> 
+            
+            
+          </div>
+      </div>
+    </div>
+</div>
+
+    
+      <div id="schedule-2025-12-06" class="schedule-day hidden">
+    <div class="time-slot">
+      <div class="time">09:00</div>
+      <div class="events">
+          <div class="event ">
+            <strong>Keynote</strong> 
+            
+            
+          </div>
+          <div class="event ">
+            <strong>Workshop A</strong> 
+            
+            
+          </div>
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time">11:00</div>
+      <div class="events">
+          <div class="event ">
+            <strong>Talk 1</strong> 
+            
+            
+          </div>
+      </div>
+    </div>
+</div>
+
+    
+      <div id="schedule-2025-12-07" class="schedule-day hidden">
+    <div class="time-slot">
+      <div class="time">09:00</div>
+      <div class="events">
+          <div class="event ">
+            <strong>Keynote</strong> 
+            
+            
+          </div>
+          <div class="event ">
+            <strong>Workshop A</strong> 
+            
+            
+          </div>
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time">11:00</div>
+      <div class="events">
+          <div class="event ">
+            <strong>Talk 1</strong> 
+            
+            
+          </div>
+      </div>
+    </div>
+</div>
+
+    
+    <div class="schedule-legend">
+      <a href="">zagłosuj!</a>
+      <span class="legend-element"
+        ><span style="color: var(--o-orange);">█</span> - Blok stosowany</span
+      >
+      <span class="legend-element"
+        ><span style="color: var(--o-blue);">█</span> - Blok teoretyczny</span
+      >
+    </div>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll(".day-selector button");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", (event) => {
+        buttons.forEach((button) => button.classList.remove("active-button"));
+        event.target.classList.add("active-button");
+        console.log(button);
+      });
+    });
+
+    function showSchedule(day) {
+      document.querySelectorAll(".schedule-day").forEach((el) => {
+        el.classList.add("hidden");
+        el.classList.remove("active");
+      });
+      const current = document.getElementById("schedule-" + day);
+      current.classList.remove("hidden");
+    }
+    document.addEventListener("DOMContentLoaded", () => {
+      const buttons = document.querySelectorAll(".day-selector button");
+      for (const button of buttons) {
+        if (new Date(button.dataset.day).getTime() >= new Date().getTime()) {
+          button.click();
+          break;
+        } else {
+          buttons[2].click();
+        }
+      }
+    });
+  </script>
+</section>
+
+  
+  
+    <section class="registration" id="registration">
+  <h1>Zapisy</h1>
+  <div class="registration-content">
+    <div class="registration-item">
+      <div class="registration-item-content">
+        <h2>uczestnik</h2>
+        <p>Cośtam</p>
+      </div>
+      <div class="registration-item-button">
+        <p>Termin: 07.12.2025</p>
+        <a href=""
+          ><button class="green">zapisz się</button></a
+        >
+      </div>
+    </div>
+    <div class="registration-item">
+      <div class="registration-item-content">
+        <h2>prelegent</h2>
+        <p>Cośtam</p>
+      </div>
+      <div class="registration-item-button">
+        <p>Termin: 07.12.2025</p>
+        <a href=""
+          ><button class="blue">zapisz się</button></a
+        >
+      </div>
+    </div>
+    <div class="registration-item">
+      <div class="registration-item-content">
+        <h2>plakaty</h2>
+        <p>Cośtam</p>
+      </div>
+      <div class="registration-item-button">
+        <p>Termin: 07.12.2025</p>
+        <a href=""
+          ><button class="orange">zapisz się</button></a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
   
 
   
+    <section class="patrons" id="patrons">
+  <h1>patroni honorowi</h1>
+  <div class="patrons-container">
+    
+    
+  </div>
+</section>
+
+  
+
+  
+    <section class="sponsors" id="sponsors">
+  <h1>sponsorzy</h1>
+  <div class="main-sponsors">
+    <h2>sponsor główny</h2>
+    <div class="main-sponsors-container">
+      
+      
+    </div>
+    <div class="normal-sponsors">
+      <h2>sponsorzy i partnerzy</h2>
+      <div class="normal-sponsors-container">
+        
+        
+          
+        
+      </div>
+    </div>
+  </div>
+</section>
 
   
 

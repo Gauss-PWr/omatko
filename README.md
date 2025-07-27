@@ -6,6 +6,8 @@
 - [x] Podstrona ze sztabem
 - [ ] Poprzednie edycje (?)
 - [ ] Dokumentacja
+- [ ] Abstrakty w harmonogramie
+- [ ] Integracja z omatko-glosuj
 - [ ] Github Actions
 
 > [!WARNING]
@@ -43,12 +45,12 @@ Znajdują się tam parametry odpowiadające za wyświetlanie konkretnych sekcji:
 
 ### Sponsorzy i patroni
 
-Aby dodać sponsorów, wystarczy wkleić loga do folderu _static/sponsors_. Sponsor główny ma własny folder _main_.
+Aby dodać sponsorów, wystarczy wkleić loga do folderu _themes/\*/static/sponsors_. Sponsor główny ma własny folder _main_.
 To samo z patronami.
 
 ### Harmonogram
 
-Dane z harmonogramu znajdują się w folderze _data/schedule_.
+Dane z harmonogramu znajdują się w folderze _themes/\*/data/schedule_.
 Żeby dodać dzień, stwórz plik .yml z datą tego dnia w formacie **YYYY-MM-DD**.
 
 Przykładowa zawartość pliku:
@@ -98,7 +100,7 @@ poster_url = 'kolejny link'
 ### Sztab
 
 W folderze _data/organizers_ znajdują się pliki _.yml_ z danymi sztabu.
-Wystarczy je wypełnić i wstawić zdjęcia do folderu _content/organizatorzy/photos_.
+Wystarczy je wypełnić i wstawić zdjęcia do folderu _themes/\*/content/organizatorzy/photos_.
 Żeby aktywować podstronę odkomentuj:
 
 ```toml
@@ -108,6 +110,11 @@ Wystarczy je wypełnić i wstawić zdjęcia do folderu _content/organizatorzy/ph
  url = '/organizatorzy'
  weight = 3
 ```
+
+### Posty
+
+Dodaj post za pomocą komendy: `hugo new aktualnosci/tytul-posta.md`. [Możesz też użyć innych fomatów](https://gohugo.io/content-management/formats/).
+Plik pojawi się w folderze _content/aktualnosci_.
 
 ## Aktualizacja strony
 

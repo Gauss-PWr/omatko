@@ -21,18 +21,18 @@ url = '/aktualnosci'
 weight = 2
 
 
-# [[menus.main]]
-# name = 'Organizatorzy'
-# pageRef = 'organizatorzy'
-# url = '/organizatorzy'
-# weight = 3
+[[menus.main]]
+name = 'Organizatorzy'
+pageRef = 'organizatorzy'
+url = '/organizatorzy'
+weight = 3
 
 [params]
 # Harmonogram
-show_schedule_section = false
+show_schedule_section = true
 
 # Rejestracja 
-show_registration_section = false
+show_registration_section = true
 
 # Linki do formularzy
 participant_url = ''
@@ -40,10 +40,10 @@ speaker_url = ''
 poster_url = ''
 
 # Sponsorzy
-show_sponsors_section = false
+show_sponsors_section = true
 
 # Patroni medialni
-show_patrons_section = false
+show_patrons_section = true
 
 # Animacja w tle
 enable_background_animations = true

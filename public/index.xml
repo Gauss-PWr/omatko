@@ -6,13 +6,28 @@
     <description>Recent content on OMatKo!!!</description>
     <generator>Hugo</generator>
     <language>pl</language>
+    <lastBuildDate>Sun, 27 Jul 2025 15:58:27 +0200</lastBuildDate>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
-      <link>//localhost:1313/aktualnosci/zapisy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/aktualnosci/zapisy/</guid>
+      <title>Cos</title>
+      <link>//localhost:1313/aktualnosci/cos/</link>
+      <pubDate>Sun, 27 Jul 2025 15:58:27 +0200</pubDate>
+      <guid>//localhost:1313/aktualnosci/cos/</guid>
       <description></description>
+    </item>
+    <item>
+      <title>Html</title>
+      <link>//localhost:1313/aktualnosci/cos-innego/</link>
+      <pubDate>Sun, 27 Jul 2025 15:58:27 +0200</pubDate>
+      <guid>//localhost:1313/aktualnosci/cos-innego/</guid>
+      <description>&lt;h1&gt;Mozesz tez uzyc html&lt;/h1&gt;&#xA;&#xA;&lt;p&gt;calkiem spk&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Zapisy</title>
+      <link>//localhost:1313/aktualnosci/zapisy/</link>
+      <pubDate>Sun, 27 Jul 2025 15:58:27 +0200</pubDate>
+      <guid>//localhost:1313/aktualnosci/zapisy/</guid>
+      <description>&lt;h1 id=&#34;raz-dwa-trzy&#34;&gt;Raz dwa trzy&lt;/h1&gt;&#xA;&lt;h2 id=&#34;baba-jaga-patrzy&#34;&gt;baba jaga patrzy&lt;/h2&gt;</description>
     </item>
   </channel>
 </rss>
