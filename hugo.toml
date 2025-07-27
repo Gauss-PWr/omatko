@@ -8,6 +8,23 @@ defaultContentLanguage = "pl"
 [languages.pl]
 languageName = "Polski"
 
+[menus]
+[[menus.main]]
+name = 'O konferencji'
+url = '/#about'
+weight = 1
+
+[[menus.main]]
+name = 'Aktualności'
+pageRef = 'aktualnosci'
+url = '/aktualnosci'
+weight = 2
+
+[[menus.main]]
+name = 'Organizatorzy'
+pageRef = 'organizatorzy'
+url = '/organizatorzy'
+weight = 3
 
 [params]
 # Harmonogram
@@ -20,7 +37,6 @@ show_registration_section = false
 participant_url = ''
 speaker_url = ''
 poster_url = ''
-
 
 # Sponsorzy
 show_sponsors_section = false

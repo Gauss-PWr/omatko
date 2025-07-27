@@ -1,0 +1,44 @@
+.organizers-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.organizers-container h3 {
+  width: 100%;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.organizers-container h2 {
+  margin-top: 50px;
+}
+
+.organizer {
+  width: 400px;
+}
+.organizer img {
+  border-radius: 5px;
+}
+
+.organizer h4 {
+  text-align: center;
+}
+
+.coordinators {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.quote {
+  display: flex;
+  padding-left: 100px;
+  font-style: italic;
+}
+
+.team {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}

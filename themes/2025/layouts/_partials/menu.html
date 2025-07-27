@@ -27,8 +27,8 @@
       {{ if site.Params.show_patrons_section }}
         <li><a class="nav-link" href="/#patrons">Sponsorzy</a></li>
       {{ end }}
+
       {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
-    </ul>
 
     <script>
       const button = document.getElementById("menu-button");
