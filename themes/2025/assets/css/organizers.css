@@ -14,10 +14,12 @@
 }
 
 .organizer {
-  width: 400px;
+  max-width: 400px;
 }
 .organizer img {
+  width: 90%;
   border-radius: 5px;
+  margin: 10px;
 }
 
 .organizer h4 {
@@ -28,6 +30,8 @@
   display: flex;
   padding-left: 100px;
   font-style: italic;
+  justify-content: right;
+  text-align: right;
 }
 
 .team {

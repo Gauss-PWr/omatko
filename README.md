@@ -6,6 +6,7 @@
 - [x] Podstrona ze sztabem
 - [ ] Poprzednie edycje (?)
 - [ ] Dokumentacja
+- [ ] Layout dla tabletów i dużych ekranów
 - [ ] Abstrakty w harmonogramie
 - [ ] Integracja z omatko-glosuj
 - [ ] Github Actions
