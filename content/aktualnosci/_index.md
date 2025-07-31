@@ -1,3 +1,4 @@
 ---
 layout: "aktualnosci"
+title: "Aktualności"
 ---

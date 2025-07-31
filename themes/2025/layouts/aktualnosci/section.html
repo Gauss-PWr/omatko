@@ -1,7 +1,21 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-  {{ end }}
+  <section class="articles">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+    {{ range .Pages }}
+      <article
+        class="article-preview"
+        id="{{ .Date.Format "2006" }}{{ .Title | lower }}"
+      >
+        <a href="{{ .RelPermalink }}"><h2>{{ .LinkTitle }}</h2></a>
+        <p>{{ .Content | plainify | truncate 100 }}</p>
+        <div class="article-info">
+          <span class="conf-edition">{{ .Params.edition }}</span>
+          <span class="article-date"
+            >{{ time.Format "Monday, 02 Jan 2006" .Date }}</span
+          >
+        </div>
+      </article>
+    {{ end }}
+  </section>
 {{ end }}

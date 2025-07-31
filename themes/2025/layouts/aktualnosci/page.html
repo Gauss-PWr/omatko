@@ -1,3 +1,22 @@
 {{ define "main" }}
-  {{ .Content }}
+  <section class="article">
+    <article class="article-container">
+      <a
+        href="{{ .CurrentSection.RelPermalink }}#{{ .Date.Format "2006" }}{{ .Title | lower }}"
+      >
+        &larr; powrót</a
+      >
+      <h1>{{ .Title }}</h1>
+      <h1>{{ .Slug }}</h1>
+      <div class="article-info">
+        <span class="conf-edition">{{ .Params.edition }}</span>
+        <span class="article-date"
+          >{{ time.Format "Monday, 02 Jan 2006" .Date }}</span
+        >
+      </div>
+      <div class="article-content">
+        {{ .Content }}
+      </div>
+    </article>
+  </section>
 {{ end }}
