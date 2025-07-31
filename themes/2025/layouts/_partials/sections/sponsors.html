@@ -2,13 +2,13 @@
   <h1>sponsorzy</h1>
   <div class="main-sponsors">
     <h2>sponsor główny</h2>
-    <div class="main-sponsors-container">
-      {{ $images := readDir "public/sponsors/main" }}
+    <div class="sponsors-container">
+      {{ $images := readDir "themes/2025/static/sponsors/main" }}
       {{ range $images }}
         {{ if not .IsDir }}
           <img
             class="main-sponsor-img"
-            src="{{ (printf "patrons/%s" .Name) | relURL }}"
+            src="{{ (printf "sponsors/%s" .Name) | relURL }}"
             alt="{{ .Name }}"
           />
         {{ end }}
@@ -16,13 +16,13 @@
     </div>
     <div class="normal-sponsors">
       <h2>sponsorzy i partnerzy</h2>
-      <div class="normal-sponsors-container">
-        {{ $images := readDir "public/sponsors" }}
+      <div class="sponsors-container">
+        {{ $images := readDir "themes/2025/static/sponsors" }}
         {{ range $images }}
           {{ if not .IsDir }}
             <img
               class="sponsor-img"
-              src="{{ (printf "patrons/%s" .Name) | relURL }}"
+              src="{{ (printf "sponsors/%s" .Name) | relURL }}"
               alt="{{ .Name }}"
             />
           {{ end }}

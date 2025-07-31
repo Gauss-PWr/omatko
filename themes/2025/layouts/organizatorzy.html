@@ -10,8 +10,10 @@
               src="photos/{{ $coordinator_data.img_name }}"
               alt="{{ $coordinator_data.name }}"
             />
-            <h3>{{ $coordinator_data.name }}</h3>
-            <span class="quote"> „{{ $coordinator_data.quote }}”</span>
+            <div class="organizer-info">
+              <h3>{{ $coordinator_data.name }}</h3>
+              <span class="quote"> „{{ $coordinator_data.quote }}”</span>
+            </div>
           </div>
         {{ end }}
       </div>
@@ -24,8 +26,10 @@
               src="photos/{{ $section_head_data.img_name }}"
               alt="{{ $section_head_data.name }}"
             />
-            <h3>{{ $section_head_data.name }}</h3>
-            <span class="quote">„{{ $section_head_data.quote }}”</span>
+            <div class="organizer-info">
+              <h3>{{ $section_head_data.name }}</h3>
+              <span class="quote">„{{ $section_head_data.quote }}”</span>
+            </div>
           </div>
         {{ end }}
       </div>
@@ -37,8 +41,10 @@
               src="photos/{{ $team_data.img_name }}"
               alt="{{ $team_data.name }}"
             />
-            <h3>{{ $team_data.name }}</h3>
-            <span class="quote">„{{ $team_data.quote }}”</span>
+            <div class="organizer-info">
+              <h3>{{ $team_data.name }}</h3>
+              <span class="quote">„{{ $team_data.quote }}”</span>
+            </div>
           </div>
         {{ end }}
       </div>

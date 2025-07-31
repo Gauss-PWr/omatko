@@ -34,7 +34,6 @@
       button.addEventListener("click", (event) => {
         buttons.forEach((button) => button.classList.remove("active-button"));
         event.target.classList.add("active-button");
-        console.log(button);
       });
     });
 
@@ -53,7 +52,7 @@
           button.click();
           break;
         } else {
-          buttons[2].click();
+          buttons[buttons.length - 1].click();
         }
       }
     });

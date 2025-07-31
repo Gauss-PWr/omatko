@@ -52,8 +52,22 @@
   color: white;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .registration-content {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .registration-item {
+    min-width: 0px;
+    width: 80%;
+    min-height: 0px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .registration-item {
+    min-width: 0px;
+    width: 80%;
   }
 }

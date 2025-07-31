@@ -3,12 +3,30 @@
   text-align: center;
 }
 
-.normal-sponsors-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 150px;
+.sponsors-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 100px;
 }
 
 .sponsor-img {
-  max-width: 100%;
+  max-width: 25%;
+}
+
+.main-sponsor-img {
+  max-width: 45%;
+}
+
+@media screen and (max-width: 768px) {
+  .sponsors-container {
+    gap: 50px;
+  }
+  .sponsor-img {
+    max-width: 30%;
+  }
+
+  .main-sponsor-img {
+    max-width: 70%;
+  }
 }

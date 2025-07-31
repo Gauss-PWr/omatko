@@ -25,6 +25,7 @@
   display: flex;
   background-color: var(--o-gray);
   border-radius: 5px;
+  flex-wrap: wrap;
   font-weight: 600;
   font-size: 0.9rem;
   justify-content: space-between;
@@ -38,7 +39,14 @@
 .about-socials-icons a {
   color: black;
   margin: 1px 5px;
-  padding: 0 auto;
+  width: fit-content;
+}
+
+@media screen and (max-width: 1024px) {
+  .about-content {
+    grid-template-rows: 1fr fr;
+    grid-template-columns: none;
+  }
 }
 
 @media screen and (max-width: 768px) {

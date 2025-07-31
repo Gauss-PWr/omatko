@@ -32,6 +32,7 @@
 
 #timer {
   display: flex;
+  justify-content: space-evenly;
 }
 
 .countdown-number {
@@ -69,6 +70,7 @@
   .countdown-item {
     width: 75px;
     padding: 2px;
+    text-align: center;
   }
 
   #timer {

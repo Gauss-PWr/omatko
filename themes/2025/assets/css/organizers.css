@@ -15,7 +15,15 @@
 
 .organizer {
   max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.organizer-info {
+  width: 90%;
+}
+
 .organizer img {
   width: 90%;
   border-radius: 5px;

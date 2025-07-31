@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl" dir="ltr">
 <head>
-	<meta name="generator" content="Hugo 0.148.1"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta name="generator" content="Hugo 0.148.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width" />
 <title>
@@ -380,7 +380,6 @@
       button.addEventListener("click", (event) => {
         buttons.forEach((button) => button.classList.remove("active-button"));
         event.target.classList.add("active-button");
-        console.log(button);
       });
     });
 
@@ -399,7 +398,7 @@
           button.click();
           break;
         } else {
-          buttons[2].click();
+          buttons[buttons.length - 1].click();
         }
       }
     });
@@ -455,7 +454,7 @@
   
     <section class="patrons" id="patrons">
   <h1>patroni honorowi</h1>
-  <div class="patrons-container">
+  <div class="sponsors-container">
     
     
   </div>
@@ -468,13 +467,13 @@
   <h1>sponsorzy</h1>
   <div class="main-sponsors">
     <h2>sponsor główny</h2>
-    <div class="main-sponsors-container">
+    <div class="sponsors-container">
       
       
     </div>
     <div class="normal-sponsors">
       <h2>sponsorzy i partnerzy</h2>
-      <div class="normal-sponsors-container">
+      <div class="sponsors-container">
         
         
           
