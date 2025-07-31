@@ -8,7 +8,9 @@
         id="{{ .Date.Format "2006" }}{{ .Title | lower }}"
       >
         <a href="{{ .RelPermalink }}"><h2>{{ .LinkTitle }}</h2></a>
-        <p>{{ .Content | plainify | truncate 100 }}</p>
+        <p>
+          {{ .Content | plainify | truncate 100 }}
+        </p>
         <div class="article-info">
           <span class="conf-edition">{{ .Params.edition }}</span>
           <span class="article-date"
