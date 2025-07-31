@@ -56,5 +56,14 @@
         }
       }
     });
+
+    const eventDetails = document.querySelectorAll(".event-details");
+    const eventAbstracts = document.querySelectorAll(".event-abstract");
+
+    eventDetails.forEach((ele, i) => {
+      ele.addEventListener("click", () => {
+        eventAbstracts[i].classList.toggle("hidden");
+      });
+    });
   </script>
 </section>

@@ -4,6 +4,12 @@
       location: "Room 101"
       author: "Jan kowalski"
       type: "stosowana"
+      abstract: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, fuga libero!
+        Quod dolorem, amet sequi qui porro animi. Saepe perspiciatis velit sequi,
+       tenetur unde ipsam explicabo similique voluptates quaerat voluptas? Facilis, aut
+       totam. Placeat maiores esse doloremque porro, incidunt voluptas ut laboriosam
+       magnam sapiente pariatur laborum doloribus. Accusantium aperiam, est non
+       laboriosam praesentium, adipisci id alias, libero minus dicta dolor?"
     - name: "Workshop A"
       author: "Jan kowalski"
       location: "Room 101"

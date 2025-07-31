@@ -265,13 +265,34 @@
       <div class="time">09:00</div>
       <div class="events">
           <div class="event stosowana">
-            <strong>Bardzo bardzo bardzo bardzo bardzo długa nazwa wykładu</strong> -
-            Jan kowalski
+            <div class="event-details">
+              
+              
+              <strong>Bardzo bardzo bardzo bardzo bardzo długa nazwa wykładu</strong> 
+                -
+              
+              Jan kowalski
+
+              
+            </div>
+            
+              <div class="event-abstract hidden">
+                <p class="event-abstract-content">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, fuga libero! Quod dolorem, amet sequi qui porro animi. Saepe perspiciatis velit sequi, tenetur unde ipsam explicabo similique voluptates quaerat voluptas? Facilis, aut totam. Placeat maiores esse doloremque porro, incidunt voluptas ut laboriosam magnam sapiente pariatur laborum doloribus. Accusantium aperiam, est non laboriosam praesentium, adipisci id alias, libero minus dicta dolor?
+                </p>
+              </div>
             
           </div>
           <div class="event teoretyczna">
-            <strong>Workshop A</strong> -
-            Jan kowalski
+            <div >
+              
+              <strong>Workshop A</strong> 
+                -
+              
+              Jan kowalski
+
+              
+            </div>
             
           </div>
       </div>
@@ -280,13 +301,23 @@
       <div class="time">10:00</div>
       <div class="events">
           <div class="event s">
-            <strong>Wykład</strong> 
-            
+            <div >
+              
+              <strong>Wykład</strong> 
+              
+
+              
+            </div>
             
           </div>
           <div class="event t">
-            <strong>Wykład inny</strong> 
-            
+            <div >
+              
+              <strong>Wykład inny</strong> 
+              
+
+              
+            </div>
             
           </div>
       </div>
@@ -295,8 +326,13 @@
       <div class="time">11:00</div>
       <div class="events">
           <div class="event ">
-            <strong>Talk 1</strong> 
-            
+            <div >
+              
+              <strong>Talk 1</strong> 
+              
+
+              
+            </div>
             
           </div>
       </div>
@@ -309,13 +345,23 @@
       <div class="time">09:00</div>
       <div class="events">
           <div class="event ">
-            <strong>Keynote</strong> 
-            
+            <div >
+              
+              <strong>Keynote</strong> 
+              
+
+              
+            </div>
             
           </div>
           <div class="event ">
-            <strong>Workshop A</strong> 
-            
+            <div >
+              
+              <strong>Workshop A</strong> 
+              
+
+              
+            </div>
             
           </div>
       </div>
@@ -324,8 +370,13 @@
       <div class="time">11:00</div>
       <div class="events">
           <div class="event ">
-            <strong>Talk 1</strong> 
-            
+            <div >
+              
+              <strong>Talk 1</strong> 
+              
+
+              
+            </div>
             
           </div>
       </div>
@@ -338,13 +389,23 @@
       <div class="time">09:00</div>
       <div class="events">
           <div class="event ">
-            <strong>Keynote</strong> 
-            
+            <div >
+              
+              <strong>Keynote</strong> 
+              
+
+              
+            </div>
             
           </div>
           <div class="event ">
-            <strong>Workshop A</strong> 
-            
+            <div >
+              
+              <strong>Workshop A</strong> 
+              
+
+              
+            </div>
             
           </div>
       </div>
@@ -353,8 +414,13 @@
       <div class="time">11:00</div>
       <div class="events">
           <div class="event ">
-            <strong>Talk 1</strong> 
-            
+            <div >
+              
+              <strong>Talk 1</strong> 
+              
+
+              
+            </div>
             
           </div>
       </div>
@@ -401,6 +467,15 @@
           buttons[buttons.length - 1].click();
         }
       }
+    });
+
+    const eventDetails = document.querySelectorAll(".event-details");
+    const eventAbstracts = document.querySelectorAll(".event-abstract");
+
+    eventDetails.forEach((ele, i) => {
+      ele.addEventListener("click", () => {
+        eventAbstracts[i].classList.toggle("hidden");
+      });
     });
   </script>
 </section>
