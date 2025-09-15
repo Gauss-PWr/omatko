@@ -34,7 +34,7 @@
         }
 
         const interval = setInterval(function () {
-          const now = new Date().getTime();
+          const now = new Date();
           const distance = targetDate - now;
 
           if (distance < 0) {
@@ -73,7 +73,7 @@
 
       // Usage
       document.addEventListener("DOMContentLoaded", function () {
-        const targetDate = new Date(2025, 12, 5, 10, 0, 0).getTime();
+        const targetDate = new Date(2025, 11, 15, 10, 0, 0); // KTO JEST TAKIM DEBILEM ŻEBY LICZYĆ MIESIĄCE OD ZERA?????????????????????????????
         countdownToDate(targetDate, "timer");
       });
     </script>

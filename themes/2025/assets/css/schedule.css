@@ -20,7 +20,9 @@
 }
 
 .hidden {
-  display: none;
+  visibility: hidden;
+  opacity: 0 !important;
+  height: 0;
 }
 
 .day-selector button {
@@ -73,8 +75,14 @@
   height: fit-content;
 }
 
+.event-details {
+  cursor: pointer;
+}
+
 .event-abstract {
   transition: 0.5s ease;
+  visibility: visible;
+  opacity: 1;
 }
 
 .event:only-child {
