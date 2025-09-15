@@ -1,4 +1,6 @@
 baseURL = '/'
+relativeURLs = true
+canonifyURLs = true
 languageCode = 'pl-PL'
 title = 'OMatKo!!!'
 theme = '2025'
