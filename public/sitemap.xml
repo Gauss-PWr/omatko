@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/aktualnosci/</loc>
+    <loc>/aktualnosci/</loc>
     <lastmod>2025-07-31T15:57:48+02:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/</loc>
+    <loc>/</loc>
     <lastmod>2025-07-31T15:57:48+02:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/organizatorzy/</loc>
+    <loc>/organizatorzy/</loc>
   </url><url>
-    <loc>//localhost:1313/categories/</loc>
+    <loc>/categories/</loc>
   </url><url>
-    <loc>//localhost:1313/tags/</loc>
+    <loc>/tags/</loc>
   </url>
 </urlset>

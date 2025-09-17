@@ -30,9 +30,11 @@ body {
   padding: 0;
   background: url("/bg.webp");
   background-size: cover;
+  object-fit: cover;
   background-position: center;
   background-attachment: scroll;
-  width: 100vw;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 h1 {
