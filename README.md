@@ -18,6 +18,10 @@
 > Instalacja na Windowsie (w powershell'u):
 >
 > `winget install Hugo.Hugo.Extended`
+>
+> Do jej działania potrzebny jest również [node.js](https://nodejs.org/en/download)
+>
+> Po instalacji node'a w terminalu wpisz `npm i`. Jeśli node nie działa zobacz czy istnieje ścieżka w zmiennych środowiskowych.
 
 ## Generowanie
 
@@ -116,6 +120,17 @@ Wystarczy je wypełnić i wstawić zdjęcia do folderu _themes/\*/content/organi
 
 Dodaj post za pomocą komendy: `hugo new aktualnosci/tytul-posta.md`. [Możesz też użyć innych fomatów](https://gohugo.io/content-management/formats/).
 Plik pojawi się w folderze _content/aktualnosci_.
+W pliku są metadane które po kolei oznaczają:
+
+- _date_ - data utworzenia posta
+- _publishDate_ - data publikacji posta która będzie widoczna na stronie
+- _draft_ - czy post jest/nie jest szkicem **pamiętaj żeby zmienić to na false przy publikacji posta**
+- _title_ - tytuł posta
+- _edition_ - edycja omatko
+
+> [!TIP]
+>
+> Używaj **pogrubienia** do zaznaczania ważniejszych informacji takich jak czas, miejsce oraz imiona i nazwiska.
 
 ## Aktualizacja strony
 
