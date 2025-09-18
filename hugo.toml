@@ -16,11 +16,11 @@ name = 'O konferencji'
 url = '/#about'
 weight = 1
 
-# [[menus.main]]
-# name = 'Aktualności'
-# pageRef = 'aktualnosci'
-# url = '/aktualnosci'
-# weight = 2
+[[menus.main]]
+name = 'Aktualności'
+pageRef = 'aktualnosci'
+url = '/aktualnosci'
+weight = 2
 
 
 # [[menus.main]]
