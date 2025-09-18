@@ -19,7 +19,7 @@
 >
 > `winget install Hugo.Hugo.Extended`
 >
-> Do jej działania potrzebny jest również [node.js](https://nodejs.org/en/download)
+> Do jej działania potrzebny jest również [node.js](https://nodejs.org/en/download).
 >
 > Po instalacji node'a w terminalu wpisz `npm i`. Jeśli node nie działa zobacz czy istnieje ścieżka w zmiennych środowiskowych.
 
@@ -135,6 +135,11 @@ W pliku są metadane które po kolei oznaczają:
 ## Aktualizacja strony
 
 Aby zakutalizować stronę po dokonaniu zmian, otaguj commit z nową wersją strony.
+
+> [!CAUTION]
+>
+> Tag musisz samodzielnie zpushować na repo przy pomocy komendy `git push origin <nazwa_tagu>`
+
 Po otagowaniu, wejdź na serwer wydziału przy użyciu studenckiego vpn'a i odpal skrypt _pull.sh_, który pobierze najnowszą otagowaną wersje strony.
 
 ## Tagowanie
