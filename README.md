@@ -25,7 +25,7 @@
 
 ## Generowanie
 
-Wygeneruj stronę przy pomocy komendy:`hugo`
+Wygeneruj stronę przy pomocy komendy:`hugo -F`
 
 Folder _public_ zwiera wygenerowaną stronę.
 
@@ -51,7 +51,7 @@ Znajdują się tam parametry odpowiadające za wyświetlanie konkretnych sekcji:
 ### Sponsorzy i patroni
 
 Aby dodać sponsorów, wystarczy wkleić loga do folderu _themes/\*/static/sponsors_. Sponsor główny ma własny folder _main_.
-To samo z patronami.
+Patroni mają swój własny folder _patrons_.
 
 ### Harmonogram
 
