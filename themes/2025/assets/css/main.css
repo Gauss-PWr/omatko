@@ -34,7 +34,11 @@ body {
   background-position: center;
   background-attachment: scroll;
   max-width: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 h1 {
@@ -56,6 +60,14 @@ section {
 footer {
   text-align: center;
   padding: 10px;
+}
+
+main {
+  flex: 1;
+}
+
+header {
+  max-width: 100%;
 }
 
 @media screen and (max-width: 768px) {

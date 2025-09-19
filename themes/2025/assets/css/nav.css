@@ -79,6 +79,10 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .main-nav {
+    padding: 2px 10px;
+  }
+
   #menu-button {
     display: block;
     cursor: pointer;
