@@ -142,6 +142,10 @@ Aby zakutalizować stronę po dokonaniu zmian, otaguj commit z nową wersją str
 
 Po otagowaniu, wejdź na serwer wydziału przy użyciu studenckiego vpn'a i odpal skrypt _pull.sh_, który pobierze najnowszą otagowaną wersje strony.
 
+> [!TIP]
+>
+> Możesz wyznaczyć czas pullowania tagu za pomocą komendy `at hh:mm MM/DD -f pull.sh`.
+
 ## Tagowanie
 
 Konwencja jest następująca:
