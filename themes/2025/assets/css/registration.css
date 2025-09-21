@@ -39,6 +39,7 @@
 
 .registration-item-content {
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .registration-item-button {
@@ -63,13 +64,14 @@
 }
 
 .registration-closed div[id^="timer"] {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
-  grid-template-rows: repeat(4, 100px);
-  align-items: last baseline;
+  align-items: center;
 }
+
 .registration-closed div[id^="timer"] .countdown-item {
-  grid-template-columns: none;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 1024px) {
@@ -91,15 +93,7 @@
     width: 80%;
   }
 
-  .registration-closed div[id^="timer"] .countdown-item {
-    grid-template-columns: 1fr 2fr;
-  }
-
   .registration-closed div[id^="timer"] {
-    display: grid;
-    justify-content: space-evenly;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: none;
-    align-items: center;
+    flex-direction: row;
   }
 }
