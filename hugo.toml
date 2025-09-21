@@ -29,12 +29,22 @@ weight = 2
 # url = '/organizatorzy'
 # weight = 3
 
+[markup]
+[markup.goldmark]
+[markup.goldmark.extensions]
+[markup.goldmark.extensions.passthrough]
+enable = true
+[markup.goldmark.extensions.passthrough.delimiters]
+block = [['\[', '\]'], ['$$', '$$']]
+inline = [['\(', '\)']]
+
+
 [params]
 # Harmonogram
 show_schedule_section = false
 
 # Rejestracja 
-show_registration_section = false
+show_registration = false
 
 # Linki do formularzy
 participant_url = ''
@@ -49,3 +59,5 @@ show_patrons_section = false
 
 # Animacja w tle
 enable_background_animations = true
+
+math = true

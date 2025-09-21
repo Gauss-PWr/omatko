@@ -31,16 +31,23 @@
 }
 
 #timer {
-  display: flex;
+  display: grid;
   justify-content: space-evenly;
+  grid-template-columns: repeat(4, 150px);
 }
 
 .countdown-number {
   font-size: 4rem;
+  width: 4rem;
+  margin-right: 10px;
 }
 
 .countdown-item {
   padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-content: left;
+  align-items: baseline;
 }
 
 .countdown-end {
@@ -59,8 +66,8 @@
   }
 
   .countdown-number {
-    font-size: 1.5rem;
-    margin-right: 2px;
+    width: 2rem;
+    font-size: 2rem;
   }
 
   .countdown-label {
@@ -68,12 +75,10 @@
   }
 
   .countdown-item {
-    width: 75px;
     padding: 2px;
-    text-align: center;
   }
 
   #timer {
-    justify-content: space-evenly;
+    grid-template-columns: repeat(4, 100px);
   }
 }

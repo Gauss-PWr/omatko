@@ -22,9 +22,19 @@
   min-width: 300px;
 }
 
+.registration-closed {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--o-gray);
+}
+
+.registration-timer .countdown-number {
+  color: var(--o-gray);
+}
+
 .registration-item h2 {
   text-transform: uppercase;
   font-size: 2.5rem;
+  text-align: center;
 }
 
 .registration-item-content {
@@ -52,6 +62,16 @@
   color: white;
 }
 
+.registration-closed div[id^="timer"] {
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-rows: repeat(4, 100px);
+  align-items: last baseline;
+}
+.registration-closed div[id^="timer"] .countdown-item {
+  grid-template-columns: none;
+}
+
 @media screen and (max-width: 1024px) {
   .registration-content {
     flex-direction: column;
@@ -69,5 +89,17 @@
   .registration-item {
     min-width: 0px;
     width: 80%;
+  }
+
+  .registration-closed div[id^="timer"] .countdown-item {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .registration-closed div[id^="timer"] {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: none;
+    align-items: center;
   }
 }

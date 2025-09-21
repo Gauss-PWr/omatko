@@ -1,40 +1,75 @@
 <section class="registration" id="registration">
   <h1>Zapisy</h1>
   <div class="registration-content">
-    <div class="registration-item">
+    <div class="registration-item {{ if not .Site.Params.show_registration}}registration-closed{{end}}">
       <div class="registration-item-content">
         <h2>uczestnik</h2>
+        {{ if .Site.Params.show_registration}}
         <p>Cośtam</p>
       </div>
       <div class="registration-item-button">
-        <p>Termin: 07.12.2025</p>
+        <p>Termin: -</p>
         <a href="{{ .Site.Params.participant_url }}"
           ><button class="green">zapisz się</button></a
         >
       </div>
+      {{else}}
+        {{ partial "reg-timer.html" (dict "id" "audience") }}
+      {{ end}}
     </div>
-    <div class="registration-item">
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const targetDate = new Date(2025, 9, 22, 0, 0, 0);
+          countdownToDate(targetDate, "timer-audience");
+        });
+      </script>
+    </div>
+    <div class="registration-item {{ if not .Site.Params.show_registration}}registration-closed{{end}}">
       <div class="registration-item-content">
         <h2>prelegent</h2>
+        {{ if .Site.Params.show_registration}}
         <p>Cośtam</p>
       </div>
       <div class="registration-item-button">
-        <p>Termin: 07.12.2025</p>
+        <p>Termin: -</p>
         <a href="{{ .Site.Params.speaker_url }}"
           ><button class="blue">zapisz się</button></a
         >
       </div>
+        {{else}}
+        {{ partial "reg-timer.html" (dict "id" "speaker") }}
+        {{end}}
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const targetDate = new Date(2025, 9, 1, 0, 0, 0);
+          countdownToDate(targetDate, "timer-speaker");
+        });
+      </script>
     </div>
-    <div class="registration-item">
+    <div class="registration-item {{ if not .Site.Params.show_registration}}registration-closed{{end}}">
       <div class="registration-item-content">
         <h2>plakaty</h2>
+        {{ if .Site.Params.show_registration}}
         <p>Cośtam</p>
       </div>
       <div class="registration-item-button">
-        <p>Termin: 07.12.2025</p>
+        <p>Termin: -</p>
         <a href="{{ .Site.Params.poster_url }}"
           ><button class="orange">zapisz się</button></a
         >
+      {{ else }}
+      {{ partial "reg-timer.html" (dict "id" "posters") }}
+
+      {{end}}
+        <div class="registration-timer">
+        </div>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const targetDate = new Date(2025, 9, 1, 0, 0, 0);
+            countdownToDate(targetDate, "timer-posters");
+          });
+        </script>
       </div>
     </div>
   </div>

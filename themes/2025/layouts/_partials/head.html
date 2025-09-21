@@ -4,17 +4,6 @@
   content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"
 />
 
-<style>
-  @font-face {
-    font-family: "Quicksand";
-    font-style: normal;
-    font-weight: 500;
-    src: url(https://fonts.gstatic.com/s/quicksand/v37/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkM0o58a-wg.woff2)
-      format("woff2");
-    unicode-range: U+0000-00FF, U+100-17F;
-  }
-</style>
-
 <title>
   {{ if .IsHome }}
     {{ site.Title }}
@@ -26,13 +15,17 @@
 </title>
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+  rel="stylesheet"
+/>
 
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
 <link
   rel="apple-touch-icon"

@@ -1,23 +1,12 @@
 <!DOCTYPE html>
 <html lang="pl" dir="ltr">
 <head>
-	<meta name="generator" content="Hugo 0.150.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta name="generator" content="Hugo 0.150.0">
   <meta charset="utf-8" />
 <meta
   name="viewport"
   content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"
 />
-
-<style>
-  @font-face {
-    font-family: "Quicksand";
-    font-style: normal;
-    font-weight: 500;
-    src: url(https://fonts.gstatic.com/s/quicksand/v37/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkM0o58a-wg.woff2)
-      format("woff2");
-    unicode-range: U+0000-00FF, U+100-17F;
-  }
-</style>
 
 <title>
   
@@ -28,15 +17,19 @@
  <link rel="stylesheet" href="./css/combined.min.css" />
 
 
-      <script src="./js/main.js"></script>
+        <script src="./js/main.0d15c800811a19b037617bffe4cb81928ff94d596e8e2f840fc06bf86921598a.js" integrity="sha256-DRXIAIEaGbA3YXv/5MuBko/5TVluji&#43;ED8Br&#43;GkhWYo=" crossorigin="anonymous"></script>
 
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+  rel="stylesheet"
+/>
 
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
 <link
   rel="apple-touch-icon"
@@ -69,7 +62,7 @@
 
     <ul class="nav-list">
       
-      
+        <li><a class="nav-link" href="./#registration">Zapisy</a></li>
       
     <li class="nav-item">
       <a class="nav-link" href="./#about">O konferencji</a
@@ -132,53 +125,10 @@
       </div>
     </div>
     <script>
-      function countdownToDate(targetDate, elementId) {
-        const timer = document.getElementById(elementId);
-
-        if (!timer) {
-          console.error("Timer element not found");
-          return;
-        }
-
-        function updateTimer() {
-          const now = new Date();
-          const distance = targetDate - now;
-          console.log("XDDD");
-          if (distance < 0) {
-            clearInterval(interval);
-            timer.innerHTML =
-              "<div class='countdown-end'>Konferencja rozpoczęta!</div>";
-            return;
-          }
-
-          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-          const hours = Math.floor(
-            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
-          );
-          const minutes = Math.floor(
-            (distance % (1000 * 60 * 60)) / (1000 * 60),
-          );
-          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-          const formattedValues = [
-            days.toString().padStart(2, "0"),
-            hours.toString().padStart(2, "0"),
-            minutes.toString().padStart(2, "0"),
-            seconds.toString().padStart(2, "0"),
-          ];
-
-          timer.querySelectorAll(".countdown-number").forEach((ele, i) => {
-            ele.textContent = formattedValues[i];
-          });
-        }
-        updateTimer();
-        const interval = setInterval(updateTimer, 1000);
-      }
-
       
       document.addEventListener("DOMContentLoaded", function () {
-        const targetDate = new Date(2025, 11, 5, 10, 0, 0); 
-        countdownToDate(targetDate, "timer");
+        const targetDate = new Date(2025, 11, 5, 10, 0, 0);
+        countdownToDate(targetDate, "timer", "Konferencja rozpoczęta!");
       });
     </script>
   </div>
@@ -230,7 +180,112 @@
 </section>
 
   
-  
+
+  <section class="registration" id="registration">
+  <h1>Zapisy</h1>
+  <div class="registration-content">
+    <div class="registration-item registration-closed">
+      <div class="registration-item-content">
+        <h2>uczestnik</h2>
+        
+        <div id="timer-audience">
+  <div class="countdown-item">
+    <span class="countdown-number">00</span>
+    <span class="countdown-label">Dni</span>
+  </div>
+  <div class="countdown-item">
+    <span class="countdown-number">00</span>
+    <span class="countdown-label">Godzin</span>
+  </div>
+  <div class="countdown-item">
+    <span class="countdown-number">00</span>
+    <span class="countdown-label">Minut</span>
+  </div>
+  <div class="countdown-item">
+    <span class="countdown-number">00</span>
+    <span class="countdown-label">Sekund</span>
+  </div>
+</div>
+
+      
+    </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const targetDate = new Date(2025, 9, 22, 0, 0, 0);
+          countdownToDate(targetDate, "timer-audience");
+        });
+      </script>
+    </div>
+    <div class="registration-item registration-closed">
+      <div class="registration-item-content">
+        <h2>prelegent</h2>
+        
+        <div id="timer-speaker">
+  <div class="countdown-item">
+    <span class="countdown-number">00</span>
+    <span class="countdown-label">Dni</span>
+  </div>
+  <div class="countdown-item">
+    <span class="countdown-number">00</span>
+    <span class="countdown-label">Godzin</span>
+  </div>
+  <div class="countdown-item">
+    <span class="countdown-number">00</span>
+    <span class="countdown-label">Minut</span>
+  </div>
+  <div class="countdown-item">
+    <span class="countdown-number">00</span>
+    <span class="countdown-label">Sekund</span>
+  </div>
+</div>
+
+        
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const targetDate = new Date(2025, 9, 1, 0, 0, 0);
+          countdownToDate(targetDate, "timer-speaker");
+        });
+      </script>
+    </div>
+    <div class="registration-item registration-closed">
+      <div class="registration-item-content">
+        <h2>plakaty</h2>
+        
+      <div id="timer-posters">
+  <div class="countdown-item">
+    <span class="countdown-number">00</span>
+    <span class="countdown-label">Dni</span>
+  </div>
+  <div class="countdown-item">
+    <span class="countdown-number">00</span>
+    <span class="countdown-label">Godzin</span>
+  </div>
+  <div class="countdown-item">
+    <span class="countdown-number">00</span>
+    <span class="countdown-label">Minut</span>
+  </div>
+  <div class="countdown-item">
+    <span class="countdown-number">00</span>
+    <span class="countdown-label">Sekund</span>
+  </div>
+</div>
+
+
+      
+        <div class="registration-timer">
+        </div>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const targetDate = new Date(2025, 9, 1, 0, 0, 0);
+            countdownToDate(targetDate, "timer-posters");
+          });
+        </script>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   
 
@@ -239,10 +294,8 @@
 
   </main>
   <footer>
-    <p>
-  OMatKo!!! - Ogólnopolska Matematyczna Konferencja Studentów 2025 |
-  <a href="./">Regulamin</a>
-</p>
+    OMatKo!!! - Ogólnopolska Matematyczna Konferencja Studentów 2025 |
+<a href="./">Regulamin</a>
 
   </footer>
 </body>
