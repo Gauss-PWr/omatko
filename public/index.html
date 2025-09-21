@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="pl" dir="ltr">
 <head>
-	<meta name="generator" content="Hugo 0.150.0">
+	<meta name="generator" content="Hugo 0.150.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
 <meta
   name="viewport"
   content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"
 />
+
+<style>
+  @font-face {
+    font-family: "Quicksand";
+    font-style: normal;
+    font-weight: 500;
+    src: url(https://fonts.gstatic.com/s/quicksand/v37/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkM0o58a-wg.woff2)
+      format("woff2");
+    unicode-range: U+0000-00FF, U+100-17F;
+  }
+</style>
+
 <title>
   
     OMatKo!!!
@@ -16,7 +28,7 @@
  <link rel="stylesheet" href="./css/combined.min.css" />
 
 
-        <script src="./js/main.f2979a93a325fecf9605263bd141398a311c8e23388ed7dcff74f92f7e632866.js" integrity="sha256-8peak6Ml/s&#43;WBSY70UE5ijEcjiM4jtfc/3T5L35jKGY=" crossorigin="anonymous"></script>
+      <script src="./js/main.js"></script>
 
 
 <link
@@ -25,10 +37,7 @@
 />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap"
-  rel="stylesheet"
-/>
+
 <link
   rel="apple-touch-icon"
   sizes="180x180"
@@ -131,10 +140,10 @@
           return;
         }
 
-        const interval = setInterval(function () {
+        function updateTimer() {
           const now = new Date();
           const distance = targetDate - now;
-
+          console.log("XDDD");
           if (distance < 0) {
             clearInterval(interval);
             timer.innerHTML =
@@ -151,22 +160,19 @@
           );
           const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-          const formattedDays = days.toString().padStart(2, "0");
-          const formattedHours = hours.toString().padStart(2, "0");
-          const formattedMinutes = minutes.toString().padStart(2, "0");
-          const formattedSeconds = seconds.toString().padStart(2, "0");
-
           const formattedValues = [
-            formattedDays,
-            formattedHours,
-            formattedMinutes,
-            formattedSeconds,
+            days.toString().padStart(2, "0"),
+            hours.toString().padStart(2, "0"),
+            minutes.toString().padStart(2, "0"),
+            seconds.toString().padStart(2, "0"),
           ];
 
           timer.querySelectorAll(".countdown-number").forEach((ele, i) => {
             ele.textContent = formattedValues[i];
           });
-        }, 1000);
+        }
+        updateTimer();
+        const interval = setInterval(updateTimer, 1000);
       }
 
       

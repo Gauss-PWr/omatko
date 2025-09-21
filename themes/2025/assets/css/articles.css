@@ -4,6 +4,20 @@
   gap: 20px;
 }
 
+.history-back {
+  border: none;
+  border-radius: 5px;
+  background-color: var(--o-blue);
+  padding: 2px 15px;
+  color: white;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.history-back:hover {
+  background-color: var(--o-green);
+}
+
 .article-preview {
   border: 1px var(--o-gray) solid;
   padding: 10px 30px;
@@ -122,5 +136,10 @@
 
   .article-container {
     min-width: 0px;
+  }
+
+  .history-back {
+    width: 100%;
+    text-align: center;
   }
 }

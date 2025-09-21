@@ -1,11 +1,6 @@
 {{ define "main" }}
   <section class="article">
     <article class="article-container">
-      <a
-        href="{{ .CurrentSection.RelPermalink }}#{{ .Date.Format "2006" }}{{ .Title | lower }}"
-      >
-        &larr; powrót</a
-      >
       <h1>{{ .Title }}</h1>
       <div class="article-info">
         <span class="conf-edition">{{ .Params.edition }}</span>
@@ -16,6 +11,9 @@
       <div class="article-content">
         {{ .Content }}
       </div>
+      <button onclick="history.back()" class="history-back">
+        &larr; powrót
+      </button>
     </article>
   </section>
 {{ end }}
