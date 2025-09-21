@@ -67,8 +67,8 @@ main {
 }
 
 header {
-  max-width: 100%;
   position: sticky;
+  height: 60px;
   top: 0px;
 }
 
