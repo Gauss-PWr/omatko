@@ -11,9 +11,11 @@
     {{ partial "sections/schedule.html" . }}
   {{ end }}
 
-  {{ partial
-    "sections/registration.html" .
-  }}
+  {{ if .Site.Params.show_registration }}
+    {{ partial
+      "sections/registration.html" .
+    }}
+  {{ end }}
 
   {{ if .Site.Params.show_patrons_section }}
     {{ partial "sections/patrons.html" . }}

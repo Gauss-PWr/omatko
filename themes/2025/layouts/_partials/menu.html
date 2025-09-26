@@ -21,7 +21,9 @@
       {{ if site.Params.show_schedule_section }}
         <li><a class="nav-link" href="/#schedule">Harmonogram</a></li>
       {{ end }}
+      {{ if site.Params.show_registration }}
         <li><a class="nav-link" href="/#registration">Zapisy</a></li>
+      {{ end }}
       {{ if site.Params.show_patrons_section }}
         <li><a class="nav-link" href="/#patrons">Sponsorzy</a></li>
       {{ end }}

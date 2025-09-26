@@ -44,7 +44,7 @@ inline = [['\(', '\)']]
 show_schedule_section = false
 
 # Rejestracja 
-show_registration = false
+show_registration = true
 
 # Linki do formularzy
 participant_url = ''
