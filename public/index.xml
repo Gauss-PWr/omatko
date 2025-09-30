@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OMatKo!!!</title>
-    <link>/</link>
+    <link>https://omatko.im.pwr.edu.pl/</link>
     <description>Recent content on OMatKo!!!</description>
     <generator>Hugo</generator>
     <language>pl</language>
     <lastBuildDate>Sat, 27 Sep 2025 01:43:42 +0200</lastBuildDate>
-    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://omatko.im.pwr.edu.pl/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Informacje dla prelegentów, autorów plakatów i kół naukowych</title>
-      <link>/aktualnosci/post250929/</link>
+      <link>https://omatko.im.pwr.edu.pl/aktualnosci/post250929/</link>
       <pubDate>Mon, 29 Sep 2025 12:00:00 +0200</pubDate>
-      <guid>/aktualnosci/post250929/</guid>
+      <guid>https://omatko.im.pwr.edu.pl/aktualnosci/post250929/</guid>
       <description>&lt;h2 id=&#34;prelegenci&#34;&gt;Prelegenci&lt;/h2&gt;&#xA;&lt;p&gt;Osoby zainteresowane wygłoszeniem prelekcji zapraszamy do zgłaszania tematów w dniach 1–31 października za pośrednictwem formularza (link zostanie udostępniony wraz z rozpoczęciem zapisów).&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Do 4 listopada ogłoszona zostanie lista zatwierdzonych tematów.&lt;/li&gt;&#xA;&lt;li&gt;Do 14 listopada należy potwierdzić swoją obecność drogą mailową.&lt;/li&gt;&#xA;&lt;li&gt;Czas wystąpienia wynosi 30 minut (25 minut prezentacja + 5 minut na pytania).&lt;/li&gt;&#xA;&lt;li&gt;Każdy prelegent zobowiązany jest do zakupu biletu na konferencję.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Ze względu na ograniczoną liczbę miejsc, nie wszystkie zgłoszenia będą mogły zostać uwzględnione w programie. Decyzje zostaną podjęte tak, aby zapewnić konferencji różnorodność tematyczną i wysoki poziom merytoryczny.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Bloki tematyczne OMatKo!!!</title>
-      <link>/aktualnosci/post250926/</link>
+      <link>https://omatko.im.pwr.edu.pl/aktualnosci/post250926/</link>
       <pubDate>Fri, 26 Sep 2025 16:30:51 +0200</pubDate>
-      <guid>/aktualnosci/post250926/</guid>
+      <guid>https://omatko.im.pwr.edu.pl/aktualnosci/post250926/</guid>
       <description>&lt;p&gt;Podczas tegorocznej edycji Ogólnopolskiej Matematycznej Konferencji Studentów „OMatKo!!!”, podobnie jak w latach poprzednich, uczestnicy będą mogli wysłuchać oraz zaprezentować wystąpienia w ramach dwóch bloków tematycznych:&lt;/p&gt;&#xA;&lt;p&gt;🔹 Matematyka teoretyczna – przeznaczona dla osób zainteresowanych abstrakcyjnymi koncepcjami, dowodami i zagadnieniami z zakresu logiki oraz teorii. To przestrzeń do pogłębiania wiedzy i dyskusji nad fundamentalnymi problemami matematyki.&lt;/p&gt;&#xA;&lt;p&gt;🔹 Matematyka stosowana – skierowana do osób, które chcą pokazać praktyczne wykorzystanie matematyki w rozwiązywaniu rzeczywistych problemów, m.in. poprzez modelowanie, optymalizację procesów czy algorytmy komputerowe.&lt;/p&gt;</description>
     </item>
     <item>
       <title>OMatKo!!! XII</title>
-      <link>/aktualnosci/post250918/</link>
+      <link>https://omatko.im.pwr.edu.pl/aktualnosci/post250918/</link>
       <pubDate>Fri, 19 Sep 2025 23:47:48 +0200</pubDate>
-      <guid>/aktualnosci/post250918/</guid>
+      <guid>https://omatko.im.pwr.edu.pl/aktualnosci/post250918/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Rozpoczynamy przygotowania do XII edycji Ogólnopolskiej Matematycznej Konferencji Studentów „OMatKo!!!”&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Z przyjemnością ogłaszamy, że w dniach &lt;strong&gt;5–7 grudnia 2025 roku&lt;/strong&gt; na Politechnice Wrocławskiej odbędzie się kolejna edycja Ogólnopolskiej Matematycznej Konferencji Studentów „OMatKo!!!”.&lt;/p&gt;&#xA;&lt;p&gt;Konferencja od wielu lat gromadzi studentów i doktorantów matematyki oraz kierunków pokrewnych, stwarzając im przestrzeń do prezentowania wyników badań, dzielenia się pasją oraz poszerzania wiedzy. Podobnie jak w poprzednich latach, uczestnicy będą mogli wziąć udział zarówno w roli prelegentów, autorów plakatów czy przedstawicieli kół naukowych, jak i w roli słuchaczy, aktywnie uczestnicząc w sesjach i dyskusjach.&lt;/p&gt;</description>
     </item>
   </channel>
