@@ -23,7 +23,7 @@
         {{ partial "reg-timer.html" (dict "id" "audience") }}
         <script>
           document.addEventListener("DOMContentLoaded", function () {
-            const targetDate = new Date(2025, 9, 22, 0, 0, 0);
+            const targetDate = new Date("{{ .Site.Params.participant_reg_open }}");
             countdownToDate(targetDate, "timer-audience");
           });
         </script>
@@ -51,7 +51,7 @@
         {{ partial "reg-timer.html" (dict "id" "speaker") }}
         <script>
           document.addEventListener("DOMContentLoaded", function () {
-            const targetDate = new Date(2025, 9, 1, 0, 0, 0);
+            const targetDate = new Date("{{ .Site.Params.active_reg_open }}");
             countdownToDate(targetDate, "timer-speaker");
           });
         </script>
@@ -79,7 +79,7 @@
         {{ partial "reg-timer.html" (dict "id" "posters") }}
         <script>
           document.addEventListener("DOMContentLoaded", function () {
-            const targetDate = new Date(2025, 9, 1, 0, 0, 0);
+            const targetDate = new Date("{{ .Site.Params.active_reg_open }}");
             countdownToDate(targetDate, "timer-posters");
           });
         </script>

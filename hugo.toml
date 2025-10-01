@@ -51,6 +51,12 @@ participant_url = ''
 speaker_url = ''
 poster_url = ''
 
+# Data udostępnienia zapisów
+
+participant_reg_open = '2025-10-22'
+active_reg_open = '2025-10-03'
+
+
 # Sponsorzy
 show_sponsors_section = false
 
