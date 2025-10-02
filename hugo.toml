@@ -48,13 +48,13 @@ show_registration = true
 
 # Linki do formularzy
 participant_url = ''
-speaker_url = ''
-poster_url = ''
+speaker_url = 'https://conf.e-science.pl/e/omatko2025'
+poster_url = 'https://conf.e-science.pl/e/omatko2025'
 
 # Data udostępnienia zapisów
 
 participant_reg_open = '2025-10-22'
-active_reg_open = '2025-10-03'
+active_reg_open = '2025-10-02'
 
 
 # Sponsorzy

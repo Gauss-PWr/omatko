@@ -40,6 +40,8 @@
 
 .registration-item-content {
   margin-bottom: 10px;
+  text-wrap: pretty;
+  max-width: 200px;
 }
 
 .registration-item-button {
