@@ -1,4 +1,4 @@
-baseURL = 'https://omatko.im.pwr.edu.pl/'
+baseURL = 'https://omatko.pwr.edu.pl/'
 relativeURLs = true
 canonifyURLs = true
 languageCode = 'pl-PL'
