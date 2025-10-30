@@ -47,7 +47,7 @@ show_schedule_section = false
 show_registration = true
 
 # Linki do formularzy
-participant_url = ''
+participant_url = 'https://conf.e-science.pl/event/116/registrations/93/?form_token=90d6c5f5-6e67-470e-afab-1f9a66603f27'
 speaker_url = 'https://conf.e-science.pl/e/omatko2025'
 poster_url = 'https://conf.e-science.pl/e/omatko2025'
 
