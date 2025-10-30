@@ -27,6 +27,9 @@
       {{ if site.Params.show_patrons_section }}
         <li><a class="nav-link" href="/#patrons">Sponsorzy</a></li>
       {{ end }}
+      {{ if site.Params.show_regulamin}}
+        <li><a class="nav-link" href="/regulamin.pdf">Regulamin</a></li>
+      {{ end }}
 
       {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
 

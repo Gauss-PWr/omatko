@@ -66,4 +66,6 @@ show_patrons_section = false
 # Animacja w tle
 enable_background_animations = true
 
+show_regulamin = true
+
 math = true
