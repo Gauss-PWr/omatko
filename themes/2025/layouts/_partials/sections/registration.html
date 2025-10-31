@@ -12,14 +12,24 @@
           <p>Wspólnie z innymi odkrywaj zakamarki matematyki!</p>
         {{ end }}
       </div>
-      {{ if .Site.Params.participant_url }}
-        <div class="registration-item-button">
-          <p>Termin: 25.11.2025</p>
+      <div class="registration-item-button">
+        <p>Termin: 25.11.2025</p>
+        {{ if .Site.Params.participant_url }}
           <a href="{{ .Site.Params.participant_url }}"
-            ><button class="green">zapisz się</button></a
+            ><button
+              {{ if .Site.Params.participant_reg_close }}
+                class="gray" disabled
+              {{ else }}
+                class="green"
+              {{ end }}
+            >
+              zapisz się
+            </button></a
           >
-        </div>
-      {{ else }}
+        {{ end }}
+      </div>
+
+      {{ if and ( not .Site.Params.participant_url )  (not .Site.Params.participant_reg_close) }}
         {{ partial "reg-timer.html" (dict "id" "audience") }}
         <script>
           document.addEventListener("DOMContentLoaded", function () {
@@ -40,18 +50,28 @@
           <p>Podziel się swoją wiedzą w formie wykładu!</p>
         {{ end }}
       </div>
-      {{ if .Site.Params.speaker_url }}
-        <div class="registration-item-button">
-          <p>Termin: 31.10.2025</p>
+      <div class="registration-item-button">
+        <p>Termin: 31.10.2025</p>
+        {{ if .Site.Params.speaker_url }}
           <a href="{{ .Site.Params.speaker_url }}"
-            ><button class="blue">zapisz się</button></a
+            ><button
+              {{ if .Site.Params.active_reg_close }}
+                class="gray" disabled
+              {{ else }}
+                class="blue"
+              {{ end }}
+            >
+              zapisz się
+            </button></a
           >
-        </div>
-      {{ else }}
+        {{ end }}
+      </div>
+
+      {{ if and ( not .Site.Params.speaker_url )  (not .Site.Params.active_reg_close) }}
         {{ partial "reg-timer.html" (dict "id" "speaker") }}
         <script>
           document.addEventListener("DOMContentLoaded", function () {
-            const targetDate = new Date("{{ .Site.Params.active_reg_open }}");
+            const targetDate = new Date("{{ .Site.Params.active_reg_open_date }}");
             countdownToDate(targetDate, "timer-speaker");
           });
         </script>
@@ -68,14 +88,24 @@
           <p>Wykaż się kreatywnością przygotowując plakat!</p>
         {{ end }}
       </div>
-      {{ if .Site.Params.poster_url }}
-        <div class="registration-item-button">
-          <p>Termin: 31.10.2025</p>
+      <div class="registration-item-button">
+        <p>Termin: 31.10.2025</p>
+        {{ if .Site.Params.poster_url }}
           <a href="{{ .Site.Params.poster_url }}"
-            ><button class="orange">zapisz się</button></a
+            ><button
+              {{ if .Site.Params.active_reg_close }}
+                class="gray" disabled
+              {{ else }}
+                class="orange"
+              {{ end }}
+            >
+              zapisz się
+            </button></a
           >
-        </div>
-      {{ else }}
+        {{ end }}
+      </div>
+
+      {{ if and ( not .Site.Params.speaker_url )  (not .Site.Params.active_reg_close) }}
         {{ partial "reg-timer.html" (dict "id" "posters") }}
         <script>
           document.addEventListener("DOMContentLoaded", function () {
