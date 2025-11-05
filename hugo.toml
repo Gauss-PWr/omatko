@@ -53,8 +53,18 @@ poster_url = 'https://conf.e-science.pl/e/omatko2025'
 
 # Data udostępnienia zapisów
 
-participant_reg_open = '2025-10-22'
-active_reg_open = '2025-10-02'
+participant_reg_open_date = '2025-10-22'
+active_reg_open_date = '2025-10-02'
+
+# Data zamkniecia zapisów
+
+participant_reg_close_date = '2025-11-25'
+active_reg_close_date = '2025-10-31'
+
+# Zamkniecie zapisów
+
+participant_reg_close = false
+active_reg_close = true
 
 
 # Sponsorzy
