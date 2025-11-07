@@ -1,28 +1,36 @@
-- time: "09:00"
+- time: "13:30"
   events:
-    - name: "Bardzo bardzo bardzo bardzo bardzo długa nazwa wykładu"
-      location: "Room 101"
-      author: "Jan kowalski"
+    - name: "Rejestracja"
+- time: "14:30"
+  events:
+    - name: "Rozpoczęcie konferencji"
+- time: "15:00"
+  events:
+    - name: "Wykład otwierający"
+- time: "16:00"
+  events:
+    - name: "Przerwa kawowa"
+- time: "16:20"
+  events:
+    - name: "Blok matematyki stosowanej"
       type: "stosowana"
-      abstract: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, fuga libero!
-        Quod dolorem, amet sequi qui porro animi. Saepe perspiciatis velit sequi,
-       tenetur unde ipsam explicabo similique voluptates quaerat voluptas? Facilis, aut
-       totam. Placeat maiores esse doloremque porro, incidunt voluptas ut laboriosam
-       magnam sapiente pariatur laborum doloribus. Accusantium aperiam, est non
-       laboriosam praesentium, adipisci id alias, libero minus dicta dolor?"
-    - name: "Workshop A"
-      author: "Jan kowalski"
-      location: "Room 101"
-      type: "teoretyczna" 
-- time: "10:00"
+    - name: "Blok matematyki teoretycznej"
+      type: "teoretyczna"
+- time: "17:20"
   events:
-    - name: "Wykład"
-      location: "Sala A1.4"
-      type: "s"
-    - name: "Wykład inny"
-      location: "Sala A1.1"
-      type: "t"
-- time: "11:00"
+    - name: "Przerwa kawowa"
+- time: "17:50"
   events:
-    - name: "Talk 1"
-      location: "Room 201"
+    - name: "Prezentacja sponsora"
+- time: "18:10"
+  events:
+    - name: "Blok matematyki stosowanej"
+      type: "stosowana"
+    - name: "Blok matematyki teoretycznej"
+      type: "teoretyczna"
+- time: "18:40"
+  events:
+    - name: "Zakończenie dnia"
+- time: "19:30"
+  events:
+    - name: "Integracja"

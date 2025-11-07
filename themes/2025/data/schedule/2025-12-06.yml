@@ -1,11 +1,49 @@
-- time: "09:00"
+- time: "9:30"
   events:
-    - name: "Keynote"
-      location: "Main Hall"
-    - name: "Workshop A"
-      location: "Room 101"
-
+    - name: "Rejestracja"
+- time: "10:00"
+  events:
+    - name: "Blok matematyki stosowanej"
+      type: "stosowana"
+    - name: "Blok matematyki teoretycznej"
+      type: "teoretyczna"
 - time: "11:00"
   events:
-    - name: "Talk 1"
-      location: "Room 201"
+    - name: "Sesja plakatowa"
+    - name: "Przerwa śniadaniowa"
+- time: "11:50"
+  events:
+    - name: "Prezentacja sponsora"
+- time: "12:30"
+  events:
+    - name: "Blok matematyki stosowanej"
+      type: "stosowana"
+    - name: "Blok matematyki teoretycznej"
+      type: "teoretyczna"
+- time: "13:30"
+  events:
+    - name: "Przerwa obiadowa"
+- time: "15:00"
+  events:
+    - name: "Blok matematyki stosowanej"
+      type: "stosowana"
+    - name: "Blok matematyki teoretycznej"
+      type: "teoretyczna"
+- time: "16:30"
+  events:
+    - name: "Przerwa kawowa"
+- time: "17:00"
+  events:
+    - name: "Prezentacja sponsora"
+- time: "17:20"
+  events:
+    - name: "Blok matematyki stosowanej"
+      type: "stosowana"
+    - name: "Blok matematyki teoretycznej"
+      type: "teoretyczna"
+- time: "18:20"
+  events:
+    - name: "Zakończenie dnia"
+- time: "19:30"
+  events:
+    - name: "Integracja"

@@ -41,7 +41,7 @@ inline = [['\(', '\)']]
 
 [params]
 # Harmonogram
-show_schedule_section = false
+show_schedule_section = true
 
 # Rejestracja 
 show_registration = true
@@ -79,3 +79,7 @@ enable_background_animations = true
 show_regulamin = true
 
 math = true
+
+enable_voting = false
+
+vote_app_url = ""
