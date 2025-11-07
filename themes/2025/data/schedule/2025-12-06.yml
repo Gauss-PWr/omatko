@@ -9,8 +9,8 @@
       type: "teoretyczna"
 - time: "11:00"
   events:
-    - name: "Przerwa plakatowa"
-    - name: "Śniadanie"
+    - name: "Sesja plakatowa"
+    - name: "Przerwa śniadaniowa"
 - time: "11:50"
   events:
     - name: "Prezentacja sponsora"

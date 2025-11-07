@@ -1,11 +1,21 @@
-- time: "09:00"
+- time: "10:00"
   events:
-    - name: "Keynote"
-      location: "Main Hall"
-    - name: "Workshop A"
-      location: "Room 101"
-
+    - name: "Blok matematyki stosowanej"
+      type: "stosowana"
+    - name: "Blok matematyki teoretycznej"
+      type: "teoretyczna"
 - time: "11:00"
   events:
-    - name: "Talk 1"
-      location: "Room 201"
+    - name: "Przerwa śniadaniowa"
+- time: "11:30"
+  events:
+    - name: "Blok matematyki stosowanej"
+      type: "stosowana"
+    - name: "Blok matematyki teoretycznej"
+      type: "teoretyczna"
+- time: "13:00"
+  events:
+    - name: "Przerwa kawowa"
+- time: "13:30"
+  events:
+    - name: "Zakończenie konferencji"
