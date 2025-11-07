@@ -16,7 +16,13 @@
 }
 
 .day-container {
-  min-width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.schedule-day, .schedule-legend {
+ width: 70%; 
 }
 
 .hidden {
@@ -102,7 +108,6 @@
 }
 
 .schedule-legend {
-  width: 100%;
   font-size: small;
   display: flex;
   justify-content: right;

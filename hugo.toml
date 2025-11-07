@@ -41,7 +41,7 @@ inline = [['\(', '\)']]
 
 [params]
 # Harmonogram
-show_schedule_section = false
+show_schedule_section = true 
 
 # Rejestracja 
 show_registration = true
