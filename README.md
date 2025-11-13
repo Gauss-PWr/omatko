@@ -64,12 +64,12 @@ Przykładowa zawartość pliku:
 - time: "9:00" # Czas punktów programu konferencji
   events: # Lista punktów
     - name: "Nazwa wykładu"
-      author: "Imię Nazwisko" # Opcjonalne
+      speaker: "Imię Nazwisko" # Opcjonalne
       location: "Miejsce wykładu" # Opcjonalne
       type: "stosowana" # Blok matematyki stosowanej
     - name: "Inny wykład"
       location: "Inne miejsce wykładu"
-      author: "dr mgr inż rehabilitowany Imię Nazwisko"
+      speaker: "dr mgr inż rehabilitowany Imię Nazwisko"
       type: "teoretyczna" # Blok matematyki teoretycznej
 - time: "10:00"
   events:

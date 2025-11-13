@@ -58,12 +58,17 @@
       }
     });
 
-    const eventDetails = document.querySelectorAll(".event-details");
-    const eventAbstracts = document.querySelectorAll(".event-abstract");
+    const eventDetails = document.querySelectorAll(".event");
 
     eventDetails.forEach((ele, i) => {
       ele.addEventListener("click", () => {
-        eventAbstracts[i].classList.toggle("hidden");
+        const eventAbstract = ele.querySelector(".event-abstract");
+        const faIcon = ele.querySelector(".toggle-abstract i");
+        if (eventAbstract) {
+          eventAbstract.classList.toggle("hidden");
+          faIcon.classList.toggle("fa-caret-down");
+          faIcon.classList.toggle("fa-caret-up");
+        }
       });
     });
   </script>

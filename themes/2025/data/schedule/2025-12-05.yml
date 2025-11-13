@@ -16,6 +16,7 @@
       type: "stosowana"
     - name: "Blok matematyki teoretycznej"
       type: "teoretyczna"
+
 - time: "17:20"
   events:
     - name: "Przerwa kawowa"
