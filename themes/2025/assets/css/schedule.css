@@ -28,10 +28,9 @@
 }
 
 .hidden {
-  display: none;
-  visibility: hidden;
+  visibility: hidden !important;
   opacity: 0 !important;
-  height: 0;
+  max-height: 0 !important;
 }
 
 .day-selector button {
@@ -84,16 +83,33 @@
   background-color: var(--o-gray);
   border-radius: 5px;
   padding: 10px;
-  height: fit-content;
+
 }
 
 .event-details {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toggle-abstract {
+  cursor: pointer;
+  flex-shrink: 1;
+}
+
+.event-author {
+  flex: 2 0 auto;
+}
+
+.event-details>strong {
+  flex-grow: 1;
 }
 
 .event-abstract {
   transition: 0.5s ease;
   visibility: visible;
+  max-height: 1000px;
   opacity: 1;
 }
 
@@ -120,6 +136,11 @@
   align-items: center;
   flex-wrap: wrap-reverse;
   gap: 10px;
+}
+
+.event-abstract p {
+  margin: 5px 0px;
+  font-size: medium;
 }
 
 @media screen and (max-width: 768px) {

@@ -17,12 +17,12 @@
     }}
   {{ end }}
 
-  {{ if .Site.Params.show_patrons_section }}
-    {{ partial "sections/patrons.html" . }}
-  {{ end }}
-
   {{ if .Site.Params.show_sponsors_section }}
     {{ partial "sections/sponsors.html" . }}
+  {{ end }}
+
+  {{ if .Site.Params.show_patrons_section }}
+    {{ partial "sections/patrons.html" . }}
   {{ end }}
 
 {{ end }}

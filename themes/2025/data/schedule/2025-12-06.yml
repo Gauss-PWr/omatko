@@ -13,7 +13,9 @@
     - name: "Przerwa śniadaniowa"
 - time: "11:50"
   events:
-    - name: "Prezentacja sponsora"
+    - name: "Jak cyfrowe narzędzia zmieniają naszą codzienność?"
+      speaker: "BNY"
+      abstract: "Zapraszamy na inspirującą prezentację, podczas której pokażemy, jak nowoczesne narzędzia cyfrowe wspierają naszą pracę. W kilku słowach przedstawimy najważniejsze rozwiązania, z których korzystamy na co dzień, oraz ich kluczowe zalety. Pokażemy także praktyczny przykład wykorzystania Alteryxa, dzięki któremu automatyzacja procesów staje się prostsza, a codzienne zadania mniej czasochłonne. Chcemy zainspirować Was do korzystania z cyfrowych rozwiązań i pokazać, jak mogą one usprawnić pracę analityczną i matematyczną."
 - time: "12:30"
   events:
     - name: "Blok matematyki stosowanej"

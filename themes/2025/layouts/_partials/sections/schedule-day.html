@@ -8,25 +8,7 @@
       <div class="time">{{ $slot.time }}</div>
       <div class="events">
         {{- range $event := $slot.events }}
-          <div class="event {{ $event.type }}">
-            <div {{ if $event.abstract }}class="event-details"{{ end }}>
-              {{ if $event.abstract }}
-              {{ end }}
-              <strong>{{ $event.name }}</strong> {{ if $event.author }}
-                -
-              {{ end }}
-              {{ $event.author }}
-
-              {{/* ({{ $event.location }}) */}}
-            </div>
-            {{ if $event.abstract }}
-              <div class="event-abstract hidden">
-                <p class="event-abstract-content">
-                  {{ $event.abstract }}
-                </p>
-              </div>
-            {{ end }}
-          </div>
+          {{ partial "sections/event.html" $event }}
         {{- end }}
       </div>
     </div>
