@@ -1,22 +1,25 @@
 {{- $event := . -}}
 
+
 <div class="event {{ $event.type }}">
-<div {{ if $event.abstract }}class="event-details"{{ end }}>
-    <strong>{{ $event.name }}</strong> 
+  <div {{ if $event.abstract }}class="event-details"{{ end }}>
+    <strong>{{ $event.name }}</strong>
     {{ if $event.speaker }}
-    <span class="event-author"> -  {{ $event.speaker }}</span>
+      <span class="event-author"> - {{ $event.speaker }}</span>
     {{ end }}
     {{ if $event.abstract }}
-    <span class="toggle-abstract"><i class="fa-solid fa-caret-down"></i></span>
+      <span class="toggle-abstract"
+        ><i class="fa-solid fa-caret-down"></i
+      ></span>
     {{ end }}
 
     {{/* ({{ $event.location }}) */}}
-</div>
-{{ if $event.abstract }}
+  </div>
+  {{ if $event.abstract }}
     <div class="event-abstract hidden">
-    <p class="event-abstract-content">
+      <p class="event-abstract-content">
         {{ $event.abstract }}
-    </p>
+      </p>
     </div>
-{{ end }}
+  {{ end }}
 </div>

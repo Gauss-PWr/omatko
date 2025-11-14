@@ -83,6 +83,9 @@
   background-color: var(--o-gray);
   border-radius: 5px;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
 }
 
@@ -90,7 +93,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .toggle-abstract {
@@ -99,11 +102,13 @@
 }
 
 .event-author {
-  flex: 2 0 auto;
+  flex-grow: 9999;
 }
 
 .event-details>strong {
   flex-grow: 1;
+  margin-right: 5px;
+  font-style: italic;
 }
 
 .event-abstract {

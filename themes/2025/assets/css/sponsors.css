@@ -24,12 +24,21 @@
     max-height: 150px;
 }
 
+.sponsors h2 {
+  margin: 40px 0;
+}
+
+.patrons h2 {
+  margin: 40px 0;
+}
+
+
 @media screen and (max-width: 768px) {
   .sponsors-container {
-    gap: 50px;
+    gap: 20px;
   }
   .sponsor-img {
-    max-width: 30%;
+    max-width: 40%;
   }
 
   .main-sponsor-img {
