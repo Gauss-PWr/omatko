@@ -1,4 +1,4 @@
 {{ $cssFiles := resources.Match "css/*.css" }}
 {{ $cssFiles = $cssFiles |
-  resources.Concat "css/combined.css" | resources.Minify | postCSS
+  resources.Concat "css/combined.css" | resources.Minify | postCSS | fingerprint
 }} <link rel="stylesheet" href="{{ $cssFiles.RelPermalink }}" />
