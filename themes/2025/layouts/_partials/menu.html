@@ -18,6 +18,10 @@
     <button id="menu-button"><i class="fa-solid fa-bars"></i></button>
 
     <ul class="nav-list">
+      {{ if site.Params.enable_voting}}
+        <li><a class="nav-link" href="/glosuj/">Głosuj</a></li>
+      {{ end }}
+
       {{ if site.Params.show_schedule_section }}
         <li><a class="nav-link" href="/#schedule">Harmonogram</a></li>
       {{ end }}

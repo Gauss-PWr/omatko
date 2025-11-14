@@ -17,7 +17,11 @@
       {{ partial "sections/schedule-day.html" $key }}
     {{ end }}
     <div class="schedule-legend">
-      <a href="{{ .Site.Params.vote_app_url}}" ><button {{if not .Site.Params.enable_voting}}disabled{{end}}>zagłosuj</button></a>
+      <a href="/glosuj/"
+        ><button {{ if not .Site.Params.enable_voting }}disabled{{ end }}>
+          zagłosuj
+        </button></a
+      >
       <span class="legend-element"
         ><span style="color: var(--o-orange);">█</span> - Blok stosowany</span
       >
@@ -25,7 +29,9 @@
         ><span style="color: var(--o-blue);">█</span> - Blok teoretyczny</span
       >
     </div>
-    <p>UWAGA! Harmonogram do czasu rozpoczęcia konferencji może ulec zmianie!</p>
+    <p>
+      UWAGA! Harmonogram do czasu rozpoczęcia konferencji może ulec zmianie!
+    </p>
   </div>
 
   <script>
