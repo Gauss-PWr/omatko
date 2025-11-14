@@ -8,26 +8,26 @@
         {{ if not .IsDir }}
           <img
             class="main-sponsor-img"
-            src="{{ (printf "sponsors/%s" .Name) | relURL }}"
+            src="{{ (printf "sponsors/main/%s" .Name) | relURL }}"
             alt="{{ .Name }}"
           />
         {{ end }}
       {{ end }}
     </div>
-    <div class="normal-sponsors">
-      <h2>sponsorzy i partnerzy</h2>
-      <div class="sponsors-container">
-        {{ $images := readDir "themes/2025/static/sponsors" }}
-        {{ range $images }}
-          {{ if not .IsDir }}
-            <img
-              class="sponsor-img"
-              src="{{ (printf "sponsors/%s" .Name) | relURL }}"
-              alt="{{ .Name }}"
-            />
-          {{ end }}
+  </div>
+  <div class="normal-sponsors">
+    <h2>sponsorzy i partnerzy</h2>
+    <div class="sponsors-container">
+      {{ $images := readDir "themes/2025/static/sponsors" }}
+      {{ range $images }}
+        {{ if not .IsDir }}
+          <img
+            class="sponsor-img"
+            src="{{ (printf "sponsors/%s" .Name) | relURL }}"
+            alt="{{ .Name }}"
+          />
         {{ end }}
-      </div>
+      {{ end }}
     </div>
   </div>
 </section>

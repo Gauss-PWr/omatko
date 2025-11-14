@@ -2,14 +2,14 @@
 
 ## TODO
 
-- [ ] Import aktualności ze starej strony (?)
+- [ ] ~~Import aktualności ze starej strony (?)~~
 - [x] Podstrona ze sztabem
-- [ ] Poprzednie edycje (?)
+- [ ] ~~Poprzednie edycje (?)~~
 - [ ] Dokumentacja
 - [ ] Layout dla tabletów i dużych ekranów
-- [ ] Abstrakty w harmonogramie
-- [ ] Integracja z omatko-glosuj
-- [ ] Github Actions
+- [x] Abstrakty w harmonogramie
+- [x] Integracja z omatko-glosuj
+- [ ] Github Actions (?)
 
 > [!WARNING]
 >
@@ -23,9 +23,11 @@
 >
 > Po instalacji node'a w terminalu wpisz `npm i`. Jeśli node nie działa zobacz czy istnieje ścieżka w zmiennych środowiskowych.
 
-## Generowanie
+## Generowanie i publikowanie
 
-Wygeneruj stronę przy pomocy komendy:`hugo -F`
+Wygeneruj stronę przy pomocy komendy:`hugo -F --cleanDestinationDir`
+
+Flaga `-F` wygnereuje posty z przyszłą datą publikacji.
 
 Folder _public_ zwiera wygenerowaną stronę.
 
@@ -50,8 +52,12 @@ Znajdują się tam parametry odpowiadające za wyświetlanie konkretnych sekcji:
 
 ### Sponsorzy i patroni
 
-Aby dodać sponsorów, wystarczy wkleić loga do folderu _themes/\*/static/sponsors_. Sponsor główny ma własny folder _main_.
-Patroni mają swój własny folder _patrons_.
+Aby dodać sponsorów, wystarczy wkleić loga do folderu _themes/\*/static/sponsors_. Sponsor główny ma własny folder _main_ wewnątrz _sponsors_.
+Patroni dzielą się na honorowych i medialnych.
+Każdy z nich posiada swój własny folder:
+
+- patroni honorowi - _patrons/honorary_
+- patroni medialni - _patrons/media_
 
 ### Harmonogram
 
@@ -66,7 +72,8 @@ Przykładowa zawartość pliku:
     - name: "Nazwa wykładu"
       speaker: "Imię Nazwisko" # Opcjonalne
       location: "Miejsce wykładu" # Opcjonalne
-      type: "stosowana" # Blok matematyki stosowanej
+      type: "stosowana" # Blok matematyki stosowanej #Opcjonalne
+      abstract: "Jakiś losowy tekst" # Opcjonalne
     - name: "Inny wykład"
       location: "Inne miejsce wykładu"
       speaker: "dr mgr inż rehabilitowany Imię Nazwisko"

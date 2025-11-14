@@ -1,15 +1,34 @@
 <section class="patrons" id="patrons">
-  <h1>patroni honorowi</h1>
-  <div class="sponsors-container">
-    {{ $images := readDir "themes/2025/static/patrons" }}
-    {{ range $images }}
-      {{ if not .IsDir }}
+  <h1>patroni</h1>
+    <div class="sponsors-media">
+      <h2>Patroni medialni</h2>
+      <div class="sponsors-container">
+        {{ $images := readDir "themes/2025/static/patrons/media" }}
+        {{ range $images }}
+        {{ if not .IsDir }}
         <img
-          class="sponsor-img"
-          src="{{ (printf "patrons/%s" .Name) | relURL }}"
-          alt="{{ .Name }}"
+        class="sponsor-img"
+        src="{{ (printf "patrons/media/%s" .Name) | relURL }}"
+        alt="{{ .Name }}"
         />
-      {{ end }}
-    {{ end }}
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
+    <div class="sponsors-honorary">
+      <h2>Patroni honorowi</h2>
+      <div class="sponsors-container">
+        {{ $images := readDir "themes/2025/static/patrons/honorary" }}
+        {{ range $images }}
+        {{ if not .IsDir }}
+        <img
+        class="sponsor-img"
+        src="{{ (printf "patrons/honorary/%s" .Name) | relURL }}"
+        alt="{{ .Name }}"
+        />
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
   </div>
 </section>

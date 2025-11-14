@@ -12,10 +12,12 @@
 
 .sponsor-img {
   max-width: 25%;
+  height: auto;
 }
 
 .main-sponsor-img {
   max-width: 45%;
+  height: auto;
 }
 
 @media screen and (max-width: 768px) {

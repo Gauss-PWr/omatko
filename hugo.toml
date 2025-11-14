@@ -68,10 +68,12 @@ active_reg_close = true
 
 
 # Sponsorzy
-show_sponsors_section = false
+show_sponsors_section = true
 
-# Patroni medialni
-show_patrons_section = false
+# Patroni medialni i honorowi
+show_patrons_section = true
+
+
 
 # Animacja w tle
 enable_background_animations = true
@@ -80,6 +82,6 @@ show_regulamin = true
 
 math = true
 
-enable_voting = false
+enable_voting = true
 
-vote_app_url = ""
+vote_app_url = "https://omatko.pwr.edu.pl/glosuj/"
