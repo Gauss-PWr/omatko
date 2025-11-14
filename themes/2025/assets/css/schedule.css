@@ -91,22 +91,25 @@
 
 .event-details {
   cursor: pointer;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr 50px;
   align-items: center;
   flex-wrap: wrap;
 }
 
 .toggle-abstract {
+  grid-column: 3 / 4;
   cursor: pointer;
-  flex-shrink: 1;
+  display: flex;
+  justify-content: right;
 }
 
 .event-author {
   flex-grow: 9999;
+  white-space: nowrap;
 }
 
 .event-details>strong {
-  flex-grow: 1;
   margin-right: 5px;
   font-style: italic;
 }

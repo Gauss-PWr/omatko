@@ -129,6 +129,9 @@
     width: 100%;
     transition: 0.5s ease;
     flex-direction: column;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 
   .active-menu {
