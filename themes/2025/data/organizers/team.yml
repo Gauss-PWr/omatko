@@ -1,23 +1,44 @@
-- name: "Imie Nazwisko"
-  quote: "Some quote"
-  img_name: "placeholder.png"
+- name: "Ola Hodera"
+  img_name: "OlaH.jpg"
 
-- name: "Imie Nazwisko"
-  quote: "Some quote"
-  img_name: "placeholder.png"
+- name: "Emilia Borodzicz"
+  img_name: "Emilka.jpg"
 
-- name: "Imie Nazwisko"
-  quote: "Some quote"
-  img_name: "placeholder.png"
+- name: "Zuzia Nasiłowska"
+  img_name: "Zuza.jpg"
 
-- name: "Imie Nazwisko"
-  quote: "Some quote"
-  img_name: "placeholder.png"
+- name: "Maja Wiącek"
+  img_name: "Maja.jpg"
 
-- name: "Imie Nazwisko"
-  quote: "Some quote"
-  img_name: "placeholder.png"
-  
-- name: "Imie Nazwisko"
-  quote: "Some quote"
-  img_name: "placeholder.png"
+- name: "Maria Borowiak"
+  img_name: "MarysiaB.jpg"
+
+- name: "Tymon Stefan"
+  img_name: "Tymon.jpg"
+
+- name: "Paweł Abramowicz"
+  img_name: "PawełA.jpg"
+
+- name: "Oliwia Marut"
+  img_name: "Oliwia.jpg"
+
+- name: "Michał Sapijaszko"
+  img_name: "Michał.jpg"
+
+- name: "Maciej Zawrzykraj"
+  img_name: "Maciek.jpg"
+
+- name: "Nikodem Drelak"
+  img_name: "Nikodem.jpg"
+
+- name: "Paweł Nowak"
+  img_name: "PawełN.jpg"
+
+- name: "Piotr Fender"
+  img_name: "Piotr.jpg"
+
+- name: "Jan Świetliński"
+  img_name: "Janek.jpg"
+
+- name: "Isja Utemisov"
+  img_name: "Isja.jpg"

@@ -106,7 +106,7 @@
   );
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1366px) {
   .main-nav {
     padding: 2px 10px;
   }

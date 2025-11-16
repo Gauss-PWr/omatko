@@ -23,11 +23,11 @@ url = '/aktualnosci'
 weight = 2
 
 
-# [[menus.main]]
-# name = 'Organizatorzy'
-# pageRef = 'organizatorzy'
-# url = '/organizatorzy'
-# weight = 3
+[[menus.main]]
+name = 'Organizatorzy'
+pageRef = 'organizatorzy'
+url = '/organizatorzy'
+weight = 3
 
 [markup]
 [markup.goldmark]

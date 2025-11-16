@@ -5,7 +5,7 @@
 }
 .organizers-container h3 {
   width: 100%;
-  text-align: left;
+  text-align: center;
   text-transform: capitalize;
 }
 
@@ -32,14 +32,6 @@
 
 .organizer h4 {
   text-align: center;
-}
-
-.quote {
-  display: flex;
-  padding-left: 100px;
-  font-style: italic;
-  justify-content: right;
-  text-align: right;
 }
 
 .team {

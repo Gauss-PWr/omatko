@@ -12,12 +12,11 @@
             />
             <div class="organizer-info">
               <h3>{{ $coordinator_data.name }}</h3>
-              <span class="quote"> „{{ $coordinator_data.quote }}”</span>
             </div>
           </div>
         {{ end }}
       </div>
-      <h2>Szefowie sekcji</h2>
+      <h2>Koordynatorzy sekcji</h2>
       <div class="team">
         {{ range $_, $section_head_data := .Site.Data.organizers.section_heads }}
           <div class="organizer">
@@ -28,7 +27,6 @@
             />
             <div class="organizer-info">
               <h3>{{ $section_head_data.name }}</h3>
-              <span class="quote">„{{ $section_head_data.quote }}”</span>
             </div>
           </div>
         {{ end }}
@@ -43,7 +41,6 @@
             />
             <div class="organizer-info">
               <h3>{{ $team_data.name }}</h3>
-              <span class="quote">„{{ $team_data.quote }}”</span>
             </div>
           </div>
         {{ end }}
