@@ -1,3 +1,4 @@
 ---
 layout: "organizatorzy"
+title: 'Organizatorzy'
 ---
