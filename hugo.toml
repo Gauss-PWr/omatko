@@ -44,7 +44,7 @@ inline = [['\(', '\)']]
 show_schedule_section = true
 
 # Rejestracja 
-show_registration = true
+show_registration = false
 
 # Linki do formularzy
 participant_url = 'https://conf.e-science.pl/event/116/registrations/93/?form_token=90d6c5f5-6e67-470e-afab-1f9a66603f27'
@@ -63,7 +63,7 @@ active_reg_close_date = '2025-10-31'
 
 # Zamkniecie zapisów
 
-participant_reg_close = false
+participant_reg_close = true
 active_reg_close = true
 
 
