@@ -1,37 +1,65 @@
 - time: "13:30"
   events:
     - name: "Rejestracja"
+
 - time: "14:30"
   events:
     - name: "Rozpoczęcie konferencji"
+
 - time: "15:00"
   events:
-    - name: "Wykład otwierający"
+    - name: "Algorytmika = Matematyka ∩ Informatyka"
+      speaker: "prof. dr hab. Jacek Cichoń"
+      abstract: "Podczas wykładu przedstawiona zostanie seria, zdaniem wykładowcy, wyjątkowo eleganckich przykładów ilustrujących zastosowanie matematyki do konstrukcji i analizy algorytmów.\n
+        Główne zagadnienia:\n
+        1. Probabilistyka w Algorytmice: Rozpoczniemy od zastosowań teorii prawdopodobieństwa, omawiając koncepcję licznika Morrisa oraz metody Vittera próbkowania strumienia danych (data stream sampling).\n
+        2. Metody Algebraiczne: Następnie przejdziemy do wykorzystania technik algebraicznych. Zostaną zaprezentowane algorytmy Diffie-Hellmana oraz ElGamala, a także omówione zastosowanie ciał skończonych w kryptografii.\n
+        3. Metody Kombinatoryczne: Wykład zakończy się prezentacją kilku współczesnych metod z pogranicza kombinatoryki analitycznej i algebraicznej, stosowanych w nowoczesnej algorytmice."
+
 - time: "16:00"
   events:
     - name: "Przerwa kawowa"
+
 - time: "16:20"
   events:
-    - name: "Blok matematyki stosowanej"
+    - name: "Prezentacja sponsora"
+      speaker: "UBS"
+
+- time: "16:40"
+  events:
+    - name: "Albo szybko, albo dokładnie. Opowieść o algorytmach aproksymacyjnych"
+      speaker: "Jakub Sokołowski"
       type: "stosowana"
-    - name: "Blok matematyki teoretycznej"
+    - name: "Spotykanie przez sprzęganie — dynamika Glaubera w teorii łańcuchów Markowa"
+      speaker: "Monika Brattig"
       type: "teoretyczna"
 
-- time: "17:20"
+- time: "17:10"
   events:
     - name: "Przerwa kawowa"
-- time: "17:50"
+
+- time: "17:40"
   events:
-    - name: "Prezentacja sponsora"
+    - name: "Jak krzywe eliptyczne chronią twoje dane?"
+      speaker: "Jan Kocierz"
+      type: "stosowana"
+    - name: "Liczby Fibonacciego, które są potęgami"
+      speaker: "Anna Prucnal"
+      type: "teoretyczna"
+
 - time: "18:10"
   events:
-    - name: "Blok matematyki stosowanej"
+    - name: "Model wyborów, sondaży i podzielonego społeczeństwa"
+      speaker: "Jarowit Śledziński"
       type: "stosowana"
-    - name: "Blok matematyki teoretycznej"
+    - name: "Od Lindelöfa do Mengera – kombinatoryczne spojrzenie na własności pokryciowe"
+      speaker: "Aleksandra Łukasik"
       type: "teoretyczna"
+
 - time: "18:40"
   events:
     - name: "Zakończenie dnia"
-- time: "19:30"
+
+- time: "20:30"
   events:
-    - name: "Integracja"
+    - name: "Integracja w barze „Przekręt”"

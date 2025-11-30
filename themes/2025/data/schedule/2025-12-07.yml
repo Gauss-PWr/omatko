@@ -1,21 +1,56 @@
 - time: "10:00"
   events:
-    - name: "Blok matematyki stosowanej"
+    - name: "Modelowanie i optymalizacja procesu ogrzewania pomieszczeń z wykorzystaniem równania przewodnictwa ciepła"
+      speaker: "Jan Żurek"
       type: "stosowana"
-    - name: "Blok matematyki teoretycznej"
+    - name: "Grafy hamiltonowskie na szachownicy"
+      speaker: "Zuzanna Szeląg"
       type: "teoretyczna"
+
+- time: "10:30"
+  events:
+    - name: "Wycena opcji finansowych z wykorzystaniem metody Monte Carlo"
+      speaker: "Paweł Lotko"
+      type: "stosowana"
+    - name: "Teoria bifurkacji w równaniach nieliniowych. Twierdzenie Crandalla-Rabinowitza i nie tylko"
+      speaker: "Mateusz Woroch"
+      type: "teoretyczna"
+
 - time: "11:00"
   events:
     - name: "Przerwa śniadaniowa"
+
 - time: "11:30"
   events:
-    - name: "Blok matematyki stosowanej"
-      type: "stosowana"
-    - name: "Blok matematyki teoretycznej"
+    - name: "Jakie powierzchnie można faktycznie zaczesać?"
+      speaker: "Patryk Topór"
       type: "teoretyczna"
+    - name: "Matematyka Żonglowania"
+      speaker: "Kacper Błachut"
+      type: "teoretyczna"
+
+- time: "12:00"
+  events:
+    - name: "Tęczowe sześciokąty i grupy permutacji"
+      speaker: "Jagna Olszewska"
+      type: "teoretyczna"
+    - name: "Znaczenie pojęcia styczności w twierdzeniach o istnieniu miejsc zerowych"
+      speaker: "Karolina Fisiak"
+      type: "teoretyczna"
+
+- time: "12:30"
+  events:
+    - name: "Jak proste twierdzenie z analizy pomogło rozwiązać problem milenijny - Różne postacie twierdzenia o funkcji odwrotnej"
+      speaker: "Stanisław Dombrowski"
+      type: "teoretyczna"
+    - name: "Dowód przez rzut makaronem"
+      speaker: "Tymon Świtalski"
+      type: "teoretyczna"
+
 - time: "13:00"
   events:
     - name: "Przerwa kawowa"
+
 - time: "13:30"
   events:
     - name: "Zakończenie konferencji"

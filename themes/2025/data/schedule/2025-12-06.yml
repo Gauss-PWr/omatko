@@ -1,51 +1,116 @@
 - time: "9:30"
   events:
     - name: "Rejestracja"
+
 - time: "10:00"
   events:
-    - name: "Blok matematyki stosowanej"
+    - name: "Analiza zjawiska wędrówki chaotycznej za pomocą entropii i uczenia maszynowego"
+      speaker: "Nikodem Mierski"
       type: "stosowana"
-    - name: "Blok matematyki teoretycznej"
+    - name: "Zjawisko Rungego, czyli o tym jak matematyka wygrywa z intuicją"
+      speaker: "Klaudia Jaszczerska"
       type: "teoretyczna"
+
+- time: "10:30"
+  events:
+    - name: "Między wierszami - jak model LDA ujawnia prawdziwą tematykę w erze nadmiaru tekstu"
+      speaker: "Wiktor Waksmundzki"
+      type: "stosowana"
+    - name: "Cudze chwalicie swego nie znacie - speedrun problemów z księgi Szkockiej"
+      speaker: "Wacław Chromik"
+      type: "teoretyczna"
+
 - time: "11:00"
   events:
     - name: "Sesja plakatowa"
     - name: "Przerwa śniadaniowa"
+
 - time: "11:50"
   events:
     - name: "Jak cyfrowe narzędzia zmieniają naszą codzienność?"
       speaker: "BNY"
       abstract: "Zapraszamy na inspirującą prezentację, podczas której pokażemy, jak nowoczesne narzędzia cyfrowe wspierają naszą pracę. W kilku słowach przedstawimy najważniejsze rozwiązania, z których korzystamy na co dzień, oraz ich kluczowe zalety. Pokażemy także praktyczny przykład wykorzystania Alteryxa, dzięki któremu automatyzacja procesów staje się prostsza, a codzienne zadania mniej czasochłonne. Chcemy zainspirować Was do korzystania z cyfrowych rozwiązań i pokazać, jak mogą one usprawnić pracę analityczną i matematyczną."
+
 - time: "12:30"
   events:
-    - name: "Blok matematyki stosowanej"
+    - name: "Prosto do zderzenia - wykrywanie kolizji i ray tracing"
+      speaker: "Mikołaj Mijakowski"
       type: "stosowana"
-    - name: "Blok matematyki teoretycznej"
+    - name: "Porządek w chaosie"
+      speaker: "Magdalena Kwiatkowska"
       type: "teoretyczna"
+
+- time: "13:00"
+  events:
+    - name: "Algorytmiczna analiza układów dynamicznych przy skończonej rozdzielczości"
+      speaker: "Wojciech Jaworek"
+      type: "stosowana"
+    - name: "Gry karciane set - problem cap set w klasycznym secie"
+      speaker: "Dominik Gąska"
+      type: "teoretyczna"
+
 - time: "13:30"
   events:
     - name: "Przerwa obiadowa"
+
 - time: "15:00"
   events:
-    - name: "Blok matematyki stosowanej"
+    - name: "Oddajcie mi moje pieniądze. O zastosowaniu teorii grafów w problemie przepływu o minimalnym koszcie"
+      speaker: "Paweł Grott"
       type: "stosowana"
-    - name: "Blok matematyki teoretycznej"
+    - name: "O przestrzeniach nakrywających"
+      speaker: "Dorota Chańko"
       type: "teoretyczna"
+
+- time: "15:30"
+  events:
+    - name: "Jak zmodelować cały mecz w piłce nożnej: od danych do symulacji"
+      speaker: "Bartłomiej Węgrzyn"
+      type: "stosowana"
+    - name: "Algorytm Buchbergera, czyli geometria algebraiczna na palcach"
+      speaker: "Bartosz Bogulas"
+      type: "teoretyczna"
+
+- time: "16:00"
+  events:
+    - name: "Nieoczekiwane skutki stosowania algorytmów gradientowych"
+      speaker: "Dominik Jur"
+      type: "stosowana"
+    - name: "Sterty, czyli grupy, w których nie został wybrany element neutralny"
+      speaker: "Sara Kopczyńska"
+      type: "teoretyczna"
+
 - time: "16:30"
   events:
     - name: "Przerwa kawowa"
+
 - time: "17:00"
   events:
     - name: "Prezentacja sponsora"
+      speaker: "Aviva"
+
 - time: "17:20"
   events:
-    - name: "Blok matematyki stosowanej"
+    - name: "Eksperymentalne wykorzystanie topologicznych metod dla wyznaczenia własności kwadratów łacińskich"
+      speaker: "Serhii Kuzminov"
       type: "stosowana"
-    - name: "Blok matematyki teoretycznej"
+    - name: "Słów kilka o twierdzeniu Taniyamy-Shimury-Weila oraz krzywych eliptycznych"
+      speaker: "Mateusz Rajzer"
       type: "teoretyczna"
+
+- time: "17:50"
+  events:
+    - name: "Wstęp do klasyfikacji danych za pomocą maszyn wektorów nośnych i ich odmian"
+      speaker: "Jakub Dyrcz"
+      type: "stosowana"
+    - name: "Czy kwadrat „jednostki urojonej” zawsze wynosi -1?"
+      speaker: "Michał Stadnik"
+      type: "teoretyczna"
+
 - time: "18:20"
   events:
     - name: "Zakończenie dnia"
+
 - time: "19:30"
   events:
-    - name: "Integracja"
+    - name: "Integracja w Strefie Kultury Studenckiej"
