@@ -18,7 +18,7 @@
   {{ if $event.abstract }}
     <div class="event-abstract hidden">
       <p class="event-abstract-content">
-        {{ $event.abstract }}
+        {{ $event.abstract | markdownify }}
       </p>
     </div>
   {{ end }}

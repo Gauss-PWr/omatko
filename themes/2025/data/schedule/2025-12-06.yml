@@ -23,7 +23,7 @@
 - time: "11:00"
   events:
     - name: "Sesja plakatowa"
-    - name: "Przerwa śniadaniowa"
+    - name: "Przerwa kawowa"
 
 - time: "11:50"
   events:
