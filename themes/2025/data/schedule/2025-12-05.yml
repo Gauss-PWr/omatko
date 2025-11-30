@@ -8,8 +8,8 @@
 
 - time: "15:00"
   events:
-    - name: "Algorytmika = Matematyka ∩ Informatyka"
-      speaker: "prof. dr hab. Jacek Cichoń (wykład otwierający)"
+    - name: "Wykład otwierający: Algorytmika = Matematyka ∩ Informatyka"
+      speaker: "prof. dr hab. Jacek Cichoń"
       abstract: |
         Podczas wykładu przedstawiona zostanie seria, zdaniem wykładowcy, wyjątkowo eleganckich przykładów ilustrujących zastosowanie matematyki do konstrukcji i analizy algorytmów.
         
