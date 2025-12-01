@@ -86,8 +86,9 @@
 
 - time: "17:00"
   events:
-    - name: "Prezentacja sponsora"
+    - name: "Czym na co dzień zajmuje się aktuariusz?"
       speaker: "Aviva"
+      abstract: "Prezentacja będzie dotyczyć codziennych obowiązków aktuariusza w pracy. Omówi również możliwe ścieżki kariery. W drugiej części przedstawi, czym jest i jak oblicza się BEL (Best Estimate Liabilities)."
 
 - time: "17:20"
   events:
