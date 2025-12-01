@@ -24,8 +24,9 @@
 
 - time: "16:20"
   events:
-    - name: "Prezentacja sponsora"
+    - name: "Jak wyjaśnić pracę quanta?"
       speaker: "UBS"
+      abstract: "Współczesne modele finansowe charakteryzują się dużą złożonością, co utrudnia ich interpretację przez użytkowników biznesowych. Istotnym wyzwaniem jest zapewnienie przejrzystości działania tych modeli oraz prezentowanie wyników w sposób ułatwiający podejmowanie szybkich decyzji. Podczas prezentacji rozważymy jakie są obecne i przyszłe rozwiązania, które mogą skutecznie wspierać użytkowników w lepszym rozumieniu mechanizmów modeli finansowych."
 
 - time: "16:40"
   events:
