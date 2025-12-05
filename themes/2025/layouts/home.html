@@ -8,10 +8,6 @@
 
   {{ partial "sections/about.html" }}
 
-  {{ if .Site.Params.show_map }}
-    {{ partial "sections/map.html" }}
-  {{ end }}
-
   {{ if .Site.Params.show_schedule_section }}
     {{ partial "sections/schedule.html" . }}
   {{ end }}
@@ -20,6 +16,10 @@
     {{ partial
       "sections/registration.html" .
     }}
+  {{ end }}
+
+  {{ if .Site.Params.show_map }}
+    {{ partial "sections/map.html" }}
   {{ end }}
 
   {{ if .Site.Params.show_sponsors_section }}

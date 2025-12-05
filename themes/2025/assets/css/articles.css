@@ -81,6 +81,10 @@
   font-size: initial;
 }
 
+.article-content img {
+    max-width: 100%;
+}
+
 .article-content table {
   border-radius: 5px;
   border: 1px solid var(--o-gray);
