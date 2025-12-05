@@ -1198,12 +1198,15 @@
     }
     document.addEventListener("DOMContentLoaded", () => {
       const buttons = document.querySelectorAll(".day-selector button");
-      for (const button of buttons) {
-        if (new Date(button.dataset.day).getTime() >= new Date().getTime()) {
+      const sortedButtons = Array.from(buttons).sort(
+        (a, b) => new Date(a.dataset.day) - new Date(b.dataset.day),
+      );
+      for (const button of sortedButtons) {
+        if (new Date(button.dataset.day).getDay() >= new Date().getDay()) {
           button.click();
           break;
         } else {
-          buttons[buttons.length - 1].click();
+          sortedButtons[buttons.length - 1].click();
         }
       }
     });
