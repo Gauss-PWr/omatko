@@ -73,7 +73,8 @@ show_sponsors_section = true
 # Patroni medialni i honorowi
 show_patrons_section = true
 
-
+# mapa kampusu
+show_map = false
 
 # Animacja w tle
 enable_background_animations = true

@@ -1,0 +1,18 @@
+.map {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.map-image img {
+  display: block;
+  width: 70%;
+  margin: auto;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+    .map-image img {
+        width: 100%;
+    }
+}
