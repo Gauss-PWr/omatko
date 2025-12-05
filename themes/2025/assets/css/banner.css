@@ -75,6 +75,11 @@
     margin: 0 5px;
   }
 
+  .countdown-end {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
   #timer {
     grid-template-columns: repeat(4, 100px);
   }
