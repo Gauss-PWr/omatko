@@ -54,8 +54,13 @@
     }
     document.addEventListener("DOMContentLoaded", () => {
       const buttons = document.querySelectorAll(".day-selector button");
+      const now = new Date();
+      now.setHours(0, 0, 0, 0);
+
       for (const button of buttons) {
-        if (new Date(button.dataset.day).getTime() >= new Date().getTime()) {
+        const btnDate = new Date(button.dataset.day);
+        btnDate.setHours(0, 0, 0, 0);
+        if (btnDate.getTime() >= now.getTime()) {
           button.click();
           break;
         } else {
