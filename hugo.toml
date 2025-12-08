@@ -41,7 +41,7 @@ inline = [['\(', '\)']]
 
 [params]
 # Harmonogram
-show_schedule_section = true
+show_schedule_section = false
 
 # Rejestracja 
 show_registration = false
@@ -68,13 +68,13 @@ active_reg_close = true
 
 
 # Sponsorzy
-show_sponsors_section = true
+show_sponsors_section = false
 
 # Patroni medialni i honorowi
-show_patrons_section = true
+show_patrons_section = false
 
 # mapa kampusu
-show_map = true
+show_map = false
 
 # Animacja w tle
 enable_background_animations = true
