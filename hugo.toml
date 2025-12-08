@@ -23,11 +23,18 @@ url = '/aktualnosci'
 weight = 2
 
 
+# [[menus.main]]
+# name = 'Organizatorzy'
+# pageRef = 'organizatorzy'
+# url = '/organizatorzy'
+# weight = 3
+
 [[menus.main]]
-name = 'Organizatorzy'
-pageRef = 'organizatorzy'
-url = '/organizatorzy'
-weight = 3
+name = 'Poprzednie edycje'
+pageRef = 'poprzednie-edycje'
+url = 'poprzednie-edycje'
+weight = 4
+
 
 [markup]
 [markup.goldmark]

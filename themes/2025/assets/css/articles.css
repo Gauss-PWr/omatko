@@ -57,6 +57,17 @@
   gap: 10px;
 }
 
+.article-banner {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.article-banner img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
 .article {
   display: flex;
   flex-direction: column;
