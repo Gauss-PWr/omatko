@@ -3,7 +3,7 @@ title = 'I'
 eventYear = 2013
 +++
 
-## Zwycięzkie wykłady i plakaty
+## Zwycięskie wykłady i plakaty
 
 ### Matematyka stosowana
 

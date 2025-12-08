@@ -3,7 +3,7 @@ title = 'V'
 eventYear = 2018
 +++
 
-## Zwycięzkie wykłady i plakaty
+## Zwycięskie wykłady i plakaty
 
 ### Matematyka popularnonaukowa
 

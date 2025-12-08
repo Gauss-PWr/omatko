@@ -3,7 +3,7 @@ title = 'XII'
 eventYear = 2025
 +++
 
-## Zwycięzkie wykłady i plakaty
+## Zwycięskie wykłady i plakaty
 
 ### Matematyka stosowana
 

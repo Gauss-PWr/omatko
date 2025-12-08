@@ -4,7 +4,7 @@ eventYear = {{ .File.ContentBaseName }}
 banner = '2024.png'
 +++
 
-## Zwycięzkie wykłady i plakaty
+## Zwycięskie wykłady i plakaty
 
 ### Matematyka stosowana
 

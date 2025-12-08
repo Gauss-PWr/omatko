@@ -3,7 +3,7 @@ title = 'III'
 eventYear = 2016
 +++
 
-## Zwycięzkie wykłady i plakaty
+## Zwycięskie wykłady i plakaty
 
 
 ### Wykład

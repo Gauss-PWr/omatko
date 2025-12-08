@@ -3,7 +3,7 @@ title = 'VI'
 eventYear = 2019
 +++
 
-## Zwycięzkie wykłady i plakaty
+## Zwycięskie wykłady i plakaty
 
 ### Matematyka stosowana
 

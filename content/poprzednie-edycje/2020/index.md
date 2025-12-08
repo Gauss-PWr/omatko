@@ -3,7 +3,7 @@ title = 'VII'
 eventYear = 2020
 +++
 
-## Zwycięzkie wykłady i plakaty
+## Zwycięskie wykłady i plakaty
 
 ### Matematyka stosowana
 
