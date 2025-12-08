@@ -1,0 +1,20 @@
+{{ define "main" }}
+  <section class="article">
+    <article class="article-container">
+      <h1>{{ .Title }} Edycja Omatko!!!</h1>
+      <div class="article-banner">
+        {{ with .Resources.GetMatch (printf "%s*" (string .Params.eventYear)) }}
+          <img src="{{ .RelPermalink }}" alt="Banner for {{ $.Title }}" />
+        {{ else }}
+          <p>Brak bannera.</p>
+        {{ end }}
+      </div>
+      <div class="article-content">
+        {{ .Content }}
+      </div>
+      <button onclick="history.back()" class="history-back">
+        &larr; powrót
+      </button>
+    </article>
+  </section>
+{{ end }}

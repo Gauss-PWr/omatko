@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Organizatorzy on OMatKo!!!</title>
-    <link>https://omatko.pwr.edu.pl/organizatorzy/</link>
+    <link>http://localhost:1313/organizatorzy/</link>
     <description>Recent content in Organizatorzy on OMatKo!!!</description>
     <generator>Hugo</generator>
     <language>pl</language>
-    <atom:link href="https://omatko.pwr.edu.pl/organizatorzy/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/organizatorzy/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
