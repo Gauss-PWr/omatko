@@ -1,10 +1,9 @@
 +++
 title = 'I'
 eventYear = 2013
-banner = '2024.png'
 +++
 
-## Zwycięsckie wykłady i plakaty
+## Zwycięzkie wykłady i plakaty
 
 ### Matematyka stosowana
 

@@ -6,7 +6,6 @@
         {{ with .Resources.GetMatch (printf "%s*" (string .Params.eventYear)) }}
           <img src="{{ .RelPermalink }}" alt="Banner for {{ $.Title }}" />
         {{ else }}
-          <p>Brak bannera.</p>
         {{ end }}
       </div>
       <div class="article-content">
