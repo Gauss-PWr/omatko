@@ -31,11 +31,11 @@
 
 - time: "12:00"
   events:
-    - name: "Tęczowe sześciokąty i grupy permutacji"
-      speaker: "Jagna Olszewska"
-      type: "teoretyczna"
     - name: "Znaczenie pojęcia styczności w twierdzeniach o istnieniu miejsc zerowych"
       speaker: "Karolina Fisiak"
+      type: "teoretyczna"
+    - name: "Tęczowe sześciokąty i grupy permutacji"
+      speaker: "Jagna Olszewska"
       type: "teoretyczna"
 
 - time: "12:30"

@@ -33,9 +33,6 @@
 
 - time: "12:30"
   events:
-    - name: "Prosto do zderzenia - wykrywanie kolizji i ray tracing"
-      speaker: "Mikołaj Mijakowski"
-      type: "stosowana"
     - name: "Porządek w chaosie"
       speaker: "Magdalena Kwiatkowska"
       type: "teoretyczna"
