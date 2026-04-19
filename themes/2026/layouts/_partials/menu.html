@@ -1,90 +1,109 @@
 {{- /*
-  Renders a menu for the given menu ID.
+Renders a menu for the given menu ID.
 
-  @context {page} page The current page.
-  @context {string} menuID The menu ID.
+@context {page} page The current page.
+@context {string} menuID The menu ID.
 
-  @example: {{ partial "menu.html" (dict "menuID" "main" "page" .)
+@example: {{ partial "menu.html" (dict "menuID" "main" "page" .)
 }}
 */}}
 {{- $page := .page }}
 {{- $menuID := .menuID }}
 
 {{- with index site.Menus $menuID }}
-  <nav class="main-nav">
-    <div class="nav-logo">
-      <a href="/"><img src="/logo.webp" alt="Logo OMatKo" /></a>
-    </div>
-    <button id="menu-button"><i class="fa-solid fa-bars"></i></button>
 
+<nav class="main-nav">
+  <div class="nav-logo">
+    <a href="/"><img src="/logo.webp" alt="Logo OMatKo" /></a>
+  </div>
+  <div class="main-nav-links">
+    <button id="menu-button"><i class="fa-solid fa-bars"></i></button>
     <ul class="nav-list">
       {{ if site.Params.enable_voting}}
-        <li><a class="nav-link" href="/glosuj/">Głosuj</a></li>
+      <li><a class="nav-link" href="/glosuj/">Głosuj</a></li>
       {{ end }}
 
       {{ if site.Params.show_schedule_section }}
-        <li><a class="nav-link" href="/#schedule">Harmonogram</a></li>
+      <li><a class="nav-link" href="/#schedule">Harmonogram</a></li>
       {{ end }}
       {{ if site.Params.show_registration }}
-        <li><a class="nav-link" href="/#registration">Zapisy</a></li>
+      <li><a class="nav-link" href="/#registration">Zapisy</a></li>
       {{ end }}
       {{ if site.Params.show_map }}
-        <li><a class="nav-link" href="/#map">Mapa</a></li>
+      <li><a class="nav-link" href="/#map">Mapa</a></li>
       {{ end }}
       {{ if site.Params.show_patrons_section }}
-        <li><a class="nav-link" href="/#sponsors">Partnerzy</a></li>
+      <li><a class="nav-link" href="/#sponsors">Partnerzy</a></li>
       {{ end }}
       {{ if site.Params.show_regulamin}}
-        <li><a class="nav-link" href="/regulamin.pdf">Regulamin</a></li>
+      <li><a class="nav-link" href="/regulamin.pdf">Regulamin</a></li>
       {{ end }}
 
       {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+    </ul>
+  </div>
+  <script>
+    const button = document.getElementById("menu-button");
+    const navList = document.querySelector(".nav-list");
+    const buttonIcon = document.querySelector(".fa-solid");
 
-    <script>
-      const button = document.getElementById("menu-button");
-      const navList = document.querySelector(".nav-list");
-      const buttonIcon = document.querySelector(".fa-solid");
+    button.addEventListener("click", () => {
+      navList.classList.toggle("active-menu");
+      buttonIcon.classList.toggle("fa-bars");
+      buttonIcon.classList.toggle("fa-xmark");
+    });
 
-      button.addEventListener("click", () => {
-        navList.classList.toggle("active-menu");
-        buttonIcon.classList.toggle("fa-bars");
-        buttonIcon.classList.toggle("fa-xmark");
-      });
-    </script>
-  </nav>
+    document.addEventListener("click", function(event) {
+      // Sprawdzamy czy menu jest rozwinięte
+      if (navList.classList.contains("active-menu")) {
+        // Jeśli kliknięto POZA bąbelkiem i POZA przyciskiem menu
+        if (!navList.contains(event.target) && !button.contains(event.target)) {
+          // Zatrzymujemy kliknięcie
+          event.preventDefault();
+          event.stopPropagation();
+          // Zwijamy menu
+          navList.classList.remove("active-menu");
+          buttonIcon.classList.add("fa-bars");
+          buttonIcon.classList.remove("fa-xmark");
+        }
+      }
+    }, true); // <-- 'true' włącza fazę przechwytywania (wyłapuje kliknięcie jako pierwsze)
+
+  </script>
+</nav>
 {{- end }}
 
 {{- define "_partials/inline/menu/walk.html" }}
-  {{- $page := .page }}
-  {{- range .menuEntries }}
-    {{- $attrs := dict "href" .URL }}
-    {{- if $page.IsMenuCurrent .Menu . }}
-      {{- $attrs = merge $attrs (dict "class" "nav-link active" "aria-current" "page") }}
-    {{- else if $page.HasMenuCurrent .Menu . }}
-      {{- $attrs = merge $attrs (dict "class" "nav-link ancestor" "aria-current" "true") }}
-    {{- else }}
-      {{- $attrs = merge $attrs (dict "class" "nav-link") }}
-    {{- end }}
-    {{- $name := .Name }}
-    {{- with .Identifier }}
-      {{- with T . }}
-        {{- $name = . }}
-      {{- end }}
-    {{- end }}
-    <li class="nav-item">
-      <a
-        {{- range $k, $v := $attrs }}
-          {{- with $v }}
-            {{- printf " %s=%q" $k $v | safeHTMLAttr }}
-          {{- end }}
-        {{- end -}}
-        >{{ $name }}</a
-      >
-      {{- with .Children }}
-        <ul class="nav-submenu">
-          {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
-        </ul>
-      {{- end }}
-    </li>
+{{- $page := .page }}
+{{- range .menuEntries }}
+{{- $attrs := dict "href" .URL }}
+{{- if $page.IsMenuCurrent .Menu . }}
+{{- $attrs = merge $attrs (dict "class" "nav-link active" "aria-current" "page") }}
+{{- else if $page.HasMenuCurrent .Menu . }}
+{{- $attrs = merge $attrs (dict "class" "nav-link ancestor" "aria-current" "true") }}
+{{- else }}
+{{- $attrs = merge $attrs (dict "class" "nav-link") }}
+{{- end }}
+{{- $name := .Name }}
+{{- with .Identifier }}
+{{- with T . }}
+{{- $name = . }}
+{{- end }}
+{{- end }}
+<li class="nav-item">
+  <a
+    {{- range $k, $v :=$attrs }}
+    {{- with $v }}
+    {{- printf " %s=%q" $k $v | safeHTMLAttr }}
   {{- end }}
+  {{- end -}}
+  >{{ $name }}</a
+  >
+  {{- with .Children }}
+  <ul class="nav-submenu">
+    {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+  </ul>
+  {{- end }}
+</li>
+{{- end }}
 {{- end }}
