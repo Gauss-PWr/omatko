@@ -1,0 +1,49 @@
+<section class="sponsors" id="sponsors">
+  <h1>partnerzy</h1>
+  <div class="main-sponsors">
+    <h2>sponsor główny</h2>
+    <div class="sponsors-container">
+      {{ $images := readDir "themes/2026/static/sponsors/main" }}
+      {{ range $images }}
+        {{ if not .IsDir }}
+          <img
+            class="main-sponsor-img"
+            src="{{ (printf "sponsors/main/%s" .Name) | relURL }}"
+            alt="{{ .Name }}"
+          />
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+  <div class="normal-sponsors">
+    <h2>sponsorzy</h2>
+    <div class="sponsors-container">
+      {{ $images := readDir "themes/2026/static/sponsors" }}
+      {{ range $images }}
+        {{ if not .IsDir }}
+          <img
+            class="sponsor-img"
+            src="{{ (printf "sponsors/%s" .Name) | relURL }}"
+            alt="{{ .Name }}"
+          />
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+  <div class="normal-sponsors">
+    <h2>partnerzy</h2>
+    <div class="sponsors-container">
+      {{ $images := readDir "themes/2026/static/sponsors/partners" }}
+      {{ range $images }}
+        {{ if not .IsDir }}
+          <img
+            class="sponsor-img"
+            src="{{ (printf "sponsors/partners/%s" .Name) | relURL }}"
+            alt="{{ .Name }}"
+          />
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+
+</section>

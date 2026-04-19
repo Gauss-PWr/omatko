@@ -1,0 +1,27 @@
+- name: "Imie Nazwisko"
+  section: "Sponsorzy"
+  img_name: "placeholder_portrait.png"
+  
+- name: "Imie Nazwisko"
+  section: "Promocja"
+  img_name: "placeholder_portrait.png"
+
+- name: "Imie Nazwisko"
+  section: "Rozrywka"
+  img_name: "placeholder_portrait.png"
+
+- name: "Imie Nazwisko"
+  section: "Informatyzacja"
+  img_name: "placeholder_portrait.png"
+  
+- name: "Imie Nazwisko"
+  section: "Obsługa"
+  img_name: "placeholder_portrait.png"
+
+- name: "Imie Nazwisko"
+  section: "Kontakt"
+  img_name: "placeholder_portrait.png"
+
+- name: "Imie Nazwisko"
+  section: "Struktura"
+  img_name: "placeholder_portrait.png"
