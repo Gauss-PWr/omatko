@@ -93,7 +93,11 @@
     }
 
     .countdown-item {
-        margin: 0 5px;
+        margin: 0 10px;
+        align-items: center;
+        display: inline-flex;
+        flex-direction: column;
+
     }
 
     .countdown-end {
