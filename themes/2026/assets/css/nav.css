@@ -241,7 +241,7 @@ header {
 
 @media (prefers-contrast: more) {
     :root {
-        --nav-outline: thin solid black;
+        --nav-outline: 2px solid black;
         --nav-blur: none;
         --nav-background: white;
         --nav-text-color: black;
