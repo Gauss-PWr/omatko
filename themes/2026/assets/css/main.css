@@ -13,6 +13,7 @@
     --element-border-radius-medium: 9px;
     --section-width: calc(min(80vw - var(--element-padding), 1024px));
     --main-nav-margin: 70px;
+    --section-padding: calc(var(--main-nav-margin)/2) calc((100vw - var(--section-width))/2);
     --font-size-paragraph: 1.1rem
 }
 
@@ -86,13 +87,9 @@ strong {
 }
 
 section {
-    padding: calc(var(--main-nav-margin)/2) calc((100vw - var(--section-width))/2);
+    padding: var(--section-padding);
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-}
 
 main {
     flex: 1;
