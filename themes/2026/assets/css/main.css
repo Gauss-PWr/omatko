@@ -26,6 +26,7 @@
 }
 
 body {
+    -webkit-tap-highlight-color: transparent;
   margin: 0;
   padding: 0;
   background: url("/bg.webp");
@@ -38,7 +39,6 @@ body {
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
 h1 {
