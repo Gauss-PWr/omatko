@@ -12,24 +12,26 @@
     --element-border-radius-large: 18px;
     --element-border-radius-medium: 9px;
     --section-width: calc(min(80vw - var(--element-padding), 1024px));
-    --main-nav-margin: calc(4 * var(--element-padding));
+    --main-nav-margin: 70px;
     --font-size-paragraph: 1.1rem
 }
 
 @media (max-width: 768px) {
     :root {
         --element-padding: 14px;
-        --element-border-radius-button: 30px;
+        --button-border-radius: 30px;
         --element-border-radius-large: 18px;
         --element-border-radius-medium: 9px;
         --section-width: calc(95vw - var(--element-padding));
-        --main-nav-margin: calc(6 * var(--element-padding));
+        --main-nav-margin: 50px;
         --font-size-paragraph: 1rem
     }
 }
 
 * {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Google Sans Flex", Arial, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
 }
 
 .green {
@@ -59,14 +61,15 @@ body {
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    /*-webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;*/
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
+    font-family: "Quicksand", sans-serif;
     text-align: left;
     text-transform: lowercase;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 700;
 }
 
@@ -78,9 +81,12 @@ p {
     font-size: var(--font-size-paragraph);
 }
 
+strong {
+    font-weight: 500;
+}
+
 section {
-    width: var(--section-width);
-    margin: auto;
+    padding: calc(var(--main-nav-margin)/2) calc((100vw - var(--section-width))/2);
 }
 
 footer {
@@ -94,4 +100,5 @@ main {
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--main-nav-margin)/2);
 }

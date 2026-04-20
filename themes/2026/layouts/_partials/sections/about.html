@@ -1,32 +1,29 @@
 <section class="about" id="about">
   <h1>O konferencji</h1>
-  <div class="about-content">
-    <p class="about-text">
+<div class="about-content">
+      <p class="about-text">
       <strong
         >Ogólnopolska Matematyczna Konferencja Studentów „OMatKo!!!”</strong
       >
-      powstała z inicjatywy studentów matematyki Politechniki Wrocławskiej
-      zrzeszonych w trzech kołach naukowych oraz w Samorządzie Studenckim
-      Wydziału Matematyki i przeznaczona jest dla studentów matematyki i
-      kierunków pokrewnych z całego kraju.
+      to inicjatywa, która narodziła się na Politechnice Wrocławskiej.
+        Stoją za nią studenci z trzech kół naukowych oraz Samorząd Studencki Wydziału Matematyki.
+        Wydarzenie kierujemy do studentów matematyki i kierunków pokrewnych z całego kraju.
       <br />
       <br />
-      Celem konferencji „OMatKo!!!” jest rozwój naukowy uczestników, oferując im
-      możliwość prezentowania fascynujących tematów, najnowszych wyników badań
-      oraz dzielenie się swoją pasją z innymi studentami. W tym roku,
-      kontynuując tradycję spotkań stacjonarnych, zapraszamy do bezpośredniego
-      uczestnictwa i interakcji. Ta edycja konferencji „OMatKo!!!” obiecuje być
-      jeszcze bardziej inspirująca i stworzy przestrzeń do nawiązywania nowych,
-      wartościowych kontaktów między ambitnymi młodymi ludźmi z różnych uczelni.
+        Po co to robimy?
+        Żeby dać Wam przestrzeń do pokazania wyników swoich badań,
+        podzielenia się matematyczną zajawką i posłuchania o tym, co fascynuje innych.
+        Spotykamy się stacjonarnie, bo wiemy,
+        że najlepsze dyskusje i tak toczą się w przerwach przy kawie.
+        OMatKo!!! to nie tylko dawka wiedzy, ale przede wszystkim świetna okazja,
+        żeby poznać ambitnych ludzi z innych uczelni i złapać nowe kontakty.
     </p>
-    <div class="about-image">
         {{ with resources.GetMatch "images/previous*" }}
-          <img src="{{ .RelPermalink }}" alt=" Poprzednia edycja" />
+          <img class="about-image" src="{{ .RelPermalink }}" alt=" Poprzednia edycja" />
         {{ end }}
-    </div>
   </div>
   <div class="about-socials">
-    <p>Obserwujcie nas, by nie przegapić najważniejszych informacji!</p>
+    <p><strong>Obserwujcie nas, by nie przegapić najważniejszych informacji!</strong></p>
     <div class="about-socials-icons">
       <a
         href="https://www.facebook.com/omatkopwr"
@@ -34,6 +31,7 @@
         rel="noreferrer noopener"
         ><i class="fa-brands fa-facebook"></i
       ></a>
+      <a class="divider"></a>
       <a
         href="https://www.instagram.com/omatko.pwr/"
         target="_blank"

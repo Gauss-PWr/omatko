@@ -34,7 +34,7 @@
   
 </title>
 
- <link rel="stylesheet" href="./css/combined.min.98abf1545a8500b5c979d8ac1bc6947889bd4debc3d3457776ead763287121a3.css" />
+ <link rel="stylesheet" href="./css/combined.min.315c96e1d9953064669dd82c4acedb4c1c9c304f62aa605f7f11645f6c6060c2.css" />
 
 
         <script src="./js/main.0d15c800811a19b037617bffe4cb81928ff94d596e8e2f840fc06bf86921598a.js" integrity="sha256-DRXIAIEaGbA3YXv/5MuBko/5TVluji&#43;ED8Br&#43;GkhWYo=" crossorigin="anonymous"></script>
@@ -42,6 +42,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 <link
   rel="stylesheet"
@@ -137,6 +138,20 @@
       }
     }, true); 
 
+    
+    const navLinks = document.querySelectorAll('.nav-link[href*="#"]');
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function() {
+
+                navList.classList.remove("active-menu");
+
+                buttonIcon.classList.add("fa-bars");
+                buttonIcon.classList.remove("fa-xmark");
+
+        });
+    });
+
   </script>
 </nav>
 
@@ -191,33 +206,30 @@
 
   <section class="about" id="about">
   <h1>O konferencji</h1>
-  <div class="about-content">
-    <p class="about-text">
+<div class="about-content">
+      <p class="about-text">
       <strong
         >Ogólnopolska Matematyczna Konferencja Studentów „OMatKo!!!”</strong
       >
-      powstała z inicjatywy studentów matematyki Politechniki Wrocławskiej
-      zrzeszonych w trzech kołach naukowych oraz w Samorządzie Studenckim
-      Wydziału Matematyki i przeznaczona jest dla studentów matematyki i
-      kierunków pokrewnych z całego kraju.
+      to inicjatywa, która narodziła się na Politechnice Wrocławskiej.
+        Stoją za nią studenci z trzech kół naukowych oraz Samorząd Studencki Wydziału Matematyki.
+        Wydarzenie kierujemy do studentów matematyki i kierunków pokrewnych z całego kraju.
       <br />
       <br />
-      Celem konferencji „OMatKo!!!” jest rozwój naukowy uczestników, oferując im
-      możliwość prezentowania fascynujących tematów, najnowszych wyników badań
-      oraz dzielenie się swoją pasją z innymi studentami. W tym roku,
-      kontynuując tradycję spotkań stacjonarnych, zapraszamy do bezpośredniego
-      uczestnictwa i interakcji. Ta edycja konferencji „OMatKo!!!” obiecuje być
-      jeszcze bardziej inspirująca i stworzy przestrzeń do nawiązywania nowych,
-      wartościowych kontaktów między ambitnymi młodymi ludźmi z różnych uczelni.
+        Po co to robimy?
+        Żeby dać Wam przestrzeń do pokazania wyników swoich badań,
+        podzielenia się matematyczną zajawką i posłuchania o tym, co fascynuje innych.
+        Spotykamy się stacjonarnie, bo wiemy,
+        że najlepsze dyskusje i tak toczą się w przerwach przy kawie.
+        OMatKo!!! to nie tylko dawka wiedzy, ale przede wszystkim świetna okazja,
+        żeby poznać ambitnych ludzi z innych uczelni i złapać nowe kontakty.
     </p>
-    <div class="about-image">
         
-          <img src="./images/previous.jpg" alt=" Poprzednia edycja" />
+          <img class="about-image" src="./images/previous.jpg" alt=" Poprzednia edycja" />
         
-    </div>
   </div>
   <div class="about-socials">
-    <p>Obserwujcie nas, by nie przegapić najważniejszych informacji!</p>
+    <p><strong>Obserwujcie nas, by nie przegapić najważniejszych informacji!</strong></p>
     <div class="about-socials-icons">
       <a
         href="https://www.facebook.com/omatkopwr"
@@ -225,6 +237,7 @@
         rel="noreferrer noopener"
         ><i class="fa-brands fa-facebook"></i
       ></a>
+      <a class="divider"></a>
       <a
         href="https://www.instagram.com/omatko.pwr/"
         target="_blank"

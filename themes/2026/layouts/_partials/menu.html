@@ -69,6 +69,20 @@ Renders a menu for the given menu ID.
       }
     }, true); // <-- 'true' włącza fazę przechwytywania (wyłapuje kliknięcie jako pierwsze)
 
+    // zwijanie menu po kliknieciu linku
+    const navLinks = document.querySelectorAll('.nav-link[href*="#"]');
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function() {
+
+                navList.classList.remove("active-menu");
+
+                buttonIcon.classList.add("fa-bars");
+                buttonIcon.classList.remove("fa-xmark");
+
+        });
+    });
+
   </script>
 </nav>
 {{- end }}

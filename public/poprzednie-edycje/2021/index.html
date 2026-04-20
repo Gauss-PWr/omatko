@@ -33,7 +33,7 @@
   
 </title>
 
- <link rel="stylesheet" href="../../css/combined.min.98abf1545a8500b5c979d8ac1bc6947889bd4debc3d3457776ead763287121a3.css" />
+ <link rel="stylesheet" href="../../css/combined.min.315c96e1d9953064669dd82c4acedb4c1c9c304f62aa605f7f11645f6c6060c2.css" />
 
 
         <script src="../../js/main.0d15c800811a19b037617bffe4cb81928ff94d596e8e2f840fc06bf86921598a.js" integrity="sha256-DRXIAIEaGbA3YXv/5MuBko/5TVluji&#43;ED8Br&#43;GkhWYo=" crossorigin="anonymous"></script>
@@ -41,6 +41,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 <link
   rel="stylesheet"
@@ -135,6 +136,20 @@
         }
       }
     }, true); 
+
+    
+    const navLinks = document.querySelectorAll('.nav-link[href*="#"]');
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function() {
+
+                navList.classList.remove("active-menu");
+
+                buttonIcon.classList.add("fa-bars");
+                buttonIcon.classList.remove("fa-xmark");
+
+        });
+    });
 
   </script>
 </nav>

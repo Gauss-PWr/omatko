@@ -1,63 +1,84 @@
-.about {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+.about-layout {
+    display: flex;
+    flex-direction: column;
 }
 
 .about-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    gap: var(--element-padding);
+    align-items: start;
 }
 
 .about-text {
-  margin: 0;
+    margin: 0;
 }
 
-.about-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
+.about-image {
+    box-shadow: var(--element-box-shadow);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--element-border-radius-large);
 }
 
 .about-socials {
-  padding: 0px 15px;
-  display: flex;
-  background-color: var(--o-gray);
-  border-radius: 5px;
-  flex-wrap: wrap;
-  font-weight: 600;
-  font-size: 0.9rem;
-  justify-content: space-between;
-  align-items: center;
+    margin-top: var(--element-padding);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-socials p {
+    margin: 0;
+    padding-right: var(--element-padding);
 }
 
 .about-socials-icons {
-  font-size: 2rem;
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 1.5rem;
+    background: var(--o-green);
+    border-radius: var(--button-border-radius);
+    box-shadow: var(--element-box-shadow);
+    padding: 5px;
 }
 
 .about-socials-icons a {
-  color: black;
-  margin: 1px 5px;
-  width: fit-content;
+    color: white;
+    margin: 0 5px;
+    width: fit-content;
+    transition: 0.3s ease-in-out;
+    font-family: "Quicksand", sans-serif;
+}
+
+.about-socials-icons a:hover {
+    color: rgb(235, 235, 235);
+}
+
+.divider {
+    border-left: thin dashed rgb(230, 230, 230);
+    flex-shrink: 0;
 }
 
 @media screen and (max-width: 1024px) {
-  .about-content {
-    grid-template-rows: 1fr fr;
-    grid-template-columns: none;
-  }
+    .about-content {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 768px) {
-  .about-content {
-    grid-template-rows: 1fr fr;
-    grid-template-columns: none;
-  }
+    .about-text {
+        font-size: 1rem;
+    }
 
-  .about-socials-icons {
-    font-size: 3rem;
-    display: flex;
-    align-items: center;
-  }
+    .about-socials p {
+        font-size: 1rem;
+    }
+
+    .about-socials-icons {
+        font-size: 1.5rem;
+    }
 }
