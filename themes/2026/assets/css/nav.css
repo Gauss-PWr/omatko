@@ -217,14 +217,14 @@ header {
     }
 }
 
-@media (prefers-reduced-transparency) {
+@media (prefers-reduced-transparency: reduce) {
     :root {
         --nav-blur: none;
         --nav-background: white;
     }
 }
 
-@media (prefers-reduced-motion) {
+@media (prefers-reduced-motion: reduce) {
     .nav-link {
         transition: none;
     }

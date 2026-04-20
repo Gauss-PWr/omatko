@@ -84,7 +84,7 @@ show_patrons_section = true
 show_map = false
 
 # Animacja w tle
-enable_background_animations = false
+enable_background_animations = true
 
 show_regulamin = true
 

@@ -1,86 +1,104 @@
 .banner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    background-size: cover;
+    background: url("/bg.webp") top center;
+    z-index: -1;
+    box-shadow: inset var(--element-box-shadow);
+}
+
+.banner p {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.banner span {
+    font-family: QuickSand, sans-serif;
 }
 
 .banner-logo {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  color: var(--o-blue);
-  margin-bottom: 50px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--o-blue);
+    margin-bottom: 50px;
 }
 
 .banner-logo img {
-  width: 100%;
+    width: 100%;
 }
 
 .banner-timer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner-logo p {
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: "Quicksand", sans-serif;
 }
 
 .banner-logo p:nth-child(3) {
-  font-weight: 600;
+    font-weight: 800;
 }
 
 #timer {
-  display: flex;
-  justify-content: space-evenly;
+    display: inline-flex;
+    justify-content: space-evenly;
+    text-align: center;
 }
 
-.countdown-number {
-  font-size: 4rem;
-  width: 5rem;
+.banner .countdown-number {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.banner .countdown-label {
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .countdown-item {
-  margin: 0 15px;
-  display: flex;
-  justify-content: left;
-  align-items: baseline;
+    margin: 0 15px;
+    align-items: baseline;
 }
 
 .countdown-end {
-  text-transform: uppercase;
-  font-size: 3rem;
-  font-weight: 300;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 300;
 }
 
 @media screen and (max-width: 768px) {
-  .banner-logo {
-    width: 90%;
-  }
+    .banner-logo {
+        width: 90%;
+    }
 
-  .banner-logo p {
-    text-align: center;
-  }
+    .banner .countdown-number {
+        font-size: 2.5rem;
+    }
 
-  .countdown-number {
-    width: 2rem;
-    font-size: 1.5rem;
-  }
+    .banner .countdown-label {
+        font-size: 1.1rem;
+    }
 
-  .countdown-label {
-    font-size: 0.7rem;
-  }
+    .countdown-item {
+        margin: 0 5px;
+    }
 
-  .countdown-item {
-    margin: 0 5px;
-  }
+    .countdown-end {
+        text-align: center;
+        font-size: 2.5rem;
+    }
 
-  .countdown-end {
-  text-align: center;
-  font-size: 2.5rem;
-}
-
-  #timer {
-    grid-template-columns: repeat(4, 100px);
-  }
 }

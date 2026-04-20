@@ -1,9 +1,5 @@
 {{ define "main" }}
-  {{ if .Site.Params.enable_background_animations }}
-    {{ partial
-      "sections/background.html" .
-    }}
-  {{ end }}
+
   {{ partial "sections/banner.html" . }}
 
   {{ partial "sections/about.html" }}
