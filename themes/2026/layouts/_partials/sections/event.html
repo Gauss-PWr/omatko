@@ -2,24 +2,41 @@
 
 
 <div class="event {{ $event.type }}">
-  <div {{ if $event.abstract }}class="event-details"{{ end }}>
-    <strong>{{ $event.name }}</strong>
+  <!-- <div {{ if $event.abstract }}class="event-details"{{ end }}> !-->
+
+  <!-- !-->
+  <div {{ if $event.abstract }} class="event-details abstract"
+  {{ else }}
+   class="event-details"
+    {{ end }} >
+  <!-- !-->
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
     {{ if $event.speaker }}
-      <span class="event-author"> - {{ $event.speaker }}</span>
+    <q>{{ $event.name }}</q>
+      <span class="event-author"> &ndash; {{ $event.speaker }}</span>
+    {{ else }}
+    <p>{{ $event.name }}</p>
     {{ end }}
-    {{ if $event.abstract }}
+
+
+    {{/* ({{ $event.location }}) */}}
+</div>
+    {{ if $event.type }}
+    <span class="type-detail {{$event.type}}">{{substr $event.type 0 1}}</span>
+  {{ end }}
+
+      {{ if $event.abstract }}
       <span class="toggle-abstract"
         ><i class="fa-solid fa-caret-down"></i
       ></span>
-    {{ end }}
+  {{ end }}
 
-    {{/* ({{ $event.location }}) */}}
   </div>
-  {{ if $event.abstract }}
+        {{ if $event.abstract }}
     <div class="event-abstract hidden">
       <p class="event-abstract-content">
         {{ $event.abstract | markdownify }}
       </p>
     </div>
-  {{ end }}
+{{ end }}
 </div>

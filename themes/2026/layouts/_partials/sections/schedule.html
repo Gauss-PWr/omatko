@@ -1,6 +1,16 @@
 <section class="schedule" id="schedule">
+  <div class="schedule-layout">
   <h1>Harmonogram</h1>
+  <p class="schedule-text">
+    Poniżej prezentujemy pełen harmonogram tegorocznej konferencji.
+    Sprawdźcie, jakie tematy przygotowano,
+    kto wystąpi na naszej scenie i jak zaplanowaliśmy poszczególne bloki tematyczne.
+    <br>
+    <br>
+    <em>Ważna informacja: do czasu rozpoczęcia konferencji plan może ulec jeszcze drobnym zmianom.</em>
+  </p>
   <div class="day-selector">
+    <div class="switch-slider" id="switch-slider"></div>
     {{ range $filename, $data := site.Data.schedule }}
       {{ $weekday := time.Format "Monday" $filename }}
       <button
@@ -11,36 +21,42 @@
       </button>
     {{ end }}
   </div>
-
   <div class="day-container">
+    <div class="schedule-legend">
+      <span class="legend-element"><a class="applied-legend">s</a><a>&nbsp;- Blok stosowany</a></span>
+      <span class="legend-element"><a class="theoretic-legend">t</a><a>&nbsp;- Blok teoretyczny</a></span>
+    </div>
     {{ range $key, $val := site.Data.schedule }}
       {{ partial "sections/schedule-day.html" $key }}
     {{ end }}
-    <div class="schedule-legend">
-      <a href="/glosuj/"
-        ><button {{ if not .Site.Params.enable_voting }}disabled{{ end }}>
-          zagłosuj
-        </button></a
-      >
-      <span class="legend-element"
-        ><span style="color: var(--o-orange);">█</span> - Blok stosowany</span
-      >
-      <span class="legend-element"
-        ><span style="color: var(--o-blue);">█</span> - Blok teoretyczny</span
-      >
-    </div>
-    <p>
-      UWAGA! Harmonogram do czasu rozpoczęcia konferencji może ulec zmianie!
-    </p>
   </div>
 
-  <script>
+  <div class="schedule-vote">
+    {{ if site.Params.enable_voting }}
+      <a href="/glosuj/"><button>Zagłosuj!</button></a>
+    {{ end }}
+  </div>
+  </div>
+ <script>
     const buttons = document.querySelectorAll(".day-selector button");
+    const slider = document.getElementById("switch-slider");
 
-    buttons.forEach((button) => {
+    // Dynamicznie ustawiamy szerokość suwaka w zależności od ilości dni (np. 3 dni = 33.33%)
+    if (slider && buttons.length > 0) {
+      slider.style.width = `${100 / buttons.length}%`;
+    }
+
+    buttons.forEach((button, index) => {
       button.addEventListener("click", (event) => {
-        buttons.forEach((button) => button.classList.remove("active-button"));
+        // Zdejmujemy klasę active ze wszystkich
+        buttons.forEach((btn) => btn.classList.remove("active-button"));
+        // Nadajemy klasę klikniętemu
         event.target.classList.add("active-button");
+
+        // Przesuwamy suwak (index * 100% szerokości samego suwaka)
+        if (slider) {
+          slider.style.transform = `translateX(${index * 100}%)`;
+        }
       });
     });
 
@@ -49,27 +65,35 @@
         el.classList.add("hidden");
         el.classList.remove("active");
       });
+
       const current = document.getElementById("schedule-" + day);
-      current.classList.remove("hidden");
+      if (current) {
+          current.classList.remove("hidden");
+          // DODANA LINIJKA - nadajemy klasę active nowo wybranemu dniu
+          current.classList.add("active");
+      }
     }
+
     document.addEventListener("DOMContentLoaded", () => {
       const buttons = document.querySelectorAll(".day-selector button");
-      const sortedButtons = Array.from(buttons).sort(
-        (a, b) => new Date(a.dataset.day) - new Date(b.dataset.day),
-      );
-      for (const button of sortedButtons) {
-        if (new Date(button.dataset.day).getDay() >= new Date().getDay()) {
-          button.click();
+      const now = new Date();
+      now.setHours(0, 0, 0, 0);
+
+      for (const button of buttons) {
+        const btnDate = new Date(button.dataset.day);
+        btnDate.setHours(0, 0, 0, 0);
+        if (btnDate.getTime() >= now.getTime()) {
+          button.click(); // To automatycznie przesunie też nasz suwak!
           break;
         } else {
-          sortedButtons[buttons.length - 1].click();
+          buttons[buttons.length - 1].click();
         }
       }
     });
 
     const eventDetails = document.querySelectorAll(".event");
 
-    eventDetails.forEach((ele, i) => {
+    eventDetails.forEach((ele) => {
       ele.addEventListener("click", () => {
         const eventAbstract = ele.querySelector(".event-abstract");
         const faIcon = ele.querySelector(".toggle-abstract i");

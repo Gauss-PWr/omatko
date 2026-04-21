@@ -6,11 +6,11 @@
     justify-content: center;
     width: 100vw;
     min-height: 100vh;
-    padding: 0;
     background-size: cover;
     background: url("/bg.webp") top center;
     z-index: -1;
     box-shadow: inset var(--element-box-shadow);
+    padding: var(--main-nav-margin) 0 0;
 }
 
 .banner p {
