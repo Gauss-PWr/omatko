@@ -90,6 +90,10 @@ section {
     padding: var(--section-padding);
 }
 
+section:first-of-type {
+    padding-top: var(--main-nav-margin);
+}
+
 
 main {
     flex: 1;

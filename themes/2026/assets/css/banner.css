@@ -10,7 +10,7 @@
     background: url("/bg.webp") top center;
     z-index: -1;
     box-shadow: inset var(--element-box-shadow);
-    padding: var(--main-nav-margin) 0 0;
+    padding: 0;
 }
 
 .banner p {

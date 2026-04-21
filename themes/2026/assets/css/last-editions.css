@@ -1,11 +1,6 @@
-.last-editions {
-    padding-top: var(--main-nav-margin);
-}
-
 .last-editions a {
     text-decoration: none;
     color: black;
-    
 }
 
 .last-edition-articles-container {

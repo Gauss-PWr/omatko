@@ -4,10 +4,6 @@
   align-items: center;
 }
 
-.organizers {
-    padding-top: var(--main-nav-margin);
-}
-
 .organizers-container h3 {
   width: 100%;
   text-align: center;
