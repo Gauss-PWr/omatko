@@ -1,0 +1,26 @@
+<section id="articles" class="articles">
+  <h1>Aktualności</h1>
+
+  {{ range first 2 (where .Site.RegularPages "Section" "aktualnosci") }}
+    <div class="article-preview-container">
+      <article class="article-preview">
+        <a href="{{ .RelPermalink }}"><h2>{{ .Title }}</h2>
+
+        <p>{{ .Summary | plainify | truncate 300 }}</p>
+
+        <div class="article-info">
+          {{ if .Params.edition }}
+            <span class="conf-edition">{{ .Params.edition }}</span>
+          {{ else }}
+            <span></span>
+          {{ end }}
+          <span class="article-date">{{ time.Format "Monday, 02 Jan 2006" .PublishDate }}</span>
+        </div>
+        </a>
+      </article>
+    </div>
+  {{ end }}
+  <button onclick="location.href='/aktualnosci/'" class="history-back" style="align-self: center;">
+    Przejdź do aktualności &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i>
+  </button>
+</section>

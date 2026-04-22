@@ -23,7 +23,7 @@
         --button-border-radius: 30px;
         --element-border-radius-large: 18px;
         --element-border-radius-medium: 9px;
-        --section-width: calc(95vw - var(--element-padding));
+        --section-width: calc(96vw - var(--element-padding));
         --main-nav-margin: 50px;
         --font-size-paragraph: 1rem
     }
@@ -78,6 +78,20 @@ h1:first-letter {
     text-transform: uppercase;
 }
 
+h2 {
+    font-family: "Quicksand", sans-serif;
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-family: "Quicksand", sans-serif;
+    text-align: left;
+    font-size: var(--font-size-paragraph);
+    font-weight: 600;
+}
+
 p {
     font-size: var(--font-size-paragraph);
 }
@@ -94,6 +108,10 @@ section:first-of-type {
     padding-top: var(--main-nav-margin);
 }
 
+button {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+}
 
 main {
     flex: 1;
