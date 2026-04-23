@@ -2,16 +2,18 @@
   <section class="last-editions">
     <h1>{{ .Title }}</h1>
     <div class="last-edition-articles-container">
-      {{ range .Pages.ByParam "eventYear" }}
-        <a href="{{ .RelPermalink }}">
+      {{ range (.Pages.ByParam "eventYear").Reverse }}
+      <div class="article-preview-container">
           <article
-            class="last-edition"
+            class="article-preview"
             id="{{ .Params.eventYear }}{{ .Title | lower }}"
           >
-            <h1>{{ .Params.title }}</h1>
-            <p>{{ .Params.eventYear }}</p>
+            <a href="{{ .RelPermalink }}">
+            <h2>{{ .Params.title }} edycja OMatKo!!!</h2>
+                <p>{{ .Params.eventYear }}</p>
+            </a>
           </article>
-        </a>
+        </div>
       {{ end }}
     </div>
   </section>

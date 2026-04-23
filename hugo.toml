@@ -48,10 +48,10 @@ inline = [['\(', '\)']]
 
 [params]
 # Harmonogram
-show_schedule_section = true
+show_schedule_section = false
 
 # Rejestracja 
-show_registration = true
+show_registration = false
 
 # Linki do formularzy
 participant_url = 'https://conf.e-science.pl/event/116/registrations/93/?form_token=90d6c5f5-6e67-470e-afab-1f9a66603f27'
@@ -75,13 +75,13 @@ active_reg_close = true
 
 
 # Sponsorzy
-show_sponsors_section = true
+show_sponsors_section = false
 
 # Patroni medialni i honorowi
-show_patrons_section = true
+show_patrons_section = false
 
 # mapa kampusu
-show_map = true
+show_map = false
 
 # Animacja w tle
 enable_background_animations = true
