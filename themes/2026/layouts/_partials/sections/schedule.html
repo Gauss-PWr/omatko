@@ -30,12 +30,11 @@
       {{ partial "sections/schedule-day.html" $key }}
     {{ end }}
   </div>
-
-  <div class="schedule-vote">
     {{ if site.Params.enable_voting }}
+  <div class="schedule-vote">
       <a href="/glosuj/"><button>Zagłosuj!</button></a>
-    {{ end }}
   </div>
+    {{ end }}
   </div>
  <script>
     const buttons = document.querySelectorAll(".day-selector button");

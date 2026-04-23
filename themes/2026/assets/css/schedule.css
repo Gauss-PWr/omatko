@@ -113,7 +113,7 @@
 
 .schedule-vote {
     display: flex;
-    padding: var(--element-padding);
+    margin: var(--element-padding) 0 0;
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -336,7 +336,7 @@ q {
     }
 
     .schedule-vote a {
-        width: var(--section-width);
+        width: 100%;
     }
 }
 
