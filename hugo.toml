@@ -48,10 +48,10 @@ inline = [['\(', '\)']]
 
 [params]
 # Harmonogram
-show_schedule_section = false
+show_schedule_section = true
 
 # Rejestracja 
-show_registration = false
+show_registration = true
 
 # Linki do formularzy
 participant_url = 'https://conf.e-science.pl/event/116/registrations/93/?form_token=90d6c5f5-6e67-470e-afab-1f9a66603f27'

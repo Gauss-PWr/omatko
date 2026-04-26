@@ -34,10 +34,10 @@
   
 </title>
 
- <link rel="stylesheet" href="./css/combined.min.57a8618066e35b1952f5f62818174ec49cbe582583d9dbb4968d734df34b4783.css" />
+ <link rel="stylesheet" href="./css/combined.min.5c260392d4edc08c85faa1c4d55ed7494d8f074fff471c4d3c5533b58df4d67a.css" />
 
 
-      <script src="./js/bundle.8b2509fb0454071a9c0d0f1d12036cd34fd7f3e2919ad3efa9c010470fe3ec0b.js" integrity="sha256-iyUJ&#43;wRUBxqcDQ8dEgNs00/X8&#43;KRmtPvqcAQRw/j7As=" crossorigin="anonymous"></script>
+      <script src="./js/bundle.8806a201bdeb713db91923f9ebba935f1b17bf7b1560066abd45730f5bb7c688.js" integrity="sha256-iAaiAb3rcT25GSP567qTXxsXv3sVYAZqvUVzD1u3xog=" crossorigin="anonymous"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
@@ -84,6 +84,10 @@
       
 
       
+      <li><a class="nav-link" href="./#schedule">Harmonogram</a></li>
+      
+      
+      <li><a class="nav-link" href="./#registration">Zapisy</a></li>
       
       
       <li><a class="nav-link" href="./#map">Lokalizacja</a></li>
@@ -131,7 +135,7 @@
     <p>5-7 grudnia 2026</p>
   </div>
   <div class="banner-timer">
-    <p>Pozostało:</p>
+    <p id="timer-label">Pozostało:</p>
     <div id="timer">
       <div class="countdown-item">
         <span class="countdown-number" style="color: var(--o-green)">00</span>
@@ -247,6 +251,1236 @@ Rejestracja uczestników rozpocznie się o godzinie 13:30. Na konferencję zapra
   
 
   
+    <section class="schedule" id="schedule">
+  <div class="schedule-layout">
+  <h1>Harmonogram</h1>
+  <p class="schedule-text">
+    Poniżej prezentujemy pełen harmonogram tegorocznej konferencji.
+    Sprawdźcie, jakie tematy przygotowano,
+    kto wystąpi na naszej scenie i jak zaplanowaliśmy poszczególne bloki tematyczne.
+    <br>
+    <br>
+    <em>Ważna informacja: do czasu rozpoczęcia konferencji plan może ulec jeszcze drobnym zmianom.</em>
+  </p>
+  <div class="day-selector">
+    <div class="switch-slider" id="switch-slider"></div>
+    
+      
+      <button
+        onclick="showSchedule('2025-12-05')"
+        data-day="2025-12-05"
+      >
+        piątek
+      </button>
+    
+      
+      <button
+        onclick="showSchedule('2025-12-06')"
+        data-day="2025-12-06"
+      >
+        sobota
+      </button>
+    
+      
+      <button
+        onclick="showSchedule('2025-12-07')"
+        data-day="2025-12-07"
+      >
+        niedziela
+      </button>
+    
+  </div>
+  <div class="day-container">
+    <div class="schedule-legend">
+      <span class="legend-element"><a class="applied-legend">s</a><a>&nbsp;- Blok stosowany</a></span>
+      <span class="legend-element"><a class="theoretic-legend">t</a><a>&nbsp;- Blok teoretyczny</a></span>
+    </div>
+    
+      <div id="schedule-2025-12-05" class="schedule-day hidden">
+    <div class="time-slot">
+      <div class="time">13:30</div>
+      <div class="events">
+          <div class="event ">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Rejestracja</p>
+    
+
+
+    
+</div>
+    
+
+      
+
+  </div>
+        
+</div>
+
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time">14:30</div>
+      <div class="events">
+          <div class="event ">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Rozpoczęcie konferencji</p>
+    
+
+
+    
+</div>
+    
+
+      
+
+  </div>
+        
+</div>
+
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time">15:00</div>
+      <div class="events">
+          <div class="event ">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Wykład otwierający</p>
+    
+
+
+    
+</div>
+    
+
+      
+
+  </div>
+        
+</div>
+
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time">16:00</div>
+      <div class="events">
+          <div class="event ">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Przerwa kawowa</p>
+    
+
+
+    
+</div>
+    
+
+      
+
+  </div>
+        
+</div>
+
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time">16:20</div>
+      <div class="events">
+          <div class="event stosowana">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Blok matematyki stosowanej</p>
+    
+
+
+    
+</div>
+    
+    <span class="type-detail stosowana">s</span>
+  
+
+      
+
+  </div>
+        
+</div>
+
+          <div class="event teoretyczna">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Blok matematyki teoretycznej</p>
+    
+
+
+    
+</div>
+    
+    <span class="type-detail teoretyczna">t</span>
+  
+
+      
+
+  </div>
+        
+</div>
+
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time">17:20</div>
+      <div class="events">
+          <div class="event ">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Przerwa kawowa</p>
+    
+
+
+    
+</div>
+    
+
+      
+
+  </div>
+        
+</div>
+
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time">17:50</div>
+      <div class="events">
+          <div class="event ">
+  
+
+  
+  <div  class="event-details abstract"
+   >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <q>Cras aliquam vitae tortor egestas condimentum. Ut facilisis tincidunt enim. </q>
+      <span class="event-author"> &ndash; XYZ</span>
+    
+
+
+    
+</div>
+    
+
+      
+      <span class="toggle-abstract"
+        ><i class="fa-solid fa-caret-down"></i
+      ></span>
+  
+
+  </div>
+        
+    <div class="event-abstract hidden">
+      <p class="event-abstract-content">
+        <h3 id="xyz1234">xyz1234</h3>
+<p>Morbi sagittis, magna sit amet vestibulum mattis, orci lacus aliquet libero, eget faucibus velit velit ut risus. Integer vulputate leo urna, eget viverra libero imperdiet a. Ut aliquet lectus ut dui egestas facilisis. Vestibulum elementum purus nulla, sed consectetur erat elementum a. Quisque condimentum, enim porta sodales viverra, nunc augue hendrerit libero, id sagittis ipsum ipsum in metus. Integer tellus enim, elementum nec mauris a, tincidunt elementum neque. In porta pellentesque mauris id vestibulum. Sed suscipit tincidunt blandit. Praesent accumsan augue et diam feugiat sollicitudin. Aenean sollicitudin lacus non fringilla fermentum. Morbi tempus cursus libero a scelerisque. Nulla rhoncus nisi nec nibh sollicitudin convallis id eu ipsum.</p>
+<p>Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
+Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
+Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
+Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
+Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
+Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
+Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
+Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
+Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
+Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
+Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
+Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
+Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
+Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
+Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
+Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
+Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
+Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
+Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
+Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
+Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
+Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.</p>
+
+      </p>
+    </div>
+
+</div>
+
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time">18:10</div>
+      <div class="events">
+          <div class="event stosowana">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <q>Nulla in sagittis ante, non ultricies ex. Cras accumsan maximus risus, vel rutrum mauris vestibulum sed. Phasellus facilisis lacus ac augue dignissim tincidunt.</q>
+      <span class="event-author"> &ndash; Imie Nazwisko I</span>
+    
+
+
+    
+</div>
+    
+    <span class="type-detail stosowana">s</span>
+  
+
+      
+
+  </div>
+        
+</div>
+
+          <div class="event teoretyczna">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <q>Quisque eget odio nibh. Nullam pulvinar eleifend pharetra.</q>
+      <span class="event-author"> &ndash; Imie Nazwisko II</span>
+    
+
+
+    
+</div>
+    
+    <span class="type-detail teoretyczna">t</span>
+  
+
+      
+
+  </div>
+        
+</div>
+
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time">18:40</div>
+      <div class="events">
+          <div class="event ">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Zakończenie dnia</p>
+    
+
+
+    
+</div>
+    
+
+      
+
+  </div>
+        
+</div>
+
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time">19:30</div>
+      <div class="events">
+          <div class="event ">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Integracja</p>
+    
+
+
+    
+</div>
+    
+
+      
+
+  </div>
+        
+</div>
+
+      </div>
+    </div>
+</div>
+
+    
+      <div id="schedule-2025-12-06" class="schedule-day hidden">
+    <div class="time-slot">
+      <div class="time">9:30</div>
+      <div class="events">
+          <div class="event ">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Rejestracja</p>
+    
+
+
+    
+</div>
+    
+
+      
+
+  </div>
+        
+</div>
+
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time">10:00</div>
+      <div class="events">
+          <div class="event stosowana">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Blok matematyki stosowanej</p>
+    
+
+
+    
+</div>
+    
+    <span class="type-detail stosowana">s</span>
+  
+
+      
+
+  </div>
+        
+</div>
+
+          <div class="event teoretyczna">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Blok matematyki teoretycznej</p>
+    
+
+
+    
+</div>
+    
+    <span class="type-detail teoretyczna">t</span>
+  
+
+      
+
+  </div>
+        
+</div>
+
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time">11:00</div>
+      <div class="events">
+          <div class="event ">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Sesja plakatowa</p>
+    
+
+
+    
+</div>
+    
+
+      
+
+  </div>
+        
+</div>
+
+          <div class="event ">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Przerwa śniadaniowa</p>
+    
+
+
+    
+</div>
+    
+
+      
+
+  </div>
+        
+</div>
+
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time">11:50</div>
+      <div class="events">
+          <div class="event ">
+  
+
+  
+  <div  class="event-details abstract"
+   >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <q>Cras aliquam vitae tortor egestas condimentum. Ut facilisis tincidunt enim. </q>
+      <span class="event-author"> &ndash; XYZ</span>
+    
+
+
+    
+</div>
+    
+
+      
+      <span class="toggle-abstract"
+        ><i class="fa-solid fa-caret-down"></i
+      ></span>
+  
+
+  </div>
+        
+    <div class="event-abstract hidden">
+      <p class="event-abstract-content">
+        <h3 id="xyz1234">xyz1234</h3>
+<p>Morbi sagittis, magna sit amet vestibulum mattis, orci lacus aliquet libero, eget faucibus velit velit ut risus. Integer vulputate leo urna, eget viverra libero imperdiet a. Ut aliquet lectus ut dui egestas facilisis. Vestibulum elementum purus nulla, sed consectetur erat elementum a. Quisque condimentum, enim porta sodales viverra, nunc augue hendrerit libero, id sagittis ipsum ipsum in metus. Integer tellus enim, elementum nec mauris a, tincidunt elementum neque. In porta pellentesque mauris id vestibulum. Sed suscipit tincidunt blandit. Praesent accumsan augue et diam feugiat sollicitudin. Aenean sollicitudin lacus non fringilla fermentum. Morbi tempus cursus libero a scelerisque. Nulla rhoncus nisi nec nibh sollicitudin convallis id eu ipsum.
+Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.</p>
+      </p>
+    </div>
+
+</div>
+
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time">12:30</div>
+      <div class="events">
+          <div class="event stosowana">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Blok matematyki stosowanej</p>
+    
+
+
+    
+</div>
+    
+    <span class="type-detail stosowana">s</span>
+  
+
+      
+
+  </div>
+        
+</div>
+
+          <div class="event teoretyczna">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Blok matematyki teoretycznej</p>
+    
+
+
+    
+</div>
+    
+    <span class="type-detail teoretyczna">t</span>
+  
+
+      
+
+  </div>
+        
+</div>
+
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time">13:30</div>
+      <div class="events">
+          <div class="event ">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Przerwa obiadowa</p>
+    
+
+
+    
+</div>
+    
+
+      
+
+  </div>
+        
+</div>
+
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time">15:00</div>
+      <div class="events">
+          <div class="event stosowana">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Blok matematyki stosowanej</p>
+    
+
+
+    
+</div>
+    
+    <span class="type-detail stosowana">s</span>
+  
+
+      
+
+  </div>
+        
+</div>
+
+          <div class="event teoretyczna">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Blok matematyki teoretycznej</p>
+    
+
+
+    
+</div>
+    
+    <span class="type-detail teoretyczna">t</span>
+  
+
+      
+
+  </div>
+        
+</div>
+
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time">16:30</div>
+      <div class="events">
+          <div class="event ">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Przerwa kawowa</p>
+    
+
+
+    
+</div>
+    
+
+      
+
+  </div>
+        
+</div>
+
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time">17:00</div>
+      <div class="events">
+          <div class="event ">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Prezentacja sponsora</p>
+    
+
+
+    
+</div>
+    
+
+      
+
+  </div>
+        
+</div>
+
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time">17:20</div>
+      <div class="events">
+          <div class="event stosowana">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Blok matematyki stosowanej</p>
+    
+
+
+    
+</div>
+    
+    <span class="type-detail stosowana">s</span>
+  
+
+      
+
+  </div>
+        
+</div>
+
+          <div class="event teoretyczna">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Blok matematyki teoretycznej</p>
+    
+
+
+    
+</div>
+    
+    <span class="type-detail teoretyczna">t</span>
+  
+
+      
+
+  </div>
+        
+</div>
+
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time">18:20</div>
+      <div class="events">
+          <div class="event ">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Zakończenie dnia</p>
+    
+
+
+    
+</div>
+    
+
+      
+
+  </div>
+        
+</div>
+
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time">19:30</div>
+      <div class="events">
+          <div class="event ">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Integracja</p>
+    
+
+
+    
+</div>
+    
+
+      
+
+  </div>
+        
+</div>
+
+      </div>
+    </div>
+</div>
+
+    
+      <div id="schedule-2025-12-07" class="schedule-day hidden">
+    <div class="time-slot">
+      <div class="time">10:00</div>
+      <div class="events">
+          <div class="event stosowana">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Blok matematyki stosowanej</p>
+    
+
+
+    
+</div>
+    
+    <span class="type-detail stosowana">s</span>
+  
+
+      
+
+  </div>
+        
+</div>
+
+          <div class="event teoretyczna">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Blok matematyki teoretycznej</p>
+    
+
+
+    
+</div>
+    
+    <span class="type-detail teoretyczna">t</span>
+  
+
+      
+
+  </div>
+        
+</div>
+
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time">11:00</div>
+      <div class="events">
+          <div class="event ">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Przerwa śniadaniowa</p>
+    
+
+
+    
+</div>
+    
+
+      
+
+  </div>
+        
+</div>
+
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time">11:30</div>
+      <div class="events">
+          <div class="event stosowana">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Blok matematyki stosowanej</p>
+    
+
+
+    
+</div>
+    
+    <span class="type-detail stosowana">s</span>
+  
+
+      
+
+  </div>
+        
+</div>
+
+          <div class="event teoretyczna">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Blok matematyki teoretycznej</p>
+    
+
+
+    
+</div>
+    
+    <span class="type-detail teoretyczna">t</span>
+  
+
+      
+
+  </div>
+        
+</div>
+
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time">13:00</div>
+      <div class="events">
+          <div class="event ">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Przerwa kawowa</p>
+    
+
+
+    
+</div>
+    
+
+      
+
+  </div>
+        
+</div>
+
+      </div>
+    </div>
+    <div class="time-slot">
+      <div class="time">13:30</div>
+      <div class="events">
+          <div class="event ">
+  
+
+  
+  <div 
+   class="event-details"
+     >
+  
+<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+    
+    <p>Zakończenie konferencji</p>
+    
+
+
+    
+</div>
+    
+
+      
+
+  </div>
+        
+</div>
+
+      </div>
+    </div>
+</div>
+
+    
+  </div>
+    
+  <div class="schedule-vote">
+      <a href="./glosuj/"><button>Zagłosuj!</button></a>
+  </div>
+    
+  </div>
+</section>
+  
+
+  
+    <section class="registration" id="registration">
+  <h1>Zapisy</h1>
+  <div class="registration-content">
+    <div
+      class="registration-item "
+    >
+      <div class="registration-item-content">
+        <h2>uczestnik</h2>
+        
+          <p>Wspólnie z innymi odkrywaj zakamarki matematyki!</p>
+        
+      </div>
+      <div class="registration-item-button">
+        <p>Termin: 25.11.2025</p>
+        
+          <a href="https://conf.e-science.pl/event/116/registrations/93/?form_token=90d6c5f5-6e67-470e-afab-1f9a66603f27"
+            ><button
+              
+                class="gray" disabled
+              
+            >
+              zapisz się
+            </button></a
+          >
+        
+      </div>
+
+      
+    </div>
+    <div
+      class="registration-item "
+    >
+      <div class="registration-item-content">
+        <h2>prelegent</h2>
+        
+          <p>Podziel się swoją wiedzą w formie wykładu!</p>
+        
+      </div>
+      <div class="registration-item-button">
+        <p>Termin: 31.10.2025</p>
+        
+          <a href="https://conf.e-science.pl/e/omatko2025"
+            ><button
+              
+                class="gray" disabled
+              
+            >
+              zapisz się
+            </button></a
+          >
+        
+      </div>
+
+      
+    </div>
+    <div
+      class="registration-item "
+    >
+      <div class="registration-item-content">
+        <h2>plakat</h2>
+        
+          <p>Wykaż się kreatywnością przygotowując plakat!</p>
+        
+      </div>
+      <div class="registration-item-button">
+        <p>Termin: 31.10.2025</p>
+        
+          <a href="https://conf.e-science.pl/e/omatko2025"
+            ><button
+              
+                class="gray" disabled
+              
+            >
+              zapisz się
+            </button></a
+          >
+        
+      </div>
+
+      
+    </div>
+  </div>
+</section>
 
   
 
