@@ -36,8 +36,7 @@
  <link rel="stylesheet" href="../../css/combined.min.57a8618066e35b1952f5f62818174ec49cbe582583d9dbb4968d734df34b4783.css" />
 
 
-        <script src="../../js/main.0d15c800811a19b037617bffe4cb81928ff94d596e8e2f840fc06bf86921598a.js" integrity="sha256-DRXIAIEaGbA3YXv/5MuBko/5TVluji&#43;ED8Br&#43;GkhWYo=" crossorigin="anonymous"></script>
-
+      <script src="../../js/bundle.008ae944aecf0f3874b5b897476816db324d106f03ccba1a56a45dd3b4708f1c.js" integrity="sha256-AIrpRK7PDzh0tbiXR2gW2zJNEG8DzLoaVqRd07Rwjxw=" crossorigin="anonymous"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
@@ -84,12 +83,12 @@
       
 
       
-      <li><a class="nav-link" href="../../#schedule">Harmonogram</a></li>
-      
       
       
       <li><a class="nav-link" href="../../#map">Lokalizacja</a></li>
       
+      
+      <li><a class="nav-link" href="../../#sponsors">Partnerzy</a></li>
       
       
 <li class="nav-item">
@@ -110,48 +109,6 @@
 </li>
     </ul>
   </div>
-  <script>
-    const button = document.getElementById("menu-button");
-    const navList = document.querySelector(".nav-list");
-    const buttonIcon = document.querySelector(".fa-solid");
-
-    button.addEventListener("click", () => {
-      navList.classList.toggle("active-menu");
-      buttonIcon.classList.toggle("fa-bars");
-      buttonIcon.classList.toggle("fa-xmark");
-    });
-
-    document.addEventListener("click", function(event) {
-      
-      if (navList.classList.contains("active-menu")) {
-        
-        if (!navList.contains(event.target) && !button.contains(event.target)) {
-          
-          event.preventDefault();
-          event.stopPropagation();
-          
-          navList.classList.remove("active-menu");
-          buttonIcon.classList.add("fa-bars");
-          buttonIcon.classList.remove("fa-xmark");
-        }
-      }
-    }, true); 
-
-    
-    const navLinks = document.querySelectorAll('.nav-link[href*="#"]');
-
-    navLinks.forEach(link => {
-        link.addEventListener("click", function() {
-
-                navList.classList.remove("active-menu");
-
-                buttonIcon.classList.add("fa-bars");
-                buttonIcon.classList.remove("fa-xmark");
-
-        });
-    });
-
-  </script>
 </nav>
 
 
