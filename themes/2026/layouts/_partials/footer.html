@@ -1,23 +1,40 @@
- <div class="footer-content">
-   <div class="footer-section">
-  <a href="/"><img class="footer-logo" src="/logo.webp" alt="Logo OMatKo" /></a>
-     </div>
-<div class="footer-section">
-  <a href="/regulamin.pdf">Regulamin</a>
-  <a href="mailto:omatko@pwr.edu.pl">Kontakt</a>
-  <a href="https://www.instagram.com/omatko.pwr/">Instagram</a>
-  <a href="https://www.facebook.com/omatkopwr">Facebook</a>
+<div class="footer-content">
+  <div class="footer-section">
+    <a href="/"><img alt="Logo OMatKo" class="footer-logo" src="/logo.webp" /></a>
+  </div>
+  <div class="footer-section">
+    <a href="/regulamin.pdf">Regulamin</a>
+    <a href="mailto:omatko@pwr.edu.pl">Kontakt</a>
+    <a href="https://www.instagram.com/omatko.pwr/">Instagram</a>
+    <a href="https://www.facebook.com/omatkopwr">Facebook</a>
+  </div>
+  <div class="footer-section">
+    {{ with resources.GetMatch "images/footer/placeholder.*" }}
+    <a href="/"><img alt="logo 1" src="{{ .RelPermalink }}"></a>
+    {{ end }}
+
+    {{ with resources.GetMatch "images/footer/placeholder2.*" }}
+    <a href="/"><img alt="logo 2" src="{{ .RelPermalink }}"></a>
+    {{ end }}
+
+    {{ with resources.GetMatch "images/footer/placeholder3.*" }}
+    <a href="/"><img alt="logo 3" src="{{ .RelPermalink }}"></a>
+    {{ end }}
+
+    {{ with resources.GetMatch "images/footer/placeholder4.*" }}
+    <a href="/"><img alt="logo 4" src="{{ .RelPermalink }}"></a>
+    {{ end }}
+  </div>
+
+  <div class="footer-section">
+    {{ with resources.GetMatch "images/footer/placeholder5.*" }}
+    <a href="/"><img alt="logo politechnika" src="{{ .RelPermalink }}"></a>
+    {{ end }}
+
+    {{ with resources.GetMatch "images/footer/placeholder6.*" }}
+    <a href="/"><img alt="logo wmat" src="{{ .RelPermalink }}"></a>
+    {{ end }}
+  </div>
 
 </div>
-<div class="footer-section">
-  <a><img src="/sponsors/placeholder.webp" alt="logo 1"></a>
-  <a><img src="/sponsors/placeholder.webp" alt="logo kolo 1"></a>
-    <a><img src="/sponsors/placeholder.webp" alt="logo kolo 2"></a>
-    <a><img src="/sponsors/placeholder.webp" alt="logo kolo 3"></a>
-</div>
-   <div class="footer-section">
-  <a><img src="/sponsors/placeholder.webp" alt="logo politechnika"></a>
-  <a><img src="/sponsors/placeholder.webp" alt="logo wmat"></a>
-</div>
- </div>
-   <div class="footer-signature">Ogólnopolska Matematyczna Konferencja Studentów {{ now.Year }}</div>
+<div class="footer-signature">Ogólnopolska Matematyczna Konferencja Studentów {{ now.Year }}</div>

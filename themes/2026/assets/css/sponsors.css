@@ -1,47 +1,80 @@
-.sponsors {
-  text-transform: uppercase;
-  text-align: center;
-}
-
 .sponsors-container {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   flex-wrap: wrap;
-  gap: 100px;
+  gap: var(--element-padding);
+}
+
+.main-sponsors .sponsors-container {
+    flex-wrap: unset;
+}
+
+.main-sponsor-text {
+    width: 100%;
+}
+
+.main-sponsor-text p {
+    margin: 0;
+}
+
+
+.main-sponsors, .normal-sponsors {
+    position: relative;
+  padding-bottom: var(--element-padding);
+}
+
+.main-sponsors:not(:last-of-type)::after, .normal-sponsors:not(:last-of-type)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+    left: 0;
+    right: 0;
+  height: 1px;
+  background-color: var(--o-gray);
+  opacity: 0.4;
+}
+
+.sponsors-container a {
+    display: flex;
+    width: 18%;
+    max-height: 150px;
 }
 
 .sponsor-img {
-  width: 18%;
+    width: 100%;
   height: auto;
   object-fit: contain;
-  max-height: 150px;
 }
 
-.main-sponsor-img {
-  width: 35%;
-  height: auto;
-  object-fit: contain;
-  max-height: 150px;
+.main-sponsors .sponsors-container a {
+  width: 33%;
+  max-height: unset;
 }
 
 .sponsors h2 {
-  margin: 40px 0;
+  margin: var(--element-padding) 0;
+    text-align: left;
+    text-transform: capitalize;
 }
 
 .patrons h2 {
-  margin: 40px 0;
+  margin: var(--element-padding) 0;
+    text-align: left;
+    text-transform: capitalize;
 }
 
 
-@media screen and (max-width: 1024px) {
-  .sponsors-container {
-    gap: 20px;
-  }
-  .sponsor-img {
-    width: 40%;
-  }
+@media screen and (max-width: 768px) {
 
-  .main-sponsor-img {
-    width: 70%;
-  }
+    .sponsors-container a {
+        width: 45%;
+    }
+
+    .main-sponsors .sponsors-container a {
+        width: 70%;
+    }
+
+    .main-sponsors .sponsors-container {
+    flex-direction: column;
+}
 }

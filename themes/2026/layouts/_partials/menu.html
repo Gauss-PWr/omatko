@@ -32,8 +32,11 @@ Renders a menu for the given menu ID.
       {{ if site.Params.show_map }}
       <li><a class="nav-link" href="/#map">Lokalizacja</a></li>
       {{ end }}
+      {{ if site.Params.show_sponsors_section }}
+      <li><a class="nav-link" href="/#sponsors">Współpraca</a></li>
+      {{ end }}
       {{ if site.Params.show_patrons_section }}
-      <li><a class="nav-link" href="/#sponsors">Partnerzy</a></li>
+      <li><a class="nav-link" href="/#patrons">Patroni</a></li>
       {{ end }}
       {{ if site.Params.show_regulamin}}
       <li><a class="nav-link" href="/regulamin.pdf">Regulamin</a></li>

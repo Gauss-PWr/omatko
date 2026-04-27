@@ -51,13 +51,17 @@ Znajdują się tam parametry odpowiadające za wyświetlanie konkretnych sekcji:
 - sponsorów i patronów
 
 ### Sponsorzy i patroni
+Aby dodać sponsorów, należy wypełnić pliki _.yml_ w folderze _themes/\*/data/partnerships_
+i wstawić zdjęcia do folderu _themes/\*/content/partnerships/\*_.
 
-Aby dodać sponsorów, wystarczy wkleić loga do folderu _themes/\*/static/sponsors_. Sponsor główny ma własny folder _main_ wewnątrz _sponsors_.
-Patroni dzielą się na honorowych i medialnych.
-Każdy z nich posiada swój własny folder:
+Przykładowa zawartość pliku:
 
-- patroni honorowi - _patrons/honorary_
-- patroni medialni - _patrons/media_
+```yml
+- name: XYZ # Nazwa sponsora
+  logo: placeholder.png # Nazwa pliku z logiem sponsora
+  url: "https://example.com" # Adres internetowy sponsora
+  description: "Jakiś tekst" # Opis sponsora (dotyczy tylko głównego sponsora)
+```
 
 ### Harmonogram
 

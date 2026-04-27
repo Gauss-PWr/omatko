@@ -1,0 +1,15 @@
+- name: XYZZ normal
+  logo: placeholder5.png
+  url: "/"
+
+- name: XYZZ normal 2
+  logo: placeholder2.png
+  url: "/"
+
+- name: XYZZ normal 3
+  logo: placeholder3.png
+  url: "/"
+
+- name: XYZZ normal 4
+  logo: placeholder_normal.webp
+  url: "/"
