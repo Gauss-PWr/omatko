@@ -48,7 +48,7 @@ inline = [['\(', '\)']]
 
 [params]
 # Harmonogram
-show_schedule_section = true
+show_schedule_section = false
 
 # Rejestracja 
 show_registration = true
@@ -70,8 +70,8 @@ active_reg_close_date = '2025-10-31'
 
 # Zamkniecie zapisów
 
-participant_reg_close = true
-active_reg_close = true
+participant_reg_close = false
+active_reg_close = false
 
 
 # Sponsorzy
@@ -90,7 +90,7 @@ show_regulamin = false
 
 math = true
 
-enable_voting = true
+enable_voting = false
 
 vote_app_url = "https://omatko.pwr.edu.pl/glosuj/"
 

@@ -5,15 +5,19 @@
       class="registration-item {{ if not .Site.Params.participant_url }}
         registration-closed
       {{ end }}"
+       id="participants"
     >
       <div class="registration-item-content">
-        <h2>uczestnik</h2>
+        <h2>Uczestnik</h2>
         {{ if .Site.Params.participant_url }}
-          <p>Wspólnie z innymi odkrywaj zakamarki matematyki!</p>
+          <p>Wpadnij posłuchać innych i wspólnie z nami odkrywaj najciekawsze
+            zakamarki matematyki! Jako uczestnik masz okazję chłonąć wiedzę,
+            zadawać pytania i brać udział w dyskusjach. To też idealny moment,
+            żeby złapać nowe znajomości z ludźmi z całej Polski, których kręci
+            to samo, co Ciebie.</p>
         {{ end }}
-      </div>
-      <div class="registration-item-button">
         <p>Termin: 25.11.2025</p>
+      <div class="registration-item-button">
         {{ if .Site.Params.participant_url }}
           <a href="{{ .Site.Params.participant_url }}"
             ><button
@@ -23,11 +27,15 @@
                 class="green"
               {{ end }}
             >
-              zapisz się
+              Zapisz się!
             </button></a
           >
         {{ end }}
       </div>
+      </div>
+        {{ with resources.GetMatch "images/registration/participants.*" }}
+        <img class="registration-item-image" alt="Uczestnik" src="{{ .RelPermalink }}">
+        {{ end }}
 
       {{ if and ( not .Site.Params.participant_url )  (not .Site.Params.participant_reg_close) }}
         {{ partial "reg-timer.html" (dict "id" "audience") }}
@@ -43,15 +51,23 @@
       class="registration-item {{ if not .Site.Params.speaker_url }}
         registration-closed
       {{ end }}"
+       id="speaker"
     >
+      {{ with resources.GetMatch "images/registration/speakers.*" }}
+      <img  class="registration-item-image"  alt="Prelegent" src="{{ .RelPermalink }}">
+      {{ end }}
       <div class="registration-item-content">
-        <h2>prelegent</h2>
+        <h2>Prelegent</h2>
         {{ if .Site.Params.speaker_url }}
-          <p>Podziel się swoją wiedzą w formie wykładu!</p>
+          <p>Podziel się swoją wiedzą i wynikami badań, stając przed
+            publicznością w roli prelegenta! Masz do dyspozycji czas na
+            scenie, żeby opowiedzieć o tym, co najbardziej fascynuje Cię
+            w matematyce lub dziedzinach pokrewnych. To świetny trening
+            wystąpień publicznych i szansa na zebranie cennego
+            feedbacku od innych studentów.</p>
         {{ end }}
-      </div>
-      <div class="registration-item-button">
         <p>Termin: 31.10.2025</p>
+      <div class="registration-item-button">
         {{ if .Site.Params.speaker_url }}
           <a href="{{ .Site.Params.speaker_url }}"
             ><button
@@ -61,10 +77,11 @@
                 class="blue"
               {{ end }}
             >
-              zapisz się
+              Zapisz się!
             </button></a
           >
         {{ end }}
+      </div>
       </div>
 
       {{ if and ( not .Site.Params.speaker_url )  (not .Site.Params.active_reg_close) }}
@@ -81,15 +98,19 @@
       class="registration-item {{ if not .Site.Params.poster_url }}
         registration-closed
       {{ end }}"
+       id="poster"
     >
       <div class="registration-item-content">
-        <h2>plakat</h2>
+        <h2>Plakat</h2>
         {{ if .Site.Params.poster_url }}
-          <p>Wykaż się kreatywnością przygotowując plakat!</p>
+          <p>Wolisz formę graficzną? Wykaż się kreatywnością i zaprezentuj
+            swój projekt lub ciekawy problem matematyczny, przygotowując
+            autorski plakat! Sesja plakatowa to świetna przestrzeń do
+            luźniejszych, bezpośrednich rozmów z zainteresowanymi osobami,
+            które zatrzymają się przy Twojej pracy.</p>
         {{ end }}
-      </div>
-      <div class="registration-item-button">
         <p>Termin: 31.10.2025</p>
+      <div class="registration-item-button">
         {{ if .Site.Params.poster_url }}
           <a href="{{ .Site.Params.poster_url }}"
             ><button
@@ -99,11 +120,15 @@
                 class="orange"
               {{ end }}
             >
-              zapisz się
+              Zapisz się!
             </button></a
           >
         {{ end }}
       </div>
+      </div>
+          {{ with resources.GetMatch "images/registration/posters.*" }}
+          <img class="registration-item-image" alt="Plakat" src="{{ .RelPermalink }}">
+          {{ end }}
 
       {{ if and ( not .Site.Params.speaker_url )  (not .Site.Params.active_reg_close) }}
         {{ partial "reg-timer.html" (dict "id" "posters") }}

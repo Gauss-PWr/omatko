@@ -1,25 +1,17 @@
-.registration {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .registration-content {
   display: flex;
-  justify-content: center;
-  gap: 50px;
+    flex-direction: column;
+    gap: var(--element-padding);
 }
 
 .registration-item {
-  background-color: var(--o-gray);
-  display: flex;
-  min-height: 400px;
-  border-radius: 5px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 30px;
-  min-width: 300px;
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+    gap: var(--element-padding);
+}
+
+.registration-item#speaker {
+  grid-template-columns: 3fr 4fr;
 }
 
 .registration-closed {
@@ -33,16 +25,12 @@
 }
 
 .registration-item h2 {
-  text-transform: uppercase;
-  font-size: 2.5rem;
-  text-align: center;
+  margin-top: 0;
 }
 
 .registration-item-content {
-  margin-bottom: 10px;
-  width: 250px;
   text-wrap: wrap;
-  text-align: center;
+  text-align: left;
 }
 
 .registration-item-button {
@@ -51,15 +39,29 @@
   align-items: center;
 }
 
+.registration-item-image {
+    box-shadow: var(--element-box-shadow);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--element-border-radius-large);
+}
+
+.registration-item-button a {
+    min-width: 30%;
+}
+
 .registration-item-button button {
-  padding: 10px 30px;
+  padding: 10px;
   font-size: large;
-  font-weight: 600;
-  text-transform: uppercase;
+  font-weight: 700;
   border: 0;
-  border-radius: 5px;
+  border-radius: var(--button-border-radius);
+    box-shadow: var(--element-box-shadow);
   cursor: pointer;
   transition: 0.5s ease;
+    width: 100%;
+    color: white;
 }
 
 .registration-item-button button:hover {
@@ -84,24 +86,22 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .registration-content {
-    flex-direction: column;
-    align-items: center;
-  }
+    .registration-item {
+        display: flex;
+        flex-direction: column;
+    }
 
-  .registration-item {
-    min-width: 0px;
-    width: 80%;
-    min-height: 0px;
-  }
+    .registration-item#speaker {
+        flex-direction: column-reverse;
+    }
+
+    .registration-item-button a {
+        min-width: 100%;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
-  .registration-item {
-    min-width: 0px;
-    width: 80%;
-  }
-
   .registration-closed div[id^="timer"] {
     flex-direction: row;
   }
