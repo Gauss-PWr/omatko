@@ -120,4 +120,5 @@ main {
 html {
     scroll-behavior: smooth;
     scroll-padding-top: calc(var(--main-nav-margin)/2);
+    -webkit-text-size-adjust: 100%;
 }
