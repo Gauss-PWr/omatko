@@ -6,12 +6,12 @@
 
 .registration-item {
   display: grid;
-  grid-template-columns: 4fr 3fr;
+  grid-template-columns: 3fr 4fr;
     gap: var(--element-padding);
 }
 
 .registration-item#speaker {
-  grid-template-columns: 3fr 4fr;
+  grid-template-columns: 4fr 3fr;
 }
 
 .registration-closed {
@@ -48,7 +48,7 @@
 }
 
 .registration-item-button a {
-    min-width: 30%;
+    min-width: calc(0.3 * var(--section-width));
 }
 
 .registration-item-button button {
@@ -64,8 +64,14 @@
     color: white;
 }
 
-.registration-item-button button:hover {
-  color: white;
+button.green:hover {
+    background-color: color-mix(in srgb,var(--o-green) 85%,white)
+}
+button.blue:hover {
+    background-color: color-mix(in srgb,var(--o-blue) 85%,white)
+}
+button.orange:hover {
+    background-color: color-mix(in srgb,var(--o-orange) 85%,white)
 }
 
 .registration-closed div[id^="timer"] {
@@ -110,5 +116,8 @@
   }
   .registration-closed div[id^="timer"] .countdown-item {
     margin: 15px;
+  }
+  .registration-item-button button {
+      font-size: medium;
   }
 }

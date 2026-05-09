@@ -7,6 +7,9 @@
       {{ end }}"
        id="participants"
     >
+        {{ with resources.GetMatch "images/registration/participants.*" }}
+        <img class="registration-item-image" alt="Uczestnik" src="{{ .RelPermalink }}">
+        {{ end }}
       <div class="registration-item-content">
         <h2>Uczestnik</h2>
         {{ if .Site.Params.participant_url }}
@@ -33,9 +36,6 @@
         {{ end }}
       </div>
       </div>
-        {{ with resources.GetMatch "images/registration/participants.*" }}
-        <img class="registration-item-image" alt="Uczestnik" src="{{ .RelPermalink }}">
-        {{ end }}
 
       {{ if and ( not .Site.Params.participant_url )  (not .Site.Params.participant_reg_close) }}
         {{ partial "reg-timer.html" (dict "id" "audience") }}
@@ -53,9 +53,6 @@
       {{ end }}"
        id="speaker"
     >
-      {{ with resources.GetMatch "images/registration/speakers.*" }}
-      <img  class="registration-item-image"  alt="Prelegent" src="{{ .RelPermalink }}">
-      {{ end }}
       <div class="registration-item-content">
         <h2>Prelegent</h2>
         {{ if .Site.Params.speaker_url }}
@@ -83,6 +80,9 @@
         {{ end }}
       </div>
       </div>
+      {{ with resources.GetMatch "images/registration/speakers.*" }}
+      <img  class="registration-item-image"  alt="Prelegent" src="{{ .RelPermalink }}">
+      {{ end }}
 
       {{ if and ( not .Site.Params.speaker_url )  (not .Site.Params.active_reg_close) }}
         {{ partial "reg-timer.html" (dict "id" "speaker") }}
@@ -100,6 +100,9 @@
       {{ end }}"
        id="poster"
     >
+        {{ with resources.GetMatch "images/registration/posters.*" }}
+        <img class="registration-item-image" alt="Plakat" src="{{ .RelPermalink }}">
+        {{ end }}
       <div class="registration-item-content">
         <h2>Plakat</h2>
         {{ if .Site.Params.poster_url }}
@@ -126,9 +129,6 @@
         {{ end }}
       </div>
       </div>
-          {{ with resources.GetMatch "images/registration/posters.*" }}
-          <img class="registration-item-image" alt="Plakat" src="{{ .RelPermalink }}">
-          {{ end }}
 
       {{ if and ( not .Site.Params.speaker_url )  (not .Site.Params.active_reg_close) }}
         {{ partial "reg-timer.html" (dict "id" "posters") }}

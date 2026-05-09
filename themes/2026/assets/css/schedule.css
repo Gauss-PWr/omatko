@@ -86,7 +86,7 @@
 }
 
 .time-slot {
-    margin-top: var(--element-padding);
+    margin-top: calc(0.5*var(--element-padding));
 }
 
 .day-container {
