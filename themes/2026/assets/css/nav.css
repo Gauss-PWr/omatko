@@ -62,7 +62,7 @@ header {
     padding: 15px;
     color: var(--nav-text-color);
     font-family: QuickSand, sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     text-decoration: none;
     cursor: pointer;

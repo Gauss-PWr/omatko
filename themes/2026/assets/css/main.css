@@ -14,7 +14,9 @@
     --section-width: calc(min(80vw - var(--element-padding), 1024px));
     --main-nav-margin: 70px;
     --section-padding: calc(var(--main-nav-margin)/2) calc((100vw - var(--section-width))/2);
-    --font-size-paragraph: 1.1rem
+    --font-size-paragraph: 1.1rem;
+    --footnote-font-size: 0.9rem;
+    --footnote-font-color: #818181;
 }
 
 @media (max-width: 768px) {
@@ -25,7 +27,7 @@
         --element-border-radius-medium: 9px;
         --section-width: calc(96vw - var(--element-padding));
         --main-nav-margin: 50px;
-        --font-size-paragraph: 1rem
+        --font-size-paragraph: 1rem;
     }
 }
 

@@ -1,40 +1,15 @@
 <div class="footer-content">
-  <div class="footer-section">
-    <a href="/"><img alt="Logo OMatKo" class="footer-logo" src="/logo.webp" /></a>
+  <div class="footer-logo">
+    <a href="/"><img alt="Logo OMatKo" src="/logo.webp" /></a>
   </div>
-  <div class="footer-section">
+  <div class="footer-links">
     <a href="/regulamin.pdf">Regulamin</a>
     <a href="mailto:omatko@pwr.edu.pl">Kontakt</a>
     <a href="https://www.instagram.com/omatko.pwr/">Instagram</a>
     <a href="https://www.facebook.com/omatkopwr">Facebook</a>
   </div>
-  <div class="footer-section">
-    {{ with resources.GetMatch "images/footer/placeholder.*" }}
-    <a href="/"><img alt="logo 1" src="{{ .RelPermalink }}"></a>
-    {{ end }}
-
-    {{ with resources.GetMatch "images/footer/placeholder2.*" }}
-    <a href="/"><img alt="logo 2" src="{{ .RelPermalink }}"></a>
-    {{ end }}
-
-    {{ with resources.GetMatch "images/footer/placeholder3.*" }}
-    <a href="/"><img alt="logo 3" src="{{ .RelPermalink }}"></a>
-    {{ end }}
-
-    {{ with resources.GetMatch "images/footer/placeholder4.*" }}
-    <a href="/"><img alt="logo 4" src="{{ .RelPermalink }}"></a>
-    {{ end }}
-  </div>
-
-  <div class="footer-section">
-    {{ with resources.GetMatch "images/footer/placeholder5.*" }}
-    <a href="/"><img alt="logo politechnika" src="{{ .RelPermalink }}"></a>
-    {{ end }}
-
-    {{ with resources.GetMatch "images/footer/placeholder6.*" }}
-    <a href="/"><img alt="logo wmat" src="{{ .RelPermalink }}"></a>
-    {{ end }}
-  </div>
 
 </div>
-<div class="footer-signature">Ogólnopolska Matematyczna Konferencja Studentów {{ now.Year }}</div>
+<div class="footer-signature">
+  <p>Ogólnopolska Matematyczna Konferencja Studentów {{ now.Year }}</p>
+</div>

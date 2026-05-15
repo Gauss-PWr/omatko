@@ -19,7 +19,6 @@
             żeby złapać nowe znajomości z ludźmi z całej Polski, których kręci
             to samo, co Ciebie.</p>
         {{ end }}
-        <p>Termin: 25.11.2025</p>
       <div class="registration-item-button">
         {{ if .Site.Params.participant_url }}
           <a href="{{ .Site.Params.participant_url }}"
@@ -35,6 +34,7 @@
           >
         {{ end }}
       </div>
+        <p class="registration-term">Termin: 25.11.2025</p>
       </div>
 
       {{ if and ( not .Site.Params.participant_url )  (not .Site.Params.participant_reg_close) }}
@@ -63,7 +63,6 @@
             wystąpień publicznych i szansa na zebranie cennego
             feedbacku od innych studentów.</p>
         {{ end }}
-        <p>Termin: 31.10.2025</p>
       <div class="registration-item-button">
         {{ if .Site.Params.speaker_url }}
           <a href="{{ .Site.Params.speaker_url }}"
@@ -79,6 +78,7 @@
           >
         {{ end }}
       </div>
+        <p class="registration-term">Termin: 31.10.2025</p>
       </div>
       {{ with resources.GetMatch "images/registration/speakers.*" }}
       <img  class="registration-item-image"  alt="Prelegent" src="{{ .RelPermalink }}">
@@ -112,7 +112,6 @@
             luźniejszych, bezpośrednich rozmów z zainteresowanymi osobami,
             które zatrzymają się przy Twojej pracy.</p>
         {{ end }}
-        <p>Termin: 31.10.2025</p>
       <div class="registration-item-button">
         {{ if .Site.Params.poster_url }}
           <a href="{{ .Site.Params.poster_url }}"
@@ -128,6 +127,7 @@
           >
         {{ end }}
       </div>
+        <p class="registration-term">Termin: 31.10.2025</p>
       </div>
 
       {{ if and ( not .Site.Params.speaker_url )  (not .Site.Params.active_reg_close) }}
