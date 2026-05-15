@@ -34,7 +34,7 @@
           >
         {{ end }}
       </div>
-        <p class="registration-term">Termin: 25.11.2025</p>
+        <p class="registration-term">Termin: dd.mm.rrrr</p>
       </div>
 
       {{ if and ( not .Site.Params.participant_url )  (not .Site.Params.participant_reg_close) }}
@@ -78,7 +78,7 @@
           >
         {{ end }}
       </div>
-        <p class="registration-term">Termin: 31.10.2025</p>
+        <p class="registration-term">Termin: dd.mm.rrrr</p>
       </div>
       {{ with resources.GetMatch "images/registration/speakers.*" }}
       <img  class="registration-item-image"  alt="Prelegent" src="{{ .RelPermalink }}">
@@ -127,7 +127,7 @@
           >
         {{ end }}
       </div>
-        <p class="registration-term">Termin: 31.10.2025</p>
+        <p class="registration-term">Termin: dd.mm.rrrr</p>
       </div>
 
       {{ if and ( not .Site.Params.speaker_url )  (not .Site.Params.active_reg_close) }}

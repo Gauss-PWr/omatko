@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const targetDate = new Date(2026, 11, 5, 13, 30, 0);
+  const targetDate = new Date(2026, 11, 11, 13, 30, 0);
   countdownToDate(targetDate, "timer", "Wystartowaliśmy!");
 
   const timerLabel = document.getElementById("timer-label");
