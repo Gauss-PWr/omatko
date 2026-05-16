@@ -1,0 +1,59 @@
+.pagination {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  list-style: none;
+  padding: 0;
+  margin-top: var(--element-padding);
+  margin-bottom: var(--element-padding);
+  border-top: 1px solid color-mix(in srgb, var(--o-gray) 40%, rgba(0, 0, 0, 0));
+}
+
+.pagination .page-item {
+  margin: 0 5px;
+}
+
+.pagination .page-link {
+  display: inline-block;
+  padding: 15px 10px 5px 10px;
+    font-size: 1rem;
+  text-decoration: none;
+  color: var(--footnote-font-color);
+  transition: color 0.3s ease, border-color 0.3s ease;
+
+  /* Niewidoczna baza dla kreski, żeby po najechaniu tekst nie "skakał" */
+  border-top: 1px solid transparent;
+  /* Przesuwamy o 1px do góry, żeby nałożyć się na główną szarą linię kontenera */
+  margin-top: -1px;
+}
+
+/* Aktywna strona - pomarańczowy tekst i kreska na górze */
+.pagination .page-item.active .page-link {
+  color: var(--o-orange);
+  border-top: 1px solid var(--o-orange);
+}
+
+/* Efekt najechania dla zwykłych stron */
+.pagination .page-item:not(.active):not(.disabled) .page-link:hover {
+  color: var(--o-green);
+}
+
+/* Wyłączone skrajne strzałki */
+.pagination .page-item.disabled .page-link {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Lekkie zwężenie na telefonach */
+@media screen and (max-width: 768px) {
+    .pagination {
+        justify-content: center;
+    }
+
+  .pagination .page-item {
+    margin: 0 5px;
+  }
+  .pagination .page-link {
+    font-size: 0.9rem;
+  }
+}

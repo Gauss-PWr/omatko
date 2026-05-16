@@ -2,7 +2,10 @@
   <section class="articles">
   <h1>Aktualności</h1>
     {{ .Content }}
-    {{ range .Pages }}
+
+    {{ $paginator := .Paginate .Pages 10 }}
+    {{ range $paginator.Pages }}
+
     <div class="article-preview-container">
       <article
         class="article-preview"
@@ -22,5 +25,8 @@
       </article>
       </div>
     {{ end }}
+
+    {{ template "_internal/pagination.html" . }}
+
   </section>
 {{ end }}
