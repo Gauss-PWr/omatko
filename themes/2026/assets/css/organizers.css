@@ -1,83 +1,84 @@
 .organizers-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .organizers-container h2 {
-  margin-top: var(--element-padding);
-  text-align: left;
+    margin-top: var(--element-padding);
+    text-align: left;
 }
 
 .organizers-container h3 {
-  width: 100%;
-  text-align: left;
-  text-transform: capitalize;
-  margin-bottom: var(--element-padding);
+    width: 100%;
+    text-align: left;
+    text-transform: capitalize;
+    margin-bottom: var(--element-padding);
 }
 
 .team {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 30px;
-  width: 100%;
-  position: relative;
-  padding-bottom: var(--element-padding);
-  margin-bottom: var(--element-padding);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+    position: relative;
+    padding-bottom: var(--element-padding);
+    margin-bottom: var(--element-padding);
 }
 
 .team:not(:last-of-type)::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background-color: var(--o-gray);
-  opacity: 0.4;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--o-gray);
+    opacity: 0.4;
 }
 
 .organizer {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .organizer img {
-  width: 90px;
-  height: 90px;
-  object-fit: cover;
-  border-radius: var(--element-border-radius-medium, 10px);
-  margin: 0;
-  flex-shrink: 0;
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: var(--element-border-radius-medium);
+    margin: 0;
+    flex-shrink: 0;
+    box-shadow: var(--element-box-shadow);
 }
 
 .organizer-info {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .organizer-info h4 {
-  text-align: left;
-  font-size: 1.15rem;
-  margin: 0 0 4px 0;
+    text-align: left;
+    font-size: 1.15rem;
+    margin: 0 0 4px 0;
 }
 
 .organizer-info p {
-  margin: 0;
-  color: #818181;
-  font-size: 0.95rem;
-  line-height: 1.3;
+    margin: 0;
+    color: #818181;
+    font-size: 0.95rem;
+    line-height: 1.3;
 }
 
 @media screen and (max-width: 768px) {
-  .team {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
+    .team {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 
-  .organizer img {
-    width: 75px;
-    height: 75px;
-  }
+    .organizer img {
+        width: 75px;
+        height: 75px;
+    }
 }
