@@ -1,6 +1,7 @@
 +++
 title = 'III'
 eventYear = 2016
+eventDate = "15–17 kwietnia 2016"
 +++
 
 ## Zwycięskie wykłady i plakaty

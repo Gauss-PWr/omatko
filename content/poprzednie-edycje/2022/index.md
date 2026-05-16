@@ -2,6 +2,7 @@
 title = 'IX'
 eventYear = 2022
 banner = '2024.png'
+eventDate = "26–27 listopada 2022"
 +++
 
 ## Zwycięskie wykłady i plakaty

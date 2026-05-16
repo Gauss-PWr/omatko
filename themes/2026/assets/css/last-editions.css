@@ -23,6 +23,17 @@
     text-align: center;
 }
 
+.last-edition-header {
+    margin-bottom: calc(0.5 * var(--element-padding))
+}
+
+.edition-date {
+    font-size: var(--footnote-font-size);
+    color: var(--footnote-font-color);
+    margin-top: calc(0.5 * var(--element-padding));
+    margin-bottom: var(--element-padding);
+}
+
 .article-banner {
     display: flex;
     flex-direction: row;

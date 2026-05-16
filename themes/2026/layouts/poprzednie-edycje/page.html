@@ -1,7 +1,8 @@
 {{ define "main" }}
   <section class="article">
     <article class="article-container">
-      <h1>{{ .Title }} edycja OMatKo!!!</h1>
+      <h1 class="last-edition-header">{{ .Title }} edycja OMatKo!!!</h1>
+      <p class="edition-date">{{ .Params.eventDate }}</p>
       <div class="article-banner">
         {{ with .Resources.GetMatch (printf "%s*" (string .Params.eventYear)) }}
           <img src="{{ .RelPermalink }}" alt="Banner for {{ $.Title }}" />

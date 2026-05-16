@@ -1,6 +1,7 @@
 +++
 title = 'VIII'
 eventYear = 2021
+eventDate = "27–28 listopada 2021"
 +++
 
 ## Zwycięskie wykłady i plakaty

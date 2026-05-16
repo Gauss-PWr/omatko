@@ -2,6 +2,7 @@
 title = 'II'
 eventYear = 2015
 banner = '2024.png'
+eventDate = "24–26 kwietnia 2015"
 +++
 
 ## Zwycięskie wykłady i plakaty
