@@ -1,0 +1,18 @@
+{{ define "main" }}
+  <section class="last-editions">
+    <h1>{{ .Title }}</h1>
+    <div class="last-edition-articles-container">
+      {{ range .Pages.ByParam "eventYear" }}
+        <a href="{{ .RelPermalink }}">
+          <article
+            class="last-edition"
+            id="{{ .Params.eventYear }}{{ .Title | lower }}"
+          >
+            <h1>{{ .Params.title }}</h1>
+            <p>{{ .Params.eventYear }}</p>
+          </article>
+        </a>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}

@@ -1,0 +1,4 @@
+---
+layout: "organizatorzy"
+title: 'Organizatorzy'
+---

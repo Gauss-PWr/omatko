@@ -1,0 +1,90 @@
+{{- /*
+  Renders a menu for the given menu ID.
+
+  @context {page} page The current page.
+  @context {string} menuID The menu ID.
+
+  @example: {{ partial "menu.html" (dict "menuID" "main" "page" .)
+}}
+*/}}
+{{- $page := .page }}
+{{- $menuID := .menuID }}
+
+{{- with index site.Menus $menuID }}
+  <nav class="main-nav">
+    <div class="nav-logo">
+      <a href="/"><img src="/logo.webp" alt="Logo OMatKo" /></a>
+    </div>
+    <button id="menu-button"><i class="fa-solid fa-bars"></i></button>
+
+    <ul class="nav-list">
+      {{ if site.Params.enable_voting}}
+        <li><a class="nav-link" href="/glosuj/">Głosuj</a></li>
+      {{ end }}
+
+      {{ if site.Params.show_schedule_section }}
+        <li><a class="nav-link" href="/#schedule">Harmonogram</a></li>
+      {{ end }}
+      {{ if site.Params.show_registration }}
+        <li><a class="nav-link" href="/#registration">Zapisy</a></li>
+      {{ end }}
+      {{ if site.Params.show_map }}
+        <li><a class="nav-link" href="/#map">Mapa</a></li>
+      {{ end }}
+      {{ if site.Params.show_patrons_section }}
+        <li><a class="nav-link" href="/#sponsors">Partnerzy</a></li>
+      {{ end }}
+      {{ if site.Params.show_regulamin}}
+        <li><a class="nav-link" href="/regulamin.pdf">Regulamin</a></li>
+      {{ end }}
+
+      {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+
+    <script>
+      const button = document.getElementById("menu-button");
+      const navList = document.querySelector(".nav-list");
+      const buttonIcon = document.querySelector(".fa-solid");
+
+      button.addEventListener("click", () => {
+        navList.classList.toggle("active-menu");
+        buttonIcon.classList.toggle("fa-bars");
+        buttonIcon.classList.toggle("fa-xmark");
+      });
+    </script>
+  </nav>
+{{- end }}
+
+{{- define "_partials/inline/menu/walk.html" }}
+  {{- $page := .page }}
+  {{- range .menuEntries }}
+    {{- $attrs := dict "href" .URL }}
+    {{- if $page.IsMenuCurrent .Menu . }}
+      {{- $attrs = merge $attrs (dict "class" "nav-link active" "aria-current" "page") }}
+    {{- else if $page.HasMenuCurrent .Menu . }}
+      {{- $attrs = merge $attrs (dict "class" "nav-link ancestor" "aria-current" "true") }}
+    {{- else }}
+      {{- $attrs = merge $attrs (dict "class" "nav-link") }}
+    {{- end }}
+    {{- $name := .Name }}
+    {{- with .Identifier }}
+      {{- with T . }}
+        {{- $name = . }}
+      {{- end }}
+    {{- end }}
+    <li class="nav-item">
+      <a
+        {{- range $k, $v := $attrs }}
+          {{- with $v }}
+            {{- printf " %s=%q" $k $v | safeHTMLAttr }}
+          {{- end }}
+        {{- end -}}
+        >{{ $name }}</a
+      >
+      {{- with .Children }}
+        <ul class="nav-submenu">
+          {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+        </ul>
+      {{- end }}
+    </li>
+  {{- end }}
+{{- end }}

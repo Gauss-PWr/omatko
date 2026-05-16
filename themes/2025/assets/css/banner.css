@@ -1,0 +1,86 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.banner-logo {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--o-blue);
+  margin-bottom: 50px;
+}
+
+.banner-logo img {
+  width: 100%;
+}
+
+.banner-timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner-logo p:nth-child(3) {
+  font-weight: 600;
+}
+
+#timer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.countdown-number {
+  font-size: 4rem;
+  width: 5rem;
+}
+
+.countdown-item {
+  margin: 0 15px;
+  display: flex;
+  justify-content: left;
+  align-items: baseline;
+}
+
+.countdown-end {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+  .banner-logo {
+    width: 90%;
+  }
+
+  .banner-logo p {
+    text-align: center;
+  }
+
+  .countdown-number {
+    width: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .countdown-label {
+    font-size: 0.7rem;
+  }
+
+  .countdown-item {
+    margin: 0 5px;
+  }
+
+  .countdown-end {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+  #timer {
+    grid-template-columns: repeat(4, 100px);
+  }
+}

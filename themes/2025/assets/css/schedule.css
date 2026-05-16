@@ -1,0 +1,189 @@
+.schedule {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  height: auto;
+}
+
+.day-selector {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.time-slot {
+  margin-bottom: 1em;
+}
+
+.day-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.schedule-day,
+.schedule-legend {
+  width: 70%;
+}
+
+.hidden {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  max-height: 0 !important;
+}
+
+.day-selector button {
+  padding: 10px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-size: large;
+  min-width: 150px;
+  border: 0;
+  background-color: var(--o-gray);
+  transition: 0.5s ease;
+}
+
+.time-slot {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.events {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+
+
+.schedule-legend button {
+  border: none;
+  background-color: var(--o-gray);
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  padding: 5px;
+  border-radius: 5px;
+  transition: 0.5s ease;
+  text-align: center;
+}
+
+.schedule-legend button:hover,
+.day-selector button:hover {
+  background-color: var(--o-green);
+}
+
+.legend-element {
+  text-wrap: nowrap;
+}
+
+.event {
+  background-color: var(--o-gray);
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.event-details {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.toggle-abstract {
+  grid-column: 3 / 4;
+  cursor: pointer;
+  display: flex;
+  justify-content: right;
+}
+
+.event-author {
+  flex-grow: 9999;
+  white-space: nowrap;
+}
+
+.event-details>strong {
+  margin-right: 5px;
+  font-style: italic;
+}
+
+.event-abstract {
+  transition: 0.5s ease;
+  visibility: visible;
+  max-height: 1000px;
+  opacity: 1;
+}
+
+.event:only-child {
+  grid-column: span 2;
+}
+
+.teoretyczna {
+  box-shadow: inset 0 -4px 0 0 var(--o-blue);
+}
+
+.stosowana {
+  box-shadow: inset 0 -4px 0 0 var(--o-orange);
+}
+
+.active-button {
+  background-color: var(--o-green) !important;
+}
+
+.schedule-legend {
+  font-size: small;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  gap: 10px;
+}
+
+.event-abstract p {
+  margin: 5px 0px;
+  font-size: medium;
+}
+
+@media screen and (max-width: 768px) {
+  .day-selector {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px 0px;
+    margin-bottom: 30px;
+  }
+
+  .day-selector button {
+    min-width: none;
+    width: 100%;
+    font-size: medium;
+  }
+
+  .schedule-day {
+    width: 100%;
+  }
+
+  .events {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .schedule-legend {
+    width: 100%;
+  }
+
+  .schedule-legend button {
+    width: 100%;
+  }
+
+  .schedule-legend a {
+    width: 100%;
+  }
+}

@@ -1,0 +1,173 @@
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2px 30px;
+  color: var(--o-blue);
+}
+
+.nav-logo {
+  padding: 12px;
+  z-index: 100;
+  width: fit-content;
+}
+
+.nav-logo a,
+.nav-logo img {
+  height: 30px;
+  width: auto;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: right;
+  gap: 15px;
+  align-items: center;
+  min-height: 60px;
+}
+
+.nav-item {
+  position: relative;
+  margin: 0;
+  text-wrap: nowrap;
+}
+
+.nav-link {
+  display: block;
+  padding: 20px 24px;
+  cursor: pointer;
+  color: var(--o-blue);
+  text-decoration: none;
+  font-weight: 650;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--o-green);
+}
+
+.nav-link.active {
+  color: var(--o-orange);
+}
+
+.nav-link.ancestor {
+  color: #6c757d;
+  border-bottom-color: #6c757d;
+}
+
+#menu-button {
+  display: none;
+  padding: 0;
+  border: 0;
+  z-index: 100;
+  background-color: transparent;
+  min-width: 50px;
+  height: 50px;
+  color: black;
+}
+
+#menu-button i {
+  font-size: 1.5rem;
+}
+
+.main-nav:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgb(100% 100% 100%) 0%,
+    rgb(100% 100% 100% / 0.99609375) 6.25%,
+    rgb(100% 100% 100% / 0.984375) 12.5%,
+    rgb(100% 100% 100% / 0.96484375) 18.75%,
+    rgb(100% 100% 100% / 0.9375) 25%,
+    rgb(100% 100% 100% / 0.90234375) 31.25%,
+    rgb(100% 100% 100% / 0.859375) 37.5%,
+    rgb(100% 100% 100% / 0.80859375) 43.75%,
+    rgb(100% 100% 100% / 0.75) 50%,
+    rgb(100% 100% 100% / 0.68359375) 56.25%,
+    rgb(100% 100% 100% / 0.609375) 62.5%,
+    rgb(100% 100% 100% / 0.52734375) 68.75%,
+    rgb(100% 100% 100% / 0.4375) 75%,
+    rgb(100% 100% 100% / 0.33984375) 81.25%,
+    rgb(100% 100% 100% / 0.234375) 87.5%,
+    rgb(100% 100% 100% / 0.12109375) 93.75%,
+    rgb(100% 100% 100% / 0) 100%
+  );
+}
+
+@media screen and (max-width: 1366px) {
+  .main-nav {
+    padding: 2px 10px;
+  }
+
+  #menu-button {
+    display: block;
+    cursor: pointer;
+  }
+
+  #menu-button i {
+    transition: 0.5s ease;
+  }
+
+  .nav-list {
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 99;
+    position: absolute;
+    width: 100%;
+    transition: 0.5s ease;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .active-menu {
+    visibility: visible;
+    padding-top: 50px;
+    opacity: 1;
+  }
+
+  .nav-list::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -1000px;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(
+      180deg,
+      rgb(100% 100% 100%) 0%,
+      rgb(100% 100% 100% / 0.99609375) 6.25%,
+      rgb(100% 100% 100% / 0.984375) 12.5%,
+      rgb(100% 100% 100% / 0.96484375) 18.75%,
+      rgb(100% 100% 100% / 0.9375) 25%,
+      rgb(100% 100% 100% / 0.90234375) 31.25%,
+      rgb(100% 100% 100% / 0.859375) 37.5%,
+      rgb(100% 100% 100% / 0.80859375) 43.75%,
+      rgb(100% 100% 100% / 0.75) 50%,
+      rgb(100% 100% 100% / 0.68359375) 56.25%,
+      rgb(100% 100% 100% / 0.609375) 62.5%,
+      rgb(100% 100% 100% / 0.52734375) 68.75%,
+      rgb(100% 100% 100% / 0.4375) 75%,
+      rgb(100% 100% 100% / 0.33984375) 81.25%,
+      rgb(100% 100% 100% / 0.234375) 87.5%,
+      rgb(100% 100% 100% / 0.12109375) 93.75%,
+      rgb(100% 100% 100% / 0) 100%
+    );
+  }
+}

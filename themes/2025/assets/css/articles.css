@@ -1,0 +1,160 @@
+.articles {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.history-back {
+  border: none;
+  border-radius: 5px;
+  background-color: var(--o-blue);
+  padding: 2px 15px;
+  color: white;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.history-back:hover {
+  background-color: var(--o-green);
+}
+
+.article-preview {
+  border: 1px var(--o-gray) solid;
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+
+.article-preview p {
+  text-overflow: clip;
+  font-size: medium;
+  font-weight: 100;
+  margin-bottom: 30px;
+}
+
+.article-preview h2 {
+  text-align: left;
+}
+
+.article-preview a {
+  text-decoration: none;
+  color: var(--o-blue);
+  transition: 0.5s ease;
+}
+
+.article-preview a:hover {
+  color: var(--o-orange);
+}
+
+.article-date {
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+.article-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.article-banner {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.article-banner img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-container {
+  min-width: 1024px;
+}
+
+.article-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-content h1 {
+  border: 0;
+  text-transform: none;
+}
+
+.article-content p {
+  font-size: initial;
+}
+
+.article-content img {
+    max-width: 100%;
+}
+
+.article-content table {
+  border-radius: 5px;
+  border: 1px solid var(--o-gray);
+  align-self: center;
+}
+
+.article-content th {
+  border-bottom: 1px solid var(--o-gray);
+  padding: 20px;
+}
+
+.article-container tr {
+  border: 1px solid var(--o-gray);
+}
+
+.article-container td {
+  padding: 10px;
+}
+
+.article-container pre,
+.article-container blockquote {
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+
+.article-container blockquote {
+  background-color: var(--o-gray);
+  font-style: italic;
+  margin: 0px;
+}
+
+.article-container blockquote p::before {
+  content: open-quote;
+}
+
+.article-container blockquote p::after {
+  content: close-quote;
+}
+
+.article-container li {
+  margin-bottom: 10px;
+}
+
+.article-container li::marker {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1024px) {
+  .article-info {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .article-container {
+    min-width: 0px;
+  }
+
+  .history-back {
+    width: 100%;
+    text-align: center;
+  }
+}

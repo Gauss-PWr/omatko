@@ -1,0 +1,87 @@
+:root {
+  --o-green: #91c13fef;
+  --o-blue: #4fbdc3ef;
+  --o-orange: #f28f2def;
+  --o-gray: #babab9ef;
+}
+
+* {
+  font-family: "Quicksand";
+}
+
+.green {
+  background-color: var(--o-green);
+}
+
+.blue {
+  background-color: var(--o-blue);
+}
+
+.orange {
+  background-color: var(--o-orange);
+}
+
+.gray {
+  background-color: var(--o-gray);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url("/bg.webp");
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
+  background-attachment: fixed;
+  max-width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: left;
+  text-transform: uppercase;
+  border-bottom: 1px black solid;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+section {
+  padding: 30px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+}
+
+main {
+  flex: 1;
+}
+
+header {
+  position: sticky;
+  height: 60px;
+  top: 0px;
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    padding: 30px 10px;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}

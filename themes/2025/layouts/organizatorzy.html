@@ -1,0 +1,50 @@
+{{ define "main" }}
+  <section class="organizers">
+    <h1>sztab</h1>
+    <div class="organizers-container">
+      <div class="team">
+        {{ range $_, $coordinator_data := .Site.Data.organizers.coordinators }}
+          <div class="organizer">
+            <h2>{{ $coordinator_data.title }}</h2>
+            <img
+              src="photos/{{ $coordinator_data.img_name }}"
+              alt="{{ $coordinator_data.name }}"
+            />
+            <div class="organizer-info">
+              <h3>{{ $coordinator_data.name }}</h3>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+      <h2>Koordynatorzy sekcji</h2>
+      <div class="team">
+        {{ range $_, $section_head_data := .Site.Data.organizers.section_heads }}
+          <div class="organizer">
+            <h4>{{ $section_head_data.section }}</h4>
+            <img
+              src="photos/{{ $section_head_data.img_name }}"
+              alt="{{ $section_head_data.name }}"
+            />
+            <div class="organizer-info">
+              <h3>{{ $section_head_data.name }}</h3>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+      <h2>Członkowie sekcji</h2>
+      <div class="team">
+        {{ range $_, $team_data := .Site.Data.organizers.team }}
+          <div class="organizer">
+            <img
+              src="photos/{{ $team_data.img_name }}"
+              alt="{{ $team_data.name }}"
+            />
+            <div class="organizer-info">
+              <h3>{{ $team_data.name }}</h3>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+{{ end }}
