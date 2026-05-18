@@ -5,7 +5,9 @@
       <p class="edition-date">{{ .Params.eventDate }}</p>
       <div class="article-banner">
         {{ with .Resources.GetMatch (printf "%s*" (string .Params.eventYear)) }}
+        <a class="glightbox" data-href="{{ .RelPermalink }}" data-type="image">
           <img src="{{ .RelPermalink }}" alt="Banner for {{ $.Title }}" />
+        </a>
         {{ else }}
         {{ end }}
       </div>

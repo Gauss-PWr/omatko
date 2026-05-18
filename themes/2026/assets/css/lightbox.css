@@ -1,0 +1,128 @@
+.glightbox-omtk .gslide-description {
+    background: #fff
+}
+
+.glightbox-omtk .goverlay {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(5px);
+}
+
+.glightbox-mobile .glightbox-omtk .goverlay {
+    background: rgb(255, 255, 255);
+}
+
+.glightbox-omtk .gdesc-inner {
+    padding: 22px 20px
+}
+
+.glightbox-omtk .gslide-title {
+    font-size: 1em;
+    font-weight: 400;
+    font-family: unset;
+    color: #000;
+    margin-bottom: 19px;
+    line-height: 1.4em
+}
+
+.glightbox-omtk .gslide-desc {
+    font-size: .86em;
+    margin-bottom: 0;
+    font-family: unset;
+    line-height: 1.4em
+}
+
+.glightbox-omtk .gslide-video {
+    background: #000
+}
+
+.glightbox-omtk .gclose, .glightbox-omtk .gnext, .glightbox-omtk .gprev {
+    background-color: var(--nav-background);
+    backdrop-filter: var(--nav-blur);
+    box-shadow: var(--nav-box-shadow);
+    border-radius: 30px;
+}
+
+.glightbox-omtk .gclose path, .glightbox-omtk .gnext path, .glightbox-omtk .gprev path {
+    fill: #000
+}
+
+.glightbox-omtk .gprev {
+    position: absolute;
+    top: -100%;
+    left: 30px;
+    width: 40px;
+    height: 60px;
+    padding: 10px;
+}
+
+.glightbox-omtk .gnext {
+    position: absolute;
+    top: -100%;
+    right: 30px;
+    width: 40px;
+    height: 60px;
+    padding: 10px;
+}
+
+.glightbox-omtk .gclose {
+    width: 60px;
+    height: 40px;
+    top: 15px;
+    right: 10px;
+    padding: 10px;
+    position: absolute
+}
+
+.glightbox-omtk .gclose svg {
+    width: 18px;
+    height: auto
+}
+
+.glightbox-omtk .gclose:hover {
+    opacity: 1
+}
+
+.glightbox-omtk .gclose.disabled, .glightbox-omtk .gnext.disabled, .glightbox-omtk .gprev.disabled {
+    opacity: 0.0;
+    pointer-events: none;
+}
+
+@media (min-width: 769px) {
+
+    .glightbox-omtk .gslide-media {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .glightbox-omtk .description-left .gdesc-inner, .glightbox-omtk .description-right .gdesc-inner {
+        position: absolute;
+        height: 100%;
+        overflow-y: auto
+    }
+
+    .glightbox-omtk .gclose, .glightbox-omtk .gnext, .glightbox-omtk .gprev {
+        background-color: var(--nav-background);
+    }
+
+    .glightbox-omtk .gclose:hover, .glightbox-omtk .gnext:hover, .glightbox-omtk .gprev:hover {
+        background-color: rgba(255, 255, 255, 1)
+    }
+
+    .glightbox-omtk .gclose:hover path, .glightbox-omtk .gnext:hover path, .glightbox-omtk .gprev:hover path {
+        fill: var(--o-green);
+    }
+
+    .glightbox-omtk .gprev {
+        top: 45%
+    }
+
+    .glightbox-omtk .gnext {
+        top: 45%
+    }
+}
+
+@media (min-width: 992px) {
+    .glightbox-omtk .gclose {
+        right: 20px
+    }
+}

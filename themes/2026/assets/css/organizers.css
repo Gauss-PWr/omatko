@@ -23,7 +23,6 @@
     width: 100%;
     position: relative;
     padding-bottom: var(--element-padding);
-    margin-bottom: var(--element-padding);
 }
 
 .team:not(:last-of-type)::after {

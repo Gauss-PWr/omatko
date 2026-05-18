@@ -186,7 +186,6 @@ header {
         visibility: visible;
         pointer-events: auto;
         transition: max-height 0.5s ease-in-out, max-width 0.5s ease-in-out, opacity 1s ease-in-out;
-        overflow: scroll;
     }
 
     .nav-list::before {
@@ -200,6 +199,10 @@ header {
 
     .nav-list {
         gap: 0;
+    }
+
+    .active-menu {
+        overflow: scroll;
     }
 
     .nav-link {
