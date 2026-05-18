@@ -11,37 +11,51 @@
 
 .pagination .page-item {
   margin: 0 5px;
+  position: relative;
 }
 
 .pagination .page-link {
-  display: inline-block;
-  padding: 15px 10px 5px 10px;
+    display: inline-block;
+    text-align: center;
+    padding: 5px 10px 5px 10px;
+    margin-top: 10px;
     font-size: 1rem;
-  text-decoration: none;
-  color: var(--footnote-font-color);
-  transition: color 0.3s ease, border-color 0.3s ease;
+    text-decoration: none;
+    color: var(--footnote-font-color);
+    font-weight: 600;
+    font-family: Quicksand, sans-serif;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    min-width: 30px;
+    box-sizing: border-box;
+    font-variant-numeric: tabular-nums;
+}
 
-  /* Niewidoczna baza dla kreski, żeby po najechaniu tekst nie "skakał" */
-  border-top: 1px solid transparent;
-  /* Przesuwamy o 1px do góry, żeby nałożyć się na główną szarą linię kontenera */
-  margin-top: -1px;
+.pagination .page-item.active::before {
+  content: "";
+  position: absolute;
+  top: -1px; /* Wędruje 1px do góry, żeby idealnie przykryć główną szarą linię */
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--o-orange);
 }
 
 /* Aktywna strona - pomarańczowy tekst i kreska na górze */
 .pagination .page-item.active .page-link {
-  color: var(--o-orange);
-  border-top: 1px solid var(--o-orange);
+    color: var(--o-orange);
+    background-color: color-mix(in srgb, var(--o-orange) 30%, rgba(0, 0, 0, 0));
 }
 
-/* Efekt najechania dla zwykłych stron */
 .pagination .page-item:not(.active):not(.disabled) .page-link:hover {
-  color: var(--o-green);
+  background-color: #f0f0f0; /* Jasnoszare, delikatne tło */
 }
 
 /* Wyłączone skrajne strzałki */
 .pagination .page-item.disabled .page-link {
   opacity: 0.3;
   cursor: not-allowed;
+  background-color: transparent;
 }
 
 /* Lekkie zwężenie na telefonach */
@@ -54,6 +68,7 @@
     margin: 0 5px;
   }
   .pagination .page-link {
+    padding: 6px 10px;
     font-size: 0.9rem;
   }
 }
