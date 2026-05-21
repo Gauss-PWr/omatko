@@ -34,10 +34,10 @@
   
 </title>
 
- <link rel="stylesheet" href="./css/combined.min.e9bd8b5ab186e5ef06d16aa4cea1e4f552a0030978a76b511b9cd87b211890f9.css" />
+ <link rel="stylesheet" href="./css/combined.min.b55fbd73325a49eccf64949f747c762777523e333503bd863517bd89a693f299.css" />
 
 
-      <script src="./js/bundle.4e5242061442997461c91e3dec3b9146a31c7de3e10b7589b28a70c2bb34825b.js" integrity="sha256-TlJCBhRCmXRhyR497DuRRqMcfePhC3WJsopwwrs0gls=" crossorigin="anonymous"></script>
+      <script src="./js/bundle.c25a8aac9e868429ae1417119b833489702089a760f95f1ba5e4798d5484d300.js" integrity="sha256-wlqKrJ6GhCmuFBcRm4M0iXAgiadg&#43;V8bpeR5jVSE0wA=" crossorigin="anonymous"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
@@ -126,7 +126,7 @@
       
 
   <section class="banner">
-    
+  
     <div class="floating-bg">
   <div class="floating-image" style="background-image: url('/bg-ani/green.webp');"></div>
   <div class="floating-image" style="background-image: url('/bg-ani/blue.webp');"></div>
@@ -140,27 +140,26 @@
   </div>
   <div class="banner-timer">
     <p id="timer-label">Pozostało:</p>
-    <div id="timer">
-      <div class="countdown-item">
-        <span class="countdown-number" style="color: var(--o-green)">00</span>
-        <span class="countdown-label">dni</span>
-      </div>
-      <div class="countdown-item">
-        <span class="countdown-number" style="color: var(--o-blue)">00</span>
-        <span class="countdown-label">godzin</span>
-      </div>
-      <div class="countdown-item">
-        <span class="countdown-number" style="color: var(--o-orange)">00</span>
-        <span class="countdown-label">minut</span>
-      </div>
-      <div class="countdown-item">
-        <span class="countdown-number" style="color: var(--o-gray)">00</span>
-        <span class="countdown-label">sekund</span>
-      </div>
+
+      <div id="timer" data-target='2026-12-11T13:30' data-end='2026-12-13T14:00'>
+    <div class="countdown-item">
+      <span class="countdown-number js-days" style="color: var(--o-green)">00</span>
+      <span class="countdown-label">dni</span>
+    </div>
+    <div class="countdown-item">
+      <span class="countdown-number js-hours" style="color: var(--o-blue)">00</span>
+      <span class="countdown-label">godzin</span>
+    </div>
+    <div class="countdown-item">
+      <span class="countdown-number js-minutes" style="color: var(--o-orange)">00</span>
+      <span class="countdown-label">minut</span>
+    </div>
+    <div class="countdown-item">
+      <span class="countdown-number js-seconds" style="color: var(--o-gray)">00</span>
+      <span class="countdown-label">sekund</span>
     </div>
   </div>
 </section>
-
 
   <section class="about" id="about">
   <h1>O konferencji</h1>
@@ -1401,112 +1400,92 @@ Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus a
     <section class="registration" id="registration">
   <h1>Zapisy</h1>
   <div class="registration-content">
+
     <div
-      class="registration-item "
-       id="participants"
+      class="registration-item js-reg-block "
+      data-btn-color="green"
+      data-close="2025-11-25"
+      data-manual-close="false"
+      data-open="2025-10-22"
+      data-url="./"
+      id="participants"
     >
-        
-        <img class="registration-item-image" alt="Uczestnik" src="./images/registration/participants.webp">
-        
+      
+      <img alt="Uczestnik" class="registration-item-image" src="./images/registration/participants.webp">
+      
       <div class="registration-item-content">
         <h2>Uczestnik</h2>
         
-          <p>Wpadnij posłuchać innych i wspólnie z nami odkrywaj najciekawsze
-            zakamarki matematyki! Jako uczestnik masz okazję chłonąć wiedzę,
-            zadawać pytania i brać udział w dyskusjach. To też idealny moment,
-            żeby złapać nowe znajomości z ludźmi z całej Polski, których kręci
-            to samo, co Ciebie.</p>
+        <p>Wpadnij posłuchać innych i wspólnie z nami odkrywaj najciekawsze
+          zakamarki matematyki! Jako uczestnik masz okazję chłonąć wiedzę,
+          zadawać pytania i brać udział w dyskusjach. To też idealny moment,
+          żeby złapać nowe znajomości z ludźmi z całej Polski, których kręci
+          to samo, co Ciebie.</p>
         
-      <div class="registration-item-button">
-        
-          <a href="./"
-            ><button
-              
-                class="green"
-              
-            >
-              Zapisz się!
-            </button></a
-          >
-        
-      </div>
-        <p class="registration-term">Termin: dd.mm.rrrr</p>
-      </div>
 
-      
+        <div class="registration-item-button js-btn-container"></div>
+        <p class="registration-term js-term"></p>
+      </div>
     </div>
+
     <div
-      class="registration-item "
-       id="speaker"
+      class="registration-item js-reg-block "
+      data-btn-color="blue"
+      data-close="2025-10-31"
+      data-manual-close="false"
+      data-open="2025-10-02"
+      data-url="./"
+      id="speaker"
     >
       <div class="registration-item-content">
         <h2>Prelegent</h2>
         
-          <p>Podziel się swoją wiedzą i wynikami badań, stając przed
-            publicznością w roli prelegenta! Masz do dyspozycji czas na
-            scenie, żeby opowiedzieć o tym, co najbardziej fascynuje Cię
-            w matematyce lub dziedzinach pokrewnych. To świetny trening
-            wystąpień publicznych i szansa na zebranie cennego
-            feedbacku od innych studentów.</p>
+        <p>Podziel się swoją wiedzą i wynikami badań, stając przed
+          publicznością w roli prelegenta! Masz do dyspozycji czas na
+          scenie, żeby opowiedzieć o tym, co najbardziej fascynuje Cię
+          w matematyce lub dziedzinach pokrewnych. To świetny trening
+          wystąpień publicznych i szansa na zebranie cennego
+          feedbacku od innych studentów.</p>
         
-      <div class="registration-item-button">
-        
-          <a href="./"
-            ><button
-              
-                class="blue"
-              
-            >
-              Zapisz się!
-            </button></a
-          >
-        
+
+        <div class="registration-item-button js-btn-container"></div>
+        <p class="registration-term js-term"></p>
       </div>
-        <p class="registration-term">Termin: dd.mm.rrrr</p>
-      </div>
-      
-      <img  class="registration-item-image"  alt="Prelegent" src="./images/registration/speakers.webp">
-      
 
       
+      <img alt="Prelegent" class="registration-item-image" src="./images/registration/speakers.webp">
+      
     </div>
+
     <div
-      class="registration-item "
-       id="poster"
+      class="registration-item js-reg-block "
+      data-btn-color="orange"
+      data-close="2025-10-31"
+      data-manual-close="false"
+      data-open="2025-10-02"
+      data-url="./"
+      id="poster"
     >
-        
-        <img class="registration-item-image" alt="Plakat" src="./images/registration/posters.webp">
-        
+      
+      <img alt="Plakat" class="registration-item-image" src="./images/registration/posters.webp">
+      
       <div class="registration-item-content">
         <h2>Plakat</h2>
         
-          <p>Wolisz formę graficzną? Wykaż się kreatywnością i zaprezentuj
-            swój projekt lub ciekawy problem matematyczny, przygotowując
-            autorski plakat! Sesja plakatowa to świetna przestrzeń do
-            luźniejszych, bezpośrednich rozmów z zainteresowanymi osobami,
-            które zatrzymają się przy Twojej pracy.</p>
+        <p>Wolisz formę graficzną? Wykaż się kreatywnością i zaprezentuj
+          swój projekt lub ciekawy problem matematyczny, przygotowując
+          autorski plakat! Sesja plakatowa to świetna przestrzeń do
+          luźniejszych, bezpośrednich rozmów z zainteresowanymi osobami,
+          które zatrzymają się przy Twojej pracy.</p>
         
-      <div class="registration-item-button">
-        
-          <a href="./"
-            ><button
-              
-                class="orange"
-              
-            >
-              Zapisz się!
-            </button></a
-          >
-        
-      </div>
-        <p class="registration-term">Termin: dd.mm.rrrr</p>
-      </div>
 
-      
+        <div class="registration-item-button js-btn-container"></div>
+        <p class="registration-term js-term"></p>
+      </div>
     </div>
+
   </div>
 </section>
-
   
 
   

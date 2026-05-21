@@ -54,7 +54,7 @@
 }
 
 .about-socials-icons a:hover {
-    color: rgb(235, 235, 235);
+    scale: 1.1;
 }
 
 .divider {
@@ -80,5 +80,11 @@
 
     .about-socials-icons {
         font-size: 1.5rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .about-socials-icons a:hover {
+        scale: unset;
     }
 }

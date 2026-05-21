@@ -47,6 +47,10 @@ inline = [['\(', '\)']]
 
 
 [params]
+# Data konferencji
+conference_start = '2026-12-11T13:30'
+conference_end = '2026-12-13T14:00'
+
 # Harmonogram
 show_schedule_section = true
 

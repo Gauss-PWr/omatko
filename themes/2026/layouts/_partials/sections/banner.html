@@ -1,8 +1,6 @@
 <section class="banner">
-    {{ if .Site.Params.enable_background_animations }}
-    {{ partial
-      "sections/background.html" .
-    }}
+  {{ if .Site.Params.enable_background_animations }}
+    {{ partial "sections/background.html" . }}
   {{ end }}
   <div class="banner-logo">
     <img src="logo.webp" alt="Logo OMatKo" />
@@ -11,23 +9,23 @@
   </div>
   <div class="banner-timer">
     <p id="timer-label">Pozostało:</p>
-    <div id="timer">
-      <div class="countdown-item">
-        <span class="countdown-number" style="color: var(--o-green)">00</span>
-        <span class="countdown-label">dni</span>
-      </div>
-      <div class="countdown-item">
-        <span class="countdown-number" style="color: var(--o-blue)">00</span>
-        <span class="countdown-label">godzin</span>
-      </div>
-      <div class="countdown-item">
-        <span class="countdown-number" style="color: var(--o-orange)">00</span>
-        <span class="countdown-label">minut</span>
-      </div>
-      <div class="countdown-item">
-        <span class="countdown-number" style="color: var(--o-gray)">00</span>
-        <span class="countdown-label">sekund</span>
-      </div>
+
+      <div id="timer" data-target='{{ site.Param "conference_start" }}' data-end='{{ site.Param "conference_end" }}'>
+    <div class="countdown-item">
+      <span class="countdown-number js-days" style="color: var(--o-green)">00</span>
+      <span class="countdown-label">dni</span>
+    </div>
+    <div class="countdown-item">
+      <span class="countdown-number js-hours" style="color: var(--o-blue)">00</span>
+      <span class="countdown-label">godzin</span>
+    </div>
+    <div class="countdown-item">
+      <span class="countdown-number js-minutes" style="color: var(--o-orange)">00</span>
+      <span class="countdown-label">minut</span>
+    </div>
+    <div class="countdown-item">
+      <span class="countdown-number js-seconds" style="color: var(--o-gray)">00</span>
+      <span class="countdown-label">sekund</span>
     </div>
   </div>
 </section>

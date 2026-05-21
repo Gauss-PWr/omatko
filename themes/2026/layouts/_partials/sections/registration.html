@@ -1,144 +1,89 @@
 <section class="registration" id="registration">
   <h1>Zapisy</h1>
   <div class="registration-content">
+
     <div
-      class="registration-item {{ if not .Site.Params.participant_url }}
-        registration-closed
-      {{ end }}"
-       id="participants"
+      class="registration-item js-reg-block {{ if not .Site.Params.participant_url }}registration-closed{{ end }}"
+      data-btn-color="green"
+      data-close="{{ .Site.Params.participant_reg_close_date }}"
+      data-manual-close="{{ .Site.Params.participant_reg_close }}"
+      data-open="{{ .Site.Params.participant_reg_open_date }}"
+      data-url="{{ .Site.Params.participant_url }}"
+      id="participants"
     >
-        {{ with resources.GetMatch "images/registration/participants.*" }}
-        <img class="registration-item-image" alt="Uczestnik" src="{{ .RelPermalink }}">
-        {{ end }}
+      {{ with resources.GetMatch "images/registration/participants.*" }}
+      <img alt="Uczestnik" class="registration-item-image" src="{{ .RelPermalink }}">
+      {{ end }}
       <div class="registration-item-content">
         <h2>Uczestnik</h2>
         {{ if .Site.Params.participant_url }}
-          <p>Wpadnij posłuchać innych i wspólnie z nami odkrywaj najciekawsze
-            zakamarki matematyki! Jako uczestnik masz okazję chłonąć wiedzę,
-            zadawać pytania i brać udział w dyskusjach. To też idealny moment,
-            żeby złapać nowe znajomości z ludźmi z całej Polski, których kręci
-            to samo, co Ciebie.</p>
+        <p>Wpadnij posłuchać innych i wspólnie z nami odkrywaj najciekawsze
+          zakamarki matematyki! Jako uczestnik masz okazję chłonąć wiedzę,
+          zadawać pytania i brać udział w dyskusjach. To też idealny moment,
+          żeby złapać nowe znajomości z ludźmi z całej Polski, których kręci
+          to samo, co Ciebie.</p>
         {{ end }}
-      <div class="registration-item-button">
-        {{ if .Site.Params.participant_url }}
-          <a href="{{ .Site.Params.participant_url }}"
-            ><button
-              {{ if .Site.Params.participant_reg_close }}
-                class="gray" disabled
-              {{ else }}
-                class="green"
-              {{ end }}
-            >
-              Zapisz się!
-            </button></a
-          >
-        {{ end }}
-      </div>
-        <p class="registration-term">Termin: dd.mm.rrrr</p>
-      </div>
 
-      {{ if and ( not .Site.Params.participant_url )  (not .Site.Params.participant_reg_close) }}
-        {{ partial "reg-timer.html" (dict "id" "audience") }}
-        <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            const targetDate = new Date("{{ .Site.Params.participant_reg_open }}");
-            countdownToDate(targetDate, "timer-audience");
-          });
-        </script>
-      {{ end }}
+        <div class="registration-item-button js-btn-container"></div>
+        <p class="registration-term js-term"></p>
+      </div>
     </div>
+
     <div
-      class="registration-item {{ if not .Site.Params.speaker_url }}
-        registration-closed
-      {{ end }}"
-       id="speaker"
+      class="registration-item js-reg-block {{ if not .Site.Params.speaker_url }}registration-closed{{ end }}"
+      data-btn-color="blue"
+      data-close="{{ .Site.Params.active_reg_close_date }}"
+      data-manual-close="{{ .Site.Params.active_reg_close }}"
+      data-open="{{ .Site.Params.active_reg_open_date }}"
+      data-url="{{ .Site.Params.speaker_url }}"
+      id="speaker"
     >
       <div class="registration-item-content">
         <h2>Prelegent</h2>
         {{ if .Site.Params.speaker_url }}
-          <p>Podziel się swoją wiedzą i wynikami badań, stając przed
-            publicznością w roli prelegenta! Masz do dyspozycji czas na
-            scenie, żeby opowiedzieć o tym, co najbardziej fascynuje Cię
-            w matematyce lub dziedzinach pokrewnych. To świetny trening
-            wystąpień publicznych i szansa na zebranie cennego
-            feedbacku od innych studentów.</p>
+        <p>Podziel się swoją wiedzą i wynikami badań, stając przed
+          publicznością w roli prelegenta! Masz do dyspozycji czas na
+          scenie, żeby opowiedzieć o tym, co najbardziej fascynuje Cię
+          w matematyce lub dziedzinach pokrewnych. To świetny trening
+          wystąpień publicznych i szansa na zebranie cennego
+          feedbacku od innych studentów.</p>
         {{ end }}
-      <div class="registration-item-button">
-        {{ if .Site.Params.speaker_url }}
-          <a href="{{ .Site.Params.speaker_url }}"
-            ><button
-              {{ if .Site.Params.active_reg_close }}
-                class="gray" disabled
-              {{ else }}
-                class="blue"
-              {{ end }}
-            >
-              Zapisz się!
-            </button></a
-          >
-        {{ end }}
-      </div>
-        <p class="registration-term">Termin: dd.mm.rrrr</p>
-      </div>
-      {{ with resources.GetMatch "images/registration/speakers.*" }}
-      <img  class="registration-item-image"  alt="Prelegent" src="{{ .RelPermalink }}">
-      {{ end }}
 
-      {{ if and ( not .Site.Params.speaker_url )  (not .Site.Params.active_reg_close) }}
-        {{ partial "reg-timer.html" (dict "id" "speaker") }}
-        <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            const targetDate = new Date("{{ .Site.Params.active_reg_open_date }}");
-            countdownToDate(targetDate, "timer-speaker");
-          });
-        </script>
+        <div class="registration-item-button js-btn-container"></div>
+        <p class="registration-term js-term"></p>
+      </div>
+
+      {{ with resources.GetMatch "images/registration/speakers.*" }}
+      <img alt="Prelegent" class="registration-item-image" src="{{ .RelPermalink }}">
       {{ end }}
     </div>
+
     <div
-      class="registration-item {{ if not .Site.Params.poster_url }}
-        registration-closed
-      {{ end }}"
-       id="poster"
+      class="registration-item js-reg-block {{ if not .Site.Params.poster_url }}registration-closed{{ end }}"
+      data-btn-color="orange"
+      data-close="{{ .Site.Params.active_reg_close_date }}"
+      data-manual-close="{{ .Site.Params.active_reg_close }}"
+      data-open="{{ .Site.Params.active_reg_open_date }}"
+      data-url="{{ .Site.Params.poster_url }}"
+      id="poster"
     >
-        {{ with resources.GetMatch "images/registration/posters.*" }}
-        <img class="registration-item-image" alt="Plakat" src="{{ .RelPermalink }}">
-        {{ end }}
+      {{ with resources.GetMatch "images/registration/posters.*" }}
+      <img alt="Plakat" class="registration-item-image" src="{{ .RelPermalink }}">
+      {{ end }}
       <div class="registration-item-content">
         <h2>Plakat</h2>
         {{ if .Site.Params.poster_url }}
-          <p>Wolisz formę graficzną? Wykaż się kreatywnością i zaprezentuj
-            swój projekt lub ciekawy problem matematyczny, przygotowując
-            autorski plakat! Sesja plakatowa to świetna przestrzeń do
-            luźniejszych, bezpośrednich rozmów z zainteresowanymi osobami,
-            które zatrzymają się przy Twojej pracy.</p>
+        <p>Wolisz formę graficzną? Wykaż się kreatywnością i zaprezentuj
+          swój projekt lub ciekawy problem matematyczny, przygotowując
+          autorski plakat! Sesja plakatowa to świetna przestrzeń do
+          luźniejszych, bezpośrednich rozmów z zainteresowanymi osobami,
+          które zatrzymają się przy Twojej pracy.</p>
         {{ end }}
-      <div class="registration-item-button">
-        {{ if .Site.Params.poster_url }}
-          <a href="{{ .Site.Params.poster_url }}"
-            ><button
-              {{ if .Site.Params.active_reg_close }}
-                class="gray" disabled
-              {{ else }}
-                class="orange"
-              {{ end }}
-            >
-              Zapisz się!
-            </button></a
-          >
-        {{ end }}
-      </div>
-        <p class="registration-term">Termin: dd.mm.rrrr</p>
-      </div>
 
-      {{ if and ( not .Site.Params.speaker_url )  (not .Site.Params.active_reg_close) }}
-        {{ partial "reg-timer.html" (dict "id" "posters") }}
-        <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            const targetDate = new Date("{{ .Site.Params.active_reg_open }}");
-            countdownToDate(targetDate, "timer-posters");
-          });
-        </script>
-      {{ end }}
+        <div class="registration-item-button js-btn-container"></div>
+        <p class="registration-term js-term"></p>
+      </div>
     </div>
+
   </div>
 </section>
