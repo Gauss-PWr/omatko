@@ -1,0 +1,19 @@
+name: Deploy
+
+on:
+  push:
+     tags:
+      - 'v*'  # triggers on v1.0.0, v1.2.3, etc.
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Pull latest
+        run: git -C /home/omatko/apps/omatko pull
+
+      - name: Build
+        run: hugo -s /home/omatko/apps/omatko 
+
+      - name: Deploy to /www
+        run: rsync -a --delete /home/omatko/apps/omatko/public/ /srv/omatko
