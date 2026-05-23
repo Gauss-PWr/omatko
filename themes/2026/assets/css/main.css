@@ -1,33 +1,58 @@
 :root {
+    /* kolory omatko */
     --o-green: #91c13fef;
     --o-blue: #4fbdc3ef;
     --o-orange: #f28f2def;
     --o-gray: #babab9ef;
+
+    /* tło, tekst, elementy */
     --background-color: white;
     --secondary-background-color: #f6f6f6;
-    --element-box-shadow: 0 0 1px rgba(100, 100, 100, 0.4);
-    --element-box-shadow-hover: 0 0px 1px rgba(100, 100, 100, 0.2), 0 0px 10px rgba(100, 100, 100, 0.15);
-    --element-padding: 18px;
-    --button-border-radius: 30px;
-    --element-border-radius-large: 18px;
-    --element-border-radius-medium: 9px;
-    --section-width: calc(min(80vw - var(--element-padding), 1024px));
-    --main-nav-margin: 70px;
-    --section-padding: calc(var(--main-nav-margin)/2) calc((100vw - var(--section-width))/2);
+
+    --font-color: black;
     --font-size-paragraph: 1.1rem;
     --footnote-font-size: 0.9rem;
     --footnote-font-color: #818181;
+
+    /* cienie */
+    --hover-background-color: rgba(125, 125, 125, 0.1);
+    --element-box-shadow: 0 0 1px rgba(100, 100, 100, 0.4);
+    --section-box-shadow: inset 0 1px 1px -1px rgba(100, 100, 100, 0.4);
+
+    /* spacing elementów */
+    --element-spacing: 18px;
+    --element-spacing-small: calc(0.5 * var(--element-spacing));
+
+    --section-width: calc(min(80vw - var(--element-spacing), 1024px));
+    --main-nav-margin: 70px;
+    --section-padding: calc(var(--main-nav-margin)/2) calc((100vw - var(--section-width))/2);
+
+    --element-border-radius-large: 18px;
+    --element-border-radius-medium: 9px;
+
+    /* przyciski */
+    --button-background-color: var(--o-green);
+    --button-font-color: #ffffff;
+    --button-font-family: Quicksand;
+    --button-font-weight: 600;
+    --button-padding: var(--element-spacing-small);
+    --button-font-size: 1.1rem;
+    --button-border-radius: 30px;
+    --button-min-width: calc(.3 * var(--section-width));
 }
+
 
 @media (max-width: 768px) {
     :root {
-        --element-padding: 14px;
-        --button-border-radius: 30px;
-        --element-border-radius-large: 18px;
-        --element-border-radius-medium: 9px;
-        --section-width: calc(96vw - var(--element-padding));
-        --main-nav-margin: 50px;
         --font-size-paragraph: 1rem;
+
+        --element-spacing: 14px;
+        --section-width: calc(96vw - var(--element-spacing));
+        --main-nav-margin: 50px;
+
+        --button-font-size: 1rem;
+        --button-border-radius: 30px;
+        --button-min-width: var(--section-width);
     }
 }
 
@@ -58,6 +83,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--background-color);
+    color: var(--font-color);
     object-fit: cover;
     max-width: 100vw;
     min-height: 100vh;
@@ -111,8 +137,8 @@ section:first-of-type {
 }
 
 button {
-    font-family: "Quicksand", sans-serif;
-    font-weight: 600;
+    font-family: var(--button-font-family), sans-serif;
+    font-weight: var(--button-font-weight);
 }
 
 main {

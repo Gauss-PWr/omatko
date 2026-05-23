@@ -1,11 +1,15 @@
+:root {
+    --footer-color: #3c3c3c;
+}
+
 footer {
     position: static;
     background: url("/bg.webp") bottom center;
-    box-shadow: inset var(--element-box-shadow);
+    box-shadow: var(--section-box-shadow);
     display: flex;
     flex-direction: column;
     padding: var(--section-padding);
-    gap: calc(2*var(--element-padding));
+    gap: calc(2*var(--element-spacing));
 }
 
 .footer-content {
@@ -13,7 +17,7 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: calc(2*var(--element-padding));
+    gap: calc(2*var(--element-spacing));
     width: 100%;
 }
 
@@ -33,12 +37,12 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    gap: var(--element-padding);
+    gap: var(--element-spacing);
 }
 
 .footer-links a {
     font-size: var(--footnote-font-size);
-    color: #3c3c3c;
+    color: var(--footer-color);
     text-decoration: none;
 }
 
@@ -50,7 +54,7 @@ footer {
     margin: 0;
     text-align: left;
     font-size: small;
-    color: #3c3c3c;
+    color: var(--footer-color);
 }
 
 @media (max-width: 768px) {
@@ -58,9 +62,9 @@ footer {
     max-width: 120px;
     }
     .footer-content {
-        gap: var(--element-padding);
+        gap: var(--element-spacing);
     }
     footer {
-        gap: var(--element-padding);
+        gap: var(--element-spacing);
     }
 }

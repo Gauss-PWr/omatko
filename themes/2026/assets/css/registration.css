@@ -1,13 +1,13 @@
 .registration-content {
     display: flex;
     flex-direction: column;
-    gap: var(--element-padding);
+    gap: var(--element-spacing);
 }
 
 .registration-item {
     display: grid;
     grid-template-columns: 3fr 4fr;
-    gap: var(--element-padding);
+    gap: var(--element-spacing);
 }
 
 .registration-item#speaker {
@@ -38,10 +38,10 @@
 }
 
 .registration-item-button a {
-    padding: 10px;
-    font-size: large;
-    font-weight: 700;
-    font-family: QuickSand, sans-serif;
+    padding: var(--button-padding);
+    font-size: var(--button-font-size);
+    font-weight: var(--button-font-weight);
+    font-family: var(--button-font-family), sans-serif;
     text-align: center;
     text-decoration: none;
     border: 0;
@@ -49,9 +49,9 @@
     box-shadow: var(--element-box-shadow);
     cursor: pointer;
     transition: 0.5s ease;
-    width: calc(0.3 * var(--section-width));
+    min-width: var(--button-min-width);
     box-sizing: border-box;
-    color: white;
+    color: var(--button-font-color);
 }
 
 .registration-item-button a:not([href]) {
@@ -83,17 +83,5 @@
 
     .registration-item#speaker {
         flex-direction: column-reverse;
-    }
-
-    .registration-item-button a {
-        width: 100%;
-    }
-
-}
-
-@media screen and (max-width: 768px) {
-
-    .registration-item-button a {
-        font-size: medium;
     }
 }

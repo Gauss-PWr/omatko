@@ -94,7 +94,7 @@ show_regulamin = false
 
 math = true
 
-enable_voting = false
+enable_voting = true
 
 vote_app_url = "https://omatko.pwr.edu.pl/glosuj/"
 

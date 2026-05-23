@@ -4,8 +4,8 @@
   align-items: flex-start;
   list-style: none;
   padding: 0;
-  margin-top: var(--element-padding);
-  margin-bottom: var(--element-padding);
+  margin-top: var(--element-spacing);
+  margin-bottom: var(--element-spacing);
   border-top: 1px solid color-mix(in srgb, var(--o-gray) 40%, rgba(0, 0, 0, 0));
 }
 
@@ -44,11 +44,11 @@
 /* Aktywna strona - pomarańczowy tekst i kreska na górze */
 .pagination .page-item.active .page-link {
     color: var(--o-orange);
-    background-color: color-mix(in srgb, var(--o-orange) 30%, rgba(0, 0, 0, 0));
+    background-color: color-mix(in srgb, var(--o-orange) 30%, var(--background-color));
 }
 
 .pagination .page-item:not(.active):not(.disabled) .page-link:hover {
-  background-color: #f0f0f0; /* Jasnoszare, delikatne tło */
+  background-color: var(--hover-background-color);
 }
 
 /* Wyłączone skrajne strzałki */

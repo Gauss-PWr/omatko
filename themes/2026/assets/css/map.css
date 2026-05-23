@@ -2,7 +2,7 @@
       display: grid;
     width: var(--section-width);
     grid-template-columns: 3fr 5fr;
-    gap: var(--element-padding);
+    gap: var(--element-spacing);
 }
 
 .map-text > p:first-of-type {
@@ -10,7 +10,7 @@
 }
 
 .map-text > p {
-    margin: calc(var(--element-padding) / 2) 0;
+    margin: var(--element-spacing-small) 0;
 }
 
 iframe {

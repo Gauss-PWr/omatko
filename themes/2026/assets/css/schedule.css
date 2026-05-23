@@ -3,11 +3,11 @@
     flex-direction: column;
     align-items: center;
     background-color: var(--secondary-background-color);
-    box-shadow: inset var(--element-box-shadow);
+    box-shadow: var(--section-box-shadow);
 }
 
 .schedule-text {
-    margin-bottom: var(--element-padding);
+    margin-bottom: var(--element-spacing);
     margin-top: 0;
 }
 
@@ -26,7 +26,8 @@
     position: relative;
     z-index: 0;
     display: flex;
-    width: 90%;
+    width: calc(3*var(--button-min-width));
+    max-width: var(--section-width);
     align-self: center;
     background-color: var(--background-color);
     border-radius: var(--button-border-radius);
@@ -40,7 +41,7 @@
     top: 0;
     left: 0;
     height: 100%;
-    background-color: var(--o-green);
+    background-color: var(--button-background-color);
     border-radius: var(--button-border-radius);
     transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
     box-shadow: var(--element-box-shadow);
@@ -49,12 +50,12 @@
 .day-selector button {
     position: relative;
     flex: 1;
-    color: var(--o-green);
+    color: var(--button-background-color);
     cursor: pointer;
-    padding: 10px;
+    padding: var(--button-padding);
     border-radius: var(--button-border-radius);
     text-transform: capitalize;
-    font-size: large;
+    font-size: var(--button-font-size);
     border: 0;
     background-color: transparent !important;
     transition: 0.4s ease-in-out;
@@ -67,8 +68,8 @@
     bottom: 4px;
     left: 4px;
     right: 4px;
-    border-radius: calc(var(--button-border-radius) - 2px);
-    background-color: rgba(0, 0, 0, 0.06);
+    border-radius: calc(var(--button-border-radius) - 4px);
+    background-color: var(--hover-background-color);
     z-index: -1;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
@@ -79,13 +80,13 @@
 }
 
 .day-selector button.active-button {
-    color: white !important;
+    color: var(--button-font-color) !important;
 }
 
 
 .active-button {
-    background-color: var(--o-green) !important;
-    color: white !important;
+    background-color: var(--button-background-color) !important;
+    color: var(--button-font-color) !important;
 }
 
 .time {
@@ -93,16 +94,16 @@
 }
 
 .time-slot {
-    margin-top: calc(0.5*var(--element-padding));
+    margin-top: calc(0.5*var(--element-spacing));
 }
 
 .day-container {
-    margin-top: var(--element-padding);
-    width: calc(var(--section-width) - 2 * var(--element-padding));
+    margin-top: var(--element-spacing);
+    width: calc(var(--section-width) - 2 * var(--element-spacing));
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: var(--element-padding);
+    padding: var(--element-spacing);
     background-color: var(--background-color);
     border-radius: var(--element-border-radius-large);
     box-shadow: var(--element-box-shadow);
@@ -120,7 +121,7 @@
 
 .schedule-vote {
     display: flex;
-    margin: var(--element-padding) 0 0;
+    margin: var(--element-spacing) 0 0;
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -153,26 +154,25 @@
 }
 
 .schedule-vote a {
-    min-width: 30%;
-}
-
-.schedule-vote button {
     cursor: pointer;
     border: 0;
-    background-color: var(--o-green);
-    color: white;
+    background-color: var(--button-background-color);
+    color: var(--button-font-color);
     text-decoration: none;
-    font-size: large;
-    padding: 10px;
-    min-width: 100%;
+    font-size: var(--button-font-size);
+    padding: var(--button-padding);
+    min-width: var(--button-min-width);
     border-radius: var(--button-border-radius);
     transition: 0.5s ease-in-out;
     text-align: center;
     box-shadow: var(--element-box-shadow);
+    font-family: var(--button-font-family), sans-serif;
+    font-weight: var(--button-font-weight);
+    box-sizing: border-box;
 }
 
-.schedule-vote button:hover {
-    background-color: color-mix(in srgb, var(--o-green) 85%, white);
+.schedule-vote a:hover {
+    background-color: color-mix(in srgb, var(--button-background-color) 85%, white);
 }
 
 
@@ -183,7 +183,7 @@
 
 .event {
     border-radius: var(--element-border-radius-medium);
-    background-color: color-mix(in srgb, var(--o-gray), white 70%);
+    background-color: color-mix(in srgb, var(--o-gray), var(--background-color) 70%);
     padding: 9px;
     font-weight: 300;
     transition: 0.5s ease-in-out;
@@ -197,7 +197,7 @@ q {
     font-family: QuickSand, sans-serif;
     width: 1.3em;
     height: 1.3em;
-    background-color: color-mix(in srgb, var(--o-orange), white 70%);
+    background-color: color-mix(in srgb, var(--o-orange), var(--background-color) 70%);
     border-radius: 5px;
     color: var(--o-orange);
     font-weight: 700;
@@ -209,7 +209,7 @@ q {
     display: inline-block;
     width: 1.3em;
     height: 1.3em;
-    background-color: color-mix(in srgb, var(--o-blue), white 70%);
+    background-color: color-mix(in srgb, var(--o-blue), var(--background-color) 70%);
     border-radius: 5px;
     color: var(--o-blue);
     font-weight: 700;
@@ -285,11 +285,11 @@ q {
 }
 
 .teoretyczna {
-    background-color: color-mix(in srgb, var(--o-blue), white 70%)
+    background-color: color-mix(in srgb, var(--o-blue), var(--background-color) 70%)
 }
 
 .stosowana {
-    background-color: color-mix(in srgb, var(--o-orange), white 70%)
+    background-color: color-mix(in srgb, var(--o-orange), var(--background-color) 70%)
 }
 
 .schedule-legend {
@@ -306,15 +306,14 @@ q {
     font-size: medium;
 }
 
-@media screen and (max-width: 768px) {
-
+@media screen and (max-width: 1024px) {
     .day-selector {
-        width: 100%;
+        width: var(--section-width);
     }
 
-    .day-selector button {
-        font-size: medium;
-    }
+}
+
+@media screen and (max-width: 768px) {
 
     .events {
         display: flex;
@@ -337,21 +336,13 @@ q {
     .schedule-legend {
         width: 100%;
     }
-
-    .schedule-vote button {
-        min-width: 100%;
-    }
-
-    .schedule-vote a {
-        width: 100%;
-    }
 }
 
 @media (prefers-reduced-motion: reduce) {
     .switch-slider,
     .day-selector button,
     .day-selector button::before,
-    .schedule-vote button,
+    .schedule-vote a,
     .event,
     .event-details.abstract,
     .event-abstract {

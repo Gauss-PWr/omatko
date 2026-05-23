@@ -6,7 +6,7 @@
 .about-content {
     display: grid;
     grid-template-columns: 3fr 4fr;
-    gap: var(--element-padding);
+    gap: var(--element-spacing);
     align-items: start;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .about-socials {
-    margin-top: var(--element-padding);
+    margin-top: var(--element-spacing);
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -32,21 +32,21 @@
 
 .about-socials p {
     margin: 0;
-    padding-right: var(--element-padding);
+    padding-right: var(--element-spacing);
 }
 
 .about-socials-icons {
     display: flex;
     flex-wrap: nowrap;
     font-size: 1.5rem;
-    background: var(--o-green);
+    background: var(--button-background-color);
     border-radius: var(--button-border-radius);
     box-shadow: var(--element-box-shadow);
     padding: 5px;
 }
 
 .about-socials-icons a {
-    color: white;
+    color: var(--button-font-color);
     margin: 0 5px;
     width: fit-content;
     transition: 0.3s ease-in-out;

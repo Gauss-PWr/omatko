@@ -9,8 +9,12 @@
     background-size: cover;
     background: url("/bg.webp") top center;
     z-index: -1;
-    box-shadow: inset var(--element-box-shadow);
+    box-shadow: var(--section-box-shadow);
     padding: 0;
+}
+
+.banner:first-of-type {
+    padding-top: unset;
 }
 
 .banner p {
@@ -60,7 +64,7 @@
 }
 
 .banner .countdown-number {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 700;
 }
 
@@ -99,7 +103,6 @@
         align-items: center;
         display: inline-flex;
         flex-direction: column;
-
     }
 
     .countdown-end {

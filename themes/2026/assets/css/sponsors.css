@@ -2,7 +2,7 @@
   display: flex;
   justify-content: left;
   flex-wrap: wrap;
-  gap: var(--element-padding);
+  gap: var(--element-spacing);
 }
 
 .main-sponsors .sponsors-container {
@@ -20,7 +20,7 @@
 
 .main-sponsors, .normal-sponsors {
     position: relative;
-  padding-bottom: var(--element-padding);
+  padding-bottom: var(--element-spacing);
 }
 
 .main-sponsors:not(:last-of-type)::after, .normal-sponsors:not(:last-of-type)::after {
@@ -52,13 +52,13 @@
 }
 
 .sponsors h2 {
-  margin: var(--element-padding) 0;
+  margin: var(--element-spacing) 0;
     text-align: left;
     text-transform: capitalize;
 }
 
 .patrons h2 {
-  margin: var(--element-padding) 0;
+  margin: var(--element-spacing) 0;
     text-align: left;
     text-transform: capitalize;
 }

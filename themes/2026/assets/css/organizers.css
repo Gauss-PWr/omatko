@@ -5,24 +5,23 @@
 }
 
 .organizers-container h2 {
-    margin-top: var(--element-padding);
+    margin-top: var(--element-spacing);
     text-align: left;
 }
 
 .organizers-container h3 {
     width: 100%;
     text-align: left;
-    text-transform: capitalize;
-    margin-bottom: var(--element-padding);
+    margin-bottom: var(--element-spacing);
 }
 
 .team {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 30px;
+    gap: calc(1.5 * var(--element-spacing));
     width: 100%;
     position: relative;
-    padding-bottom: var(--element-padding);
+    padding-bottom: var(--element-spacing);
 }
 
 .team:not(:last-of-type)::after {
@@ -39,7 +38,7 @@
 .organizer {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: var(--element-spacing);
 }
 
 .organizer img {
@@ -59,21 +58,19 @@
 
 .organizer-info h4 {
     text-align: left;
-    font-size: 1.15rem;
-    margin: 0 0 4px 0;
+    font-size: 1.1rem;
+    margin: 0 0 5px 0;
 }
 
 .organizer-info p {
     margin: 0;
-    color: #818181;
-    font-size: 0.95rem;
-    line-height: 1.3;
+    color: var(--footnote-font-color);
+    font-size: var(--footnote-font-size);
 }
 
 @media screen and (max-width: 768px) {
     .team {
         grid-template-columns: 1fr;
-        gap: 20px;
     }
 
     .organizer img {

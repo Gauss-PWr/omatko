@@ -1,6 +1,5 @@
 .last-editions a {
     text-decoration: none;
-    color: black;
 }
 
 .last-edition-articles-container {
@@ -24,14 +23,14 @@
 }
 
 .last-edition-header {
-    margin-bottom: calc(0.5 * var(--element-padding))
+    margin-bottom: var(--element-spacing-small)
 }
 
 .edition-date {
     font-size: var(--footnote-font-size);
     color: var(--footnote-font-color);
-    margin-top: calc(0.5 * var(--element-padding));
-    margin-bottom: var(--element-padding);
+    margin-top: var(--element-spacing-small);
+    margin-bottom: var(--element-spacing);
 }
 
 .article-banner {
@@ -51,6 +50,6 @@
     .article-banner {
         float: right;
         width: 50%;
-        margin: var(--element-padding);
+        margin: var(--element-spacing);
     }
 }
