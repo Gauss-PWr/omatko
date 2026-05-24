@@ -5,8 +5,8 @@
     Poniżej prezentujemy pełen harmonogram tegorocznej konferencji.
     Sprawdźcie, jakie tematy przygotowano,
     kto wystąpi na naszej scenie i jak zaplanowaliśmy poszczególne bloki tematyczne.
-    <br>
-    <br>
+    </p>
+    <p class="schedule-text">
     <em>Ważna informacja: do czasu rozpoczęcia konferencji plan może ulec jeszcze drobnym zmianom.</em>
   </p>
   <div class="day-selector">
@@ -23,8 +23,8 @@
   </div>
   <div class="day-container">
     <div class="schedule-legend">
-      <span class="legend-element"><a class="applied-legend">s</a><a>&nbsp;- Blok stosowany</a></span>
-      <span class="legend-element"><a class="theoretic-legend">t</a><a>&nbsp;- Blok teoretyczny</a></span>
+      <span class="legend-element"><a class="applied-legend">s</a><a>&nbsp;– blok stosowany</a></span>
+      <span class="legend-element"><a class="theoretic-legend">t</a><a>&nbsp;– blok teoretyczny</a></span>
     </div>
     {{ range $key, $val := site.Data.schedule }}
       {{ partial "sections/schedule-day.html" $key }}

@@ -90,7 +90,8 @@
 }
 
 .time {
-    margin: 5px
+    margin: 5px;
+    font-size: var(--footnote-font-size);
 }
 
 .time-slot {
@@ -117,6 +118,10 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    font-size: small;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: var(--element-spacing-small);
 }
 
 .schedule-vote {
@@ -150,7 +155,7 @@
 .events {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: var(--element-spacing-small);
 }
 
 .schedule-vote a {
@@ -184,7 +189,7 @@
 .event {
     border-radius: var(--element-border-radius-medium);
     background-color: color-mix(in srgb, var(--o-gray), var(--background-color) 70%);
-    padding: 9px;
+    padding: var(--element-spacing-small);
     font-weight: 300;
     transition: 0.5s ease-in-out;
 }
@@ -292,18 +297,10 @@ q {
     background-color: color-mix(in srgb, var(--o-orange), var(--background-color) 70%)
 }
 
-.schedule-legend {
-    font-size: small;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap-reverse;
-    gap: 10px;
-}
 
 
 .event-abstract p {
     margin: 5px 0;
-    font-size: medium;
 }
 
 @media screen and (max-width: 1024px) {
@@ -319,9 +316,6 @@ q {
         display: flex;
         flex-direction: column;
         gap: 5px;
-    }
-
-    .time-slot {
         font-size: 0.9rem;
     }
 

@@ -35,6 +35,7 @@
     text-align: center;
     color: var(--o-blue);
     margin-bottom: 50px;
+    margin-top: 60px;
 }
 
 .banner-logo img {
@@ -88,6 +89,7 @@
 @media screen and (max-width: 768px) {
     .banner-logo {
         width: 90%;
+        margin-top: unset;
     }
 
     .banner .countdown-number {

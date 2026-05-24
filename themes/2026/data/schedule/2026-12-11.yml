@@ -22,7 +22,7 @@
     - name: "Przerwa kawowa"
 - time: "17:50"
   events:
-    - name: "Cras aliquam vitae tortor egestas condimentum. Ut facilisis tincidunt enim. "
+    - name: "Cras aliquam vitae tortor egestas condimentum. Ut facilisis tincidunt enim."
       speaker: "XYZ"
       abstract: |
         ### xyz1234
