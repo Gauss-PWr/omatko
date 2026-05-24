@@ -93,3 +93,5 @@ math = true
 enable_voting = false
 
 vote_app_url = "https://omatko.pwr.edu.pl/glosuj/"
+
+# test
