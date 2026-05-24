@@ -16,7 +16,7 @@ jobs:
       - name: Check if tag is on main
         id: check
         run: |
-          git fetch origin main
+          git fetch --all --tags
           git merge-base --is-ancestor ${{ github.sha }} origin/main \
             && echo "on_main=true" >> $GITHUB_OUTPUT \
             || echo "on_main=false" >> $GITHUB_OUTPUT
