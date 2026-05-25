@@ -50,6 +50,6 @@
     .article-banner {
         float: right;
         width: 50%;
-        margin: var(--element-spacing);
+        margin: 0 0 var(--element-spacing) var(--element-spacing);
     }
 }

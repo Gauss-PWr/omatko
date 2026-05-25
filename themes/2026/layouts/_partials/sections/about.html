@@ -1,6 +1,9 @@
 <section class="about" id="about">
   <h1>O konferencji</h1>
 <div class="about-content">
+      {{ with resources.GetMatch "images/previous*" }}
+        <img class="about-image" src="{{ .RelPermalink }}" alt=" Poprzednia edycja" />
+      {{ end }}
       <p class="about-text">
       <strong
         >Ogólnopolska Matematyczna Konferencja Studentów „OMatKo!!!”</strong
@@ -18,9 +21,6 @@
         OMatKo!!! to nie tylko dawka wiedzy, ale przede wszystkim świetna okazja,
         żeby poznać ambitnych ludzi z innych uczelni i złapać nowe kontakty.
     </p>
-        {{ with resources.GetMatch "images/previous*" }}
-          <img class="about-image" src="{{ .RelPermalink }}" alt=" Poprzednia edycja" />
-        {{ end }}
   </div>
   <div class="about-socials">
     <p><strong>Obserwujcie nas, by nie przegapić najważniejszych informacji!</strong></p>

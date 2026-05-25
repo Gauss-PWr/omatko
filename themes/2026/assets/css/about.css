@@ -4,22 +4,17 @@
 }
 
 .about-content {
-    display: grid;
-    grid-template-columns: 3fr 4fr;
-    gap: var(--element-spacing);
-    align-items: start;
-}
-
-.about-text {
-    margin: 0;
+    display: block;
 }
 
 .about-image {
+    display: block;
     box-shadow: var(--element-box-shadow);
-    height: 100%;
-    width: 100%;
+    width: 60%;
     object-fit: cover;
     border-radius: var(--element-border-radius-large);
+    float: right;
+    margin: 0 0 var(--element-spacing) var(--element-spacing);
 }
 
 .about-socials {
@@ -63,10 +58,11 @@
 }
 
 @media screen and (max-width: 1024px) {
-    .about-content {
-        display: flex;
-        flex-direction: column;
-    }
+    .about-image {
+    width: 100%;
+    float: right;
+    margin: 0 0 var(--element-spacing) 0;
+}
 }
 
 @media screen and (max-width: 768px) {
