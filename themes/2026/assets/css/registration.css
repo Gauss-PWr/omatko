@@ -73,6 +73,7 @@
 .registration-term {
     font-size: var(--footnote-font-size);
     color: var(--footnote-font-color);
+    margin-top: var(--element-spacing-small);
 }
 
 @media screen and (max-width: 1024px) {

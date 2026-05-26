@@ -37,12 +37,12 @@
     background: var(--button-background-color);
     border-radius: var(--button-border-radius);
     box-shadow: var(--element-box-shadow);
-    padding: 5px;
+    padding: var(--element-spacing-tiny);
 }
 
 .about-socials-icons a {
     color: var(--button-font-color);
-    margin: 0 5px;
+    margin: 0 var(--element-spacing-tiny);
     width: fit-content;
     transition: 0.3s ease-in-out;
     font-family: "Quicksand", sans-serif;

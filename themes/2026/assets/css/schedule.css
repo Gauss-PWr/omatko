@@ -64,11 +64,11 @@
 .day-selector button::before {
     content: "";
     position: absolute;
-    top: 4px;
-    bottom: 4px;
-    left: 4px;
-    right: 4px;
-    border-radius: calc(var(--button-border-radius) - 4px);
+    top: var(--element-spacing-tiny);
+    bottom: var(--element-spacing-tiny);
+    left: var(--element-spacing-tiny);
+    right: var(--element-spacing-tiny);
+    border-radius: calc(var(--button-border-radius) - var(--element-spacing-tiny));
     background-color: var(--hover-background-color);
     z-index: -1;
     opacity: 0;
@@ -90,7 +90,7 @@
 }
 
 .time {
-    margin: 5px;
+    margin: var(--element-spacing-tiny);
     font-size: var(--footnote-font-size);
 }
 
@@ -203,7 +203,7 @@ q {
     width: 1.3em;
     height: 1.3em;
     background-color: color-mix(in srgb, var(--o-orange), var(--background-color) 70%);
-    border-radius: 5px;
+    border-radius: var(--element-border-radius-tiny);
     color: var(--o-orange);
     font-weight: 700;
     text-align: center;
@@ -215,7 +215,7 @@ q {
     width: 1.3em;
     height: 1.3em;
     background-color: color-mix(in srgb, var(--o-blue), var(--background-color) 70%);
-    border-radius: 5px;
+    border-radius: var(--element-border-radius-tiny);
     color: var(--o-blue);
     font-weight: 700;
     text-align: center;
@@ -300,7 +300,7 @@ q {
 
 
 .event-abstract p {
-    margin: 5px 0;
+    margin: var(--element-spacing-tiny) 0;
     font-size: initial;
 }
 
@@ -316,7 +316,7 @@ q {
     .events {
         display: flex;
         flex-direction: column;
-        gap: 5px;
+        gap: var(--element-spacing-tiny);
         font-size: 0.9rem;
     }
 

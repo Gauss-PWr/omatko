@@ -59,7 +59,7 @@
 .organizer-info h4 {
     text-align: left;
     font-size: 1.1rem;
-    margin: 0 0 5px 0;
+    margin: 0 0 var(--element-spacing-tiny) 0;
 }
 
 .organizer-info p {

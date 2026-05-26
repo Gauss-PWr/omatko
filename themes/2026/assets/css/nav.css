@@ -4,7 +4,7 @@
     --nav-text-color: #3c3c3c;
     --nav-text-color-ancestor: var(--o-orange);
     --nav-text-color-active: var(--o-orange);
-    --nav-box-shadow: inset 0 -4px 4px -4px rgba(255, 255, 255, 1), inset 0 4px 4px -4px rgba(255, 255, 255, 1), 0 0 1px rgba(100, 100, 100, 0.4), 0 0 5px rgba(100, 100, 100, 0.2);
+    --nav-box-shadow: inset 0 -4px 4px -4px rgba(255, 255, 255, 1), inset 0 4px 4px -4px rgba(255, 255, 255, 1), 0 0 1px rgba(100, 100, 100, 0.4), 0 0 9px rgba(100, 100, 100, 0.2);
     --nav-outline: none;
     --nav-padding: 15px;
 }

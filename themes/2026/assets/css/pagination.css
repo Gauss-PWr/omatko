@@ -10,21 +10,21 @@
 }
 
 .pagination .page-item {
-  margin: 0 5px;
+  margin: 0 var(--element-spacing-tiny);
   position: relative;
 }
 
 .pagination .page-link {
     display: inline-block;
     text-align: center;
-    padding: 5px 10px 5px 10px;
-    margin-top: 10px;
+    padding: var(--element-spacing-tiny) var(--element-spacing-small) var(--element-spacing-tiny) var(--element-spacing-small);
+    margin-top: var(--element-spacing-small);
     font-size: 1rem;
     text-decoration: none;
     color: var(--footnote-font-color);
     font-weight: 600;
     font-family: Quicksand, sans-serif;
-    border-radius: 5px;
+    border-radius: var(--element-border-radius-tiny);
     transition: background-color 0.3s ease, color 0.3s ease;
     min-width: 30px;
     box-sizing: border-box;
@@ -64,11 +64,8 @@
         justify-content: center;
     }
 
-  .pagination .page-item {
-    margin: 0 5px;
-  }
   .pagination .page-link {
-    padding: 6px 10px;
+    padding: var(--element-spacing-small) var(--element-spacing-small);
     font-size: 0.9rem;
   }
 }
