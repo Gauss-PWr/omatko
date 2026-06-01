@@ -109,12 +109,12 @@
     }
 
     .glightbox-omtk .gclose:hover, .glightbox-omtk .gnext:hover, .glightbox-omtk .gprev:hover {
-        filter: brightness(110%);
+        filter: brightness(95%);
     }
 
-    .glightbox-omtk .gclose:hover path, .glightbox-omtk .gnext:hover path, .glightbox-omtk .gprev:hover path {
-        fill: var(--o-green);
-    }
+    /*.glightbox-omtk .gclose:hover path, .glightbox-omtk .gnext:hover path, .glightbox-omtk .gprev:hover path {
+        fill: var(--o-orange);
+    }*/
 
     .glightbox-omtk .gprev {
         top: 45%
