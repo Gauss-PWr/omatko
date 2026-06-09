@@ -2,6 +2,16 @@
     --footer-color: #3c3c3c;
 }
 
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --footer-color: #e6e6e6;
+    }
+    footer {
+        background: var(--secondary-background-color) !important;
+    }
+}
+
 footer {
     position: static;
     background: url("/bg.webp") bottom center;

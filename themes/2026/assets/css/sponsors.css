@@ -76,5 +76,11 @@
 
     .main-sponsors .sponsors-container {
     flex-direction: column;
+    }
 }
+
+@media (prefers-color-scheme: dark) {
+    .sponsor-img {
+        background-color: white;
+    }
 }

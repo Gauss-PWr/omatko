@@ -112,3 +112,9 @@
     }
 
 }
+
+@media (prefers-color-scheme: dark) {
+    .banner {
+        background: var(--secondary-background-color) !important;
+    }
+}

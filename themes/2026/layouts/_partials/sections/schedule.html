@@ -23,8 +23,8 @@
   </div>
   <div class="day-container">
     <div class="schedule-legend">
-      <span class="legend-element"><a class="applied-legend">s</a><a>&nbsp;– blok stosowany</a></span>
-      <span class="legend-element"><a class="theoretic-legend">t</a><a>&nbsp;– blok teoretyczny</a></span>
+      <span class="legend-element"><span class="applied-legend">s</span><span>&nbsp;– blok stosowany</span></span>
+      <span class="legend-element"><span class="theoretic-legend">t</span><span>&nbsp;– blok teoretyczny</span></span>
     </div>
     {{ range $key, $val := site.Data.schedule }}
       {{ partial "sections/schedule-day.html" $key }}
