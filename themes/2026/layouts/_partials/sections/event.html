@@ -5,12 +5,12 @@
   <!-- <div {{ if $event.abstract }}class="event-details"{{ end }}> !-->
 
   <!-- !-->
-  <div {{ if $event.abstract }} class="event-details abstract"
+  <button {{ if $event.abstract }} class="event-details abstract"
   {{ else }}
    class="event-details"
     {{ end }} >
   <!-- !-->
-<div style="display: inline; width: calc(100% - 1em); align-self: start;">
+<div class="event-text">
     {{ if $event.speaker }}
     <q>{{ $event.name }}</q>
       <span class="event-author"> &ndash; {{ $event.speaker }}</span>
@@ -18,12 +18,18 @@
     <p>{{ $event.name }}</p>
     {{ end }}
 
-
-    {{/* ({{ $event.location }}) */}}
 </div>
+
+    {{ if or $event.type $event.location }}
+    <div class="type-details">
     {{ if $event.type }}
-    <span class="type-detail {{$event.type}}">{{substr $event.type 0 1}}</span>
+    <span class="type-detail {{$event.type}}">{{$event.type}}</span>
   {{ end }}
+      {{ if $event.location }}
+    <span class="type-location">{{$event.location}}</span>
+  {{ end }}
+      </div>
+    {{ end }}
 
       {{ if $event.abstract }}
       <span class="toggle-abstract"
@@ -31,12 +37,14 @@
       ></span>
   {{ end }}
 
-  </div>
+  </button>
         {{ if $event.abstract }}
     <div class="event-abstract hidden">
+      <div>
       <p class="event-abstract-content">
         {{ $event.abstract | markdownify }}
       </p>
+      </div>
     </div>
 {{ end }}
 </div>

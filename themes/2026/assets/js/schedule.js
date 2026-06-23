@@ -73,7 +73,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 5. Obsługa rozwijania abstraktów/szczegółów
   eventDetails.forEach((ele) => {
-    ele.addEventListener("click", () => {
+    // Dodajemy 'e' jako argument funkcji
+    ele.addEventListener("click", (e) => {
+
+      // ZABEZPIECZENIE: Jeśli kliknięty element to .event-abstract
+      // lub znajduje się w jego wnętrzu, przerywamy funkcję.
+      if (e.target.closest(".event-abstract")) {
+          return;
+      }
+
       const eventAbstract = ele.querySelector(".event-abstract");
       const faIcon = ele.querySelector(".toggle-abstract i");
 

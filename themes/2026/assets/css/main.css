@@ -6,8 +6,8 @@
     --o-gray: #babab9ef;
 
     /* tło, tekst, elementy */
-    --background-color: white;
-    --secondary-background-color: #f6f6f6;
+    --background-color: #fcfcfc;
+    --secondary-background-color: #ffffff;
 
     --font-color: black;
     --font-size-paragraph: 1.1rem;
@@ -28,7 +28,7 @@
     --main-nav-margin: 70px;
     --section-padding: calc(var(--main-nav-margin)/2) calc((100vw - var(--section-width))/2);
 
-    --element-border-radius-large: 18px;
+    --element-border-radius-large: 15px;
     --element-border-radius-medium: 9px;
     --element-border-radius-tiny: 5px;
 
@@ -39,7 +39,7 @@
     --button-font-weight: 600;
     --button-padding: var(--element-spacing-small);
     --button-font-size: 1.1rem;
-    --button-border-radius: 30px;
+    --button-border-radius: 15px;
     --button-min-width: calc(.3 * var(--section-width));
 }
 
@@ -54,7 +54,7 @@
         --main-nav-margin: 50px;
 
         --button-font-size: 1rem;
-        --button-border-radius: 30px;
+        --button-border-radius: 15px;
         --button-min-width: var(--section-width);
     }
 }
@@ -167,8 +167,8 @@ html {
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background-color: #161616;
-        --secondary-background-color: #101010;
+        --background-color: #191919;
+        --secondary-background-color: #1e1e1e;
         --font-color: #e6e6e6;
         --element-box-shadow: 0 0 1px rgba(180, 180, 180, 0.4);
         --section-box-shadow: inset 0 1px 1px -1px rgba(180, 180, 180, 0.4), inset 0 -1px 1px -1px rgba(180, 180, 180, 0.4);

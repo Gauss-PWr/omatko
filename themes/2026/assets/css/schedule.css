@@ -2,8 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--secondary-background-color);
-    box-shadow: var(--section-box-shadow);
 }
 
 .schedule-text {
@@ -29,7 +27,7 @@
     width: calc(3*var(--button-min-width));
     max-width: var(--section-width);
     align-self: center;
-    background-color: var(--background-color);
+    background-color: var(--secondary-background-color);
     border-radius: var(--button-border-radius);
     box-shadow: var(--element-box-shadow);
     overflow: hidden; /* Ukrywa rogi suwaka na krawędziach */
@@ -90,24 +88,36 @@
 }
 
 .time {
-    margin: var(--element-spacing-tiny);
+    margin: var(--element-spacing) 0;
     font-size: var(--footnote-font-size);
+    width: 3em;
+    text-align: right;
 }
 
 .time-slot {
-    margin-top: calc(0.5*var(--element-spacing));
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: var(--element-spacing-small);
+}
+
+.time-slot:not(:last-of-type)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+    left: 0;
+    right: 0;
+  height: 1px;
+  background-color: var(--o-gray);
+  opacity: 0.4;
 }
 
 .day-container {
     margin-top: var(--element-spacing);
-    width: calc(var(--section-width) - 2 * var(--element-spacing));
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: var(--element-spacing);
-    background-color: var(--background-color);
-    border-radius: var(--element-border-radius-large);
-    box-shadow: var(--element-box-shadow);
 }
 
 .schedule-day {
@@ -145,17 +155,12 @@
     padding: 0 !important;
 }
 
-.time-slot {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    font-size: 1rem;
-}
-
 .events {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    width: 100%;
     gap: var(--element-spacing-small);
+    align-items: start;
 }
 
 .schedule-vote a {
@@ -187,11 +192,22 @@
 }
 
 .event {
-    border-radius: var(--element-border-radius-medium);
-    background-color: color-mix(in srgb, var(--o-gray), var(--background-color) 70%);
-    padding: var(--element-spacing-small);
+    margin: calc(.5 *var(--element-spacing)) 0;
+    padding: calc(.5 *var(--element-spacing));
     font-weight: 300;
     transition: 0.5s ease-in-out;
+    background-color: var(--hover-background-color);
+    border-radius: var(--element-border-radius-medium);
+}
+
+button.event-details {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    text-align: left;
+    width: 100%;
 }
 
 q {
@@ -228,6 +244,13 @@ q {
     width: 100%;
     height: 100%;
     justify-content: space-between;
+    gap: var(--element-spacing-small);
+}
+
+.event-text {
+    display: inline;
+    width: calc(100% - 1.5em);
+    align-self: center;
 }
 
 .event-details.abstract {
@@ -247,23 +270,47 @@ q {
     max-height: 100%;
 }
 
+.type-details {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: left;
+    width: unset;
+    gap: var(--element-spacing-small);
+}
+
 .type-detail {
     display: flex;
-    justify-content: right;
     font-size: small;
     font-weight: 700;
-    width: 0.95em;
-    align-items: end;
-    text-transform: lowercase;
+    text-align: center;
+    justify-content: center;
     font-family: QuickSand, sans-serif;
+    border-radius: var(--element-border-radius-tiny);
+    padding: 0 var(--element-spacing-tiny);
+    text-transform: capitalize;
+}
+
+.type-location {
+    display: flex;
+    font-size: small;
+    font-weight: 700;
+    text-align: center;
+    justify-content: center;
+    font-family: QuickSand, sans-serif;
+    border-radius: var(--element-border-radius-tiny);
+    padding: 0 var(--element-spacing-tiny);
+    color: var(--o-gray);
+    background-color: color-mix(in srgb, var(--o-gray), var(--background-color) 70%)
 }
 
 .type-detail.stosowana {
     color: var(--o-orange);
+    background-color: color-mix(in srgb, var(--o-orange), var(--background-color) 70%)
 }
 
 .type-detail.teoretyczna {
     color: var(--o-blue);
+    background-color: color-mix(in srgb, var(--o-blue), var(--background-color) 70%)
 }
 
 .event-author {
@@ -278,46 +325,57 @@ q {
 }
 
 .event-abstract {
+    display: grid;
+    grid-template-rows: 1fr;
     transition: 0.5s ease-in-out;
-    visibility: visible;
-    max-height: 500px;
-    overflow: scroll;
     opacity: 1;
+    overflow: hidden;
+    will-change: grid-template-rows, opacity;
+}
+
+.event-abstract > div {
+    min-height: 0;
+}
+
+/* Stan ukryty */
+.event-abstract.hidden {
+    grid-template-rows: 0fr;
+    max-height: unset !important;
+    visibility: collapse !important;
 }
 
 .event:only-child {
     grid-column: span 2;
 }
 
-.teoretyczna {
-    background-color: color-mix(in srgb, var(--o-blue), var(--background-color) 70%)
-}
-
-.stosowana {
-    background-color: color-mix(in srgb, var(--o-orange), var(--background-color) 70%)
-}
-
-
-
 .event-abstract p {
     margin: var(--element-spacing-tiny) 0;
     font-size: initial;
 }
 
-@media screen and (max-width: 1024px) {
-    .day-selector {
-        width: var(--section-width);
+@media screen and (max-width: 768px) {
+
+    .time-slot {
+        flex-direction: column;
+        padding: var(--element-spacing-tiny) 0 var(--element-spacing-small);
+        gap: var(--element-spacing-tiny);
     }
 
-}
+    .time {
+        margin: var(--element-spacing-tiny) 0;
+        width: unset;
+        text-align: unset;
+    }
 
-@media screen and (max-width: 768px) {
+    .event {
+        margin: 0 calc(-1 * var(--element-spacing-tiny))
+    }
 
     .events {
         display: flex;
         flex-direction: column;
-        gap: var(--element-spacing-tiny);
         font-size: 0.9rem;
+        align-items: unset;
     }
 
     .event-abstract p {

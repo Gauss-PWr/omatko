@@ -77,7 +77,6 @@ active_reg_close_date = '2025-10-31'
 participant_reg_close = false
 active_reg_close = false
 
-
 # Sponsorzy
 show_sponsors_section = true
 
