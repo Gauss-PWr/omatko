@@ -43,7 +43,7 @@
     background-color: var(--nav-background);
     backdrop-filter: var(--nav-blur);
     box-shadow: var(--nav-box-shadow);
-    border-radius: 30px;
+    border-radius: var(--nav-border-radius);
 }
 
 .glightbox-omtk .gclose path, .glightbox-omtk .gnext path, .glightbox-omtk .gprev path {
