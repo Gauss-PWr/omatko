@@ -1,27 +1,27 @@
 - name: "Imie Nazwisko"
-  section: "Sponsorzy"
-  img_name: "placeholder_portrait.png"
-  
-- name: "Imie Nazwisko"
-  section: "Promocja"
+  section: "koordynator/ka ds. sponsorów"
   img_name: "placeholder_portrait.png"
 
 - name: "Imie Nazwisko"
-  section: "Rozrywka"
+  section: "koordynator/ka ds. promocji"
   img_name: "placeholder_portrait.png"
 
 - name: "Imie Nazwisko"
-  section: "Informatyzacja"
-  img_name: "placeholder_portrait.png"
-  
-- name: "Imie Nazwisko"
-  section: "Obsługa"
+  section: "koordynator/ka ds. rozrywki"
   img_name: "placeholder_portrait.png"
 
 - name: "Imie Nazwisko"
-  section: "Kontakt"
+  section: "koordynator/ka ds. informatyzacji"
   img_name: "placeholder_portrait.png"
 
 - name: "Imie Nazwisko"
-  section: "Struktura"
+  section: "koordynator/ka ds. obsługi"
+  img_name: "placeholder_portrait.png"
+
+- name: "Imie Nazwisko"
+  section: "koordynator/ka ds. kontaktu"
+  img_name: "placeholder_portrait.png"
+
+- name: "Imie Nazwisko"
+  section: "koordynator/ka ds. struktury"
   img_name: "placeholder_portrait.png"

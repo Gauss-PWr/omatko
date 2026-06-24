@@ -49,7 +49,7 @@
 .day-selector button {
     position: relative;
     flex: 1;
-    color: var(--button-background-color);
+    color: var(--footnote-font-color);
     cursor: pointer;
     padding: var(--button-padding);
     border-radius: var(--button-border-radius);
@@ -58,6 +58,12 @@
     border: 0;
     background-color: transparent !important;
     transition: 0.4s ease-in-out;
+}
+
+@media (prefers-color-scheme: dark) {
+    .day-selector button {
+        color: var(--font-color);
+    }
 }
 
 .day-selector button::before {
@@ -92,7 +98,7 @@
     margin: var(--element-spacing) 0;
     font-size: var(--footnote-font-size);
     width: 3em;
-    text-align: right;
+    text-align: left;
 }
 
 .time-slot {
@@ -123,16 +129,6 @@
 
 .schedule-day {
     width: 100%;
-}
-
-.schedule-legend {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-size: small;
-    align-items: center;
-    flex-wrap: wrap-reverse;
-    gap: var(--element-spacing-small);
 }
 
 .schedule-vote {
@@ -187,11 +183,6 @@
 }
 
 
-.legend-element {
-    text-wrap: nowrap;
-    display: inline-flex;
-}
-
 .event {
     margin: calc(.5 *var(--element-spacing)) 0;
     padding: calc(.5 *var(--element-spacing));
@@ -213,29 +204,6 @@ button.event-details {
 
 q {
     quotes: "„" "”" "«" "»";
-}
-
-.applied-legend {
-    font-family: QuickSand, sans-serif;
-    width: 1.3em;
-    height: 1.3em;
-    background-color: color-mix(in srgb, var(--o-orange), var(--background-color) 70%);
-    border-radius: var(--element-border-radius-tiny);
-    color: var(--o-orange);
-    font-weight: 700;
-    text-align: center;
-}
-
-.theoretic-legend {
-    font-family: QuickSand, sans-serif;
-    display: inline-block;
-    width: 1.3em;
-    height: 1.3em;
-    background-color: color-mix(in srgb, var(--o-blue), var(--background-color) 70%);
-    border-radius: var(--element-border-radius-tiny);
-    color: var(--o-blue);
-    font-weight: 700;
-    text-align: center;
 }
 
 .event-details {
@@ -300,8 +268,8 @@ q {
     font-family: QuickSand, sans-serif;
     border-radius: var(--element-border-radius-tiny);
     padding: 0 var(--element-spacing-tiny);
-    color: var(--o-gray);
-    background-color: color-mix(in srgb, var(--o-gray), var(--background-color) 70%)
+    color: rgb(160, 160, 160);
+    background-color: color-mix(in srgb, rgb(160, 160, 160), var(--background-color) 70%)
 }
 
 .type-detail.stosowana {
@@ -385,10 +353,6 @@ q {
 
     .event-details p {
         font-size: 0.9rem;
-    }
-
-    .schedule-legend {
-        width: 100%;
     }
 }
 

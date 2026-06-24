@@ -88,7 +88,7 @@ Przykładowa zawartość pliku:
 - time: "20:00"
   events:
     - name: "Integracja"
-    - location: "SKS"
+      location: "SKS"
 ```
 
 > [!CAUTION]

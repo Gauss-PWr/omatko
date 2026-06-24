@@ -42,13 +42,16 @@
     - name: "Prezentacja sponsora"
 - time: "17:20"
   events:
-    - name: "Blok matematyki stosowanej"
-      type: "stosowana"
     - name: "Blok matematyki teoretycznej"
       type: "teoretyczna"
+      location: "Sala X"
+    - name: "Blok matematyki teoretycznej"
+      type: "teoretyczna"
+      location: "Sala Y"
 - time: "18:20"
   events:
     - name: "Zakończenie dnia"
 - time: "19:30"
   events:
     - name: "Integracja"
+      location: "Klub jakis tam"

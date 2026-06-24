@@ -1,26 +1,34 @@
 - name: "Imie Nazwisko"
   img_name: "placeholder_portrait.png"
+  section: "sekcja promocji"
 
 - name: "Imie Nazwisko"
   img_name: "placeholder_portrait.png"
+  section: "sekcja rozrywki"
 
 - name: "Imie Nazwisko"
   img_name: "placeholder_portrait.png"
+  section: "sekcja X"
 
 - name: "Imie Nazwisko"
   img_name: "placeholder_portrait.png"
+  section: "sekcja X, sekcja Z"
 
 - name: "Imie Nazwisko"
   img_name: "placeholder_portrait.png"
+  section: "sekcja Y"
 
 - name: "Imie Nazwisko"
   img_name: "placeholder_portrait.png"
+  section: "sekcja Z"
 
 - name: "Imie Nazwisko"
   img_name: "placeholder_portrait.png"
+  section: "sekcja X, sekcja Y"
 
 - name: "Imie Nazwisko"
   img_name: "placeholder_portrait.png"
+  section: "sekcja X, sekcja Y, sekcja Z, sekcja A, sekcja B, sekcja C"
 
 - name: "Imie Nazwisko"
   img_name: "placeholder_portrait.png"

@@ -55,7 +55,7 @@
 }
 
 .registration-item-button a:not([href]) {
-    cursor: not-allowed;
+    cursor: default;
 }
 
 .registration-item-button a.green:hover {

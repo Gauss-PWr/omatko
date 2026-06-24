@@ -42,6 +42,9 @@
             />
             <div class="organizer-info">
               <h4>{{ $team_data.name }}</h4>
+              {{ if $team_data.section }}
+              <p>{{ $team_data.section }}</p>
+              {{ end }}
             </div>
           </div>
         {{ end }}
