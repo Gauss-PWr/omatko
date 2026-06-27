@@ -76,7 +76,16 @@
     margin-top: var(--element-spacing-small);
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) and (min-width: 601px) {
+
+    .registration-item-image {
+        height: 80%;
+        margin: auto 0 var(--element-spacing) auto;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
     .registration-item {
         display: flex;
         flex-direction: column;

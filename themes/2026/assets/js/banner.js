@@ -31,6 +31,13 @@ document.addEventListener("DOMContentLoaded", function () {
     if (now >= endDate) {
       if (timerLabel) timerLabel.style.display = "none";
       timerContainer.innerHTML = `<div class="countdown-end">Do zobaczenia niedługo!</div>`;
+
+      // Zmiana nagłówka po zakończeniu konferencji ---
+      const conferenceInfo = document.getElementById("conference-info");
+      if (conferenceInfo) {
+        conferenceInfo.innerHTML = `<p>Ogólnopolska Matematyczna Konferencja Studentów</p>`;
+      }
+
       clearInterval(countdownInterval);
       return;
     }

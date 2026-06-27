@@ -4,9 +4,9 @@
 - time: "10:00"
   events:
     - name: "Blok matematyki stosowanej"
-      type: "stosowana"
+      type: "Blok stosowany"
     - name: "Blok matematyki teoretycznej"
-      type: "teoretyczna"
+      type: "Blok teoretyczny"
 - time: "11:00"
   events:
     - name: "Sesja plakatowa"
@@ -19,34 +19,38 @@
         ### xyz1234
         Morbi sagittis, magna sit amet vestibulum mattis, orci lacus aliquet libero, eget faucibus velit velit ut risus. Integer vulputate leo urna, eget viverra libero imperdiet a. Ut aliquet lectus ut dui egestas facilisis. Vestibulum elementum purus nulla, sed consectetur erat elementum a. Quisque condimentum, enim porta sodales viverra, nunc augue hendrerit libero, id sagittis ipsum ipsum in metus. Integer tellus enim, elementum nec mauris a, tincidunt elementum neque. In porta pellentesque mauris id vestibulum. Sed suscipit tincidunt blandit. Praesent accumsan augue et diam feugiat sollicitudin. Aenean sollicitudin lacus non fringilla fermentum. Morbi tempus cursus libero a scelerisque. Nulla rhoncus nisi nec nibh sollicitudin convallis id eu ipsum.
         Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
+      type: "Prezentacja sponsora"
+      location: "Sala X"
 - time: "12:30"
   events:
     - name: "Blok matematyki stosowanej"
-      type: "stosowana"
+      type: "Blok stosowany"
     - name: "Blok matematyki teoretycznej"
-      type: "teoretyczna"
+      type: "Blok teoretyczny"
 - time: "13:30"
   events:
     - name: "Przerwa obiadowa"
 - time: "15:00"
   events:
     - name: "Blok matematyki stosowanej"
-      type: "stosowana"
+      type: "Blok stosowany"
     - name: "Blok matematyki teoretycznej"
-      type: "teoretyczna"
+      type: "Blok teoretyczny"
 - time: "16:30"
   events:
     - name: "Przerwa kawowa"
 - time: "17:00"
   events:
-    - name: "Prezentacja sponsora"
+    - name: "Cras aliquam vitae tortor egestas condimentum. Ut facilisis tincidunt enim."
+      speaker: "XYZ"
+      type: "Prezentacja sponsora"
 - time: "17:20"
   events:
     - name: "Blok matematyki teoretycznej"
-      type: "teoretyczna"
+      type: "Blok teoretyczny"
       location: "Sala X"
     - name: "Blok matematyki teoretycznej"
-      type: "teoretyczna"
+      type: "Blok teoretyczny"
       location: "Sala Y"
 - time: "18:20"
   events:

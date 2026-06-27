@@ -57,15 +57,13 @@
     flex-shrink: 0;
 }
 
-@media screen and (max-width: 1024px) {
-    .about-image {
-    width: 100%;
-    float: right;
-    margin: 0 0 var(--element-spacing) 0;
-}
-}
-
 @media screen and (max-width: 768px) {
+    .about-image {
+        width: 100%;
+        float: right;
+        margin: 0 0 var(--element-spacing) 0;
+    }
+
     .about-text {
         font-size: 1rem;
     }

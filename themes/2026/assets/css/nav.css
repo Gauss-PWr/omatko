@@ -9,12 +9,11 @@
         inset 0 4px 4px -4px rgba(255, 255, 255, 1),
         0 0 1px rgba(100, 100, 100, 0.4),
         0 0 9px rgba(100, 100, 100, 0.2);
-    --nav-outline: none;
     --nav-padding: 13px;
     --nav-border-radius: 18px;
 }
 
-@media screen and (max-width: 1255px) {
+@media screen and (max-width: 1024px) {
     :root {
         --nav-border-radius: 18px;
         --nav-padding: 10px;
@@ -41,7 +40,6 @@ header {
     backdrop-filter: var(--nav-blur);
     -webkit-backdrop-filter: var(--nav-blur);
     box-shadow: var(--nav-box-shadow);
-    outline: var(--nav-outline);
 }
 
 .nav-logo {
@@ -111,7 +109,30 @@ header {
     font-size: 1.5rem;
 }
 
-@media screen and (max-width: 1255px) {
+@media screen and (min-width: 1180px) and (max-width: 1279px) {
+    .nav-link {
+        font-size: 0.95rem;
+        padding: calc(var(--nav-padding) * 0.4) calc(var(--nav-padding) * 0.7);
+    }
+}
+@media screen and (min-width: 1025px) and (max-width: 1179px) {
+
+    .main-nav {
+        overflow: scroll;
+    }
+    .nav-logo a,
+    .nav-logo img {
+        height: 20px;
+        margin-left: 4px;
+    }
+    .nav-link {
+        font-size: 0.9rem;
+        padding: calc(var(--nav-padding) * 0.4) calc(var(--nav-padding) * 0.4);
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
     header {
         position: fixed;
         width: 100%;
@@ -122,7 +143,6 @@ header {
         backdrop-filter: unset;
         -webkit-backdrop-filter: unset;
         box-shadow: none;
-        outline: none;
     }
 
     /*da sie klikac za navbar???*/
@@ -146,7 +166,6 @@ header {
         backdrop-filter: var(--nav-blur);
         -webkit-backdrop-filter: var(--nav-blur);
         box-shadow: var(--nav-box-shadow);
-        outline: var(--nav-outline);
     }
 
     .nav-logo a,
@@ -167,7 +186,6 @@ header {
         backdrop-filter: var(--nav-blur);
         -webkit-backdrop-filter: var(--nav-blur);
         box-shadow: var(--nav-box-shadow);
-        outline: var(--nav-outline);
         max-height: calc(100vh - 30px);
     }
 
@@ -196,19 +214,17 @@ header {
         pointer-events: none;
         z-index: 99;
         gap: 5px;
-        transition: max-width 0.5s ease-in-out, max-height 0.5s ease-in-out, opacity 0.2s ease-in-out, visibility 0.5s ease-in-out;
+        transition: max-height 0.35s ease-in-out 0.2s, max-width 0.5s ease-in-out 0.2s, opacity 0.2s ease-in-out, visibility 0.5s ease-in-out;
     }
 
     .active-menu {
         position: static;
         display: flex;
-        max-height: 100vh;
-        max-width: 100vw;
         margin-right: unset;
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
-        transition: max-height 0.5s ease-in-out, max-width 0.5s ease-in-out, opacity 1s ease-in-out, visibility 1s ease-in-out;
+        transition: max-height 0.5s ease-in-out, max-width 0.35s ease-in-out, opacity 1s ease-in-out, visibility 1s ease-in-out;
     }
 
     .nav-list li {
@@ -229,7 +245,7 @@ header {
     }
 }
 
-@media screen and (max-height: 600px) and (max-width: 1200px) {
+@media screen and (max-height: 600px) and (max-width: 1024px) {
 
     .nav-list {
         gap: 0;
@@ -271,7 +287,6 @@ header {
 
 @media (prefers-contrast: more) {
     :root {
-        --nav-outline: 2px solid black;
         --nav-blur: none;
         --nav-background: white;
         --nav-text-color: black;
@@ -283,12 +298,8 @@ header {
         --nav-background: rgba(35, 35, 35, 0.8);
         --nav-text-color: #d2dfec;
         --nav-box-shadow:
-            inset 0 -4px 4px -4px rgba(60, 60, 60, 0.5),
-            inset 0 4px 4px -4px rgba(60, 60, 60, 0.5),
-            inset 0 1px 1px -1px rgba(100, 100, 100, 0.9),
-            inset 0 -1px 1px -1px rgba(100, 100, 100, 0.9),
-            inset 0 0 1px rgba(100, 100, 100, 0.6),
             0 0 1px rgb(30, 30, 30, 0.8),
-            0 0 9px rgba(30, 30, 30, 0.6);
+            0 0 9px rgba(30, 30, 30, 0.6),
+            inset 0 0 1px rgba(80, 80, 80, 0.8);
     }
 }

@@ -1,18 +1,18 @@
 - time: "10:00"
   events:
     - name: "Blok matematyki stosowanej"
-      type: "stosowana"
+      type: "Blok stosowany"
     - name: "Blok matematyki teoretycznej"
-      type: "teoretyczna"
+      type: "Blok teoretyczny"
 - time: "11:00"
   events:
     - name: "Przerwa śniadaniowa"
 - time: "11:30"
   events:
     - name: "Blok matematyki stosowanej"
-      type: "stosowana"
+      type: "Blok stosowany"
     - name: "Blok matematyki teoretycznej"
-      type: "teoretyczna"
+      type: "Blok teoretyczny"
 - time: "13:00"
   events:
     - name: "Przerwa kawowa"

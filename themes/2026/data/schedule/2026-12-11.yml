@@ -8,8 +8,10 @@
       location: "Hol główny"
 - time: "15:00"
   events:
-    - name: "Wykład otwierający"
+    - name: "Cras aliquam vitae tortor egestas condimentum. Ut facilisis tincidunt enim."
+      speaker: "XYZ"
       location: "Sala Y"
+      type: "Wykład otwierający"
 - time: "16:00"
   events:
     - name: "Przerwa kawowa"
@@ -17,10 +19,10 @@
 - time: "16:20"
   events:
     - name: "Blok matematyki stosowanej"
-      type: "stosowana"
+      type: "Blok stosowany"
       location: "Sala X"
     - name: "Blok matematyki teoretycznej"
-      type: "teoretyczna"
+      type: "Blok teoretyczny"
       location: "Sala Y"
 
 - time: "17:20"
@@ -45,7 +47,7 @@
 - time: "18:10"
   events:
     - name: "Nulla in sagittis ante, non ultricies ex. Cras accumsan maximus risus, vel rutrum mauris vestibulum sed. Phasellus facilisis lacus ac augue dignissim tincidunt."
-      type: "stosowana"
+      type: "Blok stosowany"
       speaker: "Imie Nazwisko I"
       abstract: |
         ### xyz1234
@@ -53,7 +55,7 @@
       location: "Sala X"
 
     - name: "Quisque eget odio nibh. Nullam pulvinar eleifend pharetra."
-      type: "teoretyczna"
+      type: "Blok teoretyczny"
       speaker: "Imie Nazwisko II"
       abstract: |
         ### xyz1234

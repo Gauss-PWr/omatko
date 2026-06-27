@@ -45,7 +45,7 @@
     box-shadow: var(--element-box-shadow);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .article-banner {
         float: right;
         width: 50%;

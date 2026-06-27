@@ -43,6 +43,12 @@
     --button-min-width: calc(.3 * var(--section-width));
 }
 
+@media (max-width: 1024px) {
+
+    :root {
+        --button-min-width: calc(0.5 * var(--section-width));
+    }
+}
 
 @media (max-width: 768px) {
     :root {
@@ -55,6 +61,11 @@
 
         --button-font-size: 1rem;
         --button-border-radius: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    :root {
         --button-min-width: var(--section-width);
     }
 }

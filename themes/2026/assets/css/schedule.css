@@ -247,18 +247,6 @@ q {
     gap: var(--element-spacing-small);
 }
 
-.type-detail {
-    display: flex;
-    font-size: small;
-    font-weight: 700;
-    text-align: center;
-    justify-content: center;
-    font-family: QuickSand, sans-serif;
-    border-radius: var(--element-border-radius-tiny);
-    padding: 0 var(--element-spacing-tiny);
-    text-transform: capitalize;
-}
-
 .type-location {
     display: flex;
     font-size: small;
@@ -270,6 +258,22 @@ q {
     padding: 0 var(--element-spacing-tiny);
     color: rgb(160, 160, 160);
     background-color: color-mix(in srgb, rgb(160, 160, 160), var(--background-color) 70%)
+}
+
+.type-detail {
+    display: flex;
+    font-size: small;
+    font-weight: 700;
+    text-align: center;
+    justify-content: center;
+    font-family: QuickSand, sans-serif;
+    border-radius: var(--element-border-radius-tiny);
+    padding: 0 var(--element-spacing-tiny);
+}
+
+.type-detail {
+    color: var(--o-green);
+    background-color: color-mix(in srgb, var(--o-green), var(--background-color) 70%)
 }
 
 .type-detail.stosowana {
@@ -323,6 +327,34 @@ q {
 }
 
 @media screen and (max-width: 768px) {
+    .time {
+        margin: var(--element-spacing-small) 0;
+    }
+    .events {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.9rem;
+        align-items: unset;
+    }
+
+    .time-slot{
+        padding: var(--element-spacing-small) 0 var(--element-spacing-small);
+    }
+
+    .event {
+        margin: 0
+    }
+
+    .event-abstract p {
+        font-size: 0.9rem;
+    }
+
+    .event-details p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
 
     .time-slot {
         flex-direction: column;
@@ -340,20 +372,6 @@ q {
         margin: 0 calc(-1 * var(--element-spacing-tiny))
     }
 
-    .events {
-        display: flex;
-        flex-direction: column;
-        font-size: 0.9rem;
-        align-items: unset;
-    }
-
-    .event-abstract p {
-        font-size: 0.9rem;
-    }
-
-    .event-details p {
-        font-size: 0.9rem;
-    }
 }
 
 @media (prefers-reduced-motion: reduce) {

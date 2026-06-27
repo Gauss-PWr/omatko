@@ -36,8 +36,8 @@
 
 .sponsors-container a {
     display: flex;
-    width: 18%;
-    max-height: 150px;
+    width: 150px;
+    max-height: 110px;
 }
 
 .sponsor-img {
@@ -47,8 +47,8 @@
 }
 
 .main-sponsors .sponsors-container a {
-  width: 33%;
-  max-height: unset;
+    width: 250px;
+    max-height: unset;
 }
 
 .sponsors h2 {
@@ -64,18 +64,16 @@
 }
 
 
-@media screen and (max-width: 768px) {
-
-    .sponsors-container a {
-        width: 45%;
-    }
-
-    .main-sponsors .sponsors-container a {
-        width: 70%;
-    }
+@media screen and (max-width: 600px) {
 
     .main-sponsors .sponsors-container {
     flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 519px) {
+    .sponsors-container a {
+        width: calc(0.5 * (var(--section-width) - var(--element-spacing)) - 1px);
     }
 }
 

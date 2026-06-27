@@ -21,10 +21,10 @@
   
 </title>
 
- <link rel="stylesheet" href="./css/combined.min.4d9d939f23f1576979e244b2432bb449ff10d58202bfb35a793aa4e110255f0a.css" />
+ <link rel="stylesheet" href="./css/combined.min.3fac04b2780efeed274a49ed4e28b1a356ce7bf3de23149379566b400adcf80d.css" />
 
 
-      <script src="./js/bundle.7bde3de90bc53811e38d522703c334b2ff1c0f2a318a6c4bc80dd27e5cc9ea27.js" integrity="sha256-e9496QvFOBHjjVInA8M0sv8cDyoximxLyA3SflzJ6ic=" crossorigin="anonymous"></script>
+      <script src="./js/bundle.472482ae772733acab25b466cb942e6e85ff03d1291caa63c749ac57e6234729.js" integrity="sha256-RySCrncnM6yrJbRmy5QuboX/A9EpHKpjx0msV&#43;YjRyk=" crossorigin="anonymous"></script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -70,23 +70,23 @@
     <button id="menu-button"><i class="fa-solid fa-bars"></i></button>
     <ul class="nav-list">
       
-      <li><a class="nav-link" href="./glosuj/">Głosuj</a></li>
+      <li class="nav-item"><a class="nav-link" href="./glosuj/">Głosuj</a></li>
       
 
       
-      <li><a class="nav-link" href="./#schedule">Harmonogram</a></li>
+      <li class="nav-item"><a class="nav-link" href="./#schedule">Harmonogram</a></li>
       
       
-      <li><a class="nav-link" href="./#registration">Zapisy</a></li>
+      <li class="nav-item"><a class="nav-link" href="./#registration">Zapisy</a></li>
       
       
-      <li><a class="nav-link" href="./#map">Lokalizacja</a></li>
+      <li class="nav-item"><a class="nav-link" href="./#map">Lokalizacja</a></li>
       
       
-      <li><a class="nav-link" href="./#sponsors">Współpraca</a></li>
+      <li class="nav-item"><a class="nav-link" href="./#sponsors">Współpraca</a></li>
       
       
-      <li><a class="nav-link" href="./#patrons">Patroni</a></li>
+      <li class="nav-item"><a class="nav-link" href="./#patrons">Patroni</a></li>
       
       
 <li class="nav-item">
@@ -124,8 +124,10 @@
   
   <div class="banner-logo">
     <img src="logo.webp" alt="Logo OMatKo" />
+    <div id="conference-info">
     <p>XIII Edycja Ogólnopolskiej Matematycznej Konferencji Studentów</p>
     <p>11-13 grudnia 2026</p>
+      </div>
   </div>
   <div class="banner-timer">
     <p id="timer-label">Pozostało:</p>
@@ -147,6 +149,7 @@
       <span class="countdown-number js-seconds" style="color: var(--o-gray)">00</span>
       <span class="countdown-label">sekund</span>
     </div>
+  </div>
   </div>
 </section>
 
@@ -358,7 +361,7 @@ Rejestracja uczestników rozpocznie się o godzinie 13:30. Na konferencję zapra
     <div class="time-slot">
       <div class="time">15:00</div>
       <div class="events">
-          <div class="event ">
+          <div class="event Wykład otwierający">
   
 
   
@@ -368,7 +371,8 @@ Rejestracja uczestników rozpocznie się o godzinie 13:30. Na konferencję zapra
   
 <div class="event-text">
     
-    <p>Wykład otwierający</p>
+    <q>Cras aliquam vitae tortor egestas condimentum. Ut facilisis tincidunt enim.</q>
+      <span class="event-author"> &ndash; XYZ</span>
     
 
 </div>
@@ -376,6 +380,10 @@ Rejestracja uczestników rozpocznie się o godzinie 13:30. Na konferencję zapra
     
     <div class="type-details">
     
+    
+    <span class="type-detail">Wykład otwierający</span>
+      
+      
       
     <span class="type-location">Sala Y</span>
   
@@ -428,7 +436,7 @@ Rejestracja uczestników rozpocznie się o godzinie 13:30. Na konferencję zapra
     <div class="time-slot">
       <div class="time">16:20</div>
       <div class="events">
-          <div class="event stosowana">
+          <div class="event Blok stosowany">
   
 
   
@@ -446,8 +454,10 @@ Rejestracja uczestników rozpocznie się o godzinie 13:30. Na konferencję zapra
     
     <div class="type-details">
     
-    <span class="type-detail stosowana">stosowana</span>
-  
+    
+    <span class="type-detail stosowana">Blok stosowany</span>
+      
+      
       
     <span class="type-location">Sala X</span>
   
@@ -460,7 +470,7 @@ Rejestracja uczestników rozpocznie się o godzinie 13:30. Na konferencję zapra
         
 </div>
 
-          <div class="event teoretyczna">
+          <div class="event Blok teoretyczny">
   
 
   
@@ -478,8 +488,10 @@ Rejestracja uczestników rozpocznie się o godzinie 13:30. Na konferencję zapra
     
     <div class="type-details">
     
-    <span class="type-detail teoretyczna">teoretyczna</span>
-  
+    
+    <span class="type-detail teoretyczna">Blok teoretyczny</span>
+      
+      
       
     <span class="type-location">Sala Y</span>
   
@@ -587,7 +599,7 @@ Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus a
     <div class="time-slot">
       <div class="time">18:10</div>
       <div class="events">
-          <div class="event stosowana">
+          <div class="event Blok stosowany">
   
 
   
@@ -605,8 +617,10 @@ Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus a
     
     <div class="type-details">
     
-    <span class="type-detail stosowana">stosowana</span>
-  
+    
+    <span class="type-detail stosowana">Blok stosowany</span>
+      
+      
       
     <span class="type-location">Sala X</span>
   
@@ -632,7 +646,7 @@ Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus a
 
 </div>
 
-          <div class="event teoretyczna">
+          <div class="event Blok teoretyczny">
   
 
   
@@ -650,8 +664,10 @@ Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus a
     
     <div class="type-details">
     
-    <span class="type-detail teoretyczna">teoretyczna</span>
-  
+    
+    <span class="type-detail teoretyczna">Blok teoretyczny</span>
+      
+      
       
     <span class="type-location">Sala Y</span>
   
@@ -788,7 +804,7 @@ Quisque condimentum, enim porta sodales viverra, nunc augue hendrerit libero, id
     <div class="time-slot">
       <div class="time">10:00</div>
       <div class="events">
-          <div class="event stosowana">
+          <div class="event Blok stosowany">
   
 
   
@@ -806,8 +822,10 @@ Quisque condimentum, enim porta sodales viverra, nunc augue hendrerit libero, id
     
     <div class="type-details">
     
-    <span class="type-detail stosowana">stosowana</span>
-  
+    
+    <span class="type-detail stosowana">Blok stosowany</span>
+      
+      
       
       </div>
     
@@ -818,7 +836,7 @@ Quisque condimentum, enim porta sodales viverra, nunc augue hendrerit libero, id
         
 </div>
 
-          <div class="event teoretyczna">
+          <div class="event Blok teoretyczny">
   
 
   
@@ -836,8 +854,10 @@ Quisque condimentum, enim porta sodales viverra, nunc augue hendrerit libero, id
     
     <div class="type-details">
     
-    <span class="type-detail teoretyczna">teoretyczna</span>
-  
+    
+    <span class="type-detail teoretyczna">Blok teoretyczny</span>
+      
+      
       
       </div>
     
@@ -904,7 +924,7 @@ Quisque condimentum, enim porta sodales viverra, nunc augue hendrerit libero, id
     <div class="time-slot">
       <div class="time">11:50</div>
       <div class="events">
-          <div class="event ">
+          <div class="event Prezentacja sponsora">
   
 
   
@@ -919,6 +939,17 @@ Quisque condimentum, enim porta sodales viverra, nunc augue hendrerit libero, id
 
 </div>
 
+    
+    <div class="type-details">
+    
+    
+    <span class="type-detail">Prezentacja sponsora</span>
+      
+      
+      
+    <span class="type-location">Sala X</span>
+  
+      </div>
     
 
       
@@ -946,7 +977,7 @@ Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus a
     <div class="time-slot">
       <div class="time">12:30</div>
       <div class="events">
-          <div class="event stosowana">
+          <div class="event Blok stosowany">
   
 
   
@@ -964,8 +995,10 @@ Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus a
     
     <div class="type-details">
     
-    <span class="type-detail stosowana">stosowana</span>
-  
+    
+    <span class="type-detail stosowana">Blok stosowany</span>
+      
+      
       
       </div>
     
@@ -976,7 +1009,7 @@ Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus a
         
 </div>
 
-          <div class="event teoretyczna">
+          <div class="event Blok teoretyczny">
   
 
   
@@ -994,8 +1027,10 @@ Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus a
     
     <div class="type-details">
     
-    <span class="type-detail teoretyczna">teoretyczna</span>
-  
+    
+    <span class="type-detail teoretyczna">Blok teoretyczny</span>
+      
+      
       
       </div>
     
@@ -1039,7 +1074,7 @@ Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus a
     <div class="time-slot">
       <div class="time">15:00</div>
       <div class="events">
-          <div class="event stosowana">
+          <div class="event Blok stosowany">
   
 
   
@@ -1057,8 +1092,10 @@ Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus a
     
     <div class="type-details">
     
-    <span class="type-detail stosowana">stosowana</span>
-  
+    
+    <span class="type-detail stosowana">Blok stosowany</span>
+      
+      
       
       </div>
     
@@ -1069,7 +1106,7 @@ Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus a
         
 </div>
 
-          <div class="event teoretyczna">
+          <div class="event Blok teoretyczny">
   
 
   
@@ -1087,8 +1124,10 @@ Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus a
     
     <div class="type-details">
     
-    <span class="type-detail teoretyczna">teoretyczna</span>
-  
+    
+    <span class="type-detail teoretyczna">Blok teoretyczny</span>
+      
+      
       
       </div>
     
@@ -1132,7 +1171,7 @@ Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus a
     <div class="time-slot">
       <div class="time">17:00</div>
       <div class="events">
-          <div class="event ">
+          <div class="event Prezentacja sponsora">
   
 
   
@@ -1142,11 +1181,21 @@ Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus a
   
 <div class="event-text">
     
-    <p>Prezentacja sponsora</p>
+    <q>Cras aliquam vitae tortor egestas condimentum. Ut facilisis tincidunt enim.</q>
+      <span class="event-author"> &ndash; XYZ</span>
     
 
 </div>
 
+    
+    <div class="type-details">
+    
+    
+    <span class="type-detail">Prezentacja sponsora</span>
+      
+      
+      
+      </div>
     
 
       
@@ -1160,7 +1209,7 @@ Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus a
     <div class="time-slot">
       <div class="time">17:20</div>
       <div class="events">
-          <div class="event teoretyczna">
+          <div class="event Blok teoretyczny">
   
 
   
@@ -1178,8 +1227,10 @@ Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus a
     
     <div class="type-details">
     
-    <span class="type-detail teoretyczna">teoretyczna</span>
-  
+    
+    <span class="type-detail teoretyczna">Blok teoretyczny</span>
+      
+      
       
     <span class="type-location">Sala X</span>
   
@@ -1192,7 +1243,7 @@ Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus a
         
 </div>
 
-          <div class="event teoretyczna">
+          <div class="event Blok teoretyczny">
   
 
   
@@ -1210,8 +1261,10 @@ Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus a
     
     <div class="type-details">
     
-    <span class="type-detail teoretyczna">teoretyczna</span>
-  
+    
+    <span class="type-detail teoretyczna">Blok teoretyczny</span>
+      
+      
       
     <span class="type-location">Sala Y</span>
   
@@ -1296,7 +1349,7 @@ Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus a
     <div class="time-slot">
       <div class="time">10:00</div>
       <div class="events">
-          <div class="event stosowana">
+          <div class="event Blok stosowany">
   
 
   
@@ -1314,8 +1367,10 @@ Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus a
     
     <div class="type-details">
     
-    <span class="type-detail stosowana">stosowana</span>
-  
+    
+    <span class="type-detail stosowana">Blok stosowany</span>
+      
+      
       
       </div>
     
@@ -1326,7 +1381,7 @@ Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus a
         
 </div>
 
-          <div class="event teoretyczna">
+          <div class="event Blok teoretyczny">
   
 
   
@@ -1344,8 +1399,10 @@ Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus a
     
     <div class="type-details">
     
-    <span class="type-detail teoretyczna">teoretyczna</span>
-  
+    
+    <span class="type-detail teoretyczna">Blok teoretyczny</span>
+      
+      
       
       </div>
     
@@ -1389,7 +1446,7 @@ Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus a
     <div class="time-slot">
       <div class="time">11:30</div>
       <div class="events">
-          <div class="event stosowana">
+          <div class="event Blok stosowany">
   
 
   
@@ -1407,8 +1464,10 @@ Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus a
     
     <div class="type-details">
     
-    <span class="type-detail stosowana">stosowana</span>
-  
+    
+    <span class="type-detail stosowana">Blok stosowany</span>
+      
+      
       
       </div>
     
@@ -1419,7 +1478,7 @@ Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus a
         
 </div>
 
-          <div class="event teoretyczna">
+          <div class="event Blok teoretyczny">
   
 
   
@@ -1437,8 +1496,10 @@ Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus a
     
     <div class="type-details">
     
-    <span class="type-detail teoretyczna">teoretyczna</span>
-  
+    
+    <span class="type-detail teoretyczna">Blok teoretyczny</span>
+      
+      
       
       </div>
     

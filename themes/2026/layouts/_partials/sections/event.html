@@ -23,8 +23,14 @@
     {{ if or $event.type $event.location }}
     <div class="type-details">
     {{ if $event.type }}
-    <span class="type-detail {{$event.type}}">{{$event.type}}</span>
-  {{ end }}
+    {{ if eq $event.type "Blok stosowany" }}
+    <span class="type-detail stosowana">{{$event.type}}</span>
+      {{else if eq $event.type "Blok teoretyczny"}}
+    <span class="type-detail teoretyczna">{{$event.type}}</span>
+      {{else}}
+    <span class="type-detail">{{$event.type}}</span>
+      {{ end }}
+      {{end}}
       {{ if $event.location }}
     <span class="type-location">{{$event.location}}</span>
   {{ end }}
