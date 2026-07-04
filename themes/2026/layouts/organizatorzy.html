@@ -1,5 +1,6 @@
 {{ define "main" }}
   <section class="organizers">
+    {{ if .Site.Params.show_organizers }}
     <h1>sztab</h1>
     <div class="organizers-container">
       <h2>Koordynatorzy główni</h2>
@@ -50,5 +51,8 @@
         {{ end }}
       </div>
     </div>
+    {{ else }}
+    <h2 style="text-align:center;">UNDER CONSTRUCTION........</h2>
+    {{ end }}
   </section>
 {{ end }}

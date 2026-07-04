@@ -14,7 +14,6 @@
     {{ range $filename, $data := site.Data.schedule }}
       {{ $weekday := time.Format "Monday" $filename }}
       <button
-        onclick="showSchedule('{{ $filename }}')"
         data-day="{{ $filename }}"
       >
         {{ $weekday }}

@@ -42,7 +42,7 @@
 .glightbox-omtk .gclose, .glightbox-omtk .gnext, .glightbox-omtk .gprev {
     background-color: var(--nav-background);
     backdrop-filter: var(--nav-blur);
-    box-shadow: var(--nav-box-shadow);
+    box-shadow: var(--nav-box-shadow-mobile);
     border-radius: var(--nav-border-radius);
 }
 

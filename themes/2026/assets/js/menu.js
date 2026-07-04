@@ -63,4 +63,85 @@ document.addEventListener("DOMContentLoaded", () => {
   navLinks.forEach(link => {
       link.addEventListener("click", closeMenu);
   });
+  // Pobieramy wszystkie elementy menu
+    const navItems = document.querySelectorAll('.nav-item');
+
+    navItems.forEach(item => {
+        const link = item.querySelector('.nav-link');
+        const submenu = item.querySelector('.nav-submenu');
+
+        // Uruchamiamy logikę tylko dla linków, które mają podmenu
+        if (submenu && link) {
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth > 900) {
+
+                    // ZAWSZE blokujemy domyślne działanie linku
+                    e.preventDefault();
+
+                    if (item.classList.contains('is-open')) {
+                        // DRUGIE KLIKNIĘCIE: Zamknij menu
+                        item.classList.remove('is-open');
+
+                        // Zdejmuje focus z linku (wyłącza :focus-within w CSS)
+                        link.blur();
+
+                        // Wymusza ukrycie w CSS na wypadek trwającego :hover
+                        item.classList.add('is-closed');
+                        setTimeout(() => item.classList.remove('is-closed'), 300);
+
+                    } else {
+                        // PIERWSZE KLIKNIĘCIE: Otwórz menu
+                        item.classList.remove('is-closed'); // Reset
+
+                        document.querySelectorAll('.nav-item.is-open').forEach(el => {
+                            el.classList.remove('is-open');
+                        });
+                        item.classList.add('is-open');
+                    }
+                }
+            });
+        }
+    });
+
+    // Zamykanie podmenu, gdy użytkownik tapnie/kliknie gdziekolwiek indziej na stronie (poza nawigacją)
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.main-nav')) {
+            document.querySelectorAll('.nav-item.is-open').forEach(el => {
+                el.classList.remove('is-open');
+            });
+        }
+    });
+    // ---------------------------------------------------------
+    // NOWE: Zamykanie menu po kliknięciu w jakikolwiek link (kotwicę)
+    // ---------------------------------------------------------
+    const allNavLinks = document.querySelectorAll('.main-nav a');
+
+    allNavLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Sprawdzamy, czy link faktycznie prowadzi do kotwicy (zawiera '#')
+            // i nie jest to tylko puste '#' (którego czasami używa się do zaślepek)
+            const href = this.getAttribute('href');
+            if (href && href.includes('#') && href !== '#') {
+
+                // 1. Zamykamy wszystkie otwarte podmenu (.nav-submenu)
+                document.querySelectorAll('.nav-item.is-open').forEach(el => {
+                    el.classList.remove('is-open');
+
+                    // Opcjonalnie dokładamy klasę .is-closed z poprzedniego kroku
+                    el.classList.add('is-closed');
+                    setTimeout(() => el.classList.remove('is-closed'), 300);
+                });
+
+                // Zdejmujemy focus, żeby zabić hover z klawiatury
+                this.blur();
+
+                // 2. Jeśli masz na mobile otwarte całe menu (klasa .active-menu na .nav-list),
+                // to też je zamykamy przy okazji!
+                const navList = document.querySelector('.nav-list');
+                if (navList && navList.classList.contains('active-menu')) {
+                    navList.classList.remove('active-menu');
+                }
+            }
+        });
+    });
 });

@@ -38,7 +38,7 @@ Komenda `hugo server --buildDrafts --noHTTPCache` uruchamia serwer http.
 Podgląd strony na żywo będzie dostępny na [localhost:1313](http://localhost:1313).
 
 Hugo używa motywów do tworzenia stron.
-Dla jednej edycji konferencji powinien istnieć jeden motyw.
+Dla jednej edycji konferencji powinien istnieć jeden motyw.
 Aby zmienić motyw ustaw parametr `theme='rok-edycji'`.
 
 ## Zarządzanie stroną
@@ -50,22 +50,9 @@ Znajdują się tam parametry odpowiadające za wyświetlanie konkretnych sekcji:
 - zapisów
 - sponsorów i patronów
 
-### Sponsorzy i patroni
-Aby dodać sponsorów, należy wypełnić pliki _.yml_ w folderze _themes/\*/data/partnerships_
-i wstawić zdjęcia do folderu _themes/\*/content/partnerships/\*_.
-
-Przykładowa zawartość pliku:
-
-```yml
-- name: XYZ # Nazwa sponsora
-  logo: placeholder.png # Nazwa pliku z logiem sponsora
-  url: "https://example.com" # Adres internetowy sponsora
-  description: "Jakiś tekst" # Opis sponsora (dotyczy tylko głównego sponsora)
-```
-
 ### Harmonogram
 
-Dane z harmonogramu znajdują się w folderze _themes/\*/data/schedule_.
+Za wyświetlanie sekcji z harmonogramem odpowiada parametr ```show_schedule_section```. Dane z harmonogramu znajdują się w folderze _themes/\*/data/schedule_.
 Żeby dodać dzień, stwórz plik .yml z datą tego dnia w formacie **YYYY-MM-DD**.
 
 Przykładowa zawartość pliku:
@@ -105,27 +92,53 @@ Przykładowa zawartość pliku:
 
 ### Zapisy
 
-Linki do zapisów wstaw do parametrów:
+Aby wyświetlić sekcję z zapisami, zmień parametr ```show_registration``` na ```true```.
 
+Linki do zapisów wstaw do parametrów:
 ```toml
+# Linki do formularzy
 participant_url = 'link'
 speaker_url = 'inny link'
 poster_url = 'kolejny link'
+```
+
+Daty otwarcia i zamknięcia zapisów są sterowane parametrami:
+```toml
+# Data udostępnienia zapisów
+participant_reg_open_date = 'yyyy-mm-dd'
+active_reg_open_date = 'yyyy-mm-dd'
+
+# Data zamkniecia zapisów
+participant_reg_close_date = 'yyyy-mm-dd'
+active_reg_close_date = 'yyyy-mm-dd'
+```
+
+Można też zamknąć zapisy niezależnie od daty zamknięcia:
+```toml
+# Zamkniecie zapisów
+participant_reg_close = true
+active_reg_close = true
+```
+
+
+### Sponsorzy i patroni
+Aby dodać sponsorów i patronów, należy zmienić parametry ```show_sponsors_section``` i ```show_patrons_section``` na ```true```, wypełnić pliki _.yml_ w folderze _themes/\*/data/partnerships_
+i wstawić zdjęcia do folderów _themes/\*/content/partnerships/\*_.
+
+Przykładowa zawartość pliku:
+
+```yml
+- name: XYZ # Nazwa sponsora
+  logo: placeholder.png # Nazwa pliku z logiem sponsora
+  url: "https://example.com" # Adres internetowy sponsora
+  description: "Jakiś tekst" # Opis sponsora (dotyczy tylko głównego sponsora)
 ```
 
 ### Sztab
 
 W folderze _data/organizers_ znajdują się pliki _.yml_ z danymi sztabu.
 Wystarczy je wypełnić i wstawić zdjęcia do folderu _themes/\*/content/organizatorzy/photos_.
-Żeby aktywować podstronę odkomentuj:
-
-```toml
-[[menus.main]]
- name = 'Organizatorzy'
- pageRef = 'organizatorzy'
- url = '/organizatorzy'
- weight = 3
-```
+Żeby aktywować podstronę sztabu zmień parametr ```show_organizers``` na ```true```:
 
 ### Posty
 

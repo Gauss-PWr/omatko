@@ -24,7 +24,7 @@
     --element-spacing-small: calc(0.5 * var(--element-spacing));
     --element-spacing-tiny: 4px;
 
-    --section-width: calc(min(90vw - var(--element-spacing), 1024px));
+    --section-width: calc(min(96vw - var(--element-spacing), 1024px));
     --main-nav-margin: 70px;
     --section-padding: calc(var(--main-nav-margin)/2) calc((100vw - var(--section-width))/2);
 
