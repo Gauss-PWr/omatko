@@ -20,7 +20,7 @@ Renders a menu for the given menu ID.
     <button id="menu-button"><i class="fa-solid fa-bars"></i></button>
     <ul class="nav-list">
       {{ if site.Params.enable_voting}}
-      <li class="nav-item"><a class="nav-link" href="/glosuj/">Głosuj</a></li>
+      <li class="nav-item"><a class="nav-link" href="/glosuj/" style="font-weight: 700; color: var(--o-orange);">Głosuj</a></li>
       {{ end }}
 
       {{ if site.Params.show_schedule_section }}

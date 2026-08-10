@@ -186,7 +186,6 @@
 .event {
     margin: calc(.5 *var(--element-spacing)) 0;
     padding: calc(.5 *var(--element-spacing));
-    font-weight: 300;
     transition: 0.5s ease-in-out;
     background-color: var(--hover-background-color);
     border-radius: var(--element-border-radius-medium);
@@ -234,7 +233,6 @@ q {
     display: flex;
     justify-content: right;
     font-size: small;
-    font-weight: 800;
     align-items: self-start;
     max-height: 100%;
 }
@@ -322,7 +320,7 @@ q {
 }
 
 .event-abstract p {
-    margin: var(--element-spacing-tiny) 0;
+    margin: var(--element-spacing-small) 0 var(--element-spacing-tiny) 0;
     font-size: initial;
 }
 

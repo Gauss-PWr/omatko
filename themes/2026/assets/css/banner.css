@@ -4,13 +4,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    min-height: 100vh;
+    min-height: var(--viewport-height);
     background-size: cover;
     background: url("/bg.webp") top center;
     z-index: -1;
     box-shadow: var(--section-box-shadow);
-    padding: 0;
+    padding: var(--section-padding);
 }
 
 .banner:first-of-type {
@@ -28,7 +27,7 @@
 }
 
 .banner-logo {
-    width: 60%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;

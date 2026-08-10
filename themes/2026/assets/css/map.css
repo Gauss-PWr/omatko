@@ -1,6 +1,5 @@
 .map-container {
       display: grid;
-    width: var(--section-width);
     grid-template-columns: 3fr 5fr;
     gap: var(--element-spacing);
 }

@@ -58,7 +58,7 @@ conference_end = '2026-12-13T14:00'
 show_schedule_section = true
 
 # Rejestracja 
-show_registration = false
+show_registration = true
 
 # Linki do formularzy
 participant_url = '/'
