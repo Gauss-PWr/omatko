@@ -9,7 +9,7 @@
 - [ ] Layout dla tabletów i dużych ekranów
 - [x] Abstrakty w harmonogramie
 - [x] Integracja z omatko-glosuj
-- [ ] Github Actions (?)
+- [x] Github Actions (?)
 
 > [!WARNING]
 >
