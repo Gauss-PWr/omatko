@@ -141,17 +141,12 @@ W pliku są metadane które po kolei oznaczają:
 
 ## Aktualizacja strony
 
-Aby zakutalizować stronę po dokonaniu zmian, otaguj commit z nową wersją strony.
+Po zpushowaniu posta zmiany zostaną automatycznie pobrane na serwer. 
+Możesz ustawić przyszłą date publikacji posta dzięki zadaniu które uruchamia się co godzinę i aktualizuje stronę.
+Aby zapobiec uruchomieniu zadania w commit message dodaj `[skip build]`.
+Przykładowo: `feat!: part 1 of page rewrite [skip build]`.
 
-> [!CAUTION]
->
-> Tag musisz samodzielnie zpushować na repo przy pomocy komendy `git push origin <nazwa_tagu>`
 
-Po otagowaniu, wejdź na serwer wydziału przy użyciu studenckiego vpn'a i odpal skrypt _pull.sh_, który pobierze najnowszą otagowaną wersje strony.
-
-> [!TIP]
->
-> Możesz wyznaczyć czas pullowania tagu za pomocą komendy `at hh:mm MM/DD -f pull.sh`.
 
 ## Tagowanie
 
