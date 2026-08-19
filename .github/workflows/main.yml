@@ -1,36 +1,27 @@
-name: Deploy
-
-on:
+'on':
   push:
-    tags:
-      - 'v*'
+    branches:
+      - main
+    paths:
+      - 'content/**'
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
-  deploy:
+  build:
+    if: "!contains(github.event.head_commit.message, '[skip build]')"
     runs-on: self-hosted
-    defaults:
-      run:
-        working-directory: /home/omatko/apps/omatko
-
     steps:
-      - name: Check if tag is on main
-        id: check
-        run: |
-          git fetch --all --tags
-          git merge-base --is-ancestor ${{ github.sha }} origin/main \
-            && echo "on_main=true" >> $GITHUB_OUTPUT \
-            || echo "on_main=false" >> $GITHUB_OUTPUT
-
       - name: Checkout
-        if: steps.check.outputs.on_main == 'true'
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-
+          submodules: recursive
       - name: Build
-        if: steps.check.outputs.on_main == 'true'
         run: hugo -s /home/omatko/apps/omatko
 
-      - name: Deploy to /www
-        if: steps.check.outputs.on_main == 'true'
+      - name: Deploy to /srv/omatko
         run: rsync -a --delete /home/omatko/apps/omatko/public/ /srv/omatko
