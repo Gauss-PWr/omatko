@@ -24,4 +24,4 @@ jobs:
         run: hugo -s /home/omatko/apps/omatko
 
       - name: Deploy to /srv/omatko
-        run: rsync -a --delete /home/omatko/apps/omatko/public/ /srv/omatko
+        run: rsync -rlD --delete /home/omatko/apps/omatko/public/ /srv/omatko
