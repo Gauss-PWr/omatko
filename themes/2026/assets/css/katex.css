@@ -1,0 +1,4 @@
+/* domyslny font latexowy */
+.katex * {
+    font-family: KaTeX_Main, serif;
+}

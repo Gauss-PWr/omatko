@@ -8,10 +8,21 @@
       location: "Hol główny"
 - time: "15:00"
   events:
-    - name: "Cras aliquam vitae tortor egestas condimentum. Ut facilisis tincidunt enim."
+    - name: \(\LaTeX\) test
       speaker: "XYZ"
       location: "Sala Y"
       type: "Wykład otwierający"
+      abstract: |
+        Cras aliquam vitae tortor egestas condimentum \(\frac{1}{2} \sum_{n=1}^{\infty} 2n + 1\) facilisis tincidunt enim.
+        
+        \[ \frac{1}{\pi} = \frac{2\sqrt{2}}{9801} \sum_{k=0}^\infty \frac{(4k)!(1103+26390k)}{(k!)^4 396^{4k}} \]
+        
+        Cras aliquam vitae tortor egestas condimentum. Ut facilisis tincidunt enim.
+        
+        \[ \rho \left( \frac{\partial \mathbf{u}}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u} \right) = -\nabla p + \mu \nabla^2 \mathbf{u} + \mathbf{f} \]
+        
+        Some quote aliquam vitae tortor egestas condimentum. Ut facilisis tincidunt enim.
+
 - time: "16:00"
   events:
     - name: "Przerwa kawowa"

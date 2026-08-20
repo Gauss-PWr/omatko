@@ -25,7 +25,6 @@
     font-weight: 600;
     font-family: Quicksand, sans-serif;
     border-radius: var(--element-border-radius-tiny);
-    transition: background-color 0.3s ease, color 0.3s ease;
     min-width: 30px;
     box-sizing: border-box;
     font-variant-numeric: tabular-nums;
@@ -54,7 +53,7 @@
 /* Wyłączone skrajne strzałki */
 .pagination .page-item.disabled .page-link {
   opacity: 0.3;
-  cursor: not-allowed;
+  cursor: default;
   background-color: transparent;
 }
 

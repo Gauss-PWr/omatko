@@ -106,7 +106,7 @@ header {
     color: var(--nav-text-color);
     font-family: QuickSand, sans-serif;
     font-size: var(--link-font-size);
-    font-weight: 500;
+    font-weight: 600;
     text-decoration: none;
     cursor: pointer;
     border-radius: calc(var(--nav-border-radius) - calc(var(--nav-padding) * 0.6));
