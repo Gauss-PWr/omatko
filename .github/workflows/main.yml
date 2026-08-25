@@ -1,0 +1,27 @@
+'on':
+  push:
+    branches:
+      - main
+    paths:
+      - 'content/**'
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    if: "!contains(github.event.head_commit.message, '[skip build]')"
+    runs-on: self-hosted
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Build
+        run: hugo -s /home/omatko/apps/omatko
+
+      - name: Deploy to /srv/omatko
+        run: rsync -rlD --delete /home/omatko/apps/omatko/public/ /srv/omatko
