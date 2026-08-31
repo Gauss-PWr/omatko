@@ -1,6 +1,6 @@
 :root {
-    --nav-blur: blur(20px) saturate(200%);
-    --nav-background: rgba(255, 255, 255, 0.8);
+    --nav-blur: blur(50px) saturate(200%);
+    --nav-background: rgba(255, 255, 255, 0.9);
 
     --nav-text-color: #3c3c3c;
     --nav-text-color-ancestor: var(--o-orange);
@@ -345,7 +345,7 @@ header {
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --nav-background: rgba(35, 35, 35, 0.8);
+        --nav-background: rgba(35, 35, 35, 0.9);
         --nav-text-color: #d2dfec;
         --nav-box-shadow:
             0 0 1px rgb(30, 30, 30, 0.8),
@@ -355,4 +355,10 @@ header {
             0 0 9px rgba(30, 30, 30, 0.6),
             inset var(--element-box-shadow);
     }
+    @media (prefers-reduced-transparency: reduce) {
+    :root {
+        --nav-blur: none;
+        --nav-background: rgb(35,35,35);
+    }
+}
 }
