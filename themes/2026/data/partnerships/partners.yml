@@ -1,0 +1,23 @@
+- name: XYZZ partner
+  logo: placeholder_partner.webp
+  url: "/"
+
+- name: XYZZ partner 2
+  logo: placeholder1.png
+  url: "/"
+
+- name: XYZZ partner 3
+  logo: placeholder2.png
+  url: "/"
+
+- name: XYZZ partner 4
+  logo: placeholder3.png
+  url: "/"
+
+- name: XYZZ partner 5
+  logo: placeholder4.png
+  url: "/"
+
+- name: XYZZ partner 6
+  logo: placeholder5.png
+  url: "/"

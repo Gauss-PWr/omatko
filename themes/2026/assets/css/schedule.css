@@ -1,0 +1,382 @@
+.schedule {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.schedule-text {
+    margin-bottom: var(--element-spacing);
+    margin-top: 0;
+}
+
+.schedule-text em {
+    font-style: normal;
+    font-size: var(--footnote-font-size);
+    color: var(--footnote-font-color);
+}
+
+.schedule-layout {
+    display: flex;
+    flex-direction: column;
+}
+
+.day-selector {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    width: calc(2*var(--button-min-width));
+    max-width: var(--section-width);
+    align-self: center;
+    background-color: var(--hover-background-color);
+    border-radius: var(--button-border-radius);
+    overflow: hidden;
+}
+
+.switch-slider {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--button-background-color);
+    border-radius: var(--button-border-radius);
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: var(--element-box-shadow);
+}
+
+.day-selector button {
+    position: relative;
+    flex: 1;
+    color: var(--footnote-font-color);
+    cursor: pointer;
+    padding: var(--button-padding);
+    border-radius: var(--button-border-radius);
+    text-transform: capitalize;
+    font-size: var(--button-font-size);
+    border: 0;
+    background-color: transparent !important;
+    transition: 0.4s ease-in-out;
+}
+
+@media (prefers-color-scheme: dark) {
+    .day-selector button {
+        color: var(--font-color);
+    }
+}
+
+.day-selector button::before {
+    content: "";
+    position: absolute;
+    top: var(--element-spacing-tiny);
+    bottom: var(--element-spacing-tiny);
+    left: var(--element-spacing-tiny);
+    right: var(--element-spacing-tiny);
+    border-radius: calc(var(--button-border-radius) - var(--element-spacing-tiny));
+    background-color: var(--hover-background-color);
+    z-index: -1;
+    opacity: 0;
+}
+
+.day-selector button:not(.active-button):hover::before {
+    opacity: 1;
+}
+
+.day-selector button.active-button {
+    color: var(--button-font-color) !important;
+}
+
+
+.active-button {
+    background-color: var(--button-background-color) !important;
+    color: var(--button-font-color) !important;
+}
+
+.time {
+    margin: var(--element-spacing) 0;
+    font-size: var(--footnote-font-size);
+    width: 3em;
+    text-align: left;
+}
+
+.time-slot {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: var(--element-spacing-small);
+}
+
+.time-slot:not(:last-of-type)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+    left: 0;
+    right: 0;
+  height: 1px;
+  background-color: var(--o-gray);
+  opacity: 0.4;
+}
+
+.day-container {
+    margin-top: var(--element-spacing);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.schedule-day {
+    width: 100%;
+}
+
+.schedule-vote {
+    display: flex;
+    margin: var(--element-spacing) 0 0;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.schedule-day.hidden {
+    display: none !important;
+}
+
+.hidden {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+    max-height: 0 !important;
+    padding: 0 !important;
+}
+
+.events {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: var(--element-spacing-small);
+    align-items: start;
+}
+
+.schedule-vote a {
+    cursor: pointer;
+    border: 0;
+    background-color: var(--button-background-color);
+    color: var(--button-font-color);
+    text-decoration: none;
+    font-size: var(--button-font-size);
+    padding: var(--button-padding);
+    min-width: var(--button-min-width);
+    border-radius: var(--button-border-radius);
+    transition: 0.5s ease-in-out;
+    text-align: center;
+    box-shadow: var(--element-box-shadow);
+    font-family: var(--button-font-family), sans-serif;
+    font-weight: var(--button-font-weight);
+    box-sizing: border-box;
+}
+
+.schedule-vote a:hover {
+    background-color: color-mix(in srgb, var(--button-background-color) 85%, white);
+}
+
+
+.event {
+    margin: calc(.5 *var(--element-spacing)) 0;
+    padding: calc(.5 *var(--element-spacing));
+    transition: 0.5s ease-in-out;
+    background-color: var(--hover-background-color);
+    border-radius: var(--element-border-radius-medium);
+}
+
+button.event-details {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    text-align: left;
+    width: 100%;
+}
+
+q {
+    quotes: "„" "”" "«" "»";
+}
+
+.event-details {
+    display: flex;
+    align-items: end;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    gap: var(--element-spacing-small);
+}
+
+.event-text {
+    display: inline;
+    width: calc(100% - 1.5em);
+    align-self: center;
+}
+
+.event-details.abstract {
+    height: unset;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.toggle-abstract {
+    grid-column: 3 / 4;
+    cursor: pointer;
+    display: flex;
+    justify-content: right;
+    font-size: small;
+    align-items: self-start;
+    max-height: 100%;
+}
+
+.type-details {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: left;
+    width: unset;
+    gap: var(--element-spacing-small);
+}
+
+.type-location {
+    display: flex;
+    font-size: small;
+    font-weight: 600;
+    text-align: center;
+    justify-content: center;
+    font-family: QuickSand, sans-serif;
+    border-radius: var(--element-border-radius-tiny);
+    padding: 0 var(--element-spacing-tiny);
+    color: rgb(160, 160, 160);
+    background-color: color-mix(in srgb, rgb(160, 160, 160), var(--background-color) 70%)
+}
+
+.type-detail {
+    display: flex;
+    font-size: small;
+    font-weight: 600;
+    text-align: center;
+    justify-content: center;
+    font-family: QuickSand, sans-serif;
+    border-radius: var(--element-border-radius-tiny);
+    padding: 0 var(--element-spacing-tiny);
+}
+
+.type-detail {
+    color: var(--o-green);
+    background-color: color-mix(in srgb, var(--o-green), var(--background-color) 70%)
+}
+
+.type-detail.stosowana {
+    color: var(--o-orange);
+    background-color: color-mix(in srgb, var(--o-orange), var(--background-color) 70%)
+}
+
+.type-detail.teoretyczna {
+    color: var(--o-blue);
+    background-color: color-mix(in srgb, var(--o-blue), var(--background-color) 70%)
+}
+
+.event-author {
+    flex-grow: 9999;
+    white-space: nowrap;
+}
+
+
+.event-details p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.event-abstract {
+    display: grid;
+    grid-template-rows: 1fr;
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+    overflow: hidden;
+    will-change: grid-template-rows, opacity;
+}
+
+.event-abstract > div {
+    min-height: 0;
+}
+
+/* Stan ukryty */
+.event-abstract.hidden {
+    grid-template-rows: 0fr;
+    max-height: unset !important;
+    visibility: collapse !important;
+}
+
+.event:only-child {
+    grid-column: span 2;
+}
+
+.event-abstract p {
+    margin: var(--element-spacing-small) 0 var(--element-spacing-tiny) 0;
+    font-size: initial;
+}
+
+@media screen and (max-width: 768px) {
+    .time {
+        margin: var(--element-spacing-small) 0;
+    }
+    .events {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.9rem;
+        align-items: unset;
+    }
+
+    .time-slot{
+        padding: var(--element-spacing-small) 0 var(--element-spacing-small);
+    }
+
+    .event {
+        margin: 0
+    }
+
+    .event-abstract p {
+        font-size: 0.9rem;
+    }
+
+    .event-details p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .time-slot {
+        flex-direction: column;
+        padding: var(--element-spacing-tiny) 0 var(--element-spacing-small);
+        gap: var(--element-spacing-tiny);
+    }
+
+    .time {
+        margin: var(--element-spacing-tiny) 0;
+        width: unset;
+        text-align: unset;
+    }
+
+    .event {
+        margin: 0 calc(-1 * var(--element-spacing-tiny))
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .switch-slider,
+    .day-selector button,
+    .day-selector button::before,
+    .schedule-vote a,
+    .event,
+    .event-details.abstract,
+    .event-abstract {
+        transition: none !important;
+    }
+}

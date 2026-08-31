@@ -1,0 +1,20 @@
+{{ define "main" }}
+  <section class="article">
+    <article class="article-container">
+      <div class="article-content">
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+                <div class="article-info">
+        <span class="conf-edition">{{ .Params.edition }}</span>
+        <span class="article-date"
+          >{{ time.Format "Monday, 02 Jan 2006" .PublishDate }}</span
+        >
+      </div>
+      </div>
+    </article>
+
+    <button onclick="history.back()" class="history-back">
+      <i class="fa fa-arrow-left" aria-hidden="true"></i> Wróć
+    </button>
+  </section>
+{{ end }}

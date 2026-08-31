@@ -1,0 +1,80 @@
+:root {
+    --footer-color: #3c3c3c;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --footer-color: #e6e6e6;
+    }
+    footer {
+        background: var(--secondary-background-color) !important;
+    }
+}
+
+footer {
+    position: static;
+    background: url("/bg.webp") bottom center;
+    box-shadow: var(--section-box-shadow);
+    display: flex;
+    flex-direction: column;
+    padding: var(--section-padding);
+    gap: calc(2*var(--element-spacing));
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: calc(2*var(--element-spacing));
+    width: 100%;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo img {
+    max-height: 60px;
+    max-width: 180px;
+    object-fit: contain;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--element-spacing);
+}
+
+.footer-links a {
+    font-size: var(--footnote-font-size);
+    color: var(--footer-color);
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+.footer-signature p {
+    margin: 0;
+    text-align: left;
+    font-size: small;
+    color: var(--footer-color);
+}
+
+@media (max-width: 768px) {
+    .footer-logo img {
+    max-width: 120px;
+    }
+    .footer-content {
+        gap: var(--element-spacing);
+    }
+    footer {
+        gap: var(--element-spacing);
+    }
+}

@@ -1,0 +1,90 @@
+- time: "13:30"
+  events:
+    - name: "Rejestracja"
+      location: "Hol główny"
+- time: "14:30"
+  events:
+    - name: "Rozpoczęcie konferencji"
+      location: "Hol główny"
+- time: "15:00"
+  events:
+    - name: \(\LaTeX\) test
+      speaker: "XYZ"
+      location: "Sala Y"
+      type: "Wykład otwierający"
+      abstract: |
+        Cras aliquam vitae tortor egestas condimentum \(\frac{1}{2} \sum_{n=1}^{\infty} 2n + 1\) facilisis tincidunt enim.
+        
+        \[ \frac{1}{\pi} = \frac{2\sqrt{2}}{9801} \sum_{k=0}^\infty \frac{(4k)!(1103+26390k)}{(k!)^4 396^{4k}} \]
+        
+        Cras aliquam vitae tortor egestas condimentum. Ut facilisis tincidunt enim.
+        
+        \[ \rho \left( \frac{\partial \mathbf{u}}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u} \right) = -\nabla p + \mu \nabla^2 \mathbf{u} + \mathbf{f} \]
+        
+        Some quote aliquam vitae tortor egestas condimentum. Ut facilisis tincidunt enim.
+
+- time: "16:00"
+  events:
+    - name: "Przerwa kawowa"
+      location: "Hol główny"
+- time: "16:20"
+  events:
+    - name: "Blok matematyki stosowanej"
+      type: "Blok stosowany"
+      location: "Sala X"
+    - name: "Blok matematyki teoretycznej"
+      type: "Blok teoretyczny"
+      location: "Sala Y"
+
+- time: "17:20"
+  events:
+    - name: "Przerwa kawowa"
+      location: "Hol główny"
+- time: "17:50"
+  events:
+    - name: "Cras aliquam vitae tortor egestas condimentum. Ut facilisis tincidunt enim."
+      speaker: "XYZ"
+      abstract: |
+        ### xyz1234
+        Morbi sagittis, magna sit amet vestibulum mattis, orci lacus aliquet libero, eget faucibus velit velit ut risus. Integer vulputate leo urna, eget viverra libero imperdiet a. Ut aliquet lectus ut dui egestas facilisis. Vestibulum elementum purus nulla, sed consectetur erat elementum a. Quisque condimentum, enim porta sodales viverra, nunc augue hendrerit libero, id sagittis ipsum ipsum in metus. Integer tellus enim, elementum nec mauris a, tincidunt elementum neque. In porta pellentesque mauris id vestibulum. Sed suscipit tincidunt blandit. Praesent accumsan augue et diam feugiat sollicitudin. Aenean sollicitudin lacus non fringilla fermentum. Morbi tempus cursus libero a scelerisque. Nulla rhoncus nisi nec nibh sollicitudin convallis id eu ipsum.
+        
+        Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
+        Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
+        Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
+        Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
+        Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
+        Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
+      location: "Sala X"
+- time: "18:10"
+  events:
+    - name: "Nulla in sagittis ante, non ultricies ex. Cras accumsan maximus risus, vel rutrum mauris vestibulum sed. Phasellus facilisis lacus ac augue dignissim tincidunt."
+      type: "Blok stosowany"
+      speaker: "Imie Nazwisko I"
+      abstract: |
+        ### xyz1234
+        Morbi sagittis, magna sit amet vestibulum mattis, orci lacus aliquet libero, eget faucibus velit velit ut risus. Integer vulputate leo urna, eget viverra libero imperdiet a. Ut aliquet lectus ut dui egestas facilisis. Vestibulum elementum purus nulla, sed consectetur erat elementum a. Quisque condimentum, enim porta sodales viverra, nunc augue hendrerit libero, id sagittis ipsum ipsum in metus. Integer tellus enim, elementum nec mauris a, tincidunt elementum neque. In porta pellentesque mauris id vestibulum. Sed suscipit tincidunt blandit. Praesent accumsan augue et diam feugiat sollicitudin. Aenean sollicitudin lacus non fringilla fermentum. Morbi tempus cursus libero a scelerisque. Nulla rhoncus nisi nec nibh sollicitudin convallis id eu ipsum.
+      location: "Sala X"
+
+    - name: "Quisque eget odio nibh. Nullam pulvinar eleifend pharetra."
+      type: "Blok teoretyczny"
+      speaker: "Imie Nazwisko II"
+      abstract: |
+        ### xyz1234
+        - Morbi sagittis, magna sit amet vestibulum mattis, 
+        - orci lacus aliquet libero, eget faucibus velit velit ut risus. 
+        1. Integer vulputate leo urna, 
+        2. eget viverra libero imperdiet a.
+        
+        Ut aliquet lectus ut dui egestas facilisis.
+        
+        Vestibulum elementum purus nulla, 
+        Quisque condimentum, enim porta sodales viverra, nunc augue hendrerit libero, id sagittis ipsum ipsum in metus. Integer tellus enim, elementum nec mauris a, tincidunt elementum neque. In porta pellentesque mauris id vestibulum. Sed suscipit tincidunt blandit. Praesent accumsan augue et diam feugiat sollicitudin. Aenean sollicitudin lacus non fringilla fermentum. Morbi tempus cursus libero a scelerisque. Nulla rhoncus nisi nec nibh sollicitudin convallis id eu ipsum.
+      location: "Sala Y"
+
+- time: "18:40"
+  events:
+    - name: "Zakończenie dnia"
+- time: "19:30"
+  events:
+    - name: "Integracja"
+      location: "SKS"

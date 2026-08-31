@@ -1,0 +1,94 @@
+{{- /*
+Renders a menu for the given menu ID.
+
+@context {page} page The current page.
+@context {string} menuID The menu ID.
+
+@example: {{ partial "menu.html" (dict "menuID" "main" "page" .)
+}}
+*/}}
+{{- $page := .page }}
+{{- $menuID := .menuID }}
+
+{{- with index site.Menus $menuID }}
+
+<nav class="main-nav">
+  <div class="nav-logo">
+    <a href="/"><img src="/logo.webp" alt="Logo OMatKo" /></a>
+  </div>
+  <div class="main-nav-links">
+    <button id="menu-button"><i class="fa-solid fa-bars"></i></button>
+    <ul class="nav-list">
+      {{ if site.Params.enable_voting}}
+      <li class="nav-item"><a class="nav-link" href="/glosuj/" style="font-weight: 700; color: var(--o-orange);">Głosuj</a></li>
+      {{ end }}
+
+      {{ if site.Params.show_schedule_section }}
+      <li class="nav-item"><a class="nav-link" href="/#schedule">Harmonogram</a></li>
+      {{ end }}
+      {{ if site.Params.show_registration }}
+      <li class="nav-item"><a class="nav-link" href="/#registration">Zapisy</a></li>
+      {{ end }}
+
+      <li class="nav-item"><a class="nav-link" href="/">Strona główna</a>
+        <ul class="nav-submenu">
+          <li class="nav-item"><a class="nav-link" href="/#about">O konferencji</a></li>
+          {{ if site.Params.show_map }}
+          <li class="nav-item"><a class="nav-link" href="/#map">Lokalizacja</a></li>
+          {{ end }}
+          {{ if site.Params.show_sponsors_section }}
+          <li class="nav-item"><a class="nav-link" href="/#sponsors">Współpraca</a></li>
+          {{ end }}
+          {{ if site.Params.show_patrons_section }}
+          <li class="nav-item"><a class="nav-link" href="/#patrons">Patroni</a></li>
+          {{ end }}
+        </ul>
+      </li>
+
+      <li class="nav-item"><a class="nav-link" href="/aktualnosci">Aktualności</a></li>
+
+      {{ if site.Params.show_organizers }}
+      <li class="nav-item"><a class="nav-link" href="/organizatorzy">Organizatorzy</a></li>
+      {{ end }}
+
+      <li class="nav-item"><a class="nav-link" href="/poprzednie-edycje">Poprzednie edycje</a></li>
+
+    </ul>
+  </div>
+</nav>
+{{- end }}
+
+{{- define "_partials/inline/menu/walk.html" }}
+{{- $page := .page }}
+{{- range .menuEntries }}
+{{- $attrs := dict "href" .URL }}
+{{- if $page.IsMenuCurrent .Menu . }}
+{{- $attrs = merge $attrs (dict "class" "nav-link active" "aria-current" "page") }}
+{{- else if $page.HasMenuCurrent .Menu . }}
+{{- $attrs = merge $attrs (dict "class" "nav-link ancestor" "aria-current" "true") }}
+{{- else }}
+{{- $attrs = merge $attrs (dict "class" "nav-link") }}
+{{- end }}
+{{- $name := .Name }}
+{{- with .Identifier }}
+{{- with T . }}
+{{- $name = . }}
+{{- end }}
+{{- end }}
+<li class="nav-item">
+  <a
+    {{- range $k, $v :=$attrs }}
+    {{- with $v }}
+    {{- printf " %s=%q" $k $v | safeHTMLAttr }}
+  {{- end }}
+  {{- end -}}
+  >{{ $name }}</a
+  >
+  {{- with .Children }}
+  <ul class="nav-submenu">
+    {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+  </ul>
+  {{- end }}
+</li>
+{{- end }}
+{{- end }}

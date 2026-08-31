@@ -2,6 +2,7 @@
 title = 'IV'
 eventYear = 2017
 banner = '2024.png'
+eventDate = "7–9 kwietnia 2017"
 +++
 
 ## Zwycięskie wykłady i plakaty

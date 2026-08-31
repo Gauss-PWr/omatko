@@ -1,0 +1,364 @@
+:root {
+    --nav-blur: blur(50px) saturate(200%);
+    --nav-background: rgba(255, 255, 255, 0.9);
+
+    --nav-text-color: #3c3c3c;
+    --nav-text-color-ancestor: var(--o-orange);
+    --nav-text-color-active: var(--o-orange);
+
+    --nav-box-shadow:
+        0 0 1px rgba(100, 100, 100, 0.4),
+        0 0 9px rgba(100, 100, 100, 0.2);
+    --nav-padding: 13px;
+    --nav-border-radius: 18px;
+    --nav-border: .5px solid rgba(100, 100, 100, 0.2);
+
+    --nav-box-shadow-mobile:
+        0 0 1px rgba(100, 100, 100, 0.4),
+        0 0 9px rgba(100, 100, 100, 0.2),
+        inset var(--element-box-shadow);
+    --nav-padding-mobile: 10px;
+    --link-font-size: 1rem;
+}
+
+@media screen and (max-width: 900px) {
+    :root {
+        --nav-border: none;
+    }
+}
+
+header {
+    position: sticky;
+    height: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.main-nav {
+    position: relative;
+    isolation: isolate;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 calc((100vw - var(--section-width))/2 - var(--nav-padding));
+}
+
+.main-nav::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* to samo co top: 0; left: 0; right: 0; bottom: 0; */
+    z-index: -1; /* musi być z tyłu za linkami */
+
+    /* Przenosimy style tutaj: */
+    background: var(--nav-background);
+    backdrop-filter: var(--nav-blur);
+    -webkit-backdrop-filter: var(--nav-blur);
+    box-shadow: var(--nav-box-shadow);
+    border-bottom: var(--nav-border);
+}
+
+.nav-logo {
+    position: relative;
+    margin: auto auto auto 0;
+}
+
+.nav-logo a,
+.nav-logo img {
+    height: 25px;
+    width: auto;
+}
+
+
+@media only screen and (min-width: 1440px) {
+    .nav-logo a,
+    .nav-logo img {
+        height: 28px;
+        width: auto;
+    }
+}
+
+
+.nav-logo a {
+    margin-left: var(--nav-padding);
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-item {
+    position: relative;
+    margin: 0;
+    text-wrap: nowrap;
+}
+
+.nav-link {
+    display: block;
+    padding: calc(var(--nav-padding) * 0.4) calc(var(--nav-padding) * 0.8);
+    margin: calc(var(--nav-padding) * 0.6) 0;
+    color: var(--nav-text-color);
+    font-family: QuickSand, sans-serif;
+    font-size: var(--link-font-size);
+    font-weight: 550;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: calc(var(--nav-border-radius) - calc(var(--nav-padding) * 0.6));
+}
+
+.nav-link:hover {
+    background-color: var(--hover-background-color);
+}
+
+.nav-link.active {
+    color: var(--nav-text-color-active);
+}
+
+.nav-link.ancestor {
+    color: var(--nav-text-color-ancestor);
+}
+
+#menu-button {
+    display: none;
+    min-width: 50px;
+    color: var(--nav-text-color);
+    font-size: unset;
+    background-color: transparent;
+    border: 0;
+    z-index: 100;
+}
+
+#menu-button i {
+    font-size: 1.5rem;
+}
+
+.nav-submenu {
+    list-style: none;
+    padding: 0;
+}
+
+@media screen and (min-width: 901px) {
+    .nav-item {
+        position: relative;
+    }
+
+    .nav-submenu {
+        position: absolute;
+        top: calc(100% + 5px);
+        right: calc(-.6 * var(--nav-padding));
+        background-color: var(--nav-background);
+        backdrop-filter: var(--nav-blur);
+        -webkit-backdrop-filter: var(--nav-blur);
+        box-shadow: var(--nav-box-shadow-mobile);
+        border-radius: 18px;
+        padding: var(--nav-padding-mobile);
+        margin: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+        z-index: 1000;
+    }
+
+    .nav-submenu .nav-link {
+        padding: var(--nav-padding-mobile);
+        margin: 0;
+    }
+
+    @media (hover: hover) {
+        .nav-item:hover .nav-submenu {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    .nav-item:focus-within .nav-submenu,
+    .nav-item.is-open .nav-submenu {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-item.is-closed .nav-submenu {
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    header {
+        position: fixed;
+        width: 100%;
+    }
+    .main-nav {
+        padding: 0;
+        background: none;
+        backdrop-filter: unset;
+        -webkit-backdrop-filter: unset;
+        box-shadow: none;
+        margin: var(--nav-padding-mobile) var(--nav-padding-mobile) 0 var(--nav-padding-mobile);
+    }
+
+    .main-nav::before {
+        display: none;
+    }
+
+    /*da sie klikac za navbar???*/
+    .nav-logo,
+    #menu-button,
+    .nav-list {
+        pointer-events: auto;
+    }
+
+    .main-nav {
+        pointer-events: none;
+    }
+
+    /*???*/
+    .nav-logo {
+        height: 20px;
+        padding: var(--nav-padding-mobile);
+        margin: 0 auto auto 0;
+        border-radius: var(--nav-border-radius);
+        background-color: var(--nav-background);
+        backdrop-filter: var(--nav-blur);
+        -webkit-backdrop-filter: var(--nav-blur);
+        box-shadow: var(--nav-box-shadow-mobile);
+    }
+
+    .nav-logo a,
+    .nav-logo img {
+        height: 20px;
+        width: auto;
+        margin-left: 0;
+    }
+
+    .main-nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: var(--nav-padding-mobile);
+        margin: 0;
+        border-radius: var(--nav-border-radius);
+        background-color: var(--nav-background);
+        backdrop-filter: var(--nav-blur);
+        -webkit-backdrop-filter: var(--nav-blur);
+        box-shadow: var(--nav-box-shadow-mobile);
+        max-height: calc(100vh - 30px);
+    }
+
+    #menu-button {
+        display: block;
+        width: 70px;
+        cursor: pointer;
+        padding: var(--nav-padding-mobile);
+        margin: calc(-1 * var(--nav-padding-mobile));
+    }
+
+    #menu-button i {
+        font-size: 1rem;
+        transition: 0.5s ease;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        max-height: 0;
+        max-width: 0;
+        padding: 0;
+        opacity: 0;
+        visibility: hidden;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: 99;
+        gap: 5px;
+        transition: max-height 0.35s ease-in-out 0.1s, max-width 0.5s ease-in-out 0.1s, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    }
+
+    .active-menu {
+        position: static;
+        display: flex;
+        margin-right: unset;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transition: max-height 0.5s ease-in-out, max-width 0.35s ease-in-out, opacity .5s ease-in-out .15s, visibility .5s ease-in-out .15s;
+    }
+
+    .nav-list li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-list::before {
+        content: "";
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    .nav-link {
+        margin: unset;
+        padding: var(--nav-padding-mobile);
+        border-radius: calc(var(--nav-border-radius) - var(--nav-padding-mobile));
+    }
+
+    .nav-submenu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+        gap: 5px;
+        margin: 5px 0 0 0;
+    }
+}
+
+@media screen and (max-height: 600px) and (max-width: 900px) {
+
+    .nav-list {
+        gap: 0;
+    }
+
+    .active-menu {
+        overflow: scroll;
+    }
+
+    .nav-link {
+        padding: calc((3/4) * var(--nav-padding-mobile));
+    }
+
+    .nav-submenu {
+        gap: 0;
+        margin: 0;
+    }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+    :root {
+        --nav-blur: none;
+        --nav-background: white;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --nav-background: rgba(35, 35, 35, 0.9);
+        --nav-text-color: #d2dfec;
+        --nav-box-shadow:
+            0 0 1px rgb(30, 30, 30, 0.8),
+            0 0 9px rgba(30, 30, 30, 0.6);
+        --nav-box-shadow-mobile:
+            0 0 1px rgb(30, 30, 30, 0.8),
+            0 0 9px rgba(30, 30, 30, 0.6),
+            inset var(--element-box-shadow);
+    }
+    @media (prefers-reduced-transparency: reduce) {
+    :root {
+        --nav-blur: none;
+        --nav-background: rgb(35,35,35);
+    }
+}
+}

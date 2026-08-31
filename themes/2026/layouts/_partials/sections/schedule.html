@@ -1,0 +1,34 @@
+<section class="schedule" id="schedule">
+  <div class="schedule-layout">
+  <h1>Harmonogram</h1>
+  <p class="schedule-text">
+    Poniżej prezentujemy pełen harmonogram tegorocznej konferencji.
+    Sprawdźcie, jakie tematy przygotowano,
+    kto wystąpi na naszej scenie i jak zaplanowaliśmy poszczególne bloki tematyczne.
+    </p>
+    <p class="schedule-text">
+    <em>Ważna informacja: do czasu rozpoczęcia konferencji plan może ulec jeszcze drobnym zmianom.</em>
+  </p>
+  <div class="day-selector">
+    <div class="switch-slider" id="switch-slider"></div>
+    {{ range $filename, $data := site.Data.schedule }}
+      {{ $weekday := time.Format "Monday" $filename }}
+      <button
+        data-day="{{ $filename }}"
+      >
+        {{ $weekday }}
+      </button>
+    {{ end }}
+  </div>
+  <div class="day-container">
+    {{ range $key, $val := site.Data.schedule }}
+      {{ partial "sections/schedule-day.html" $key }}
+    {{ end }}
+  </div>
+    {{ if site.Params.enable_voting }}
+  <div class="schedule-vote">
+      <a href="/glosuj/">Zagłosuj!</a>
+  </div>
+    {{ end }}
+  </div>
+</section>

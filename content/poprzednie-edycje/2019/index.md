@@ -1,6 +1,7 @@
 +++
 title = 'VI'
 eventYear = 2019
+eventDate = "12–14 kwietnia 2019"
 +++
 
 ## Zwycięskie wykłady i plakaty

@@ -1,6 +1,7 @@
 +++
 title = 'I'
 eventYear = 2013
+eventDate = "25–27 października 2013"
 +++
 
 ## Zwycięskie wykłady i plakaty

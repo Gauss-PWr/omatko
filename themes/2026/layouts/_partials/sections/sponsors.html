@@ -1,0 +1,51 @@
+<section class="sponsors" id="sponsors">
+  <h1>Współpraca</h1>
+  <p>Organizacja konferencji OMatKo!!! to duże przedsięwzięcie,
+    które nie udałoby się bez wsparcia z zewnątrz.
+    Dziękujemy firmom, które nam zaufały i pomagają nam zrealizować to wydarzenie.</p>
+  <div class="main-sponsors">
+    <h2>sponsor główny</h2>
+    <div class="sponsors-container">
+      {{ range $_, $main_sponsor_data := .Site.Data.partnerships.main_sponsor }}
+        <a href ="{{ $main_sponsor_data.url }}">
+          <img
+          class="sponsor-img"
+          src="/partnerships/main_sponsors/{{ $main_sponsor_data.logo }}"
+          alt="{{ $main_sponsor_data.name }}"
+        /></a>
+      <div class="main-sponsor-text"><p>
+        {{ $main_sponsor_data.description }}
+      </p></div>
+      {{ end }}
+    </div>
+  </div>
+
+  <div class="normal-sponsors">
+    <h2>sponsorzy</h2>
+    <div class="sponsors-container">
+      {{ range $_, $sponsor_data := .Site.Data.partnerships.sponsors }}
+        <a href ="{{ $sponsor_data.url }}">
+          <img
+          class="sponsor-img"
+          src="/partnerships/sponsors/{{ $sponsor_data.logo }}"
+          alt="{{ $sponsor_data.name }}"
+        /></a>
+      {{ end }}
+    </div>
+  </div>
+
+  <div class="normal-sponsors">
+    <h2>partnerzy</h2>
+    <div class="sponsors-container">
+      {{ range $_, $partner_data := .Site.Data.partnerships.partners }}
+        <a href ="{{ $partner_data.url }}">
+          <img
+          class="sponsor-img"
+          src="/partnerships/partners/{{ $partner_data.logo }}"
+          alt="{{ $partner_data.name }}"
+        /></a>
+      {{ end }}
+    </div>
+  </div>
+
+</section>

@@ -1,0 +1,119 @@
+.banner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--viewport-height);
+    background-size: cover;
+    background: url("/bg.webp") top center;
+    z-index: -1;
+    box-shadow: var(--section-box-shadow);
+    padding: var(--section-padding);
+}
+
+.banner:first-of-type {
+    padding-top: unset;
+}
+
+.banner p {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.banner span {
+    font-family: QuickSand, sans-serif;
+}
+
+.banner-logo {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--o-blue);
+    margin-bottom: 50px;
+    margin-top: 60px;
+}
+
+.banner-logo img {
+    width: 100%;
+}
+
+.banner-timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner-logo p {
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: "Quicksand", sans-serif;
+}
+
+.banner-logo p:nth-child(2) {
+    font-weight: 800;
+}
+
+#timer {
+    display: inline-flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.banner .countdown-number {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.banner .countdown-label {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.countdown-item {
+    margin: 0 15px;
+    align-items: baseline;
+}
+
+.countdown-end {
+    font-family: "Quicksand", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--o-orange);
+}
+
+@media screen and (max-width: 768px) {
+    .banner-logo {
+        width: 90%;
+        margin-top: unset;
+    }
+
+    .banner .countdown-number {
+        font-size: 2.5rem;
+    }
+
+    .banner .countdown-label {
+        font-size: 1.1rem;
+    }
+
+    .countdown-item {
+        margin: 0 10px;
+        align-items: center;
+        display: inline-flex;
+        flex-direction: column;
+    }
+
+    .countdown-end {
+        font-size: 2rem;
+    }
+
+}
+
+@media (prefers-color-scheme: dark) {
+    .banner {
+        background: var(--secondary-background-color) !important;
+    }
+}

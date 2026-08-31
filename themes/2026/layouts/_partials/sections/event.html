@@ -1,0 +1,56 @@
+{{- $event := . -}}
+
+
+<div class="event {{ $event.type }}">
+  <!-- <div {{ if $event.abstract }}class="event-details"{{ end }}> !-->
+
+  <!-- !-->
+  <button {{ if $event.abstract }} class="event-details abstract"
+  {{ else }}
+   class="event-details"
+    {{ end }} >
+  <!-- !-->
+<div class="event-text">
+    {{ if $event.speaker }}
+    <q>{{ $event.name }}</q>
+      <span class="event-author"> &ndash; {{ $event.speaker }}</span>
+    {{ else }}
+    <p>{{ $event.name }}</p>
+    {{ end }}
+
+</div>
+
+    {{ if or $event.type $event.location }}
+    <div class="type-details">
+    {{ if $event.type }}
+    {{ if eq $event.type "Blok stosowany" }}
+    <span class="type-detail stosowana">{{$event.type}}</span>
+      {{else if eq $event.type "Blok teoretyczny"}}
+    <span class="type-detail teoretyczna">{{$event.type}}</span>
+      {{else}}
+    <span class="type-detail">{{$event.type}}</span>
+      {{ end }}
+      {{end}}
+      {{ if $event.location }}
+    <span class="type-location">{{$event.location}}</span>
+  {{ end }}
+      </div>
+    {{ end }}
+
+      {{ if $event.abstract }}
+      <span class="toggle-abstract"
+        ><i class="fa-solid fa-caret-down"></i
+      ></span>
+  {{ end }}
+
+  </button>
+        {{ if $event.abstract }}
+    <div class="event-abstract hidden">
+      <div>
+      <p class="event-abstract-content">
+        {{ $event.abstract | markdownify }}
+      </p>
+      </div>
+    </div>
+{{ end }}
+</div>

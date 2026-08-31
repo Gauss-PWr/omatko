@@ -1,6 +1,7 @@
 +++
 title = 'VII'
 eventYear = 2020
+eventDate = "3–5 kwietnia 2020"
 +++
 
 ## Zwycięskie wykłady i plakaty

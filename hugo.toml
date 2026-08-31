@@ -3,12 +3,14 @@ relativeURLs = true
 canonifyURLs = true
 languageCode = 'pl-PL'
 title = 'OMatKo!!!'
-theme = '2025'
+theme = '2026'
 
 defaultContentLanguage = "pl"
 [languages]
 [languages.pl]
 languageName = "Polski"
+
+# sekcje w menu (do motywu 2025) ---
 
 [menus]
 [[menus.main]]
@@ -23,11 +25,11 @@ url = '/aktualnosci'
 weight = 2
 
 
-# [[menus.main]]
-# name = 'Organizatorzy'
-# pageRef = 'organizatorzy'
-# url = '/organizatorzy'
-# weight = 3
+[[menus.main]]
+name = 'Organizatorzy'
+pageRef = 'organizatorzy'
+url = '/organizatorzy'
+weight = 3
 
 [[menus.main]]
 name = 'Poprzednie edycje'
@@ -35,6 +37,7 @@ pageRef = 'poprzednie-edycje'
 url = 'poprzednie-edycje'
 weight = 4
 
+# ---
 
 [markup]
 [markup.goldmark]
@@ -47,6 +50,10 @@ inline = [['\(', '\)']]
 
 
 [params]
+# Data konferencji
+conference_start = '2026-12-11T13:30'
+conference_end = '2026-12-13T14:00'
+
 # Harmonogram
 show_schedule_section = false
 
@@ -54,25 +61,21 @@ show_schedule_section = false
 show_registration = false
 
 # Linki do formularzy
-participant_url = 'https://conf.e-science.pl/event/116/registrations/93/?form_token=90d6c5f5-6e67-470e-afab-1f9a66603f27'
-speaker_url = 'https://conf.e-science.pl/e/omatko2025'
-poster_url = 'https://conf.e-science.pl/e/omatko2025'
+participant_url = '/'
+speaker_url = '/'
+poster_url = '/'
 
 # Data udostępnienia zapisów
-
 participant_reg_open_date = '2025-10-22'
 active_reg_open_date = '2025-10-02'
 
 # Data zamkniecia zapisów
-
 participant_reg_close_date = '2025-11-25'
 active_reg_close_date = '2025-10-31'
 
 # Zamkniecie zapisów
-
-participant_reg_close = true
-active_reg_close = true
-
+participant_reg_close = false
+active_reg_close = false
 
 # Sponsorzy
 show_sponsors_section = false
@@ -80,7 +83,7 @@ show_sponsors_section = false
 # Patroni medialni i honorowi
 show_patrons_section = false
 
-# mapa kampusu
+# lokalizacja
 show_map = false
 
 # Animacja w tle
@@ -93,3 +96,9 @@ math = true
 enable_voting = false
 
 vote_app_url = "https://omatko.pwr.edu.pl/glosuj/"
+
+# aktualnosci na str glownej
+show_latest_news = true
+
+# organizatorzy
+show_organizers = false

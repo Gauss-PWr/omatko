@@ -1,0 +1,35 @@
+<section class="sponsors" id="patrons">
+  <h1>Patroni</h1>
+    <p>Dziękujemy instytucjom, które uwiarygodniają nasze działania swoim
+      patronatem, oraz mediom, dzięki którym informacja o konferencji dociera
+      do właściwych osób. </p>
+  <div class="normal-sponsors">
+    <h2>Patroni medialni</h2>
+    <div class="sponsors-container">
+      {{ range $_, $media_data := .Site.Data.partnerships.media_patrons }}
+        <a href="{{ $media_data.url }}">
+          <img
+            class="sponsor-img"
+            src="/partnerships/media_patrons/{{ $media_data.logo }}"
+            alt="{{ $media_data.name }}"
+          />
+        </a>
+      {{ end }}
+    </div>
+  </div>
+
+  <div class="normal-sponsors">
+    <h2>Patroni honorowi</h2>
+    <div class="sponsors-container">
+      {{ range $_, $honorary_data := .Site.Data.partnerships.honorary_patrons }}
+        <a href="{{ $honorary_data.url }}">
+          <img
+            class="sponsor-img"
+            src="/partnerships/honorary_patrons/{{ $honorary_data.logo }}"
+            alt="{{ $honorary_data.name }}"
+          />
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</section>

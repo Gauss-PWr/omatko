@@ -1,0 +1,70 @@
+.pagination {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  list-style: none;
+  padding: 0;
+  margin-top: var(--element-spacing);
+  margin-bottom: var(--element-spacing);
+  border-top: 1px solid color-mix(in srgb, var(--o-gray) 40%, rgba(0, 0, 0, 0));
+}
+
+.pagination .page-item {
+  margin: 0 var(--element-spacing-tiny);
+  position: relative;
+}
+
+.pagination .page-link {
+    display: inline-block;
+    text-align: center;
+    padding: var(--element-spacing-tiny) var(--element-spacing-small) var(--element-spacing-tiny) var(--element-spacing-small);
+    margin-top: var(--element-spacing-small);
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--footnote-font-color);
+    font-weight: 600;
+    font-family: Quicksand, sans-serif;
+    border-radius: var(--element-border-radius-tiny);
+    min-width: 30px;
+    box-sizing: border-box;
+    font-variant-numeric: tabular-nums;
+}
+
+.pagination .page-item.active::before {
+  content: "";
+  position: absolute;
+  top: -1px; /* Wędruje 1px do góry, żeby idealnie przykryć główną szarą linię */
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--o-orange);
+}
+
+/* Aktywna strona - pomarańczowy tekst i kreska na górze */
+.pagination .page-item.active .page-link {
+    color: var(--o-orange);
+    background-color: color-mix(in srgb, var(--o-orange) 30%, var(--background-color));
+}
+
+.pagination .page-item:not(.active):not(.disabled) .page-link:hover {
+  background-color: var(--hover-background-color);
+}
+
+/* Wyłączone skrajne strzałki */
+.pagination .page-item.disabled .page-link {
+  opacity: 0.3;
+  cursor: default;
+  background-color: transparent;
+}
+
+/* Lekkie zwężenie na telefonach */
+@media screen and (max-width: 768px) {
+    .pagination {
+        justify-content: center;
+    }
+
+  .pagination .page-link {
+    padding: var(--element-spacing-small) var(--element-spacing-small);
+    font-size: 0.9rem;
+  }
+}

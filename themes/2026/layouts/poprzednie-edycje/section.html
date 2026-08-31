@@ -1,0 +1,26 @@
+{{ define "main" }}
+  <section class="last-editions">
+    <h1>{{ .Title }}</h1>
+    <div class="last-edition-articles-container">
+
+      {{ $paginator := .Paginate (.Pages.ByParam "eventYear").Reverse 10 }}
+      {{ range $paginator.Pages }}
+
+      <div class="article-preview-container">
+          <article
+            class="article-preview"
+            id="{{ .Params.eventYear }}{{ .Title | lower }}"
+          >
+            <a href="{{ .RelPermalink }}">
+            <h2>{{ .Params.title }} edycja OMatKo!!!</h2>
+                <span class="edition-date">{{ .Params.eventDate }}</span>
+            </a>
+          </article>
+        </div>
+      {{ end }}
+    </div>
+
+    {{ template "_internal/pagination.html" . }}
+
+  </section>
+{{ end }}

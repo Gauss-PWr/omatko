@@ -1,6 +1,7 @@
 +++
 title = 'V'
 eventYear = 2018
+eventDate = "13–15 kwietnia 2018"
 +++
 
 ## Zwycięskie wykłady i plakaty

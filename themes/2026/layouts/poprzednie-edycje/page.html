@@ -1,0 +1,22 @@
+{{ define "main" }}
+  <section class="article">
+    <article class="article-container">
+      <h1 class="last-edition-header">{{ .Title }} edycja OMatKo!!!</h1>
+      <p class="edition-date">{{ .Params.eventDate }}</p>
+      <div class="article-banner">
+        {{ with .Resources.GetMatch (printf "%s*" (string .Params.eventYear)) }}
+        <a class="glightbox" data-href="{{ .RelPermalink }}" data-type="image">
+          <img src="{{ .RelPermalink }}" alt="Banner for {{ $.Title }}" />
+        </a>
+        {{ else }}
+        {{ end }}
+      </div>
+      <div class="article-content">
+        {{ .Content }}
+      </div>
+    </article>
+      <button onclick="history.back()" class="history-back">
+      <i class="fa fa-arrow-left" aria-hidden="true"></i> Wróć
+      </button>
+  </section>
+{{ end }}

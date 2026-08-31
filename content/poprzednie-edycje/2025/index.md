@@ -1,6 +1,7 @@
 +++
 title = 'XII'
 eventYear = 2025
+eventDate = "5–7 grudnia 2025"
 +++
 
 ## Zwycięskie wykłady i plakaty

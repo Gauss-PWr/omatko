@@ -1,0 +1,32 @@
+{{ define "main" }}
+  <section class="articles">
+  <h1>Aktualności</h1>
+    {{ .Content }}
+
+    {{ $paginator := .Paginate .Pages 10 }}
+    {{ range $paginator.Pages }}
+
+    <div class="article-preview-container">
+      <article
+        class="article-preview"
+        id="{{ .Date.Format "2006" }}{{ .Title | lower }}"
+      >
+        <a href="{{ .RelPermalink }}"><h2>{{ .LinkTitle }}</h2>
+        <p>
+          {{ .Content | plainify | truncate 300 }}
+        </p>
+        <div class="article-info">
+          <span class="conf-edition">{{ .Params.edition }}</span>
+          <span class="article-date"
+            >{{ time.Format "Monday, 02 Jan 2006" .PublishDate }}</span
+          >
+        </div>
+        </a>
+      </article>
+      </div>
+    {{ end }}
+
+    {{ template "_internal/pagination.html" . }}
+
+  </section>
+{{ end }}

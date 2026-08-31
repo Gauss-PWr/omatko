@@ -1,0 +1,84 @@
+.sponsors-container {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  gap: var(--element-spacing);
+}
+
+.main-sponsors .sponsors-container {
+    flex-wrap: unset;
+}
+
+.main-sponsor-text {
+    width: 100%;
+}
+
+.main-sponsor-text p {
+    margin: 0;
+}
+
+
+.main-sponsors, .normal-sponsors {
+    position: relative;
+  padding-bottom: var(--element-spacing);
+}
+
+.main-sponsors:not(:last-of-type)::after, .normal-sponsors:not(:last-of-type)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+    left: 0;
+    right: 0;
+  height: 1px;
+  background-color: var(--o-gray);
+  opacity: 0.4;
+}
+
+.sponsors-container a {
+    display: flex;
+    width: 150px;
+    max-height: 110px;
+}
+
+.sponsor-img {
+    width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.main-sponsors .sponsors-container a {
+    width: 250px;
+    max-height: unset;
+}
+
+.sponsors h2 {
+  margin: var(--element-spacing) 0;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.patrons h2 {
+  margin: var(--element-spacing) 0;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .main-sponsors .sponsors-container {
+    flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 519px) {
+    .sponsors-container a {
+        width: calc(0.5 * (var(--section-width) - var(--element-spacing)) - 1px);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .sponsor-img {
+        background-color: white;
+    }
+}
