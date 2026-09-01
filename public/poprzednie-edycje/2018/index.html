@@ -7,25 +7,12 @@
     <meta charset="utf-8" />
 <meta
   name="viewport"
-  content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"
+  content="width=device-width, initial-scale=1"
 />
 
 <link rel="canonical" href="https://omatko.pwr.edu.pl/poprzednie-edycje/2018/" />
 
 
-<script
-  async
-  src="https://www.googletagmanager.com/gtag/js?id=G-9KX47YM1T5"
-></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
-
-  gtag("config", "G-9KX47YM1T5");
-</script>
 
 <title>
   
@@ -33,22 +20,30 @@
   
 </title>
 
- <link rel="stylesheet" href="../../css/combined.min.fab79ef9ae5232a0e15fc583d90089516c32eb42f109b81963505545df7ab1d9.css" />
+ <link rel="stylesheet" href="../../css/combined.min.ca59dd6ac5a5399a939d9ca993fba51d05cfd2291ff4cc0cd0ceb62875fde9a1.css" />
 
 
-        <script src="../../js/main.0d15c800811a19b037617bffe4cb81928ff94d596e8e2f840fc06bf86921598a.js" integrity="sha256-DRXIAIEaGbA3YXv/5MuBko/5TVluji&#43;ED8Br&#43;GkhWYo=" crossorigin="anonymous"></script>
+      <script src="../../js/bundle.f91f4019f6927b1bc5090d481cd654d8d686f7fcd4f4c2d70854e1db95522ee8.js" integrity="sha256-&#43;R9AGfaSexvFCQ1IHNZU2NaG9/zU9MLXCFTh25VSLug=" crossorigin="anonymous"></script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
-  rel="stylesheet"
-/>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 />
+
+<link rel="stylesheet" href="../../css/glightbox.min.css" />
+<script src="../../js/glightbox.min.js"></script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.min.css" integrity="sha384-u1zONI5gPXUx0UKI62c75/zww972y0v2rSK5ZYlVdS6xEuWDeZWUI66v6t1gvlXJ" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.min.js" integrity="sha384-ykMNcWQhhTUb0YV9SPpPUFURHZ+tWmubkakGBP+OgNK/UXdO2gtzglWx0Rj9hnO3" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/contrib/auto-render.min.js" integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
 
 <link
   rel="apple-touch-icon"
@@ -73,47 +68,37 @@
   <body>
     <header>
       
-  <nav class="main-nav">
-    <div class="nav-logo">
-      <a href="../../"><img src="../../logo.webp" alt="Logo OMatKo" /></a>
-    </div>
-    <button id="menu-button"><i class="fa-solid fa-bars"></i></button>
 
+<nav class="main-nav">
+  <div class="nav-logo">
+    <a href="../../"><img src="../../logo.webp" alt="Logo OMatKo" /></a>
+  </div>
+  <div class="main-nav-links">
+    <button id="menu-button"><i class="fa-solid fa-bars"></i></button>
     <ul class="nav-list">
       
 
       
       
-      
-      
-      
-        <li><a class="nav-link" href="../../regulamin.pdf">Regulamin</a></li>
-      
-    <li class="nav-item">
-      <a class="nav-link" href="../../#about">O konferencji</a
-      >
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="../../aktualnosci/">Aktualności</a
-      >
-    </li>
-    <li class="nav-item">
-      <a aria-current="true" class="nav-link ancestor" href="../../poprzednie-edycje/">Poprzednie edycje</a
-      >
-    </li>
 
-    <script>
-      const button = document.getElementById("menu-button");
-      const navList = document.querySelector(".nav-list");
-      const buttonIcon = document.querySelector(".fa-solid");
+      <li class="nav-item"><a class="nav-link" href="../../">Strona główna</a>
+        <ul class="nav-submenu">
+          <li class="nav-item"><a class="nav-link" href="../../#about">O konferencji</a></li>
+          
+          
+          
+        </ul>
+      </li>
 
-      button.addEventListener("click", () => {
-        navList.classList.toggle("active-menu");
-        buttonIcon.classList.toggle("fa-bars");
-        buttonIcon.classList.toggle("fa-xmark");
-      });
-    </script>
-  </nav>
+      <li class="nav-item"><a class="nav-link" href="../../aktualnosci">Aktualności</a></li>
+
+      
+
+      <li class="nav-item"><a class="nav-link" href="../../poprzednie-edycje">Poprzednie edycje</a></li>
+
+    </ul>
+  </div>
+</nav>
 
 
     </header>
@@ -121,10 +106,13 @@
       
   <section class="article">
     <article class="article-container">
-      <h1>V Edycja Omatko!!!</h1>
+      <h1 class="last-edition-header">V edycja OMatKo!!!</h1>
+      <p class="edition-date">13–15 kwietnia 2018</p>
       <div class="article-banner">
         
+        <a class="glightbox" data-href="../../poprzednie-edycje/2018/2018.JPG" data-type="image">
           <img src="../../poprzednie-edycje/2018/2018.JPG" alt="Banner for V" />
+        </a>
         
       </div>
       <div class="article-content">
@@ -149,17 +137,32 @@
 </ol>
 
       </div>
-      <button onclick="history.back()" class="history-back">
-        &larr; powrót
-      </button>
     </article>
+      <button onclick="history.back()" class="history-back">
+      <i class="fa fa-arrow-left" aria-hidden="true"></i> Wróć
+      </button>
   </section>
 
     </main>
     <footer>
-      OMatKo!!! - Ogólnopolska Matematyczna Konferencja Studentów 2026 |
-<a href="../../regulamin.pdf">Regulamin</a>
+      <div class="footer-content">
+  <div class="footer-logo">
+    <a href="../../"><img alt="Logo OMatKo" src="../../logo.webp" /></a>
+  </div>
+  <div class="footer-links">
+    
+    <a href="../../regulamin.pdf">Regulamin</a>
+    
+    <a href="mailto:omatko@pwr.edu.pl">Kontakt</a>
+    <a href="https://www.instagram.com/omatko.pwr/">Instagram</a>
+    <a href="https://www.facebook.com/omatkopwr">Facebook</a>
+    <a href="https://www.linkedin.com/company/omatko/">LinkedIn</a>
+  </div>
 
+</div>
+<div class="footer-signature">
+  <p>Ogólnopolska Matematyczna Konferencja Studentów 2026</p>
+</div>
     </footer>
   </body>
 </html>
