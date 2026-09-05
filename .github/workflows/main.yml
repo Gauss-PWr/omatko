@@ -21,7 +21,7 @@ jobs:
         with:
           submodules: recursive
       - name: Build
-        run: hugo -s /home/omatko/apps/omatko
+        run: hugo -s "$GITHUB_WORKSPACE"
 
       - name: Deploy to /srv/omatko
-        run: rsync -rlD --delete /home/omatko/apps/omatko/public/ /srv/omatko
+        run: rsync -rlD --delete "$GITHUB_WORKSPACE/public/" /srv/omatko
