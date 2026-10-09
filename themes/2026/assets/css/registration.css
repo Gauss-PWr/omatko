@@ -70,6 +70,19 @@
     background-color: color-mix(in srgb, var(--o-orange) 85%, white)
 }
 
+@media screen and (prefers-color-scheme: dark) {
+    .registration-item-button a.gray {
+        background-color: var(--footnote-font-color);
+        color: var(--o-gray);
+    }
+}
+@media screen and (prefers-color-scheme: light) {
+    .registration-item-button a.gray {
+        background-color: var(--o-gray);
+        color: var(--footnote-font-color);
+    }
+}
+
 .registration-term {
     font-size: var(--footnote-font-size);
     color: var(--footnote-font-color);
