@@ -2,7 +2,9 @@
   <h1>O konferencji</h1>
 <div class="about-content">
       {{ with resources.GetMatch "images/previous*" }}
-        <img class="about-image" src="{{ .RelPermalink }}" alt=" Poprzednia edycja" />
+        <a class="glightbox" data-href="{{ .RelPermalink }}" data-type="image" data-gallery="about">
+          <img class="about-image" src="{{ .RelPermalink }}" alt=" Poprzednia edycja" />
+        </a>
       {{ end }}
       <p class="about-text">
       <strong

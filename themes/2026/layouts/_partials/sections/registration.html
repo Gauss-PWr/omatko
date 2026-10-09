@@ -12,7 +12,9 @@
       id="participants"
     >
       {{ with resources.GetMatch "images/registration/participants.*" }}
+      <a class="glightbox" data-href="{{ .RelPermalink }}" data-type="image" data-gallery="registration">
       <img alt="Uczestnik" class="registration-item-image" src="{{ .RelPermalink }}">
+      </a>
       {{ end }}
       <div class="registration-item-content">
         <h2>Uczestnik</h2>
@@ -54,7 +56,9 @@
       </div>
 
       {{ with resources.GetMatch "images/registration/speakers.*" }}
+      <a class="glightbox" data-href="{{ .RelPermalink }}" data-type="image" data-gallery="registration">
       <img alt="Prelegent" class="registration-item-image" src="{{ .RelPermalink }}">
+      </a>
       {{ end }}
     </div>
 
@@ -68,7 +72,9 @@
       id="poster"
     >
       {{ with resources.GetMatch "images/registration/posters.*" }}
-      <img alt="Plakat" class="registration-item-image" src="{{ .RelPermalink }}">
+      <a class="glightbox" data-href="{{ .RelPermalink }}" data-type="image" data-gallery="registration">
+        <img alt="Plakat" class="registration-item-image" src="{{ .RelPermalink }}">
+      </a>
       {{ end }}
       <div class="registration-item-content">
         <h2>Plakat</h2>

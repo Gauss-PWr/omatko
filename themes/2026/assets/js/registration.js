@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     if (state === "open") {
-      btnContainer.innerHTML = `<a class="${btnColor}" href="${url}">Zapisz się!</a>`;
+      btnContainer.innerHTML = `<a class="${btnColor}" href="${url}" target="_blank" rel="noopener noreferrer">Zapisz się!</a>`;
       termElement.textContent = `Termin: ${formatDate(closeDate)}`;
     } else if (state === "before") {
       btnContainer.innerHTML = `<a class="gray" aria-disabled="true">Zapisz się!</a>`;
