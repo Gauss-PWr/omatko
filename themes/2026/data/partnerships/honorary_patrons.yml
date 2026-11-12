@@ -1,11 +1,24 @@
-- name: XYZZ partner 2
-  logo: placeholder.webp
-  url: "/"
+- name: Politechnika Wrocławska
+  logo: pwr.png
+  url: "https://pwr.edu.pl/"
 
-- name: XYZZ partner 3
-  logo: placeholder2.webp
-  url: "/"
+- name: Rektor Politechniki Wrocławkiej
+  logo: rektor_logo.png
+  url: "https://pwr.edu.pl/"
 
-- name: XYZZ partner 4
-  logo: placeholder3.webp
-  url: "/"
+- name: Dziekan Wydziału Matematyki
+  logo: dziekan.png
+  url: "https://wmat.pwr.edu.pl/"
+
+- name: Prezydent Wrocławia
+  logo: prezydent_miasta.png
+  url: "https://www.wroclaw.pl/"
+  
+- name: Marszałek Województwa Dolnośląskiego
+  logo: marszalek_wojewodztwa.png
+  url: "https://umwd.dolnyslask.pl/"
+
+- name: Wojewoda Dolnośląski
+  logo: wojewoda.png
+  url: ""
+
