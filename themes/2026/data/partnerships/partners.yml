@@ -1,10 +1,10 @@
-# - name: XYZZ partner
-#   logo: placeholder_partner.webp
-#   url: "/"
+- name: SZAMAni
+  logo: SZAMAni.jpg
+  url: "https://www.facebook.com/SzamaniWro/"
 
-# - name: XYZZ partner 2
-#   logo: placeholder1.png
-#   url: "/"
+- name: Zona 71
+  logo: zona.jpg
+  url: "https://www.zona71.pl/"
 
 # - name: XYZZ partner 3
 #   logo: placeholder2.png

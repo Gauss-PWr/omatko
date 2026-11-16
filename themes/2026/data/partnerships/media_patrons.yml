@@ -5,3 +5,11 @@
 - name: dlaStudenta.pl
   logo: ds.png
   url: "https://www.dlastudenta.pl/"
+
+- name: Miesięcznik Delta
+  logo: delta.png
+  url: "https://deltami.edu.pl/"
+
+- name: Fundacja Matematyka Dla Wszystkich
+  logo: fmdw.png
+  url: "https://www.matematykadlawszystkich.pl/"
