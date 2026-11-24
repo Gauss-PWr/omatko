@@ -6,7 +6,12 @@
     - name: "Rozpoczęcie konferencji"
 - time: "14:30"
   events:
-    - name: "Wykład otwierający"
+    - name: "Funkcja jak dzwon"
+      speaker: "dr hab. inż Mateusz Kwaśnicki"
+      type: "Wykład otwierający"
+      abstract: |-
+        Krzywa dzwonowa to wykres funkcji exp(−x²). Łatwo sprawdzić, że n-ta pochodna tej funkcji zmienia znak n razy. W latach 40. własność ta posłużyła I. J. Schoenbergowi do zdefiniowania klasy funkcji o kształcie dzwonu. Przedstawię bogatą historię badań tej klasy, jej fascynujące własności i nieoczekiwane związki z równaniami różniczkowymi i procesami stochastycznymi. Będzie o błędnym dowodzie, który na załatanie czekał 35 lat; o roli przypadku w pracy matematyka; o nadambitnym studencie, który jednak odniósł sukces; i o otwartych problemach, z którymi wciąż nie radzą sobie LLM-y.
+
 - time: "15:30"
   events:
     - name: "Przerwa kawowa"
