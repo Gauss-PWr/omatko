@@ -187,5 +187,5 @@
 - time: "20:30"
   events:
     - name: "Integracja"
-      location: "Przekręt"
+      #location: "Przekręt"
  
