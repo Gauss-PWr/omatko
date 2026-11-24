@@ -184,8 +184,8 @@
 - time: "19:00"
   events:
     - name: "Zakończenie dnia 2."
-- time: "20:30"
-  events:
-    - name: "Integracja"
-      #location: "Przekręt"
+# - time: "20:30"
+#   events:
+#     - name: "Integracja"
+#       location: "Przekręt"
  

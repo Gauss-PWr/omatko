@@ -62,8 +62,8 @@
 - time: "18:30"
   events:
     - name: "Zakończenie dnia 1."
-- time: "19:30"
-  events:
-    - name: "Integracja"
-      location: "SKS"
+# - time: "19:30"
+#   events:
+#     - name: "Integracja"
+#       location: "SKS"
  
