@@ -1,90 +1,69 @@
-- time: "13:30"
+- time: "13:00"
   events:
-    - name: "Rejestracja"
-      location: "Hol główny"
-- time: "14:30"
+    - name: "Rejestracja uczestników"
+- time: "14:00"
   events:
     - name: "Rozpoczęcie konferencji"
-      location: "Hol główny"
-- time: "15:00"
+- time: "14:30"
   events:
-    - name: \(\LaTeX\) test
-      speaker: "XYZ"
-      location: "Sala Y"
-      type: "Wykład otwierający"
-      abstract: |
-        Cras aliquam vitae tortor egestas condimentum \(\frac{1}{2} \sum_{n=1}^{\infty} 2n + 1\) facilisis tincidunt enim.
-        
-        \[ \frac{1}{\pi} = \frac{2\sqrt{2}}{9801} \sum_{k=0}^\infty \frac{(4k)!(1103+26390k)}{(k!)^4 396^{4k}} \]
-        
-        Cras aliquam vitae tortor egestas condimentum. Ut facilisis tincidunt enim.
-        
-        \[ \rho \left( \frac{\partial \mathbf{u}}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u} \right) = -\nabla p + \mu \nabla^2 \mathbf{u} + \mathbf{f} \]
-        
-        Some quote aliquam vitae tortor egestas condimentum. Ut facilisis tincidunt enim.
-
+    - name: "Wykład otwierający"
+- time: "15:30"
+  events:
+    - name: "Przerwa kawowa"
 - time: "16:00"
   events:
-    - name: "Przerwa kawowa"
-      location: "Hol główny"
+    - name: "Prezentacja UBS"
 - time: "16:20"
   events:
-    - name: "Blok matematyki stosowanej"
-      type: "Blok stosowany"
-      location: "Sala X"
-    - name: "Blok matematyki teoretycznej"
+    - name: "Jak szybko rosną algebry? Od liczenia słów do niemożliwych funkcji wzrostu"
+      speaker: "Jakub Chmiel"
       type: "Blok teoretyczny"
-      location: "Sala Y"
-
-- time: "17:20"
-  events:
-    - name: "Przerwa kawowa"
-      location: "Hol główny"
-- time: "17:50"
-  events:
-    - name: "Cras aliquam vitae tortor egestas condimentum. Ut facilisis tincidunt enim."
-      speaker: "XYZ"
-      abstract: |
-        ### xyz1234
-        Morbi sagittis, magna sit amet vestibulum mattis, orci lacus aliquet libero, eget faucibus velit velit ut risus. Integer vulputate leo urna, eget viverra libero imperdiet a. Ut aliquet lectus ut dui egestas facilisis. Vestibulum elementum purus nulla, sed consectetur erat elementum a. Quisque condimentum, enim porta sodales viverra, nunc augue hendrerit libero, id sagittis ipsum ipsum in metus. Integer tellus enim, elementum nec mauris a, tincidunt elementum neque. In porta pellentesque mauris id vestibulum. Sed suscipit tincidunt blandit. Praesent accumsan augue et diam feugiat sollicitudin. Aenean sollicitudin lacus non fringilla fermentum. Morbi tempus cursus libero a scelerisque. Nulla rhoncus nisi nec nibh sollicitudin convallis id eu ipsum.
-        
-        Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
-        Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
-        Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
-        Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
-        Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
-        Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
-      location: "Sala X"
-- time: "18:10"
-  events:
-    - name: "Nulla in sagittis ante, non ultricies ex. Cras accumsan maximus risus, vel rutrum mauris vestibulum sed. Phasellus facilisis lacus ac augue dignissim tincidunt."
+      abstract: |-
+        Jak szybko może rosnąć algebra? Wybierając skończony zbiór generatorów, możemy liczyć, ile liniowo niezależnych elementów da się uzyskać z iloczynów długości co najwyżej \(n\). Tak powstaje funkcja wzrostu, która pozwala porównywać algebry pod względem ich rozmiaru.
+ 
+        Podczas referatu przedstawię podstawowe przykłady i własności funkcji wzrostu oraz pytanie o to, które funkcje można w ten sposób otrzymać. Przyjrzymy się jak w przestrzeni rosnących funkcji submultiplikatywnych wygląda zbiór funkcji wzrostu wraz z luką Bergmana, charakterystyką Bella–Zelmanova oraz wynikiem Greenfelda pokazującym, że nawet wśród bardzo szybko rosnących funkcji monotonicznych i submultiplikatywnych istnieją takie, które nie są równoważne funkcji wzrostu żadnej skończenie generowanej algebry. Wskażę również związek tych zagadnień z liczeniem słów w językach formalnych i rolę automatów skończonych.
+ 
+        Referat będzie miał charakter przeglądowy, z naciskiem na przykłady i znaczenie wyników, bez szczegółowych dowodów.
+    - name: "Zastosowania Rozkładu na macierze nieujemne (NMF) w analizie danych i uczeniu maszynowym"
+      speaker: "Kacper Wiącek"
       type: "Blok stosowany"
-      speaker: "Imie Nazwisko I"
-      abstract: |
-        ### xyz1234
-        Morbi sagittis, magna sit amet vestibulum mattis, orci lacus aliquet libero, eget faucibus velit velit ut risus. Integer vulputate leo urna, eget viverra libero imperdiet a. Ut aliquet lectus ut dui egestas facilisis. Vestibulum elementum purus nulla, sed consectetur erat elementum a. Quisque condimentum, enim porta sodales viverra, nunc augue hendrerit libero, id sagittis ipsum ipsum in metus. Integer tellus enim, elementum nec mauris a, tincidunt elementum neque. In porta pellentesque mauris id vestibulum. Sed suscipit tincidunt blandit. Praesent accumsan augue et diam feugiat sollicitudin. Aenean sollicitudin lacus non fringilla fermentum. Morbi tempus cursus libero a scelerisque. Nulla rhoncus nisi nec nibh sollicitudin convallis id eu ipsum.
-      location: "Sala X"
-
-    - name: "Quisque eget odio nibh. Nullam pulvinar eleifend pharetra."
-      type: "Blok teoretyczny"
-      speaker: "Imie Nazwisko II"
-      abstract: |
-        ### xyz1234
-        - Morbi sagittis, magna sit amet vestibulum mattis, 
-        - orci lacus aliquet libero, eget faucibus velit velit ut risus. 
-        1. Integer vulputate leo urna, 
-        2. eget viverra libero imperdiet a.
-        
-        Ut aliquet lectus ut dui egestas facilisis.
-        
-        Vestibulum elementum purus nulla, 
-        Quisque condimentum, enim porta sodales viverra, nunc augue hendrerit libero, id sagittis ipsum ipsum in metus. Integer tellus enim, elementum nec mauris a, tincidunt elementum neque. In porta pellentesque mauris id vestibulum. Sed suscipit tincidunt blandit. Praesent accumsan augue et diam feugiat sollicitudin. Aenean sollicitudin lacus non fringilla fermentum. Morbi tempus cursus libero a scelerisque. Nulla rhoncus nisi nec nibh sollicitudin convallis id eu ipsum.
-      location: "Sala Y"
-
-- time: "18:40"
+      abstract: |-
+        Celem referatu jest charakterystyka matematycznych podstaw oraz właściwości aplikacyjnych Nieujemnej Faktoryzacji Macierzy (NMF), stanowiącej alternatywną i silnie zorientowaną na interpretowalność technikę redukcji wymiarowości i ekstrakcji cech wektorowych. Wskazane zostaną kluczowe różnice pomiędzy NMF a klasycznymi metodami redukcji wymiarów (SVD i PCA). W dalszej części przedstawione zostaną wybrane zastosowania NMF – m.in. w analizie skupień, bi-klasteryzacji, przetwarzaniu obrazów, analizie sygnałów i nienadzorowanym uczeniu maszynowym – ze szczególnym uwzględnieniem zalet i ograniczeń tej metody. Zaprezentowane zostaną również alternatywne warianty rozkładu, w tym m.in. fairer NMF radzące sobie z niezbalansowaniem klas.
+- time: "16:50"
   events:
-    - name: "Zakończenie dnia"
+    - name: "Przerwa kawowa + pizzerki"
+- time: "17:30"
+  events:
+    - name: "Trochę ogólniej o odkryciu Hamiltona"
+      speaker: "Wiktor Smolak"
+      type: "Blok teoretyczny"
+      abstract: |-
+        Ośmielony użytecznością ciała liczb zespolonych irlandzki matematyk W. Hamilton zdefiniował w 1843 roku pewną czterowymiarową, nieprzemienną algebrę nad ciałem liczb rzeczywistych (nazwaną później jego nazwiskiem algebrą kwaternionów Hamiltona i oznaczoną symbolem \(\mathbb{H}\)), która umożliwia wygodne przedstawienie przekształceń trójwymiarowej przestrzeni euklidesowej. Dana struktura użyteczna jest po dziś dzień oraz ma liczne zastosowania w matematyce i poza nią, o czym krótko wspomnimy na początku referatu. Niemniej jednak rozważania na jej temat doprowadziły do sformułowania ogólnej definicji algebry kwaternionów nad dowolnym ciałem (w szczególności skupimy sie na ciałach o charakterystyce różnej od 2, co zapewni nam nieprzemienność). Wśród różnych algebr kwaternionów, które w ogólności są centralnymi algebrami prostymi można znaleźć algebry z dzieleniem (taką algebrą jest również \(\mathbb{H}\)) oraz algebry z dzielnikami zera, które nazywamy rozszczepionymi i o których powiemy trochę więcej w kontekście ich izomorficzności z algebrą macierzy kwadratowych \(2\times 2\) o współczynnikach z ciała nad którym definiujemy daną algebrę kwaternionów. W szczególności pokażemy, że algebra kwaternionów jest algebrą z dzieleniem albo wspomniany izomorfizm istnieje, co po stwierdzeniu pewnej własności rozszerzeń ciał przeniesie nas do rozważań na temat stożkowej stowarzyszonej do algebry kwaternionów i zagadnienia polegającego na znalezieniu jej punktów F-wymiernych, co z kolei ma zastosowanie w rozwiązywaniu równań diofantycznych.
+    - name: "Od serii do pętli: jak dobór cech zmienia topologię danych treningowych w trójboju siłowym?"
+      speaker: "Paweł Drzyzga"
+      type: "Blok stosowany"
+      abstract: |-
+        Treningi o tej samej liczbie powtórzeń i średnim ciężarze mogą różnić się organizacją serii. Na przykładzie realnego planu trójboisty pokażę, jak topologiczna analiza danych pomaga badać podobieństwo i powtarzalność treningów. Wykorzystując homologie persystentne, omówię powstawanie pętli oraz wpływ doboru cech, reprezentacji czasu i skali odległości na otrzymane struktury. Wyniki porównam z prostymi opisami programu, wskazując możliwości wykorzystania tych analiz oraz granice ich interpretacji. Przedstawię też kierunki weryfikacji wyników na nowych danych.
+- time: "18:00"
+  events:
+    - name: "Niech moc będzie z nami, czyli o co chodzi w tym całym forsingu"
+      speaker: "Bartosz Kamiński"
+      type: "Blok teoretyczny"
+      abstract: |-
+        Wielu matematyków słysząc słowo ***forsing***, wychodzi z założenia, że to ekwiwalent potwora, który w najlepszym przypadku nie ma sensu, a w najgorszym jest pierwszą oznaką szaleństwa.
+        I choć szaleństwo można przypisać każdej osobie, która po prostu uprawia matematykę, to okaże się, że forsing nie jest taki straszny, jak go malują.
+        Na referacie postaram się pokazać, że forsing to nic więcej jak dołożenie nowego elementu do naszego "worka" po to, żeby jakieś konkretne zdanie stało się prawdziwe. Pokażę to poprzez „wyforsowanie” z pierścienia \(\mathbb{Q}\) nowego pierścienia \(\mathbb{Q}[\sqrt{2}]\) oraz, dla kontrastu, błędne forsowanie ze zbioru \(\mathbb{N}\) struktury \(\mathbb{N}[\frac{1}{2}]\). Te analogie pomogą nam zrozumieć, w jaki sposób dowodzi się niezależności \(\mathrm{CH}\) od aksjomatów \(\mathrm{ZFC}\).
+    - name: "Wypukłość strachu i wklęsłość chciwości: matematyka teorii perspektywy"
+      speaker: "Oliwia Ciupińska"
+      type: "Blok stosowany"
+      abstract: |-
+        Klasyczna ekonomia zakłada, że w warunkach niepewności zawsze dążymy do maksymalizacji matematycznej wartości oczekiwanej. Jednak badania Daniela Kahnemana i Amosa Tversky'ego dowodzą, że ludzki umysł systematycznie łamie aksjomaty rachunku prawdopodobieństwa.
+        Wystąpienie rozpocznę od krótkiego eksperymentu decyzyjnego na żywo z udziałem publiczności. Sprawdzę w nim, jak jedno słowo w opisie problemu potrafi całkowicie odwrócić nasze wybory przy identycznej wartości oczekiwanej. Następnie przełożę wyniki tego doświadczenia na język analizy matematycznej. Omówię własności funkcji wartości (jej asymetrię, brak różniczkowalności w zerze oraz tytułową wklęsłość dla zysków i wypukłość dla strat), a także nieliniową funkcję wag decyzyjnych. Na koniec podstawię wyniki głosowania z sali do równań teorii perspektywy i pokażę, jak dokładnie matematyka potrafi przewidzieć ludzką irracjonalność.
+- time: "18:30"
+  events:
+    - name: "Zakończenie dnia 1."
 - time: "19:30"
   events:
     - name: "Integracja"
       location: "SKS"
+ 

@@ -1,61 +1,191 @@
 - time: "9:30"
   events:
-    - name: "Rejestracja"
+    - name: "Rejestracja uczestników"
 - time: "10:00"
   events:
-    - name: "Blok matematyki stosowanej"
-      type: "Blok stosowany"
-    - name: "Blok matematyki teoretycznej"
+    - name: "Fabryka liczb: Jak algebry Clifforda, mnożąc wektory, tworzą (nie)znane struktury"
+      speaker: "Michał Stadnik"
       type: "Blok teoretyczny"
+      abstract: |-
+        W wystąpieniu opowiem o algebrach Clifforda jako uniwersalnym narzędziu pozwalającym w sposób systematyczny generować struktury algebraiczne. Dzięki nim możemy uogólnić konstrukcję liczb zespolonych czy kwaternionów. Punktem wyjścia będzie pozornie proste pytanie: co się stanie, jeśli pozwolimy wektorom mnożyć się przez siebie i zażądamy, aby kwadrat wektora był zwykłą liczbą? Prowadzi to do konstrukcji algebry łącznej, w której kwadrat wektora jest utożsamiany z wartością ustalonej formy kwadratowej \(Q\) zgodnie z relacją \(v^2=Q(v) \cdot 1\). Dzięki temu prostemu założeniu dostajemy bogatą klasę algebr, w której liczby zespolone, dualne czy kwaterniony są szczególnymi przypadkami zależnymi od wymiaru i sygnatury \(Q\). Na zakończenie przedstawię inne przykłady algebr Clifforda, które mają zastosowania w fizyce teoretycznej oraz grafice komputerowej, gdzie służą one do eleganckiego opisu rotacji i transformacji geometrycznych.
+    - name: "Szorstka prawda czy gładka manipulacja? O próbie aproksymacji dyskretnej liczby punktów rozkładem ciągłym"
+      speaker: "Paweł Podolak"
+      type: "Blok stosowany"
+      abstract: |-
+        Centralne Twierdzenie Graniczne jest jednym z najczęściej stosowanych twierdzeń w analizie danych testowych, w szczególności w ramach teorii odpowiedzi na pozycje testowe (IRT). Bezrefleksyjne stosowanie aproksymacji rozkładem normalnym stanowi jednak potężne ryzyko metodologiczne. Celem niniejszej pracy jest analiza granic stosowalności CTG ze szczególnym uwzględnieniem złamania warunku Lapunowa stosowanego przy sumie zmiennych losowych o różnych rozkładach.
+ 
+        W ramach badań przeprowadzono symulacje numeryczne Monte Carlo w środowisku R dla modeli IRT (3PL/GPCM). Analizie porównawczej poddano dwa podejścia: klasyczną, efektywną aproksymację rozkładem normalnym oraz dokładną, lecz bardziej złożoną obliczeniowo metodę wyznaczania splotu zmiennych losowych. Badania zrealizowano w dwóch scenariuszach: dla portfeli jednorodnych (same zadania zamknięte) i portfeli niejednorodnych (zadania zamknięte i otwarte) zadań z egzaminu maturalnego z matematyki na poziomie podstawowym 2026. Różnorodność punktacji za zadania otwarte jawnie narusza warunek Lapunowa.
+ 
+        Wystąpienie koncentruje się na analizie skutkowo-przyczynowej: porównano różnice w obu podejściach pod względem zagregowanego ryzyka egzaminacyjnego (tzn. szans na przekroczenie progu zdawalności) oraz dokładnego rozkładu punktów dla wybranych wartości cechy ukrytej poprzez ilustrację wskaźników błędu, tj. RMSE, MAE, MaxAE oraz wyników nieparametrycznych testów statystycznych, z szczególnym uwzględnieniem wysokiej mocy testu dla dużej próby badawczej. Praca podkreśla również istotną rolę zastosowania poprawki na ciągłość w celu zminimalizowania różnic między wynikami uzyskanymi za pomocą CTG a za pomocą splotów.
+ 
+        Choć badania oparto na danych syntetycznych, co stanowiło warunek konieczny do przeprowadzenia jednowymiarowej symulacji (przy założeniu o pomijalnym wpływie efektu wiązek zadań na odpowiedzi ucznia), są one w pełni wystarczające do zobrazowania istoty problemu. Wyniki obrazują skalę zniekształceń dokonywanych przez „wygładzanie” dyskretnej natury rozkładu punktów. Zaprezentowane wnioski stanowią krytyczny głos w dyskusji nad stosowaniem twierdzeń granicznych w inżynierii i analizie danych oraz wskazują na konieczność weryfikacji założeń do zastosowania poprawnego narzędzia.
+- time: "10:30"
+  events:
+    - name: "Granicy obliczalności strzegą bobry, czyli o nieintuicyjnych własnościach funkcji Busy Beaver"
+      speaker: "Szymon Dziewoński"
+      type: "Blok teoretyczny"
+      abstract: |-
+        Stworzona w 1962 r. przez Tibora Radó gra w pracowitego bobra (ang. Busy Beaver) polega na znalezieniu takiej \(n\)-stanowej maszyny Turinga, która zakończy swoje działanie wykonując jak najwięcej kroków lub wypisując jak najwięcej jedynek. Funkcje \(S(n)\) i \(\Sigma(n)\) określają odpowiednie największe możliwe wyniki do uzyskania. Okazuje się, że pomimo prostej, kombinatorycznej definicji, są one nieobliczalne, a tempo ich wzrostu wykracza poza klasyczne hierarchie matematyczne. Co więcej, w swoich skończonych wartościach kodują one odpowiedzi na wiele współczesnych problemów otwartych.
+ 
+        Referat rozpoczniemy od formalnego zdefiniowania gry w pracowitego bobra i przeanalizujemy wartości wspomnianych wcześniej funkcji dla małych \(n\). Następnie pokażemy, że rosną one szybciej niż jakakolwiek funkcja obliczalna. Na koniec przeanalizujemy ich związek z m.in. hipotezami Collatza, Goldbacha i Riemanna oraz problem wyznaczania ich wartości wewnątrz aksjomatyki ZFC.
+    - name: "Kiedy więcej danych oznacza mniej prawdy? Paradoksy imputacji średnią."
+      speaker: "Marlena Sadowska"
+      type: "Blok stosowany"
+      abstract: |-
+        Wyobraźmy sobie, że zbieramy dane ankietowe o zarobkach lekarzy i prawników, jednak część osób nie odpowiedziała na pytanie o wysokość wynagrodzenia. Najprostszym sposobem na uzupełnienie tych braków jest imputacja średnią. Choć metoda ta nie zmienia średniej z zaobserwowanych wartości, może znacząco zaburzać ich zmienność!
+ 
+        W swoim wystąpieniu pokażę, że nawet w prostym modelu matematycznym, przy losowo występujących brakach danych, imputacja średnią może prowadzić do zaskakujących wniosków. Gdy wariancje w obu grupach są równe, test statystyczny może wykrywać różnice, których w rzeczywistości nie ma. Z drugiej strony, gdy wariancje faktycznie się różnią, imputacja może skutecznie maskować tę różnicę.
+ 
+        Co więcej, przy ustalonym odsetku braków zwiększanie liczebności próby może pogłębiać problem fałszywych odrzuceń hipotezy zerowej! Przedstawię matematyczne uzasadnienie tych zjawisk, wyprowadzając zależności opisujące wpływ imputacji na wariancję oraz rozkład statystyki testu Bartletta, a otrzymane wyniki zilustruję eksperymentami symulacyjnymi.
 - time: "11:00"
   events:
-    - name: "Sesja plakatowa"
     - name: "Przerwa śniadaniowa"
-- time: "11:50"
+- time: "11:30"
   events:
-    - name: "Cras aliquam vitae tortor egestas condimentum. Ut facilisis tincidunt enim."
-      speaker: "XYZ"
-      abstract: | 
-        ### xyz1234
-        Morbi sagittis, magna sit amet vestibulum mattis, orci lacus aliquet libero, eget faucibus velit velit ut risus. Integer vulputate leo urna, eget viverra libero imperdiet a. Ut aliquet lectus ut dui egestas facilisis. Vestibulum elementum purus nulla, sed consectetur erat elementum a. Quisque condimentum, enim porta sodales viverra, nunc augue hendrerit libero, id sagittis ipsum ipsum in metus. Integer tellus enim, elementum nec mauris a, tincidunt elementum neque. In porta pellentesque mauris id vestibulum. Sed suscipit tincidunt blandit. Praesent accumsan augue et diam feugiat sollicitudin. Aenean sollicitudin lacus non fringilla fermentum. Morbi tempus cursus libero a scelerisque. Nulla rhoncus nisi nec nibh sollicitudin convallis id eu ipsum.
-        Duis accumsan commodo ultrices. Vestibulum vel tellus in turpis varius dapibus at a diam. Pellentesque sit amet ultricies neque. Fusce at justo sollicitudin, vulputate massa non, laoreet odio. Pellentesque vel nibh dapibus, interdum lacus quis, vestibulum arcu. Nullam quis sapien sit amet enim posuere tincidunt. Sed tempor sodales maximus.
-      type: "Prezentacja sponsora"
-      location: "Sala X"
-- time: "12:30"
+    - name: "Prezentacja BNY"
+- time: "12:10"
   events:
-    - name: "Blok matematyki stosowanej"
-      type: "Blok stosowany"
-    - name: "Blok matematyki teoretycznej"
+    - name: "Co kule mówią o przestrzeni? O hiperwypukłości przestrzeni metrycznych"
+      speaker: "Kacper Jarosiński"
       type: "Blok teoretyczny"
-- time: "13:30"
+      abstract: |-
+        Geometria przestrzeni metrycznych nie musi ograniczać się do badania odległości między punktami. Czy możemy poznać własności całej przestrzeni, badając jedynie to, jak przecinają się w niej kule? Czy warunek geometryczny może prowadzić do twierdzeń o punktach stałych i rozszerzaniu odwzorowań? Pytanie to prowadzi do pojęcia hiperwypukłości przestrzeni metrycznych, wprowadzonego przez Aronszajna i Panitchpakdiego, czyli przestrzeni, w których odpowiednio dobrane rodziny kul mają niepuste przecięcie.
+        W referacie przedstawione zostaną podstawowe idee i przykłady związane z hiperwypukłością oraz metoda konstrukcji takich przestrzeni. Przyjrzymy się wybranym własnościom tych przestrzeni oraz ich kluczowemu znaczeniu w teorii punktów stałych i rozszerzaniu odwzorowań.  Szczególnie interesującym zagadnieniem będzie możliwość zastąpienia sprawdzania warunku dla dowolnej rodziny kul na rodziny skończone.
+        Celem referatu jest pokazanie jak z pozoru prosty warunek geometryczny może prowadzić do zaskakujących wyników.
+    - name: "Jak wilki dzielą przestrzeń? Matematyczny model powstawania terytoriów"
+      speaker: "Piotr Duchnik"
+      type: "Blok stosowany"
+      abstract: |-
+        Przeanalizujemy model formowania terytoriów wilków, którego podstawowym mechanizmem jest znakowanie zapachem. Model wykorzystuje równania dyfuzji i konwekcji do opisania przewidywanego rozkładu gęstości osobników. Rozpatrzymy przypadki modelu dla różnych liczb watah, oraz omówimy interakcje, które zachodzą pomiędzy sąsiadującymi watahami i zależności między rozmiarem watahy a rozmiarem terytorium.
+- time: "12:40"
   events:
-    - name: "Przerwa obiadowa"
+    - name: "Przerwa kawowa + sesja plakatowa"
+- time: "14:00"
+  events:
+    - name: "Półciągłość i punkty stałe - twierdzenie Kakutaniego w teorii gier"
+      speaker: "Patryk Osika"
+      type: "Blok teoretyczny"
+      abstract: |-
+        **Abstrakt**
+ 
+        Celem referatu jest przedstawienie twierdzenia o punkcie stałym Kakutaniego oraz jego zastosowania w dowodzie twierdzenia Nasha o istnieniu równowagi w teorii gier. W pierwszej części omówione zostaną podstawowe pojęcia dotyczące odwzorowań wielowartościowych, w szczególności górna i dolna semiciągłość oraz górna i dolna hemiciągłość. Przedstawione zostaną definicje tych własności, ich wzajemne relacje oraz wybrane kryteria pozwalające na ich weryfikację, ze szczególnym uwzględnieniem związku między górną hemiciągłością a domkniętością grafu odwzorowania przy odpowiednich założeniach.
+ 
+        W dalszej części referatu zaprezentowane zostanie twierdzenie Kakutaniego wraz z omówieniem jego założeń i znaczenia w teorii punktów stałych. Następnie przedstawione zostanie jego zastosowanie do dowodu twierdzenia Nasha. W tym celu skonstruowane zostanie odwzorowanie najlepszych odpowiedzi, a następnie wykazane zostanie, że spełnia ono warunki pozwalające na zastosowanie twierdzenia Kakutaniego.
+ 
+        Referat ma na celu ukazanie związku między własnościami topologicznymi odwzorowań wielowartościowych a problemem istnienia równowagi w teorii gier.
+    - name: "OPTIMAL CONSUMPTION UNDER GENERALIZED SUBLINEAR CIR-TYPE DISCOUNTING"
+      speaker: "Karol Cieślik"
+      type: "Blok stosowany"
+      abstract: |-
+        We consider an infinite-horizon optimal consumption problem with deterministic income and stochastic discounting. The discount factor is \(e^{−r_t}\) , where r is a conservative
+        diffusion on [0,∞) whose dynamics in the interior are governed by
+ 
+        \(dr_t = (ar_t + b)dt+ δr^γ_{t}dWt,  \quad a,b,δ >0,\quad 0 <γ <0.5\)
+ 
+        The Hamilton–Jacobi–Bellman equation is reduced to a system of second-order ordinary differential equations with boundary, matching, and smooth-fit conditions. We distinguish two parameter regimes. If \(e^{−{r_t}}\) is a supermartingale, the maximal-consumption strategy is
+        optimal: the initial wealth is consumed immediately, and deterministic income is consumed as it arrives. In the complementary regime, the function
+ 
+        \(q(r) = \frac{\delta^2}{2}r^{2\gamma}−ar−b\)
+ 
+        has two positive zeros. We prove that the waiting region is a bounded interval and that consumption is optimal outside this interval. Depending on the parameters, its lower endpoint is either positive or equal to zero. The free boundaries are uniquely characterised by a common-tangent system expressed in terms of the scale function, while the value function is represented by solutions of the corresponding boundary-value problems and is explicit up to quadratures. In contrast to the square-root case \(γ = 1/2\), the sublinear diffusion coefficient can therefore lead to a two-sided consumption region.
+- time: "14:30"
+  events:
+    - name: "Jak (i po co) rzucić zdjęcie na wielomian"
+      speaker: "Dominik Jur"
+      type: "Blok teoretyczny"
+      abstract: |-
+        Krótko:
+        Zaprezentuje niezbyt znany kawałek matematyki, teorie momentów i momentów niezmienniczych, skupiający się na opisie obrazów za pomocą liczb tak żeby to miało sens. Czyli podobne obrazki powinny być koło siebie w przestrzeni reprezentacji, różne daleko, ewentualnie obrócony obraz powinien mieć takie same reprezentacje czasami :)
+ 
+        Dokładniej:
+        Przedstawię metodę reprezentacji numerycznej obrazu opartana momentach Zernikego, czyli rzucie obrazu na ortogonalny układ wielomianów określonych na kole jednostkowym. Taki opis ma trzy właściwości istotne przy analizie kształtu. Jesteśmy w stanie w ten sposób stworzyć reprezentacje niezmiennicze na rotacje obrazu, skalowanie i translacje.
+ 
+        Z momentów można też odtworzyć obraz, co pozwala przedstawić średni kształt grupy dodając metodzie wyjaśnialność. Całość jest deterministyczna i nie wymaga uczenia parametrów.
+ 
+        Słowa kluczowe: momenty Zernikego, wielomiany ortogonalne, reprezentacja numeryczna obrazów
+    - name: "Geodezyjne na powierzchniach obrotowych: od równań Clairauta do modelowania komputerowego"
+      speaker: "Sofiia Andrusenko"
+      type: "Blok stosowany"
+      abstract: |-
+        W pracy zbadano geometryczne właściwości geodezyjnych (najkrótszych dróg) na powierzchniach obrotowych, takich jak walec, sfera, stożek i torus. Na podstawie równań Eulera-Lagrange’a przedstawiono analityczne wyprowadzenie pierwszej całki równań ruchu - zależności Clairauta, wiążącej promień równoleżnika z kątem nachylenia krzywej. Wykazano, że w przypadku bardziej złożonych powierzchni (na przykład torusa) rozwiązanie analityczne prowadzi do całek, których nie można wyrazić za pomocą funkcji elementarnych.
+        W celu przezwyciężenia tego problemu zastosowano przejście do układu równań różniczkowych drugiego rzędu z wykorzystaniem współczynników geometrycznych (symboli Christoffela). Opracowany przez autorkę program w języku Python, wykorzystujący biblioteki NumPy, SciPy i Matplotlib, umożliwia numeryczne całkowanie równań ruchu metodą Rungego-Kutty oraz tworzenie przejrzystych modeli trójwymiarowych. Przeprowadzone eksperymenty komputerowe potwierdziły właściwości teoretyczne badanych powierzchni, ukazując między innymi pętle samoprzecięć na stożku oraz strefy odbicia trajektorii na torusie.
 - time: "15:00"
   events:
-    - name: "Blok matematyki stosowanej"
-      type: "Blok stosowany"
-    - name: "Blok matematyki teoretycznej"
-      type: "Blok teoretyczny"
+    - name: "Obiad"
 - time: "16:30"
   events:
-    - name: "Przerwa kawowa"
+    - name: "O wężu, który rozwiązał równanie różniczkowe"
+      speaker: "Monika Brattig"
+      type: "Blok teoretyczny"
+      abstract: |-
+        Równania różniczkowe cząstkowe i teoria prawdopodobieństwa na pierwszy rzut oka mogą wydawać się odległymi dziedzinami matematyki. Okazuje się jednak, że rozwiązania pewnych równań można opisać za pomocą procesów losowych.
+ 
+        Podczas referatu przyjrzymy się temu zaskakującemu związkowi na przykładzie zagadnienia Dirichleta. Zaczniemy od klasycznego równania Laplace’a i zobaczymy, w jaki sposób ruch Browna pozwala skonstruować jego rozwiązanie, wykorzystując jedynie informacje o zachowaniu losowych ścieżek na brzegu rozważanego obszaru.
+ 
+        Następnie zastanowimy się, co się stanie, gdy nasze równanie przestanie być liniowe. W poszukiwaniu odpowiedniego narzędzia poznamy węża Browna — niezwykły proces losowy, którego wartościami są całe ścieżki. Zobaczymy, jak jego konstrukcja pozwala uzyskać probabilistyczną reprezentację rozwiązania semiliniowego zagadnienia Dirichleta.
+ 
+        Referat oparty będzie na pracach Jeana-François Le Galla. Skupimy się przede wszystkim na intuicjach i geometrycznych interpretacjach omawianych obiektów.
+    - name: "Tworzenie leków do walki z nowotworami: Jak działa model ChiENN?"
+      speaker: "Emilia Porczyńska"
+      type: "Blok stosowany"
+      abstract: |-
+        Projektowanie nowoczesnych terapii onkologicznych opiera się na precyzyjnym dopasowaniu cząsteczki leku do białek nowotworowych. Choć algorytmy potrafią generować miliony potencjalnych struktur, o ich skuteczności lub toksyczności decyduje subtelna geometria 3D.
+        W niniejszym referacie przedstawiam proces generowania i weryfikacji cząsteczek oraz wyjaśniam, dlaczego klasyczne Grafowe Sieci Neuronowe zawodzą w przestrzeni trójwymiarowej. Następnie omawiam model ChiENN (Chiral Graph Neural Network) jako matematyczne rozwiązanie tego problemu. Skupiam się na stojącej za nim algebrze zorientowanych otoczeń lokalnych oraz modyfikacji operatora agregacji wiadomości. Wykazuję, jak konstrukcja ta pozwala uzyskać reprezentację niezmienniczą względem grupy obrotów SO(3), przy jednoczesnej wrażliwości na przekształcenia z grupy O(3)∖SO(3) bez konieczności stosowania sztywnych współrzędnych kartezjańskich.
 - time: "17:00"
   events:
-    - name: "Cras aliquam vitae tortor egestas condimentum. Ut facilisis tincidunt enim."
-      speaker: "XYZ"
-      type: "Prezentacja sponsora"
-- time: "17:20"
-  events:
-    - name: "Blok matematyki teoretycznej"
+    - name: "Jak spełnił się sen Leibniza - czyli o liczbach hiperrzeczywistych i mierze Loeba"
+      speaker: "Patryk Danieluk"
       type: "Blok teoretyczny"
-      location: "Sala X"
-    - name: "Blok matematyki teoretycznej"
-      type: "Blok teoretyczny"
-      location: "Sala Y"
-- time: "18:20"
+      abstract: |-
+        W \(1684\) r. Gottfried Leibniz wprowadził oznaczenie pochodnej \(\frac{dy}{dx}\), które nie miało symbolizować klasycznej granicy, lecz faktyczny iloraz nieskończenie małych wielkości. Intuicyjnie mechanizm ten działał bezbłędnie, jednak przez wieki pozostawał logicznie nieścisły. Marzenie Leibniza o rygorystycznych infinitezymalnych wielkościach zostało spełnione dopiero w latach 60. XX wieku, gdy Abraham Robinson przedstawił światu analizę niestandardową. Podczas referatu zaprezentuję konstrukcję ciała liczb **hiperrzeczywistych \({}^*\mathbb{R}\)** z wykorzystaniem **ultrafiltrów**. Przedstawię formalną definicję wielkości **nieskończenie małych** oraz kilka ich własności. Na koniec, z wykorzystaniem **twierdzenia Carathéodory’ego**, skonstruuję **miarę Loeba** na siatkach hiperskończonych. Pozwala to wysnuć zaskakujący wniosek, że w \({}^*\mathbb{R}\) miara **Lebesgue’a** staje się miarą **liczącą**, a podział na matematykę dyskretną i ciągłą traci sens.
+    - name: "Optymalne zatrzymanie w warunkach niepewności: Od klasycznej granicy swobodnej do entropijnego sterowania osobliwego w wycenie opcji realnych"
+      speaker: "Rai Ciszewska"
+      type: "Blok stosowany"
+      abstract: |-
+        Tradycyjna teoria opcji realnych opiera się na deterministycznych regułach optymalnego zatrzymania, które zakładają pełną i dokładną znajomość parametrów stochastycznego równania różniczkowego (SDE) opisującego otoczenie gospodarcze. W rzeczywistych zastosowaniach parametry takie jak dryf \(\mu\) czy zmienność \(\sigma\) są obarczone błędem estymacji, a binarne reguły decyzyjne prowadzą do niedystrybuowalnych przestrzeni polityk oraz skrajnej rzadkości sygnału nagrody. Dyskwalifikuje to bezpośrednie użycie standardowych algorytmów uczenia ze wzmocnieniem (RL).
+        W niniejszym referacie przyjrzymy się ciągłej konstrukcji regularyzacji entropijnej Shannona w ramach sterowania osobliwego dla problemów opcji realnych. Wyprowadzimy zamknięte rozwiązania analityczne dla klasycznego progu \(b^*\) oraz regularyzowanej granicy swobodnej \(g_{\lambda}(x)\) dla potęgowej funkcji zysku. Następnie omówimy i porównamy dwie metody numeryczne: modelowy algorytm iteracji polityki wykorzystujący metody różnic skończonych (PDE) oraz wolny od modelu algorytm uczenia ze wzmocnieniem (SPI-\(\lambda\)-OS) oparty na symulacjach Monte Carlo. Przyjrzymy się analizie zbieżności, wpływowi gęstości siatki, inicjalizacji polityki i redukcji wariancji (Common Random Numbers) oraz dowiedziemy, że podejście model-free skutecznie odtwarza optymalną granicę decyzyjną bez wcześniejszej znajomości dynamiki środowiska.
+- time: "17:30"
   events:
-    - name: "Zakończenie dnia"
-- time: "19:30"
+    - name: "Przerwa kawowa"
+- time: "18:00"
+  events:
+    - name: "Prawie nigdzie, lecz dość często. Prawo Benforda dla orbit układów dynamicznych."
+      speaker: "Patryk Wojtkowiak"
+      type: "Blok teoretyczny"
+      abstract: |-
+        Referat przedstawia prawo Benforda w kontekście ciągów liczbowych oraz orbit układów dynamicznych. Na przykładzie funkcji o wzroście super-wykładniczym omówiony zostanie pozorny konflikt między teorią miary a topologią: choć orbity podlegają prawu Benforda dla niemal każdego punktu początkowego w sensie miary Lebesgue’a, zbiór punktów niespełniających pozostaje gęsty i nieprzeliczalny. Wykład przybliży trudności związane z weryfikacją tej własności dla elementarnych stały (takich jak \(\sqrt{2}\) czy liczby całkowite) oraz wskaże, jak pojęcie normalności i konstrukcja binarna stałej Champernowne pozwalają podać jawny przykład punktu tworzącej taką orbitę.
+    - name: "Kiedy kłamstwo się opłaca, a kiedy przestaje - ewolucyjna teoria gier mimikry Batesa"
+      speaker: "Marcin Król"
+      type: "Blok stosowany"
+      abstract: |-
+        Mimikra Batesa to biologiczne przystosowanie obronne, w którym mimik (gatunek bezbronny) upodabnia się barwą, dźwiękiem lub zachowaniem do gatunku niebezpiecznego bądź nieatrakcyjnego dla drapieżcy.
+ 
+        W prezentacji przedstawiono model matematyczny gry sygnalizacyjnej. Zdefiniowano przestrzeń sygnałów oraz strategię sygnalizacyjną z promieniem cechy odniesienia \(q\), wykorzystywanym w funkcji decyzyjnej \(A\) określającej werdykt drapieżcy w sprawie ataku. Następnie wprowadzono funkcję wypłaty \(U\) oraz funkcję oczekiwanej użyteczności odbiorcy \(\Theta\), za pomocą których w przykładzie obliczono próg częstości \(\mu^*\) mimików w populacji. Przekroczenie tego progu sprawia, że ataki drapieżców stają się korzystne; w przeciwnym wypadku zyskują oszuści.
+ 
+        W dalszej części pogłębiono pojęcie progu częstości i rozszerzono model o strategie mieszane, w których drapieżcy podejmują decyzje zgodnie z określonym rozkładem prawdopodobieństwa. Zdefiniowano funkcję logistycznej dynamiki wyboru wraz z jednowymiarowym równaniem replikatora, przewidującym zmiany częstości mimików na podstawie ich oczekiwanego sukcesu ewolucyjnego. W przykładzie pokazano, że częstość mimików oscyluje wokół poziomu optymalnego zarówno dla nich, jak i dla gatunku jadowitego, co zilustrowano na wykresach.
+- time: "18:30"
+  events:
+    - name: "Paradoks Mycielskiego-Sierpińskiego"
+      speaker: "Michał Warmuz"
+      type: "Blok teoretyczny"
+      abstract: |-
+        Zbiory niemierzalne w sensie Lebesgue'a kojarzą się z obiektami chaotycznymi, których istnienie prowadzi do paradoksów, jak na przykład znany paradoksalny podział kuli zaproponowany przez Banacha i Tarskiego.
+        Okazuje się jednak, że odrzucenie aksjomatu wyboru i przyjęcie w jego miejsce aksjomatu "wszystkie podzbiory prostej rzeczywistej są mierzalne w sensie Lebesgue'a" też niesie ze sobą niespodziewane konsekwencje. Przykładem ich jest paradoks Mycielskiego-Sierpińskiego, który orzeka, że w tym wypadku zbiór liczb rzeczywistych da się podzielić na rodzinę parami rozłącznych zbiorów niepustych, której moc jest ściśle większa niż continuum.
+        W prezentacji zostanie szczegółowo omówiony ten paradoks oraz będzie przedstawiony jego dowód formalny.
+    - name: "Kod, który wybacza błędy - matematyka odporności kodu genetycznego"
+      speaker: "Lidia Gozdecka"
+      type: "Blok stosowany"
+      abstract: |-
+        Kod genetyczny zostanie przedstawiony jako pokolorowany graf Hamminga H(3,4); wierzchołki to kodony, czyli trójki nukleotydów, krawędzie są mutacjami punktowymi -substytucjami, a kolory to znaczenia kodonów - 20 aminokwasów i “stop”. Taki model pozwala ilościowo określić, jak właściwości kodu pozwalają na ograniczanie skutków substytucji - rodzaju mutacji punktowych, w których podmieniane są nukleotydy. Tolerancja błędów - będąca wynikiem nadmiarowości kodu genetycznego (w biologii nazywanej zdegenerowaniem) - ogranicza utratę informacji o sekwencji aminokwasowej białek. Informacja ta jest zapisana za pomocą sekwencji nukleotydowej, z której tłumaczona jest na sekwencję aminokwasową, będącą podstawą struktury białka. Na grafie Hamminga można określić miarę odporności jako ułamek krawędzi pozostających wewnątrz klas (kolorów/aminokwasów), przy jednakowym prawdopodobieństwie substytucji. Taka miara jest prawdopodobieństwem, że zmiana nukleotydu nie zmieni aminokwasu, a więc nie zmieni sekwencji białka. Dla klas o zadanych rozmiarach górną granicę tej miary daje rozwiązanie krawędziowego problemu izoperymetrycznego o zadanej liczebności w grafach Hamminga (tw. Lindseya, 1964): minimalizacja krawędzi wychodzących na zewnątrz w określonej grupie wierzchołków. Wstępne obliczenia wskazują, że standardowy kod genetyczny jest bliski tej granicy.
+        Standardowy kod genetyczny, który błędy toleruje, zostanie porównany do używanych w informatyce kodów nadmiarowych - takich jak kod Hamminga, który błędy koryguje i wykrywa, oraz kod fontannowy, który pozwala na odtworzenie utraconych fragmentów.
+        Następnie, zasymulowane zostanie wykorzystanie DNA do zakodowania krótkiej informacji będącej ciągiem aminokwasów, jako sekwencji nukleotydów. Standardowy kod genetyczny zostanie tu porównany z innymi teoretycznie możliwymi kodami genetycznymi oraz kodem losowym. Inne teoretycznie możliwe kody genetyczne to inne warianty grafu H(n,q)[gdzie n to długość słowa/kodonu, a q to liczba nukleotydów/liter alfabetu], a kolorowanie nadal dzieli zbiór wierzchołków na 21 klas o możliwie równych rozmiarach. Kod losowy to taki, że wierzchołki są losowo rozdzielone pomiędzy tę samą liczbę klas o zachowanych rozmiarach. W symulacji zostaną wprowadzone losowe zmiany (substytucje) na poziomie nukleotydowym.  Zachowanie oryginalnej informacji pomiędzy różnymi wariantami grafów zostanie porównane z przewidywaniami analitycznymi opartymi na prawdopodobieństwie zmiany aminokwasu. Miarą zachowania informacji jest odsetek poprawnie odtworzonych znaków (aminokwasów).
+        Na zakończenie omówione zostaną koncepcje wykorzystania kodu genetycznego w teoretycznych metodach biosteganografii - ukrywania informacji w DNA.
+ 
+- time: "19:00"
+  events:
+    - name: "Zakończenie dnia 2."
+- time: "20:30"
   events:
     - name: "Integracja"
-      location: "Klub jakis tam"
+      location: "Przekręt"
+ 

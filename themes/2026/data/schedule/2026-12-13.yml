@@ -1,21 +1,102 @@
 - time: "10:00"
   events:
-    - name: "Blok matematyki stosowanej"
-      type: "Blok stosowany"
-    - name: "Blok matematyki teoretycznej"
+    - name: "Od krzywej Gaussa do profilu Barenblatta: jak nieliniowa dyfuzja zapomina warunki początkowe?"
+      speaker: "Mateusz Wojnarowski"
       type: "Blok teoretyczny"
+      abstract: |-
+        W teorii równania ciepła istnieje odpowiednik centralnego twierdzenia granicznego. Choć rozwiązanie równania ciepła zależy od warunku początkowego, jego asymptotyczny kształt wyznacza krzywa Gaussa, a jedyną istotną informacją o danych początkowych jest całkowita masa. Naturalne jest pytanie, czy podobne twierdzenie można sformułować dla równań nieliniowych.
+ 
+        W równaniu ośrodka porowatego \(u_t=\Delta(u^m)\), dla \(m>1\) miejsce Gaussa zajmuje profil Barenblatta. Pokażemy, jak można go wyprowadzić, poszukując rozwiązań samopodobnych i wykorzystując zachowanie masy.
+ 
+        Samo znalezienie takiego rozwiązania nie wyjaśnia jednak, dlaczego miałoby ono opisywać zachowanie innych rozwiązań. Odpowiedź daje twierdzenie o asymptotycznej zbieżności rozwiązań do profilu Barenblatta w \(L^1(\mathbb R^N)\). Przedstawimy jego treść i naszkicujemy, jak za pomocą skalowania, zwartości i jednoznaczności można tę zbieżność wykazać. W ten sposób od konstrukcji jednego szczególnego rozwiązania przejdziemy do opisu asymptotyki całej klasy rozwiązań.
+    - name: "Normy unitarnie niezmiennicze w problemie aproksymacji macierzy."
+      speaker: "Filip Panas"
+      type: "Blok stosowany"
+      abstract: |-
+        W trakcie wystąpienia przybliżę zagadnienie niskorzędowej aproksymacji macierzy. Punktem wyjścia będzie rozkład SVD (singular value decomposition), na którym opiera się twierdzenie Eckarta-Younga, podające postać najlepszego przybliżenia danej macierzy przy użyciu macierzy ustalonego niższego rzędu (względem normy Frobeniusa lub normy spektralnej). Zostanie omówiony przykład zastosowania tego wyniku jako prostego narzędzia do kompresji obrazów cyfrowych. Następnie przejdę do uogólnienia tego twierdzenia na przypadek całej klasy norm unitarnie niezmienniczych (twierdzenie Eckarta-Younga-Mirsky'ego).
+- time: "10:30"
+  events:
+    - name: "Mat w #nieskończoność"
+      speaker: "Tymon Świtalski"
+      type: "Blok teoretyczny"
+      abstract: |-
+        Każdy, kto miał styczność z szachami, spotkał się z zadaniami typu "znajdź mata w n ruchach". Jeśli jednak uwolnimy szachy z ich skończonych ram, możliwe są pozycje, w których jeden z graczy może wymusić mata, ale drugi może go dowolnie długo odwlekać. Do opisu takich pozycji okazują się potrzebne pozaskończone liczby porządkowe. Poszukiwanie pozycji o takich własnościach rozpoczęło się od pytania na MathOverflow ponad 15 lat temu i finalnie zostało zamknięte w tym roku poprzez zanurzenie arbitralnej, otwartej gry Gale'a-Stewarta z remisami w pozycji szachowej. Podczas referatu przyjrzymy się wybranym konstrukcjom powstałym w tym czasie.
+    - name: "O tym, jak matematyka poszła w las"
+      speaker: "Mikołaj Beśka"
+      type: "Blok stosowany"
+      abstract: |-
+        Środowisko naturalne, mimo niezwykłej złożoności poddaje się efektywnemu modelowaniu matematycznemu. W niniejszym referacie przyjrzymy się kilku modelom ekologicznych, opartym na układach równań różniczkowych.
+ 
+        Najprostszym podejściem jest model Lotki-Volterry. Mimo prostoty dobrze opisuje on pewne zachowania się populacji, lecz ma pewne wady. Naturalne rozszerzenie poprawia własności modelu, ale nie rozwiązuje wszystkich problemów.
+ 
+        W pierwszej części referatu skupimy się na analizie nieco bardziej rozbudowanego modelu drapieżnik-ofiara - dodamy do równań człon, dzięki któremu pojawią się oscylacje obserwowane w rzeczywistości. Podejdziemy do zadania teoretycznie, ale też przez numeryczne symulacje. W drugiej natomiast zobaczymy, co się zmienia, gdy od równań zwyczajnych przejdziemy do równań różniczkowych z opóźnieniem, gdzie skupimy się głównie na analizie numerycznej modelu.
 - time: "11:00"
   events:
     - name: "Przerwa śniadaniowa"
 - time: "11:30"
   events:
-    - name: "Blok matematyki stosowanej"
-      type: "Blok stosowany"
-    - name: "Blok matematyki teoretycznej"
+    - name: "Czym jest ciasto Radona-Nikodyma? O teorii sprawiedliwego podziału ciasta"
+      speaker: "Michał Szostak"
       type: "Blok teoretyczny"
+      abstract: |-
+        Jak podzielić ciasto między \(n\) osób o różnych preferencjach tak, aby każda z nich była zadowolona? Nad tym problemem zastanawiali się już podczas II wojny światowej Hugo Steinhaus, Stefan Banach i Bronisław Knaster.
+        Podchodzimy do niego, traktując ciasto jako przestrzeń mierzalną, na której każda z osób ma swoją własną miarę. W celu znalezienia odpowiedniego podziału układamy ciasto w formę sympleksu, którego wierzchołki odpowiadają uczestnikom podziału. Tak powstały obiekt geometryczny nazywamy ciastem Radona-Nikodyma i na jego podstawie ustalamy podział ciasta.
+        Przedstawimy warunki „sprawiedliwości” i „efektywności” podziału ciasta i pokażemy, że dla każdego ciasta istnieje podział, który spełnia te warunki.
+    - name: "Zlecenie na drzewa: ile ich rośnie na Skellige w Wiedźminie 3?"
+      speaker: "Bartłomiej Węgrzyn"
+      type: "Blok stosowany"
+      abstract: |-
+        Celem projektu jest estymacja łącznej liczby drzew na obszarze Skellige z gry Wiedźmin 3 przy wykorzystaniu metod Monte Carlo i samplingu przestrzennego. Badany obszar traktuję jako populację dużych kwadratów siatki, w których losuję mniejsze pola pomiarowe o znanej powierzchni. Na podstawie zliczonych w nich drzew konstruuję i porównuję estymatory całkowitej liczebności populacji. Analizowane metody obejmują proste losowanie przestrzenne, estymatory uwzględniające udział i powierzchnię lądu, losowanie z nierównymi prawdopodobieństwami wyboru, próbkowanie transektowe, adaptacyjne oraz warstwowe. Poszczególne podejścia różnią się schematem doboru próby i zakresem wykorzystywanej informacji pomocniczej o strukturze mapy. Za pomocą symulacji Monte Carlo porównuję dokładność, obciążenie i zmienność estymatorów, wskazując ich zalety oraz ograniczenia w przestrzennie niejednorodnym środowisku. Osobno uwzględniam korektę dotyczącą drzew poza standardowym obszarem grywalnym. Choć projekt opiera się na nieco abstrakcyjnym problemie liczenia drzew w wirtualnym świecie, stanowi on punkt wyjścia do omówienia rzeczywistych zastosowań samplingu przestrzennego, między innymi w inwentaryzacji lasów, monitoringu środowiska i badaniach rozmieszczenia populacji.
+- time: "12:00"
+  events:
+    - name: "Igła, stół i sto lat matematyki: od zagadki przez drzewo Perrona do hipotezy Kakei"
+      speaker: "Oleksandra Krykun"
+      type: "Blok teoretyczny"
+      abstract: |-
+        Połóż igłę długości 1 na stole i obróć ją o 180°, zamiatając przy tym jak najmniejszy kawałek blatu. Obrót wokół środka zajmuje koło o polu π/4, sprytniejszy ruch mieści się w trójkącie o polu 1/√3, a seria zgrabnych „zawracań” w deltoidzie o polu zaledwie π/8. W 1917 roku Sōichi Kakeya zapytał, gdzie leży granica, i postawił na deltoid.
+ 
+        Okaże się, że intuicja może tu zawieść. Zbudujemy krok po kroku dziwny obiekt, drzewo Perrona: tniemy trójkąt na coraz węższe paski i przesuwamy je tak, by się na siebie nakładały. Policzymy, ile pola oszczędza jedno takie przesunięcie, i zobaczymy, do czego prowadzi ta prosta sztuczka powtórzona wiele razy. Poznamy też sztuczkę Pála, bez której igła utknęłaby w pół drogi.
+ 
+        Na koniec zastanowimy się, czy istnieje inna miara takiego zbioru, której nie da się oszukać. To pytanie stoi za hipotezą Kakei, jednym z centralnych problemów współczesnej analizy. Na płaszczyźnie rozstrzygnięto ją w 1971 roku, w przestrzeni trójwymiarowej dopiero w 2025 roku (Hong Wang i Joshua Zahl), a w wyższych wymiarach wciąż pozostaje otwarta.
+ 
+        Wystarczy znajomość pola trójkąta i figur podobnych.
+    - name: "Łańcuchy Markowa w analizie behawioralnej logów systemowych"
+      speaker: "Karol Strzępek"
+      type: "Blok stosowany"
+      abstract: |-
+        Tradycyjne systemy bezpieczeństwa często zawodzą w detekcji zagrożeń wewnętrznych (insider threat). Referat prezentuje zastosowanie dyskretnych łańcuchów Markowa do analizy zachowań użytkowników (UBA) na podstawie surowych logów systemowych ze zbioru CERT Insider Threat.
+ 
+        Zachowanie użytkownika modelujemy jako proces stochastyczny opisany macierzą prawdopodobieństw przejść \(P\), która odwzorowuję nawyki pracownika (np. kolejność logowań, dostępu do plików i aktywności sieciowej). Anomalie wykrywamy, oceniając nowe sekwencje zdarzeń za pomocą znormalizowanej funkcji Log-Likelihood (\(LL\)):
+ 
+        \[ LL = \frac{1}{k-1} \sum_{m=1}^{k-1} \log(p_{x_m, x_{m+1}}) \]
+ 
+        Dodatkowo wyznaczamy indywidualny próg alarmowy dla każdego konta (np. próg \(\mu - 3\sigma\)). Spadek wartości \(LL\) poniżej progu wskazuje dni, w których zachowanie drastycznie odbiega od normy, co stanowi mocny sygnał do interwencji.
+ 
+        Dzięki wykorzystaniu łańcuchów Markowa, zaprezentowany model jest w pełni interpretowalny, co ułatwia dokładną analizę przyczyny alarmu (Root Cause Analysis). Istotnym elementem referatu będzie porównanie skuteczności łańcuchów Markowa różnego rzędu. Projekt stanowi solidny punkt wyjścia do budowy zaawansowanych, wielowarstwowych narzędzi cyberbezpieczeństwa.
+- time: "12:30"
+  events:
+    - name: "Problem słów i inne problemy decyzyjne w teorii grup"
+      speaker: "Nastazja Lukoszek"
+      type: "Blok teoretyczny"
+      abstract: |-
+        Przedstawimy powiązania teorii grup z kombinatoryką i teorią obliczalności, zastanawiając się nad następującym pytaniem: "Czy dla zadanej grupy skończenie prezentowalnej istnieje algorytm, który jest w stanie stwierdzić, czy podane słowo na generatorach jest elementem neutralnym?".
+        W trakcie referatu postawimy problem słów (en. word problem) oraz kilka podobnych zagadnień. Następnie przedstawimy jego kilka prostych własności  oraz wybrane rodziny grup, w których tenże problem jest rozwiązywalny. Referat zakończymy sformułowaniem intuicji za dowodem twierdzenia Novikova-Boone'a-Brittona w oparciu o podejście S. Aandreaa i D. E. Cohena oraz, będącym wnioskiem z powyższego twierdzenia, twierdzeniem Baumslaga-Boone'a-Neumanna.
+    - name: "Matematyka podobieństwa semantycznego — od embeddingów do sieci skojarzeń"
+      speaker: "Wojciech Marchewka"
+      type: "Blok stosowany"
+      abstract: |-
+        W jaki sposób można reprezentować znaczenie słów za pomocą wektorów i wykorzystać geometryczne podobieństwo tych reprezentacji do tworzenia sieci skojarzeń?
+ 
+        Podczas referatu przedstawione zostaną matematyczne podstawy embeddingów słów, czyli wyuczonych reprezentacji wektorowych, pozwalających opisywać relacje semantyczne za pomocą narzędzi algebry liniowej. Omówione zostaną podobieństwo cosinusowe oraz wybrane metody uczenia reprezentacji, w szczególności model Skip-gram i technika negative sampling.
+ 
+        Następnie pokazane zostanie, w jaki sposób na podstawie podobieństwa embeddingów można konstruować grafy semantyczne, których wierzchołkami są słowa, a krawędzie odpowiadają relacjom wynikającym z ich reprezentacji wektorowych. Przedstawione zostaną wybrane metody budowania takich grafów oraz wpływ przyjętych kryteriów podobieństwa na ich strukturę i własności matematyczne.
+ 
+        Zagadnienia te zostaną zilustrowane autorską grą polegającą na łączeniu pozornie odległych słów poprzez kolejne skojarzenia, odpowiadające ścieżkom w grafie semantycznym. Przykład ten pokaże, jak połączenie geometrii przestrzeni wektorowych, teorii grafów i metod uczenia maszynowego pozwala modelować relacje między słowami oraz wykorzystywać je w praktyce.
+ 
 - time: "13:00"
   events:
     - name: "Przerwa kawowa"
 - time: "13:30"
   events:
     - name: "Zakończenie konferencji"
+ 
