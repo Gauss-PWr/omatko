@@ -114,17 +114,15 @@
     - name: "Obiad"
 - time: "16:30"
   events:
-    - name: "O wężu, który rozwiązał równanie różniczkowe"
-      speaker: "Monika Brattig"
+    - name: "Jak szybko rosną algebry? Od liczenia słów do niemożliwych funkcji wzrostu"
+      speaker: "Jakub Chmiel"
       type: "Blok teoretyczny"
       abstract: |-
-        Równania różniczkowe cząstkowe i teoria prawdopodobieństwa na pierwszy rzut oka mogą wydawać się odległymi dziedzinami matematyki. Okazuje się jednak, że rozwiązania pewnych równań można opisać za pomocą procesów losowych.
+        Jak szybko może rosnąć algebra? Wybierając skończony zbiór generatorów, możemy liczyć, ile liniowo niezależnych elementów da się uzyskać z iloczynów długości co najwyżej \(n\). Tak powstaje funkcja wzrostu, która pozwala porównywać algebry pod względem ich rozmiaru.
  
-        Podczas referatu przyjrzymy się temu zaskakującemu związkowi na przykładzie zagadnienia Dirichleta. Zaczniemy od klasycznego równania Laplace’a i zobaczymy, w jaki sposób ruch Browna pozwala skonstruować jego rozwiązanie, wykorzystując jedynie informacje o zachowaniu losowych ścieżek na brzegu rozważanego obszaru.
+        Podczas referatu przedstawię podstawowe przykłady i własności funkcji wzrostu oraz pytanie o to, które funkcje można w ten sposób otrzymać. Przyjrzymy się jak w przestrzeni rosnących funkcji submultiplikatywnych wygląda zbiór funkcji wzrostu wraz z luką Bergmana, charakterystyką Bella–Zelmanova oraz wynikiem Greenfelda pokazującym, że nawet wśród bardzo szybko rosnących funkcji monotonicznych i submultiplikatywnych istnieją takie, które nie są równoważne funkcji wzrostu żadnej skończenie generowanej algebry. Wskażę również związek tych zagadnień z liczeniem słów w językach formalnych i rolę automatów skończonych.
  
-        Następnie zastanowimy się, co się stanie, gdy nasze równanie przestanie być liniowe. W poszukiwaniu odpowiedniego narzędzia poznamy węża Browna — niezwykły proces losowy, którego wartościami są całe ścieżki. Zobaczymy, jak jego konstrukcja pozwala uzyskać probabilistyczną reprezentację rozwiązania semiliniowego zagadnienia Dirichleta.
- 
-        Referat oparty będzie na pracach Jeana-François Le Galla. Skupimy się przede wszystkim na intuicjach i geometrycznych interpretacjach omawianych obiektów.
+        Referat będzie miał charakter przeglądowy, z naciskiem na przykłady i znaczenie wyników, bez szczegółowych dowodów.
     - name: "Tworzenie leków do walki z nowotworami: Jak działa model ChiENN?"
       speaker: "Emilia Porczyńska"
       type: "Blok stosowany"
