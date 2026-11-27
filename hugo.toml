@@ -58,7 +58,7 @@ conference_end = '2026-12-13T14:00'
 show_schedule_section = true
 
 # Rejestracja 
-show_registration = true
+show_registration = false
 
 # Linki do formularzy
 participant_url = 'https://conf.e-science.pl/event/126/'
@@ -84,7 +84,7 @@ show_sponsors_section = true
 show_patrons_section = true
 
 # lokalizacja
-show_map = false
+show_map = true
 
 # Animacja w tle
 enable_background_animations = true
